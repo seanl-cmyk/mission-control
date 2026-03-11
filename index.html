@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mission Control — Sensei</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    :root {
+      --bg-primary: #0f1419;
+      --bg-secondary: #1a1f26;
+      --bg-tertiary: #242b33;
+      --accent: #00d4aa;
+      --accent-dim: #00a888;
+      --text-primary: #e7e9ea;
+      --text-secondary: #8b98a5;
+      --border: #2f3943;
+      --danger: #f4212e;
+      --warning: #ffd400;
+      --success: #00ba7c;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .logo-icon {
+      font-size: 32px;
+    }
+    
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+    
+    h1 span {
+      color: var(--accent);
+    }
+    
+    .stats {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .stat {
+      text-align: center;
+      padding: 10px 20px;
+      background: var(--bg-secondary);
+      border-radius: 8px;
+    }
+    
+    .stat-value {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+    }
+    
+    .actions {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    
+    .btn-primary {
+      background: var(--accent);
+      color: var(--bg-primary);
+    }
+    
+    .btn-primary:hover {
+      background: var(--accent-dim);
+    }
+    
+    .btn-secondary {
+      background: var(--bg-tertiary);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+    }
+    
+    .btn-secondary:hover {
+      background: var(--border);
+    }
+    
+    .btn-danger {
+      background: var(--danger);
+      color: white;
+    }
+    
+    .btn-small {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+    
+    .sync-status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--text-secondary);
+      margin-left: auto;
+    }
+    
+    .sync-indicator {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--success);
+    }
+    
+    .sync-indicator.syncing {
+      background: var(--warning);
+      animation: pulse 1s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    
+    .cases-grid {
+      display: grid;
+      gap: 16px;
+    }
+    
+    .case-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      transition: border-color 0.2s;
+    }
+    
+    .case-card:hover {
+      border-color: var(--accent);
+    }
+    
+    .case-card.status-resolved {
+      opacity: 0.7;
+    }
+    
+    .case-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    
+    .case-id {
+      font-family: monospace;
+      font-size: 14px;
+      color: var(--accent);
+      background: var(--bg-tertiary);
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+    
+    .case-status {
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    
+    .status-open { background: var(--warning); color: #000; }
+    .status-resolved { background: var(--success); color: #fff; }
+    .status-pending { background: var(--text-secondary); color: #fff; }
+    .status-escalated { background: var(--danger); color: #fff; }
+    
+    .case-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    .case-meta {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+    
+    .case-section {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+    
+    .case-section-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .case-section-title .collapse-btn {
+      cursor: pointer;
+      padding: 2px 6px;
+      background: var(--bg-tertiary);
+      border-radius: 4px;
+      font-size: 10px;
+    }
+    
+    .case-notes, .case-response, .case-findings {
+      font-size: 14px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      background: var(--bg-tertiary);
+      padding: 12px;
+      border-radius: 6px;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    
+    .case-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+    
+    .case-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+    
+    .case-tag {
+      font-size: 11px;
+      padding: 3px 8px;
+      background: var(--bg-tertiary);
+      border-radius: 4px;
+      color: var(--text-secondary);
+    }
+    
+    /* Modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.8);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    
+    .modal-overlay.active {
+      display: flex;
+    }
+    
+    .modal {
+      background: var(--bg-secondary);
+      border-radius: 12px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 24px;
+    }
+    
+    .modal h2 {
+      margin-bottom: 20px;
+    }
+    
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    
+    .form-group {
+      margin-bottom: 16px;
+    }
+    
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+    
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+    
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-tertiary);
+      color: var(--text-primary);
+      font-size: 14px;
+      font-family: inherit;
+    }
+    
+    .form-group textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+    
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+    
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-secondary);
+    }
+    
+    .empty-state-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+    
+    .search-box {
+      flex: 1;
+      max-width: 300px;
+    }
+    
+    .search-box input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-tertiary);
+      color: var(--text-primary);
+      font-size: 14px;
+    }
+    
+    .filter-group {
+      display: flex;
+      gap: 8px;
+    }
+    
+    .filter-btn {
+      padding: 8px 14px;
+      font-size: 12px;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    
+    .filter-btn.active {
+      background: var(--accent);
+      color: var(--bg-primary);
+      border-color: var(--accent);
+    }
+    
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--accent);
+      padding: 12px 20px;
+      border-radius: 8px;
+      display: none;
+      z-index: 200;
+    }
+    
+    .toast.show {
+      display: block;
+      animation: slideIn 0.3s ease;
+    }
+    
+    @keyframes slideIn {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <span class="logo-icon">🎯</span>
+        <h1>Mission <span>Control</span></h1>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-value" id="totalCases">0</div>
+          <div class="stat-label">Total Cases</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value" id="openCases">0</div>
+          <div class="stat-label">Open</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value" id="resolvedCases">0</div>
+          <div class="stat-label">Resolved</div>
+        </div>
+      </div>
+    </header>
+    
+    <div class="actions">
+      <button class="btn-primary" onclick="openModal()">+ New Case</button>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search cases..." oninput="renderCases()">
+      </div>
+      <div class="filter-group">
+        <button class="filter-btn active" data-filter="all" onclick="setFilter('all')">All</button>
+        <button class="filter-btn" data-filter="open" onclick="setFilter('open')">Open</button>
+        <button class="filter-btn" data-filter="pending" onclick="setFilter('pending')">Pending</button>
+        <button class="filter-btn" data-filter="resolved" onclick="setFilter('resolved')">Resolved</button>
+      </div>
+      <div class="sync-status">
+        <div class="sync-indicator" id="syncIndicator"></div>
+        <span id="syncText">Synced</span>
+        <button class="btn-secondary btn-small" onclick="syncFromServer()">↻ Refresh</button>
+      </div>
+    </div>
+    
+    <div class="cases-grid" id="casesGrid">
+      <!-- Cases will be rendered here -->
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+      <h2 id="modalTitle">New Case</h2>
+      <form id="caseForm" onsubmit="saveCase(event)">
+        <input type="hidden" id="caseId">
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label>Ticket ID *</label>
+            <input type="text" id="caseTicketId" placeholder="e.g., ZD-12345 or MDR-abc123" required>
+          </div>
+          
+          <div class="form-group">
+            <label>Status</label>
+            <select id="caseStatus">
+              <option value="open">Open</option>
+              <option value="pending">Pending</option>
+              <option value="escalated">Escalated</option>
+              <option value="resolved">Resolved</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label>Title / Summary *</label>
+          <input type="text" id="caseTitle" placeholder="Brief description of the issue" required>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label>Customer / Account</label>
+            <input type="text" id="caseCustomer" placeholder="Customer name or account ID">
+          </div>
+          
+          <div class="form-group">
+            <label>Category</label>
+            <select id="caseCategory">
+              <option value="">Select...</option>
+              <option value="voice">Voice / SIP</option>
+              <option value="messaging">Messaging / SMS</option>
+              <option value="porting">Porting</option>
+              <option value="billing">Billing</option>
+              <option value="api">API / Webhooks</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label>Root Cause / Findings</label>
+          <textarea id="caseFindings" placeholder="What was the root cause? Key findings from investigation..."></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label>Notes</label>
+          <textarea id="caseNotes" placeholder="Investigation notes, steps taken, etc."></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label>Response to Customer</label>
+          <textarea id="caseResponse" placeholder="Final response sent to customer"></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label>Tags (comma-separated)</label>
+          <input type="text" id="caseTags" placeholder="e.g., spam, toll-free, carrier-issue">
+        </div>
+        
+        <div class="modal-actions">
+          <button type="button" class="btn-secondary" onclick="closeModal()">Cancel</button>
+          <button type="submit" class="btn-primary">Save Case</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <div class="toast" id="toast"></div>
+  
+  <script>
+    // Data storage
+    let cases = [];
+    let currentFilter = 'all';
+    const STORAGE_KEY = 'missionControlCases';
+    const SERVER_FILE = 'cases.json';
+    
+    // Initialize
+    async function init() {
+      await syncFromServer();
+      setInterval(syncFromServer, 30000); // Auto-refresh every 30s
+    }
+    
+    async function syncFromServer() {
+      const indicator = document.getElementById('syncIndicator');
+      const text = document.getElementById('syncText');
+      
+      indicator.classList.add('syncing');
+      text.textContent = 'Syncing...';
+      
+      try {
+        const response = await fetch(SERVER_FILE + '?t=' + Date.now());
+        if (response.ok) {
+          const data = await response.json();
+          cases = data.cases || [];
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(cases));
+          updateStats();
+          renderCases();
+          text.textContent = 'Synced ' + new Date().toLocaleTimeString();
+        }
+      } catch (e) {
+        // Fall back to localStorage
+        cases = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+        text.textContent = 'Offline mode';
+      }
+      
+      indicator.classList.remove('syncing');
+      updateStats();
+      renderCases();
+    }
+    
+    function saveCasesLocal() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(cases));
+      updateStats();
+    }
+    
+    function updateStats() {
+      document.getElementById('totalCases').textContent = cases.length;
+      document.getElementById('openCases').textContent = cases.filter(c => c.status === 'open' || c.status === 'escalated').length;
+      document.getElementById('resolvedCases').textContent = cases.filter(c => c.status === 'resolved').length;
+    }
+    
+    function setFilter(filter) {
+      currentFilter = filter;
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.filter === filter);
+      });
+      renderCases();
+    }
+    
+    function renderCases() {
+      const grid = document.getElementById('casesGrid');
+      const search = document.getElementById('searchInput').value.toLowerCase();
+      
+      let filtered = cases.filter(c => {
+        const matchesSearch = 
+          c.ticketId.toLowerCase().includes(search) ||
+          c.title.toLowerCase().includes(search) ||
+          (c.customer || '').toLowerCase().includes(search) ||
+          (c.notes || '').toLowerCase().includes(search) ||
+          (c.findings || '').toLowerCase().includes(search) ||
+          (c.tags || []).some(t => t.toLowerCase().includes(search));
+        
+        const matchesFilter = 
+          currentFilter === 'all' || 
+          c.status === currentFilter ||
+          (currentFilter === 'open' && c.status === 'escalated');
+        
+        return matchesSearch && matchesFilter;
+      });
+      
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-state-icon">📋</div>
+            <p>${cases.length === 0 ? 'No cases yet. Sensei will add cases as you work tickets together.' : 'No cases match your search.'}</p>
+          </div>
+        `;
+        return;
+      }
+      
+      // Sort by date, newest first
+      filtered.sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));
+      
+      grid.innerHTML = filtered.map(c => `
+        <div class="case-card status-${c.status}">
+          <div class="case-header">
+            <span class="case-id">${escapeHtml(c.ticketId)}</span>
+            <span class="case-status status-${c.status}">${c.status}</span>
+          </div>
+          <div class="case-title">${escapeHtml(c.title)}</div>
+          <div class="case-meta">
+            ${c.customer ? `<strong>Customer:</strong> ${escapeHtml(c.customer)} · ` : ''}
+            ${c.category ? `<strong>Category:</strong> ${c.category} · ` : ''}
+            <strong>Updated:</strong> ${formatDate(c.updatedAt)}
+          </div>
+          ${c.findings ? `
+            <div class="case-section">
+              <div class="case-section-title">Root Cause / Findings</div>
+              <div class="case-findings">${escapeHtml(c.findings)}</div>
+            </div>
+          ` : ''}
+          ${c.notes ? `
+            <div class="case-section">
+              <div class="case-section-title">Notes</div>
+              <div class="case-notes">${escapeHtml(c.notes)}</div>
+            </div>
+          ` : ''}
+          ${c.response ? `
+            <div class="case-section">
+              <div class="case-section-title">Response</div>
+              <div class="case-response">${escapeHtml(c.response)}</div>
+            </div>
+          ` : ''}
+          ${c.tags && c.tags.length ? `
+            <div class="case-tags">
+              ${c.tags.map(t => `<span class="case-tag">${escapeHtml(t)}</span>`).join('')}
+            </div>
+          ` : ''}
+          <div class="case-actions">
+            <button class="btn-secondary btn-small" onclick="editCase('${c.id}')">Edit</button>
+            <button class="btn-secondary btn-small" onclick="copyResponse('${c.id}')">Copy Response</button>
+            <button class="btn-danger btn-small" onclick="deleteCase('${c.id}')">Delete</button>
+          </div>
+        </div>
+      `).join('');
+    }
+    
+    function openModal(caseId = null) {
+      const modal = document.getElementById('modalOverlay');
+      const form = document.getElementById('caseForm');
+      const title = document.getElementById('modalTitle');
+      
+      form.reset();
+      document.getElementById('caseId').value = '';
+      
+      if (caseId) {
+        const c = cases.find(x => x.id === caseId);
+        if (c) {
+          title.textContent = 'Edit Case';
+          document.getElementById('caseId').value = c.id;
+          document.getElementById('caseTicketId').value = c.ticketId;
+          document.getElementById('caseTitle').value = c.title;
+          document.getElementById('caseCustomer').value = c.customer || '';
+          document.getElementById('caseCategory').value = c.category || '';
+          document.getElementById('caseStatus').value = c.status;
+          document.getElementById('caseFindings').value = c.findings || '';
+          document.getElementById('caseNotes').value = c.notes || '';
+          document.getElementById('caseResponse').value = c.response || '';
+          document.getElementById('caseTags').value = (c.tags || []).join(', ');
+        }
+      } else {
+        title.textContent = 'New Case';
+      }
+      
+      modal.classList.add('active');
+    }
+    
+    function closeModal(event) {
+      if (event && event.target !== event.currentTarget) return;
+      document.getElementById('modalOverlay').classList.remove('active');
+    }
+    
+    function editCase(id) {
+      openModal(id);
+    }
+    
+    function deleteCase(id) {
+      if (confirm('Delete this case?')) {
+        cases = cases.filter(c => c.id !== id);
+        saveCasesLocal();
+        renderCases();
+        showToast('Case deleted (local only - Sensei will sync)');
+      }
+    }
+    
+    function copyResponse(id) {
+      const c = cases.find(x => x.id === id);
+      if (c && c.response) {
+        navigator.clipboard.writeText(c.response);
+        showToast('Response copied to clipboard');
+      }
+    }
+    
+    function saveCase(event) {
+      event.preventDefault();
+      
+      const id = document.getElementById('caseId').value || generateId();
+      const tags = document.getElementById('caseTags').value
+        .split(',')
+        .map(t => t.trim())
+        .filter(t => t);
+      
+      const caseData = {
+        id,
+        ticketId: document.getElementById('caseTicketId').value,
+        title: document.getElementById('caseTitle').value,
+        customer: document.getElementById('caseCustomer').value,
+        category: document.getElementById('caseCategory').value,
+        status: document.getElementById('caseStatus').value,
+        findings: document.getElementById('caseFindings').value,
+        notes: document.getElementById('caseNotes').value,
+        response: document.getElementById('caseResponse').value,
+        tags,
+        updatedAt: new Date().toISOString()
+      };
+      
+      const existingIndex = cases.findIndex(c => c.id === id);
+      if (existingIndex >= 0) {
+        caseData.createdAt = cases[existingIndex].createdAt;
+        cases[existingIndex] = caseData;
+      } else {
+        caseData.createdAt = caseData.updatedAt;
+        cases.push(caseData);
+      }
+      
+      saveCasesLocal();
+      renderCases();
+      closeModal();
+      showToast('Case saved (local - Sensei will sync)');
+    }
+    
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    }
+    
+    function generateId() {
+      return 'case-' + Date.now().toString(36) + Math.random().toString(36).substr(2);
+    }
+    
+    function formatDate(iso) {
+      const d = new Date(iso);
+      const now = new Date();
+      const diffMs = now - d;
+      const diffMins = Math.floor(diffMs / 60000);
+      const diffHours = Math.floor(diffMs / 3600000);
+      const diffDays = Math.floor(diffMs / 86400000);
+      
+      if (diffMins < 1) return 'Just now';
+      if (diffMins < 60) return `${diffMins}m ago`;
+      if (diffHours < 24) return `${diffHours}h ago`;
+      if (diffDays < 7) return `${diffDays}d ago`;
+      
+      return d.toLocaleDateString();
+    }
+    
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+    
+    // Keyboard shortcuts
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+      if (e.key === 'n' && e.ctrlKey) { e.preventDefault(); openModal(); }
+      if (e.key === 'r' && e.ctrlKey) { e.preventDefault(); syncFromServer(); }
+    });
+    
+    // Initialize
+    init();
+  </script>
+</body>
+</html>
