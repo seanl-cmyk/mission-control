@@ -30,7 +30,7 @@
     }
     
     .container {
-      max-width: 1400px;
+      max-width: 1200px;
       margin: 0 auto;
     }
     
@@ -38,7 +38,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 30px;
+      margin-bottom: 24px;
       padding-bottom: 20px;
       border-bottom: 1px solid var(--border);
       flex-wrap: wrap;
@@ -51,97 +51,323 @@
       gap: 12px;
     }
     
-    .logo-icon {
-      font-size: 32px;
-    }
+    .logo-icon { font-size: 32px; }
     
     h1 {
       font-size: 24px;
       font-weight: 600;
     }
     
-    h1 span {
-      color: var(--accent);
+    h1 span { color: var(--accent); }
+    
+    /* Summary Cards */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
     }
     
-    .stats {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    
-    .stat {
-      text-align: center;
-      padding: 10px 20px;
+    .summary-card {
       background: var(--bg-secondary);
-      border-radius: 8px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
     }
     
-    .stat-value {
-      font-size: 24px;
+    .summary-card.highlight {
+      border-color: var(--accent);
+      background: linear-gradient(135deg, rgba(0,212,170,0.1), transparent);
+    }
+    
+    .summary-value {
+      font-size: 36px;
       font-weight: 700;
       color: var(--accent);
+      line-height: 1;
     }
     
-    .stat-label {
-      font-size: 12px;
+    .summary-label {
+      font-size: 13px;
       color: var(--text-secondary);
+      margin-top: 8px;
       text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
     
-    .actions {
+    .summary-breakdown {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 12px;
+      font-size: 12px;
+    }
+    
+    .breakdown-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    
+    .breakdown-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+    
+    .breakdown-dot.analysis { background: #00d4aa; }
+    .breakdown-dot.response { background: #ffd400; }
+    .breakdown-dot.notes { background: #8b98a5; }
+    
+    /* Day Sections */
+    .day-section {
+      margin-bottom: 32px;
+    }
+    
+    .day-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .day-date {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    
+    .day-stats {
       display: flex;
       gap: 12px;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
+      margin-left: auto;
+      font-size: 13px;
+      color: var(--text-secondary);
     }
     
-    button {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
+    .day-stat {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    
+    .day-stat-value {
+      color: var(--accent);
+      font-weight: 600;
+    }
+    
+    /* Ticket Cards */
+    .tickets-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .ticket-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 20px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 16px;
+      align-items: start;
+      transition: border-color 0.2s;
+    }
+    
+    .ticket-card:hover {
+      border-color: var(--accent);
+    }
+    
+    .ticket-card.sensei-assisted {
+      border-left: 3px solid var(--accent);
+    }
+    
+    .ticket-id-col {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-width: 100px;
+    }
+    
+    .ticket-id {
+      font-family: monospace;
       font-size: 14px;
+      color: var(--accent);
+      background: var(--bg-tertiary);
+      padding: 4px 8px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+    
+    .ticket-id a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    .ticket-id a:hover {
+      text-decoration: underline;
+    }
+    
+    .ticket-status {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 12px;
+      text-transform: uppercase;
       font-weight: 500;
+      display: inline-block;
+    }
+    
+    .status-open { background: var(--warning); color: #000; }
+    .status-pending { background: #6366f1; color: #fff; }
+    .status-hold { background: #f97316; color: #fff; }
+    .status-resolved { background: var(--success); color: #fff; }
+    
+    .ticket-content {
+      min-width: 0;
+    }
+    
+    .ticket-title {
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+    
+    .ticket-meta {
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+    
+    .ticket-customer {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+    
+    .ticket-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    
+    .ticket-tag {
+      font-size: 10px;
+      padding: 2px 6px;
+      background: var(--bg-tertiary);
+      border-radius: 4px;
+      color: var(--text-secondary);
+    }
+    
+    .ticket-tag.category-voice { background: #1e3a5f; color: #60a5fa; }
+    .ticket-tag.category-messaging { background: #1e3a3f; color: #34d399; }
+    .ticket-tag.category-billing { background: #3f3a1e; color: #fbbf24; }
+    .ticket-tag.category-wireless { background: #3a1e3f; color: #a78bfa; }
+    
+    .ticket-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      align-items: flex-end;
+    }
+    
+    .sensei-badges {
+      display: flex;
+      gap: 6px;
+    }
+    
+    .sensei-badge {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      background: var(--bg-tertiary);
+      border: 2px solid var(--border);
+      cursor: help;
+    }
+    
+    .sensei-badge.active {
+      border-color: var(--accent);
+      background: rgba(0,212,170,0.2);
+    }
+    
+    .sensei-badge.analysis.active { background: rgba(0,212,170,0.2); }
+    .sensei-badge.response.active { background: rgba(255,212,0,0.2); border-color: var(--warning); }
+    .sensei-badge.notes.active { background: rgba(139,152,165,0.2); border-color: var(--text-secondary); }
+    
+    /* Sensei Work Details */
+    .sensei-details {
+      grid-column: 1 / -1;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      display: none;
+    }
+    
+    .ticket-card.expanded .sensei-details {
+      display: block;
+    }
+    
+    .sensei-section {
+      margin-bottom: 12px;
+    }
+    
+    .sensei-section:last-child {
+      margin-bottom: 0;
+    }
+    
+    .sensei-section-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    
+    .sensei-section-content {
+      font-size: 13px;
+      line-height: 1.5;
+      background: var(--bg-tertiary);
+      padding: 10px 12px;
+      border-radius: 6px;
+      white-space: pre-wrap;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    
+    .expand-btn {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 11px;
+      cursor: pointer;
       transition: all 0.2s;
     }
     
-    .btn-primary {
-      background: var(--accent);
-      color: var(--bg-primary);
+    .expand-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
     }
     
-    .btn-primary:hover {
-      background: var(--accent-dim);
-    }
-    
-    .btn-secondary {
-      background: var(--bg-tertiary);
-      color: var(--text-primary);
-      border: 1px solid var(--border);
-    }
-    
-    .btn-secondary:hover {
-      background: var(--border);
-    }
-    
-    .btn-danger {
-      background: var(--danger);
-      color: white;
-    }
-    
-    .btn-small {
-      padding: 6px 12px;
-      font-size: 12px;
-    }
-    
-    .sync-status {
+    /* Sync Status */
+    .sync-bar {
       display: flex;
       align-items: center;
-      gap: 8px;
-      font-size: 12px;
-      color: var(--text-secondary);
-      margin-left: auto;
+      gap: 12px;
+      padding: 12px 16px;
+      background: var(--bg-secondary);
+      border-radius: 8px;
+      margin-bottom: 24px;
+      font-size: 13px;
     }
     
     .sync-indicator {
@@ -161,280 +387,99 @@
       50% { opacity: 0.5; }
     }
     
-    .cases-grid {
-      display: grid;
-      gap: 16px;
+    .sync-text {
+      color: var(--text-secondary);
     }
     
-    .case-card {
-      background: var(--bg-secondary);
+    .sync-actions {
+      margin-left: auto;
+      display: flex;
+      gap: 8px;
+    }
+    
+    .btn {
+      padding: 6px 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .btn-secondary {
+      background: var(--bg-tertiary);
+      color: var(--text-primary);
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 20px;
-      transition: border-color 0.2s;
     }
     
-    .case-card:hover {
+    .btn-secondary:hover {
       border-color: var(--accent);
     }
     
-    .case-card.status-resolved {
-      opacity: 0.7;
-    }
-    
-    .case-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 16px;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    
-    .case-id {
-      font-family: monospace;
-      font-size: 14px;
-      color: var(--accent);
-      background: var(--bg-tertiary);
-      padding: 4px 8px;
-      border-radius: 4px;
-    }
-    
-    .case-status {
-      padding: 4px 10px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 500;
-    }
-    
-    .status-open { background: var(--accent); color: #000; }
-    .status-resolved { background: var(--success); color: #fff; }
-    .status-pending { background: var(--accent); color: #000; }
-    .status-escalated { background: var(--danger); color: #fff; }
-    
-    .case-title {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    
-    .case-meta {
-      font-size: 13px;
-      color: var(--text-secondary);
-      margin-bottom: 16px;
-    }
-    
-    .case-section {
-      margin-top: 16px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border);
-    }
-    
-    .case-section-title {
-      font-size: 12px;
-      text-transform: uppercase;
-      color: var(--text-secondary);
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    
-    .case-section-title .collapse-btn {
-      cursor: pointer;
-      padding: 2px 6px;
-      background: var(--bg-tertiary);
-      border-radius: 4px;
-      font-size: 10px;
-    }
-    
-    .case-notes, .case-response, .case-findings {
-      font-size: 14px;
-      line-height: 1.6;
-      white-space: pre-wrap;
-      background: #e8eaed;
-      color: #1a1f26;
-      padding: 12px;
-      border-radius: 6px;
-      max-height: 300px;
-      overflow-y: auto;
-    }
-    
-    .case-actions {
-      display: flex;
-      gap: 8px;
-      margin-top: 16px;
-      flex-wrap: wrap;
-    }
-    
-    .case-tags {
-      display: flex;
-      gap: 6px;
-      flex-wrap: wrap;
-      margin-top: 12px;
-    }
-    
-    .case-tag {
-      font-size: 11px;
-      padding: 3px 8px;
-      background: var(--bg-tertiary);
-      border-radius: 4px;
-      color: var(--text-secondary);
-    }
-    
-    /* Modal */
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0,0,0,0.8);
-      z-index: 100;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-    
-    .modal-overlay.active {
-      display: flex;
-    }
-    
-    .modal {
-      background: var(--bg-secondary);
-      border-radius: 12px;
-      width: 100%;
-      max-width: 700px;
-      max-height: 90vh;
-      overflow-y: auto;
-      padding: 24px;
-    }
-    
-    .modal h2 {
-      margin-bottom: 20px;
-    }
-    
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-    
-    .form-group {
-      margin-bottom: 16px;
-    }
-    
-    .form-group.full-width {
-      grid-column: 1 / -1;
-    }
-    
-    .form-group label {
-      display: block;
-      font-size: 13px;
-      color: var(--text-secondary);
-      margin-bottom: 6px;
-    }
-    
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      width: 100%;
-      padding: 10px 12px;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      background: var(--bg-tertiary);
-      color: var(--text-primary);
-      font-size: 14px;
-      font-family: inherit;
-    }
-    
-    .form-group textarea {
-      min-height: 100px;
-      resize: vertical;
-    }
-    
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
-      outline: none;
-      border-color: var(--accent);
-    }
-    
-    .modal-actions {
-      display: flex;
-      justify-content: flex-end;
-      gap: 12px;
-      margin-top: 24px;
-    }
-    
-    .empty-state {
-      text-align: center;
-      padding: 60px 20px;
-      color: var(--text-secondary);
-    }
-    
-    .empty-state-icon {
-      font-size: 48px;
-      margin-bottom: 16px;
-    }
-    
-    .search-box {
-      flex: 1;
-      max-width: 300px;
-    }
-    
-    .search-box input {
-      width: 100%;
-      padding: 10px 12px;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      background: var(--bg-tertiary);
-      color: var(--text-primary);
-      font-size: 14px;
-    }
-    
-    .filter-group {
-      display: flex;
-      gap: 8px;
-    }
-    
-    .filter-btn {
-      padding: 8px 14px;
-      font-size: 12px;
-      background: var(--bg-tertiary);
-      border: 1px solid var(--border);
-      color: var(--text-secondary);
-      border-radius: 20px;
-      cursor: pointer;
-    }
-    
-    .filter-btn.active {
+    .btn-primary {
       background: var(--accent);
       color: var(--bg-primary);
-      border-color: var(--accent);
     }
     
-    .toast {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: var(--bg-secondary);
-      border: 1px solid var(--accent);
-      padding: 12px 20px;
-      border-radius: 8px;
-      display: none;
-      z-index: 200;
+    .btn-primary:hover {
+      background: var(--accent-dim);
     }
     
-    .toast.show {
-      display: block;
-      animation: slideIn 0.3s ease;
+    /* Empty state */
+    .empty-day {
+      text-align: center;
+      padding: 40px;
+      color: var(--text-secondary);
     }
     
-    @keyframes slideIn {
-      from { transform: translateX(100%); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
+    /* Legend */
+    .legend {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 24px;
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+    
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    
+    .legend-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      background: var(--bg-tertiary);
+      border: 2px solid var(--accent);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .ticket-card {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      
+      .ticket-id-col {
+        flex-direction: row;
+        align-items: center;
+      }
+      
+      .ticket-actions {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   </style>
 </head>
@@ -445,135 +490,235 @@
         <span class="logo-icon">🎯</span>
         <h1>Mission <span>Control</span></h1>
       </div>
-      <div class="stats">
-        <div class="stat">
-          <div class="stat-value" id="totalCases">0</div>
-          <div class="stat-label">Total Cases</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value" id="openCases">0</div>
-          <div class="stat-label">Open</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value" id="resolvedCases">0</div>
-          <div class="stat-label">Resolved</div>
-        </div>
-      </div>
     </header>
     
-    <div class="actions">
-      <button class="btn-primary" onclick="openModal()">+ New Case</button>
-      <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Search cases..." oninput="renderCases()">
+    <!-- Summary Cards -->
+    <div class="summary-grid">
+      <div class="summary-card highlight">
+        <div class="summary-value" id="totalAssisted">0</div>
+        <div class="summary-label">Sensei Assisted</div>
+        <div class="summary-breakdown">
+          <div class="breakdown-item">
+            <span class="breakdown-dot analysis"></span>
+            <span id="analysisCount">0</span> analysis
+          </div>
+          <div class="breakdown-item">
+            <span class="breakdown-dot response"></span>
+            <span id="responseCount">0</span> responses
+          </div>
+        </div>
       </div>
-      <div class="filter-group">
-        <button class="filter-btn active" data-filter="all" onclick="setFilter('all')">All</button>
-        <button class="filter-btn" data-filter="open" onclick="setFilter('open')">Open</button>
-        <button class="filter-btn" data-filter="pending" onclick="setFilter('pending')">Pending</button>
-        <button class="filter-btn" data-filter="resolved" onclick="setFilter('resolved')">Resolved</button>
+      <div class="summary-card">
+        <div class="summary-value" id="activeTickets">0</div>
+        <div class="summary-label">Active Tickets</div>
       </div>
-      <div class="sync-status">
-        <div class="sync-indicator" id="syncIndicator"></div>
-        <span id="syncText">Synced</span>
-        <button class="btn-secondary btn-small" onclick="syncFromServer()">↻ Refresh</button>
+      <div class="summary-card">
+        <div class="summary-value" id="pendingTickets">0</div>
+        <div class="summary-label">Pending</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-value" id="resolvedTickets">0</div>
+        <div class="summary-label">Resolved</div>
       </div>
     </div>
     
-    <div class="cases-grid" id="casesGrid">
-      <!-- Cases will be rendered here -->
+    <!-- Legend -->
+    <div class="legend">
+      <div class="legend-item">
+        <span class="legend-icon">🔍</span>
+        <span>Analysis provided</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-icon" style="border-color: var(--warning);">💬</span>
+        <span>Response drafted</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-icon" style="border-color: var(--text-secondary);">📝</span>
+        <span>Notes/findings</span>
+      </div>
     </div>
-  </div>
-  
-  <!-- Modal -->
-  <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
-    <div class="modal" onclick="event.stopPropagation()">
-      <h2 id="modalTitle">New Case</h2>
-      <form id="caseForm" onsubmit="saveCase(event)">
-        <input type="hidden" id="caseId">
-        
-        <div class="form-row">
-          <div class="form-group">
-            <label>Ticket ID *</label>
-            <input type="text" id="caseTicketId" placeholder="e.g., ZD-12345 or MDR-abc123" required>
-          </div>
-          
-          <div class="form-group">
-            <label>Status</label>
-            <select id="caseStatus">
-              <option value="open">Open</option>
-              <option value="pending">Pending</option>
-              <option value="escalated">Escalated</option>
-              <option value="resolved">Resolved</option>
-            </select>
-          </div>
-        </div>
-        
-        <div class="form-group">
-          <label>Title / Summary *</label>
-          <input type="text" id="caseTitle" placeholder="Brief description of the issue" required>
-        </div>
-        
-        <div class="form-row">
-          <div class="form-group">
-            <label>Customer / Account</label>
-            <input type="text" id="caseCustomer" placeholder="Customer name or account ID">
-          </div>
-          
-          <div class="form-group">
-            <label>Category</label>
-            <select id="caseCategory">
-              <option value="">Select...</option>
-              <option value="voice">Voice / SIP</option>
-              <option value="messaging">Messaging / SMS</option>
-              <option value="porting">Porting</option>
-              <option value="billing">Billing</option>
-              <option value="api">API / Webhooks</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-        </div>
-        
-        <div class="form-group">
-          <label>Root Cause / Findings</label>
-          <textarea id="caseFindings" placeholder="What was the root cause? Key findings from investigation..."></textarea>
-        </div>
-        
-        <div class="form-group">
-          <label>Notes</label>
-          <textarea id="caseNotes" placeholder="Investigation notes, steps taken, etc."></textarea>
-        </div>
-        
-        <div class="form-group">
-          <label>Response to Customer</label>
-          <textarea id="caseResponse" placeholder="Final response sent to customer"></textarea>
-        </div>
-        
-        <div class="form-group">
-          <label>Tags (comma-separated)</label>
-          <input type="text" id="caseTags" placeholder="e.g., spam, toll-free, carrier-issue">
-        </div>
-        
-        <div class="modal-actions">
-          <button type="button" class="btn-secondary" onclick="closeModal()">Cancel</button>
-          <button type="submit" class="btn-primary">Save Case</button>
-        </div>
-      </form>
+    
+    <!-- Sync Bar -->
+    <div class="sync-bar">
+      <div class="sync-indicator" id="syncIndicator"></div>
+      <span class="sync-text" id="syncText">Loading...</span>
+      <div class="sync-actions">
+        <button class="btn btn-secondary" onclick="syncFromServer()">↻ Refresh</button>
+      </div>
     </div>
+    
+    <!-- Day Sections -->
+    <div id="dayContainer"></div>
   </div>
-  
-  <div class="toast" id="toast"></div>
   
   <script>
-    // Data storage
-    let cases = [];
-    let currentFilter = 'all';
-    const STORAGE_KEY = 'missionControlCases';
-    const SERVER_FILE = 'cases.json';
+    // Data
+    let tickets = [];
+    let senseiCases = {};
+    const CASES_FILE = 'cases.json';
     
-    // Initialize
+    // Zendesk tickets from query (will be merged with cases.json)
+    const zendeskTickets = [
+      {
+        id: 2742849,
+        subject: "Poor Audio Quality on Outbound Calls",
+        status: "hold",
+        priority: "low",
+        customer: "Vendor (Georgia calls)",
+        category: "voice",
+        created_at: "2026-03-11T18:15:46Z",
+        updated_at: "2026-03-11T19:27:03Z"
+      },
+      {
+        id: 2742812,
+        subject: "Outbound Call Failures",
+        status: "hold",
+        priority: "low",
+        customer: "Vendor (Georgia calls)",
+        category: "voice",
+        created_at: "2026-03-11T18:08:36Z",
+        updated_at: "2026-03-11T20:01:36Z"
+      },
+      {
+        id: 2738674,
+        subject: "Audio quality issue - one-way audio and mid-call drop",
+        status: "hold",
+        priority: "high",
+        customer: "CloudTalk",
+        category: "voice",
+        created_at: "2026-03-10T14:56:27Z",
+        updated_at: "2026-03-11T20:01:36Z"
+      },
+      {
+        id: 2737363,
+        subject: "Sydney AU Anchorsite routing to EU instead of Australia",
+        status: "pending",
+        priority: "normal",
+        customer: "Axient Pty Ltd",
+        category: "voice",
+        created_at: "2026-03-09T23:03:22Z",
+        updated_at: "2026-03-11T23:23:00Z"
+      },
+      {
+        id: 2735737,
+        subject: "Feb 2026 bill question - negative balance clarification",
+        status: "pending",
+        priority: "normal",
+        customer: "Replicant Solutions Inc",
+        category: "billing",
+        created_at: "2026-03-09T15:12:25Z",
+        updated_at: "2026-03-11T20:42:07Z"
+      },
+      {
+        id: 2730532,
+        subject: "Post dial delay - 10+ seconds to reach agent",
+        status: "pending",
+        priority: "high",
+        customer: "Callbox / Car Wars",
+        category: "voice",
+        created_at: "2026-03-05T22:57:19Z",
+        updated_at: "2026-03-11T19:38:15Z"
+      },
+      {
+        id: 2727880,
+        subject: "Alpha sender not configured (40306 error)",
+        status: "pending",
+        priority: "urgent",
+        customer: "Olin Business School - Washington University",
+        category: "messaging",
+        created_at: "2026-03-04T22:30:16Z",
+        updated_at: "2026-03-10T18:01:35Z"
+      },
+      {
+        id: 2725835,
+        subject: "AWS Dubai outage impact investigation",
+        status: "pending",
+        priority: "high",
+        customer: "Trendyol",
+        category: "voice",
+        created_at: "2026-03-04T11:48:53Z",
+        updated_at: "2026-03-11T19:26:34Z"
+      },
+      {
+        id: 2717422,
+        subject: "SIM OTA Updates - carrier roaming change request",
+        status: "hold",
+        priority: "normal",
+        customer: "Grain Protein Tech / Automated Production Systems",
+        category: "wireless",
+        created_at: "2026-02-27T16:35:23Z",
+        updated_at: "2026-03-11T23:21:10Z"
+      },
+      {
+        id: 2715340,
+        subject: "Two calls bridged together (duplicate call IDs)",
+        status: "pending",
+        priority: "normal",
+        customer: "Audiocodes",
+        category: "voice",
+        created_at: "2026-02-26T17:04:24Z",
+        updated_at: "2026-03-11T19:57:38Z"
+      },
+      {
+        id: 2702425,
+        subject: "CA short code 40321 error - no usable numbers",
+        status: "pending",
+        priority: "high",
+        customer: "Iterable",
+        category: "messaging",
+        created_at: "2026-02-19T22:50:08Z",
+        updated_at: "2026-03-11T18:52:12Z"
+      },
+      {
+        id: 2608515,
+        subject: "Distorted audio at beginning of inbound calls",
+        status: "pending",
+        priority: "urgent",
+        customer: "inulti",
+        category: "voice",
+        created_at: "2026-01-12T12:28:17Z",
+        updated_at: "2026-03-11T23:22:30Z"
+      }
+    ];
+    
     async function init() {
-      await syncFromServer();
-      setInterval(syncFromServer, 30000); // Auto-refresh every 30s
+      await loadCases();
+      mergeData();
+      render();
+    }
+    
+    async function loadCases() {
+      try {
+        const res = await fetch(CASES_FILE + '?t=' + Date.now());
+        if (res.ok) {
+          const data = await res.json();
+          senseiCases = {};
+          (data.cases || []).forEach(c => {
+            senseiCases[c.ticketId] = c;
+          });
+        }
+      } catch (e) {
+        console.log('Cases file not found, using defaults');
+      }
+    }
+    
+    function mergeData() {
+      tickets = zendeskTickets.map(t => {
+        const senseiCase = senseiCases[t.id.toString()];
+        return {
+          ...t,
+          sensei: senseiCase ? {
+            analysis: !!senseiCase.findings,
+            response: !!senseiCase.response,
+            notes: !!senseiCase.notes,
+            findings: senseiCase.findings || '',
+            draftResponse: senseiCase.response || '',
+            internalNotes: senseiCase.notes || '',
+            tags: senseiCase.tags || [],
+            caseStatus: senseiCase.status
+          } : null
+        };
+      });
     }
     
     async function syncFromServer() {
@@ -583,243 +728,174 @@
       indicator.classList.add('syncing');
       text.textContent = 'Syncing...';
       
-      try {
-        const response = await fetch(SERVER_FILE + '?t=' + Date.now());
-        if (response.ok) {
-          const data = await response.json();
-          cases = data.cases || [];
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(cases));
-          updateStats();
-          renderCases();
-          text.textContent = 'Synced ' + new Date().toLocaleTimeString();
-        }
-      } catch (e) {
-        // Fall back to localStorage
-        cases = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-        text.textContent = 'Offline mode';
-      }
+      await loadCases();
+      mergeData();
+      render();
       
       indicator.classList.remove('syncing');
-      updateStats();
-      renderCases();
+      text.textContent = 'Last synced: ' + new Date().toLocaleTimeString();
     }
     
-    function saveCasesLocal() {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(cases));
-      updateStats();
-    }
-    
-    function updateStats() {
-      document.getElementById('totalCases').textContent = cases.length;
-      document.getElementById('openCases').textContent = cases.filter(c => c.status === 'open' || c.status === 'escalated').length;
-      document.getElementById('resolvedCases').textContent = cases.filter(c => c.status === 'resolved').length;
-    }
-    
-    function setFilter(filter) {
-      currentFilter = filter;
-      document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.filter === filter);
+    function groupByDay(tickets) {
+      const groups = {};
+      tickets.forEach(t => {
+        const date = t.updated_at.split('T')[0];
+        if (!groups[date]) groups[date] = [];
+        groups[date].push(t);
       });
-      renderCases();
+      return groups;
     }
     
-    function renderCases() {
-      const grid = document.getElementById('casesGrid');
-      const search = document.getElementById('searchInput').value.toLowerCase();
+    function formatDate(dateStr) {
+      const date = new Date(dateStr);
+      const today = new Date();
+      const yesterday = new Date(today);
+      yesterday.setDate(yesterday.getDate() - 1);
       
-      let filtered = cases.filter(c => {
-        const matchesSearch = 
-          c.ticketId.toLowerCase().includes(search) ||
-          c.title.toLowerCase().includes(search) ||
-          (c.customer || '').toLowerCase().includes(search) ||
-          (c.notes || '').toLowerCase().includes(search) ||
-          (c.findings || '').toLowerCase().includes(search) ||
-          (c.tags || []).some(t => t.toLowerCase().includes(search));
-        
-        const matchesFilter = 
-          currentFilter === 'all' || 
-          c.status === currentFilter ||
-          (currentFilter === 'open' && c.status === 'escalated');
-        
-        return matchesSearch && matchesFilter;
+      if (dateStr === today.toISOString().split('T')[0]) {
+        return 'Today';
+      } else if (dateStr === yesterday.toISOString().split('T')[0]) {
+        return 'Yesterday';
+      }
+      
+      return date.toLocaleDateString('en-US', { 
+        weekday: 'long', 
+        month: 'short', 
+        day: 'numeric' 
       });
+    }
+    
+    function getCategoryClass(category) {
+      const map = {
+        voice: 'category-voice',
+        messaging: 'category-messaging',
+        billing: 'category-billing',
+        wireless: 'category-wireless'
+      };
+      return map[category] || '';
+    }
+    
+    function render() {
+      // Update summary
+      const assisted = tickets.filter(t => t.sensei);
+      const analysisCount = tickets.filter(t => t.sensei?.analysis).length;
+      const responseCount = tickets.filter(t => t.sensei?.response).length;
+      const resolved = tickets.filter(t => t.sensei?.caseStatus === 'resolved').length;
+      const pending = tickets.filter(t => t.status === 'pending' || t.status === 'hold').length;
       
-      if (filtered.length === 0) {
-        grid.innerHTML = `
-          <div class="empty-state">
-            <div class="empty-state-icon">📋</div>
-            <p>${cases.length === 0 ? 'No cases yet. Sensei will add cases as you work tickets together.' : 'No cases match your search.'}</p>
+      document.getElementById('totalAssisted').textContent = assisted.length;
+      document.getElementById('analysisCount').textContent = analysisCount;
+      document.getElementById('responseCount').textContent = responseCount;
+      document.getElementById('activeTickets').textContent = tickets.length;
+      document.getElementById('pendingTickets').textContent = pending;
+      document.getElementById('resolvedTickets').textContent = resolved;
+      
+      // Group by day
+      const byDay = groupByDay(tickets);
+      const sortedDays = Object.keys(byDay).sort((a, b) => b.localeCompare(a));
+      
+      const container = document.getElementById('dayContainer');
+      container.innerHTML = sortedDays.map(day => {
+        const dayTickets = byDay[day];
+        const dayAssisted = dayTickets.filter(t => t.sensei).length;
+        const dayResponses = dayTickets.filter(t => t.sensei?.response).length;
+        
+        return `
+          <div class="day-section">
+            <div class="day-header">
+              <div class="day-date">${formatDate(day)}</div>
+              <div class="day-stats">
+                <div class="day-stat">
+                  <span class="day-stat-value">${dayTickets.length}</span> tickets
+                </div>
+                <div class="day-stat">
+                  <span class="day-stat-value">${dayAssisted}</span> assisted
+                </div>
+                <div class="day-stat">
+                  <span class="day-stat-value">${dayResponses}</span> responses
+                </div>
+              </div>
+            </div>
+            <div class="tickets-list">
+              ${dayTickets.map(t => renderTicket(t)).join('')}
+            </div>
           </div>
         `;
-        return;
-      }
+      }).join('');
       
-      // Sort by date, newest first
-      filtered.sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));
+      document.getElementById('syncText').textContent = 'Last synced: ' + new Date().toLocaleTimeString();
+    }
+    
+    function renderTicket(t) {
+      const hasAnalysis = t.sensei?.analysis;
+      const hasResponse = t.sensei?.response;
+      const hasNotes = t.sensei?.notes;
+      const isAssisted = t.sensei;
       
-      grid.innerHTML = filtered.map(c => `
-        <div class="case-card status-${c.status}">
-          <div class="case-header">
-            <span class="case-id">${escapeHtml(c.ticketId)}</span>
-            <span class="case-status status-${c.status}">${c.status}</span>
+      return `
+        <div class="ticket-card ${isAssisted ? 'sensei-assisted' : ''}" id="ticket-${t.id}">
+          <div class="ticket-id-col">
+            <span class="ticket-id">
+              <a href="https://telnyx.zendesk.com/agent/tickets/${t.id}" target="_blank">#${t.id}</a>
+            </span>
+            <span class="ticket-status status-${t.status}">${t.status}</span>
           </div>
-          <div class="case-title">${escapeHtml(c.title)}</div>
-          <div class="case-meta">
-            ${c.customer ? `<strong>Customer:</strong> ${escapeHtml(c.customer)} · ` : ''}
-            ${c.category ? `<strong>Category:</strong> ${c.category} · ` : ''}
-            <strong>Updated:</strong> ${formatDate(c.updatedAt)}
+          
+          <div class="ticket-content">
+            <div class="ticket-title">${escapeHtml(t.subject)}</div>
+            <div class="ticket-meta">
+              <span class="ticket-customer">${escapeHtml(t.customer)}</span>
+              ${t.priority === 'urgent' ? ' · <span style="color: var(--danger);">⚡ Urgent</span>' : ''}
+              ${t.priority === 'high' ? ' · <span style="color: var(--warning);">High</span>' : ''}
+            </div>
+            <div class="ticket-tags">
+              <span class="ticket-tag ${getCategoryClass(t.category)}">${t.category}</span>
+              ${(t.sensei?.tags || []).slice(0, 3).map(tag => 
+                `<span class="ticket-tag">${escapeHtml(tag)}</span>`
+              ).join('')}
+            </div>
           </div>
-          ${c.findings ? `
-            <div class="case-section">
-              <div class="case-section-title">Root Cause / Findings</div>
-              <div class="case-findings">${escapeHtml(c.findings)}</div>
+          
+          <div class="ticket-actions">
+            <div class="sensei-badges">
+              <span class="sensei-badge analysis ${hasAnalysis ? 'active' : ''}" title="Analysis provided">🔍</span>
+              <span class="sensei-badge response ${hasResponse ? 'active' : ''}" title="Response drafted">💬</span>
+              <span class="sensei-badge notes ${hasNotes ? 'active' : ''}" title="Notes/findings">📝</span>
             </div>
-          ` : ''}
-          ${c.notes ? `
-            <div class="case-section">
-              <div class="case-section-title">Notes</div>
-              <div class="case-notes">${escapeHtml(c.notes)}</div>
-            </div>
-          ` : ''}
-          ${c.response ? `
-            <div class="case-section">
-              <div class="case-section-title">Response</div>
-              <div class="case-response">${escapeHtml(c.response)}</div>
-            </div>
-          ` : ''}
-          ${c.tags && c.tags.length ? `
-            <div class="case-tags">
-              ${c.tags.map(t => `<span class="case-tag">${escapeHtml(t)}</span>`).join('')}
-            </div>
-          ` : ''}
-          <div class="case-actions">
-            <button class="btn-secondary btn-small" onclick="editCase('${c.id}')">Edit</button>
-            <button class="btn-secondary btn-small" onclick="copyResponse('${c.id}')">Copy Response</button>
-            <button class="btn-danger btn-small" onclick="deleteCase('${c.id}')">Delete</button>
+            ${isAssisted ? `<button class="expand-btn" onclick="toggleExpand(${t.id})">Details</button>` : ''}
           </div>
+          
+          ${isAssisted ? `
+            <div class="sensei-details">
+              ${t.sensei.findings ? `
+                <div class="sensei-section">
+                  <div class="sensei-section-title">🔍 Analysis / Root Cause</div>
+                  <div class="sensei-section-content">${escapeHtml(t.sensei.findings)}</div>
+                </div>
+              ` : ''}
+              ${t.sensei.draftResponse ? `
+                <div class="sensei-section">
+                  <div class="sensei-section-title">💬 Draft Response</div>
+                  <div class="sensei-section-content">${escapeHtml(t.sensei.draftResponse)}</div>
+                </div>
+              ` : ''}
+              ${t.sensei.internalNotes ? `
+                <div class="sensei-section">
+                  <div class="sensei-section-title">📝 Internal Notes</div>
+                  <div class="sensei-section-content">${escapeHtml(t.sensei.internalNotes)}</div>
+                </div>
+              ` : ''}
+            </div>
+          ` : ''}
         </div>
-      `).join('');
+      `;
     }
     
-    function openModal(caseId = null) {
-      const modal = document.getElementById('modalOverlay');
-      const form = document.getElementById('caseForm');
-      const title = document.getElementById('modalTitle');
-      
-      form.reset();
-      document.getElementById('caseId').value = '';
-      
-      if (caseId) {
-        const c = cases.find(x => x.id === caseId);
-        if (c) {
-          title.textContent = 'Edit Case';
-          document.getElementById('caseId').value = c.id;
-          document.getElementById('caseTicketId').value = c.ticketId;
-          document.getElementById('caseTitle').value = c.title;
-          document.getElementById('caseCustomer').value = c.customer || '';
-          document.getElementById('caseCategory').value = c.category || '';
-          document.getElementById('caseStatus').value = c.status;
-          document.getElementById('caseFindings').value = c.findings || '';
-          document.getElementById('caseNotes').value = c.notes || '';
-          document.getElementById('caseResponse').value = c.response || '';
-          document.getElementById('caseTags').value = (c.tags || []).join(', ');
-        }
-      } else {
-        title.textContent = 'New Case';
-      }
-      
-      modal.classList.add('active');
-    }
-    
-    function closeModal(event) {
-      if (event && event.target !== event.currentTarget) return;
-      document.getElementById('modalOverlay').classList.remove('active');
-    }
-    
-    function editCase(id) {
-      openModal(id);
-    }
-    
-    function deleteCase(id) {
-      if (confirm('Delete this case?')) {
-        cases = cases.filter(c => c.id !== id);
-        saveCasesLocal();
-        renderCases();
-        showToast('Case deleted (local only - Sensei will sync)');
-      }
-    }
-    
-    function copyResponse(id) {
-      const c = cases.find(x => x.id === id);
-      if (c && c.response) {
-        navigator.clipboard.writeText(c.response);
-        showToast('Response copied to clipboard');
-      }
-    }
-    
-    function saveCase(event) {
-      event.preventDefault();
-      
-      const id = document.getElementById('caseId').value || generateId();
-      const tags = document.getElementById('caseTags').value
-        .split(',')
-        .map(t => t.trim())
-        .filter(t => t);
-      
-      const caseData = {
-        id,
-        ticketId: document.getElementById('caseTicketId').value,
-        title: document.getElementById('caseTitle').value,
-        customer: document.getElementById('caseCustomer').value,
-        category: document.getElementById('caseCategory').value,
-        status: document.getElementById('caseStatus').value,
-        findings: document.getElementById('caseFindings').value,
-        notes: document.getElementById('caseNotes').value,
-        response: document.getElementById('caseResponse').value,
-        tags,
-        updatedAt: new Date().toISOString()
-      };
-      
-      const existingIndex = cases.findIndex(c => c.id === id);
-      if (existingIndex >= 0) {
-        caseData.createdAt = cases[existingIndex].createdAt;
-        cases[existingIndex] = caseData;
-      } else {
-        caseData.createdAt = caseData.updatedAt;
-        cases.push(caseData);
-      }
-      
-      saveCasesLocal();
-      renderCases();
-      closeModal();
-      showToast('Case saved (local - Sensei will sync)');
-    }
-    
-    function showToast(message) {
-      const toast = document.getElementById('toast');
-      toast.textContent = message;
-      toast.classList.add('show');
-      setTimeout(() => toast.classList.remove('show'), 3000);
-    }
-    
-    function generateId() {
-      return 'case-' + Date.now().toString(36) + Math.random().toString(36).substr(2);
-    }
-    
-    function formatDate(iso) {
-      const d = new Date(iso);
-      const now = new Date();
-      const diffMs = now - d;
-      const diffMins = Math.floor(diffMs / 60000);
-      const diffHours = Math.floor(diffMs / 3600000);
-      const diffDays = Math.floor(diffMs / 86400000);
-      
-      if (diffMins < 1) return 'Just now';
-      if (diffMins < 60) return `${diffMins}m ago`;
-      if (diffHours < 24) return `${diffHours}h ago`;
-      if (diffDays < 7) return `${diffDays}d ago`;
-      
-      return d.toLocaleDateString();
+    function toggleExpand(id) {
+      const card = document.getElementById('ticket-' + id);
+      card.classList.toggle('expanded');
+      const btn = card.querySelector('.expand-btn');
+      btn.textContent = card.classList.contains('expanded') ? 'Collapse' : 'Details';
     }
     
     function escapeHtml(str) {
@@ -827,14 +903,6 @@
       return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     }
     
-    // Keyboard shortcuts
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeModal();
-      if (e.key === 'n' && e.ctrlKey) { e.preventDefault(); openModal(); }
-      if (e.key === 'r' && e.ctrlKey) { e.preventDefault(); syncFromServer(); }
-    });
-    
-    // Initialize
     init();
   </script>
 </body>
