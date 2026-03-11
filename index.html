@@ -60,6 +60,119 @@
     
     h1 span { color: var(--accent); }
     
+    /* Activity Panel */
+    .activity-panel {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    
+    .activity-panel.working {
+      border-color: var(--accent);
+      background: linear-gradient(90deg, rgba(0,212,170,0.1), transparent);
+      animation: glow 2s ease-in-out infinite;
+    }
+    
+    @keyframes glow {
+      0%, 100% { box-shadow: 0 0 5px rgba(0,212,170,0.2); }
+      50% { box-shadow: 0 0 20px rgba(0,212,170,0.4); }
+    }
+    
+    .activity-indicator {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      background: var(--bg-tertiary);
+      flex-shrink: 0;
+    }
+    
+    .activity-panel.working .activity-indicator {
+      animation: pulse-icon 1.5s ease-in-out infinite;
+    }
+    
+    @keyframes pulse-icon {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+    
+    .activity-content {
+      flex: 1;
+      min-width: 0;
+    }
+    
+    .activity-state {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    
+    .activity-state.idle { color: var(--text-secondary); }
+    .activity-state.thinking { color: var(--warning); }
+    .activity-state.working { color: var(--accent); }
+    .activity-state.responding { color: var(--success); }
+    
+    .activity-message {
+      font-size: 13px;
+      color: var(--text-secondary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    .activity-ticket {
+      font-family: monospace;
+      background: var(--bg-tertiary);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 12px;
+      color: var(--accent);
+    }
+    
+    .activity-time {
+      font-size: 11px;
+      color: var(--text-secondary);
+      text-align: right;
+      flex-shrink: 0;
+    }
+    
+    .activity-duration {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    
+    .thinking-dots {
+      display: inline-flex;
+      gap: 4px;
+      margin-left: 8px;
+    }
+    
+    .thinking-dots span {
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: bounce 1.4s infinite ease-in-out;
+    }
+    
+    .thinking-dots span:nth-child(1) { animation-delay: 0s; }
+    .thinking-dots span:nth-child(2) { animation-delay: 0.2s; }
+    .thinking-dots span:nth-child(3) { animation-delay: 0.4s; }
+    
+    @keyframes bounce {
+      0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+      40% { transform: scale(1); opacity: 1; }
+    }
+    
     /* Summary Cards */
     .summary-grid {
       display: grid;
@@ -492,6 +605,24 @@
       </div>
     </header>
     
+    <!-- Activity Panel -->
+    <div class="activity-panel" id="activityPanel">
+      <div class="activity-indicator" id="activityIcon">🎯</div>
+      <div class="activity-content">
+        <div class="activity-state idle" id="activityState">
+          Idle
+          <span class="thinking-dots" id="thinkingDots" style="display: none;">
+            <span></span><span></span><span></span>
+          </span>
+        </div>
+        <div class="activity-message" id="activityMessage">Ready — waiting for tasks</div>
+      </div>
+      <div class="activity-time">
+        <div class="activity-duration" id="activityDuration">—</div>
+        <div id="activityTimestamp">Last updated: —</div>
+      </div>
+    </div>
+    
     <!-- Summary Cards -->
     <div class="summary-grid">
       <div class="summary-card highlight">
@@ -685,6 +816,79 @@
       await loadCases();
       mergeData();
       render();
+      await pollActivity();
+      setInterval(pollActivity, 3000); // Poll every 3 seconds
+    }
+    
+    let activityStartTime = null;
+    
+    async function pollActivity() {
+      try {
+        const res = await fetch('status.json?t=' + Date.now());
+        if (res.ok) {
+          const status = await res.json();
+          updateActivityPanel(status);
+        }
+      } catch (e) {
+        // Status file not available
+        updateActivityPanel({ state: 'idle', message: 'Status unavailable' });
+      }
+    }
+    
+    function updateActivityPanel(status) {
+      const panel = document.getElementById('activityPanel');
+      const icon = document.getElementById('activityIcon');
+      const stateEl = document.getElementById('activityState');
+      const messageEl = document.getElementById('activityMessage');
+      const durationEl = document.getElementById('activityDuration');
+      const timestampEl = document.getElementById('activityTimestamp');
+      const dots = document.getElementById('thinkingDots');
+      
+      const isWorking = status.state !== 'idle';
+      panel.classList.toggle('working', isWorking);
+      
+      // State icons and labels
+      const stateConfig = {
+        idle: { icon: '🎯', label: 'Ready', class: 'idle' },
+        thinking: { icon: '🤔', label: 'Thinking', class: 'thinking' },
+        analyzing: { icon: '🔍', label: 'Analyzing', class: 'working' },
+        researching: { icon: '📚', label: 'Researching', class: 'working' },
+        drafting: { icon: '✍️', label: 'Drafting Response', class: 'responding' },
+        processing: { icon: '⚙️', label: 'Processing', class: 'working' }
+      };
+      
+      const config = stateConfig[status.state] || stateConfig.idle;
+      icon.textContent = config.icon;
+      stateEl.textContent = config.label;
+      stateEl.className = 'activity-state ' + config.class;
+      
+      // Show/hide thinking dots
+      dots.style.display = isWorking ? 'inline-flex' : 'none';
+      
+      // Message with ticket badge if applicable
+      let message = status.message || 'Ready — waiting for tasks';
+      if (status.ticketId) {
+        message = `<span class="activity-ticket">#${status.ticketId}</span> ${message}`;
+      }
+      messageEl.innerHTML = message;
+      
+      // Duration
+      if (isWorking && status.startedAt) {
+        const start = new Date(status.startedAt);
+        const now = new Date();
+        const secs = Math.floor((now - start) / 1000);
+        const mins = Math.floor(secs / 60);
+        const s = secs % 60;
+        durationEl.textContent = mins > 0 ? `${mins}m ${s}s` : `${s}s`;
+      } else {
+        durationEl.textContent = '—';
+      }
+      
+      // Timestamp
+      if (status.updatedAt) {
+        const updated = new Date(status.updatedAt);
+        timestampEl.textContent = 'Updated: ' + updated.toLocaleTimeString();
+      }
     }
     
     async function loadCases() {
