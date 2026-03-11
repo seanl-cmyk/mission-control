@@ -1,4 +1,19 @@
 {
-  "cases": [],
-  "lastUpdated": "2026-03-11T00:17:00Z"
+  "cases": [
+    {
+      "id": "case-2738674",
+      "ticketId": "2738674",
+      "title": "Audio quality issues - one-way audio and mid-call audio drop",
+      "customer": "CloudTalk (59e5330a-9118-47d6-8049-9e896dfbfe74)",
+      "category": "voice",
+      "status": "open",
+      "findings": "**Example 1 (Albania):** Found\n- UUID: 4318d212-1bb6-11f1-bd45-02420aef94a0\n- Route: +35724021783 → +355694812005 (Albania Mobile Vodafone)\n- Duration: 118 sec | MOS: 4.49 | Quality: 98.4%\n- Hangup: NORMAL_CLEARING (recv_bye from customer side)\n- Issue: Customer reports audio vanished at ~1:40 and heard dial tone\n- Analysis: CDR shows good quality metrics but MOS is averaged. recv_bye indicates CloudTalk side terminated. Possible far-end issue or call transfer.\n\n**Examples 2 & 3 (Georgia +995322044044):** NOT FOUND in CDR\n- SIP Call IDs provided but ClickHouse queries timing out\n- Destination number +995322044044 has no matching CDRs\n- Issue: External party claimed they couldn't hear end-user (outbound one-way audio)",
+      "notes": "SIP Call IDs provided:\n- Ex 2: 337b67bf2454f02705b8817a0b252cfa@sip-trunks-euc1.cloudtalk.io\n- Ex 3: 785cf9677397f4ec774cc5133aa6d472@sip-trunks-euc1.cloudtalk.io\n\nTimes (CET):\n- Ex 1: 2026-03-09 13:48:23\n- Ex 2: 2026-03-10 08:58:00\n- Ex 3: 2026-03-10 08:46:41\n\nClickHouse CDR queries timing out on sip_call_id lookups. May need PCAP extraction or carrier escalation for Georgia calls.",
+      "response": "",
+      "tags": ["one-way-audio", "audio-quality", "cloudtalk", "albania", "georgia"],
+      "createdAt": "2026-03-11T16:09:00Z",
+      "updatedAt": "2026-03-11T16:25:00Z"
+    }
+  ],
+  "lastUpdated": "2026-03-11T16:25:00Z"
 }
