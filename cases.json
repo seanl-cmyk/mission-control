@@ -1,19 +1,47 @@
 {
   "cases": [
     {
+      "id": "case-2737363",
+      "ticketId": "2737363",
+      "title": "Sydney AU Anchorsite routing to EU instead of Australia",
+      "customer": "Axient Pty Ltd (94ecb5e2-6ce4-4996-99dd-b1e3d073962b)",
+      "category": "voice",
+      "status": "pending",
+      "findings": "**Sample Call Analysis (f736cfb3-07a5-4964-bd6c-b2575904c26c):**\n- Call Time: 2026-03-09 07:33 UTC\n- B2BUA: tel-ams3-ibm-prod-226 (Amsterdam, EU)\n- RTP Media IP: 185.246.41.142 (EU)\n- Customer IP: 103.26.174.36 (Australia)\n- Connection: AXIENT-SIPIP-HAMMONDCARE (ID: 2853437661459252907)\n\n**Issue:** Customer had Sydney configured but calls routed to EU.\n\n**Current Config (post-change):**\n- SIP Region: Australia\n- Anchorsite Override: Chicago, IL (changed as workaround)\n- Connection updated: 2026-03-09 22:02 UTC (15h after sample call)\n\n**Root Cause:** Unknown - historical routing logs aged out. Need fresh test call with Sydney config to determine if issue is ongoing or was temporary.",
+      "notes": "Customer changed anchorsite to Chicago as workaround after experiencing the issue.\n\nRequested customer to:\n1. Change anchorsite back to Sydney\n2. Place test call\n3. Provide new Call ID for real-time analysis\n\nAwaiting customer response.",
+      "response": "Confirmed EU routing in sample call. Requested customer to run live test with Sydney config to determine if issue persists.",
+      "tags": ["anchorsite", "sydney", "rtp-routing", "australia", "eu-routing", "axient"],
+      "createdAt": "2026-03-10T00:03:22Z",
+      "updatedAt": "2026-03-11T23:23:00Z"
+    },
+    {
       "id": "case-2738674",
       "ticketId": "2738674",
       "title": "Audio quality issues - one-way audio and mid-call audio drop",
       "customer": "CloudTalk (59e5330a-9118-47d6-8049-9e896dfbfe74)",
       "category": "voice",
       "status": "pending",
-      "findings": "**Example 1 (Albania +355694812005):**\n- UUID: 4318d212-1bb6-11f1-bd45-02420aef94a0\n- Duration: 118 sec | MOS: 4.49 | Quality: 98.4%\n- B2BUA: b2bua-canary.tel-lv1-prox-prod-610\n- Root Cause: SIP re-INVITE at 1:09 caused brief audio disruption\n- Verdict: No Telnyx-side issue\n\n**Example 2 (Georgia +995322044044):**\n- UUID: e1987bfe-1c56-11f1-8074-02420aef8d1f\n- SIP Call-ID: 785cf9677397f4ec774cc5133aa6d472@sip-trunks-euc1.cloudtalk.io\n- Time: 2026-03-10 07:58:09 UTC\n- B2BUA: tel-nj1-prox-prod-654 (canary)\n- Carrier: DeutscheTelecom (194.25.206.x)\n- Inbound MOS: 4.49 ✓ | Outbound MOS: 1.0 ✗\n- Root Cause: Media path asymmetry - RTP not returning from carrier\n\n**Example 3 (Georgia +995322044044):**\n- UUID: 899724a6-1c55-11f1-a5a6-02420aef8e1f\n- SIP Call-ID: 337b67bf2454f02705b8817a0b252cfa@sip-trunks-euc1.cloudtalk.io\n- Time: 2026-03-10 07:48:32 UTC\n- B2BUA: tel-nj1-prox-prod-654 (canary)\n- Carrier: DeutscheTelecom (194.25.206.x)\n- Inbound MOS: 4.49 ✓ | Outbound MOS: 1.0 ✗\n- Root Cause: Same as Ex 2 - outbound leg showing zero RTP packets\n\n**Conclusion:** Customer-side NOT at fault. Georgia routing via DeutscheTelecom vendor has systematic media path issue.",
-      "notes": "TREAT Analysis Complete:\n- Ex 2: http://treat.query.prod.telnyx.io:4000/?rtc-id=785cf9677397f4ec774cc5133aa6d472%40sip-trunks-euc1.cloudtalk.io\n- Ex 3: http://treat.query.prod.telnyx.io:4000/?rtc-id=337b67bf2454f02705b8817a0b252cfa%40sip-trunks-euc1.cloudtalk.io\n\nBoth Georgia calls routed via same B2BUA (tel-nj1-prox-prod-654) and same carrier (DeutscheTelecom). Issue is systematic on Georgia route.\n\nEscalated to carrier team for investigation.",
-      "response": "Customer notified that Ex 1 (Albania) was a session timer refresh issue. Ex 2 & 3 (Georgia) identified as carrier-side media path issue - escalated to carrier team for investigation of DeutscheTelecom Georgia routing.",
+      "findings": "**Example 1 (Albania +355694812005):**\n- UUID: 4318d212-1bb6-11f1-bd45-02420aef94a0\n- Duration: 118 sec | MOS: 4.49 | Quality: 98.4%\n- Root Cause: SIP re-INVITE at 1:09 caused brief audio disruption\n- Verdict: Session timer refresh, not Telnyx issue\n\n**Example 2 & 3 (Georgia +995322044044):**\n- Ex 2 UUID: e1987bfe-1c56-11f1-8074-02420aef8d1f\n- Ex 3 UUID: 899724a6-1c55-11f1-a5a6-02420aef8e1f\n- B2BUA: tel-nj1-prox-prod-654\n- Carrier: DeutscheTelecom (194.25.206.x)\n- Inbound MOS: 4.49 ✓ | Outbound MOS: 1.0 ✗\n- Root Cause: Media path asymmetry - RTP not returning from carrier\n\n**Conclusion:** Georgia routing via DeutscheTelecom has systematic media path issue.",
+      "notes": "TREAT Analysis links:\n- Ex 2: http://treat.query.prod.telnyx.io:4000/?rtc-id=785cf9677397f4ec774cc5133aa6d472%40sip-trunks-euc1.cloudtalk.io\n- Ex 3: http://treat.query.prod.telnyx.io:4000/?rtc-id=337b67bf2454f02705b8817a0b252cfa%40sip-trunks-euc1.cloudtalk.io\n\nEscalated to carrier team for DeutscheTelecom Georgia routing investigation.",
+      "response": "Ex 1 (Albania): Session timer refresh issue, not Telnyx fault.\nEx 2 & 3 (Georgia): Carrier-side media path issue identified, escalated to carrier team.",
       "tags": ["one-way-audio", "audio-quality", "cloudtalk", "albania", "georgia", "carrier-escalation", "deutschetelecom"],
       "createdAt": "2026-03-11T16:09:00Z",
       "updatedAt": "2026-03-11T18:02:00Z"
+    },
+    {
+      "id": "case-2735737",
+      "ticketId": "2735737",
+      "title": "Feb 2026 bill question - negative balance clarification",
+      "customer": "Replicant Solutions Inc (dliciu@replicant.ai)",
+      "category": "billing",
+      "status": "resolved",
+      "findings": "**Invoice #0094 (Feb 1-28, 2026):**\n- Feb charges: $2,934.94 (including $150 CC fee + $35.62 taxes)\n- Balance as of Jan 31: $1,838.80 credit\n- Payment received Feb 10: $5,150.00\n- Balance as of Feb 28: $4,053.87 credit\n- Current balance (Mar 10): $2,908.71 credit\n\n**Summary:** Customer has credit balance, no payment due. March charges ($1,145.16) have started accruing against credit.",
+      "notes": "Customer confused by negative balance on invoice. Explained that negative = credit balance.\n\nBreakdown provided:\n- Started with $1,838.80 credit\n- Added $5,150 payment\n- Less $2,934.94 Feb charges\n- = $4,053.87 credit at end of Feb\n- Less $1,145.16 March usage to date\n- = $2,908.71 current credit",
+      "response": "Confirmed Feb charges are $2,934.94 but no payment needed - account has $2,908.71 credit balance that will apply to future invoices.",
+      "tags": ["billing", "invoice", "credit-balance", "replicant"],
+      "createdAt": "2026-03-09T15:12:25Z",
+      "updatedAt": "2026-03-11T20:42:00Z"
     }
   ],
-  "lastUpdated": "2026-03-11T18:02:00Z"
+  "lastUpdated": "2026-03-11T23:24:00Z"
 }
