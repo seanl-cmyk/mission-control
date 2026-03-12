@@ -1,7 +1,7 @@
 {
-  "state": "analyzing",
-  "message": "Reading ticket #2729339",
+  "state": "investigating",
+  "message": "Call 72b19dd4-1c87-11f1-b4f1-02420a1f0a69",
   "ticketId": "2729339",
-  "startedAt": "2026-03-12T18:17:01Z",
-  "updatedAt": "2026-03-12T18:17:01Z"
+  "startedAt": "2026-03-12T18:17:32Z",
+  "updatedAt": "2026-03-12T18:17:32Z"
 }
