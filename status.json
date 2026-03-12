@@ -1,7 +1,7 @@
 {
-  "state": "drafting",
-  "message": "Summarizing ticket #2740502 findings",
-  "ticketId": "2740502",
-  "startedAt": "2026-03-12T17:34:51Z",
-  "updatedAt": "2026-03-12T17:34:51Z"
+  "state": "idle",
+  "message": "Ready",
+  "ticketId": null,
+  "startedAt": null,
+  "updatedAt": "2026-03-12T18:11:53Z"
 }
