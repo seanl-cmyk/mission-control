@@ -1,7 +1,7 @@
 {
-  "state": "idle",
-  "message": "Ready",
-  "ticketId": null,
-  "startedAt": null,
-  "updatedAt": "2026-03-12T17:33:09Z"
+  "state": "analyzing",
+  "message": "Reading ticket #2740502",
+  "ticketId": "2740502",
+  "startedAt": "2026-03-12T17:33:30Z",
+  "updatedAt": "2026-03-12T17:33:30Z"
 }
