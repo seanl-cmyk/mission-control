@@ -1,7 +1,7 @@
 {
-  "state": "idle",
-  "message": "Ready — #2742291 analysis complete",
+  "state": "analyzing",
+  "message": "TREAT analysis on call f6856d86-1ca3-11f1-a990-02420aef97a0",
   "ticketId": null,
-  "startedAt": null,
-  "updatedAt": "2026-03-12T16:48:25Z"
+  "startedAt": "2026-03-12T16:49:35Z",
+  "updatedAt": "2026-03-12T16:49:35Z"
 }
