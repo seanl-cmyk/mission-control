@@ -1,7 +1,7 @@
 {
-  "state": "drafting",
-  "message": "Crafting WWDD-style customer response",
-  "ticketId": "2742291",
-  "startedAt": "2026-03-12T16:11:44Z",
-  "updatedAt": "2026-03-12T16:11:44Z"
+  "state": "idle",
+  "message": "Ready — #2742291 analysis complete",
+  "ticketId": null,
+  "startedAt": null,
+  "updatedAt": "2026-03-12T16:48:25Z"
 }
