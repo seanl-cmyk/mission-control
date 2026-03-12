@@ -1,7 +1,7 @@
 {
-  "state": "analyzing",
-  "message": "Testing live updates — can you see this?",
+  "state": "idle",
+  "message": "Ready — live updates working!",
   "ticketId": null,
-  "startedAt": "2026-03-12T00:05:53Z",
-  "updatedAt": "2026-03-12T00:05:53Z"
+  "startedAt": null,
+  "updatedAt": "2026-03-12T00:06:04Z"
 }
