@@ -1,7 +1,7 @@
 {
   "state": "idle",
-  "message": "Ready — test complete",
+  "message": "Ready — standing by",
   "ticketId": null,
   "startedAt": null,
-  "updatedAt": "2026-03-12T00:01:30Z"
+  "updatedAt": "2026-03-12T00:05:02Z"
 }
