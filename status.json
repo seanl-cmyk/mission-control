@@ -1,7 +1,7 @@
 {
-  "state": "idle",
-  "message": "Ready — live updates working!",
+  "state": "thinking",
+  "message": "Waiting for Sean to open the dashboard...",
   "ticketId": null,
-  "startedAt": null,
-  "updatedAt": "2026-03-12T00:06:04Z"
+  "startedAt": "2026-03-12T00:07:52Z",
+  "updatedAt": "2026-03-12T00:07:52Z"
 }
