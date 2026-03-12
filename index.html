@@ -822,16 +822,27 @@
     
     let activityStartTime = null;
     
+    // Live status endpoint (CORS-enabled server on Sean's machine)
+    const STATUS_URL = 'http://seanl-clawd-bot.ipa.corp.telnyx.com:8081/status.json';
+    
     async function pollActivity() {
       try {
-        const res = await fetch('status.json?t=' + Date.now());
+        const res = await fetch(STATUS_URL + '?t=' + Date.now());
         if (res.ok) {
           const status = await res.json();
           updateActivityPanel(status);
         }
       } catch (e) {
-        // Status file not available
-        updateActivityPanel({ state: 'idle', message: 'Status unavailable' });
+        // Fall back to local status.json if remote unavailable
+        try {
+          const localRes = await fetch('status.json?t=' + Date.now());
+          if (localRes.ok) {
+            const status = await localRes.json();
+            updateActivityPanel(status);
+          }
+        } catch (e2) {
+          updateActivityPanel({ state: 'idle', message: 'Status unavailable — server offline' });
+        }
       }
     }
     
