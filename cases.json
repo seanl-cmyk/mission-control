@@ -1,6 +1,26 @@
 {
   "cases": [
     {
+      "id": "case-2742291",
+      "ticketId": "2742291",
+      "title": "Conferencing Issue: Caller can't get back to original caller",
+      "customer": "Kauneonga (90f91408-c7b1-41d3-b5cc-0389b71ec5c8)",
+      "category": "voice",
+      "status": "pending",
+      "findings": "**Pattern identified across all 3 examples:**\nAgent leg disconnects before conference dial-out completes, leaving original caller stranded.\n\n**Call a7cfa766 timeline:**\n- 19:24:02 — Agent bridged to caller\n- 19:28:09 — Agent leg disconnected\n- 19:30:35 — Conference dial-outs initiated (2+ min after agent gone)\n- 19:30:53 — Conference targets answered but never bridged\n- 19:32:52 — Original caller hung up after 4+ min alone\n\n**Call a2988de8 timeline:**\n- 15:12:02 — Agent bridged\n- 15:13:31 — Agent leg disconnected\n- 15:13:43 — Conference dial-outs started after agent dropped\n- 15:15:05 — Original caller hung up\n\n**Root Cause:** Call Control flow timing issue — conference dial-outs created after agent has disconnected. No active agent leg to bridge conference participants to.",
+      "notes": "Customer mentioned `end_conference_on_exit: false` setting but this is unrelated — that controls behavior when someone leaves an established conference. Here the conference never properly forms.\n\nThis is a customer-side Call Control implementation issue, not a Telnyx platform bug.\n\nAsked customer:\n1. What triggers agent leg hangup?\n2. Is there webhook handling to prevent conference initiation if agent is gone?\n3. Can they share Call Control webhook handler code?",
+      "response": "Analysis complete. Agent leg disconnects before conference completes. Conference dial-outs happen after agent is gone, leaving original caller stranded. This is a Call Control flow timing issue in customer implementation.",
+      "tags": [
+        "call-control",
+        "conference",
+        "bridge-failure",
+        "kauneonga",
+        "customer-implementation"
+      ],
+      "createdAt": "2026-03-11T15:44:24Z",
+      "updatedAt": "2026-03-12T16:48:00Z"
+    },
+    {
       "id": "case-2737363",
       "ticketId": "2737363",
       "title": "Sydney AU Anchorsite routing to EU instead of Australia",
@@ -10,7 +30,14 @@
       "findings": "**Sample Call Analysis (f736cfb3-07a5-4964-bd6c-b2575904c26c):**\n- Call Time: 2026-03-09 07:33 UTC\n- B2BUA: tel-ams3-ibm-prod-226 (Amsterdam, EU)\n- RTP Media IP: 185.246.41.142 (EU)\n- Customer IP: 103.26.174.36 (Australia)\n- Connection: AXIENT-SIPIP-HAMMONDCARE (ID: 2853437661459252907)\n\n**Issue:** Customer had Sydney configured but calls routed to EU.\n\n**Current Config (post-change):**\n- SIP Region: Australia\n- Anchorsite Override: Chicago, IL (changed as workaround)\n- Connection updated: 2026-03-09 22:02 UTC (15h after sample call)\n\n**Root Cause:** Unknown - historical routing logs aged out. Need fresh test call with Sydney config to determine if issue is ongoing or was temporary.",
       "notes": "Customer changed anchorsite to Chicago as workaround after experiencing the issue.\n\nRequested customer to:\n1. Change anchorsite back to Sydney\n2. Place test call\n3. Provide new Call ID for real-time analysis\n\nAwaiting customer response.",
       "response": "Confirmed EU routing in sample call. Requested customer to run live test with Sydney config to determine if issue persists.",
-      "tags": ["anchorsite", "sydney", "rtp-routing", "australia", "eu-routing", "axient"],
+      "tags": [
+        "anchorsite",
+        "sydney",
+        "rtp-routing",
+        "australia",
+        "eu-routing",
+        "axient"
+      ],
       "createdAt": "2026-03-10T00:03:22Z",
       "updatedAt": "2026-03-11T23:23:00Z"
     },
@@ -24,7 +51,15 @@
       "findings": "**Example 1 (Albania +355694812005):**\n- UUID: 4318d212-1bb6-11f1-bd45-02420aef94a0\n- Duration: 118 sec | MOS: 4.49 | Quality: 98.4%\n- Root Cause: SIP re-INVITE at 1:09 caused brief audio disruption\n- Verdict: Session timer refresh, not Telnyx issue\n\n**Example 2 & 3 (Georgia +995322044044):**\n- Ex 2 UUID: e1987bfe-1c56-11f1-8074-02420aef8d1f\n- Ex 3 UUID: 899724a6-1c55-11f1-a5a6-02420aef8e1f\n- B2BUA: tel-nj1-prox-prod-654\n- Carrier: DeutscheTelecom (194.25.206.x)\n- Inbound MOS: 4.49 ✓ | Outbound MOS: 1.0 ✗\n- Root Cause: Media path asymmetry - RTP not returning from carrier\n\n**Conclusion:** Georgia routing via DeutscheTelecom has systematic media path issue.",
       "notes": "TREAT Analysis links:\n- Ex 2: http://treat.query.prod.telnyx.io:4000/?rtc-id=785cf9677397f4ec774cc5133aa6d472%40sip-trunks-euc1.cloudtalk.io\n- Ex 3: http://treat.query.prod.telnyx.io:4000/?rtc-id=337b67bf2454f02705b8817a0b252cfa%40sip-trunks-euc1.cloudtalk.io\n\nEscalated to carrier team for DeutscheTelecom Georgia routing investigation.",
       "response": "Ex 1 (Albania): Session timer refresh issue, not Telnyx fault.\nEx 2 & 3 (Georgia): Carrier-side media path issue identified, escalated to carrier team.",
-      "tags": ["one-way-audio", "audio-quality", "cloudtalk", "albania", "georgia", "carrier-escalation", "deutschetelecom"],
+      "tags": [
+        "one-way-audio",
+        "audio-quality",
+        "cloudtalk",
+        "albania",
+        "georgia",
+        "carrier-escalation",
+        "deutschetelecom"
+      ],
       "createdAt": "2026-03-11T16:09:00Z",
       "updatedAt": "2026-03-11T18:02:00Z"
     },
@@ -38,10 +73,79 @@
       "findings": "**Invoice #0094 (Feb 1-28, 2026):**\n- Feb charges: $2,934.94 (including $150 CC fee + $35.62 taxes)\n- Balance as of Jan 31: $1,838.80 credit\n- Payment received Feb 10: $5,150.00\n- Balance as of Feb 28: $4,053.87 credit\n- Current balance (Mar 10): $2,908.71 credit\n\n**Summary:** Customer has credit balance, no payment due. March charges ($1,145.16) have started accruing against credit.",
       "notes": "Customer confused by negative balance on invoice. Explained that negative = credit balance.\n\nBreakdown provided:\n- Started with $1,838.80 credit\n- Added $5,150 payment\n- Less $2,934.94 Feb charges\n- = $4,053.87 credit at end of Feb\n- Less $1,145.16 March usage to date\n- = $2,908.71 current credit",
       "response": "Confirmed Feb charges are $2,934.94 but no payment needed - account has $2,908.71 credit balance that will apply to future invoices.",
-      "tags": ["billing", "invoice", "credit-balance", "replicant"],
+      "tags": [
+        "billing",
+        "invoice",
+        "credit-balance",
+        "replicant"
+      ],
       "createdAt": "2026-03-09T15:12:25Z",
       "updatedAt": "2026-03-11T20:42:00Z"
+    },
+    {
+      "id": "case-2745916",
+      "ticketId": "2745916",
+      "title": "SMS Delivery Failures - Error 40002/40008",
+      "customer": "ClearDent (acf0cad5-13f5-494a-9f07-8bb11c9653a0)",
+      "category": "messaging",
+      "status": "resolved",
+      "findings": "**Root Cause:** Canadian carrier-level A2P filtering of unregistered long code traffic.\n\nMessages passed Telnyx/Proofpoint anti-spam (verdict: legit) but carriers rejected:\n- Bell: REJECTD:41A\n- Rogers/Fido: REJECTD:402\n\n**Key Finding:** No TCR campaign registration (tcr_campaign_id: null). Customer sending dental appointment reminders from unregistered long codes.\n\n**Message samples analyzed:**\n- 40319cc9-cfc0-4c52-9fdb-276c5255bd02 (Bell)\n- 40319cde-2d3d-4c31-b798-7b2f99e21e77 (Rogers)\n- 40319cbb-0428-427b-9158-14279454b474 (Fido)",
+      "notes": "Canadian carriers have their own A2P filtering independent of US 10DLC - no centralized registration system but aggressive pattern detection.\n\nRecommended toll-free verification for Canada A2P messaging.",
+      "response": "Carrier-level rejections, not Telnyx blocking. Recommended toll-free number with verification for reliable Canada A2P delivery.",
+      "tags": [
+        "sms",
+        "a2p",
+        "canada",
+        "spam-filter",
+        "carrier-rejection",
+        "toll-free"
+      ],
+      "createdAt": "2026-03-12T18:31:24Z",
+      "updatedAt": "2026-03-12T20:00:00Z"
+    },
+    {
+      "id": "case-2746001",
+      "ticketId": "2746001",
+      "title": "Lumen Misrouting - Dead Air/Wrong Voicemail",
+      "customer": "CallBox (dialtag.net)",
+      "category": "voice",
+      "status": "pending",
+      "findings": "**Root Cause:** LRN misrouting - calls routed via intermediary carriers instead of direct to Lumen.\n\n**Affected DIDs:** 2067856609, 2067126855, 2067126858, 2067126857, 2067856605\n\n**PCAP Analysis (8f40674c-421a-4951-b3c0-ce29277b4ec1):**\n- 35-second post-dial delay\n- Call answered (200 OK) but wrong destination\n- 2.8s connected then hangup (caller heard wrong endpoint)\n- Routed via 64.16.250.10, not Lumen direct\n\n**Additional calls analyzed:**\n- 9288f81a: Lumen OCN 403 → Peerless success (156s)\n- 3623c9bf: Lumen OCN 403 → multiple 503s → caller canceled after 20s\n- 6e7d2bad: Lumen OCN 403 → 382-DCA success (18s)\n\n**Common pattern:** Lumen OCN rejection (403 O37 Only Telnyx numbers allowed) forcing failover.",
+      "notes": "NOC submitted Lumen direct routing request. Once applied, calls bypass LRN lookups and route directly to Lumen network.\n\nAudio quality was excellent (MOS 4.49) - issue is routing/translation, not media quality.",
+      "response": "Confirmed LRN misrouting to wrong endpoint. Lumen direct routing requested by NOC.",
+      "tags": [
+        "voice",
+        "lumen",
+        "centurylink",
+        "lrn",
+        "misrouting",
+        "ocn",
+        "callbox"
+      ],
+      "createdAt": "2026-03-12T19:09:32Z",
+      "updatedAt": "2026-03-12T22:35:00Z"
+    },
+    {
+      "id": "case-2729339",
+      "ticketId": "2729339",
+      "title": "Instant Call Hangup - 404 Not Found",
+      "customer": "smrtPhone (laurentiu@smrtphone.io)",
+      "category": "voice",
+      "status": "resolved",
+      "findings": "**Root Cause:** Stale dialplan mapping.\n\nNumber +1 573 206 2908 was previously on a blocked account (closed Dec 2025), reaped Jan 2026. Dialplan still pointed to old blocked account, causing 404 D19 not_found errors.\n\nNumber did not sync to smrtPhone account until March 10th when a query triggered the update.\n\n**Failed call:** a58e958e-18a6-11f1-ab6d-02420a1f1069\n**Working calls:** 3f41fdd4-18a6-11f1-ba8d-02420a1f0d69, b4832366-18a6-11f1-938d-02420a1f0d69",
+      "notes": "Sean investigated manually via Metabase. Identified sync issue between number inventory and dialplan layer when numbers are reaped and reassigned.\n\nPotential platform bug to flag - number ownership updated but dialplan didnt refresh until something triggered it.",
+      "response": "Root cause identified: stale dialplan mapping after number reap/reassignment. Number now correctly mapped.",
+      "tags": [
+        "voice",
+        "404",
+        "dialplan",
+        "number-porting",
+        "sync-issue",
+        "smrtphone"
+      ],
+      "createdAt": "2026-03-05T15:46:13Z",
+      "updatedAt": "2026-03-12T23:48:00Z"
     }
   ],
-  "lastUpdated": "2026-03-11T23:24:00Z"
+  "lastUpdated": "2026-03-12T23:49:00Z"
 }
