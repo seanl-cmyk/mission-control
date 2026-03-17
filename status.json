@@ -1,7 +1,7 @@
 {
-  "state": "offline",
-  "message": "End of day - 2026-03-16",
+  "state": "online",
+  "message": "Dashboard sync complete - midday",
   "ticketId": null,
-  "startedAt": "2026-03-16T19:35:00Z",
-  "updatedAt": "2026-03-16T23:30:00Z"
+  "startedAt": "2026-03-17T19:00:00Z",
+  "updatedAt": "2026-03-17T19:00:00Z"
 }
