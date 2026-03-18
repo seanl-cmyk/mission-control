@@ -1,6 +1,48 @@
 {
   "cases": [
     {
+      "id": "case-2757241",
+      "ticketId": "2757241",
+      "title": "PSTN numbers appearing as SIP calls",
+      "customer": "Ringba",
+      "category": "voice",
+      "status": "resolved",
+      "findings": "**Root Cause:** Customer's Call Control application webhook logic was transforming destinations to SIP URIs (LiveKit endpoints) - not Telnyx infrastructure.\n\n**Call Samples Analyzed:**\n- 71a2a3d2-1efa-11f1-b6af-02420aef50a0\n- e19ebbd2-219b-11f1-b28e-02420aef3ca0\n\n**Conclusion:** Application-level behavior in customer webhook, not automatic Telnyx conversion.",
+      "notes": "Customer initially claimed Telnyx was converting PSTN to SIP. Analysis showed webhook logic was the source.",
+      "response": "Explained this is application-level behavior in webhook, not Telnyx automatic conversion.",
+      "tags": ["voice", "call-control", "sip", "webhook", "customer-implementation"],
+      "createdAt": "2026-03-18T00:00:00Z",
+      "updatedAt": "2026-03-18T19:00:00Z"
+    },
+    {
+      "id": "case-2757114",
+      "ticketId": "2757114",
+      "title": "Hosted messaging order stuck in provisioning - OSR mismatch",
+      "customer": "Mogli",
+      "category": "messaging",
+      "status": "escalated",
+      "findings": "**Issue:** Hosted messaging order stuck in 'provisioning' status due to OSR mismatch.\n\n**Order ID:** 80019cf7-f612-4df8-8645-5db0b15c2683\n\n**Numbers Affected:**\n- +1 904 371 2900\n- +1 904 572 1700\n- +1 904 222 6988",
+      "notes": "Internal escalation drafted for messaging/numbers team.",
+      "response": "Escalated internally to messaging/numbers team for OSR mismatch investigation.",
+      "tags": ["messaging", "hosted-messaging", "provisioning", "osr-mismatch", "escalation"],
+      "createdAt": "2026-03-18T00:00:00Z",
+      "updatedAt": "2026-03-18T19:00:00Z"
+    },
+    {
+      "id": "case-2724276",
+      "ticketId": "2724276",
+      "title": "T.38/G.711 race condition - Fax failures to toll-free",
+      "customer": "Paxyl (Dat Tran)",
+      "category": "fax",
+      "status": "pending",
+      "findings": "**Issue:** Unable to send fax to +1 866-288-4455 (toll-free), ongoing 15 days.\n\n**Root Cause:** T.38/G.711 race condition\n- Call starts with G.711 PCMU audio passthrough\n- During V.17/V.29 fax modem training, carrier sends T.38 re-INVITE\n- Switchover mid-training causes T.30 handshake desync\n- Session stalls, carrier times out\n\n**Resolution Applied:**\n- Disabled T.38 on Fax API connection via private API\n- Connection ID: 2153687997793437157\n- API Response: {\"changes\":\"applied\"}",
+      "notes": "Customer can't disable T.38 themselves for Fax API connections - requires server-side fix via private API.\n\nLearning: Fax API T.38 toggle endpoint: http://faxes.service.ch1b-prod.consul:4014/private/v2/admin/connection_settings",
+      "response": "T.38 disabled on connection. Awaiting customer retest to confirm resolution.",
+      "tags": ["fax", "t38", "g711", "race-condition", "toll-free", "paxyl"],
+      "createdAt": "2026-03-03T00:00:00Z",
+      "updatedAt": "2026-03-18T19:00:00Z"
+    },
+    {
       "id": "case-2618917",
       "ticketId": "2618917",
       "title": "MS Teams Call Me drops after ~40 seconds (RTP No-Op handling)",
@@ -127,5 +169,5 @@
       "updatedAt": "2026-03-12T23:48:00Z"
     }
   ],
-  "lastUpdated": "2026-03-16T19:31:00Z"
+  "lastUpdated": "2026-03-18T19:00:00Z"
 }
