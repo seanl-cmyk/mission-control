@@ -1,18 +1,60 @@
 {
   "cases": [
     {
+      "id": "case-2755796",
+      "ticketId": "2755796",
+      "title": "D18/D30 Error - Call Control to WebRTC transfer failure",
+      "customer": "Lender.com (Ilya Beyrak)",
+      "category": "voice",
+      "status": "investigating",
+      "findings": "**Issue:** D18 error when transferring Call Control calls to WebRTC endpoint.\n\n**Initial Root Cause:** Target credential connection `1716660028770879136` was deactivated (`active: false`).\n\n**Resolution Step 1:** Customer reactivated connection.\n\n**Follow-up Issue:** New D30 error \"Invalid SIP URI calling preference\" on credential `gencredPV93NckUqFOJQcbWt2I1URLzkxDyVnNG311lznvpu3`.",
+      "notes": "Customer reactivated connection but hit second error. Investigating credential configuration.",
+      "response": "Initial D18 resolved by reactivating connection. Now investigating D30 credential config issue.",
+      "tags": ["voice", "call-control", "webrtc", "d18", "d30", "credential", "lender"],
+      "createdAt": "2026-03-19T00:00:00Z",
+      "updatedAt": "2026-03-19T23:30:00Z"
+    },
+    {
+      "id": "case-2741796",
+      "ticketId": "2741796",
+      "title": "Mass Call Drops - ~100+ calls dropped simultaneously",
+      "customer": "EnrollHere (Tim Strakeljahn) - VIP",
+      "category": "voice",
+      "status": "pending",
+      "findings": "**Issue:** ~100+ calls dropped simultaneously with audio issues on March 11.\n\n**Analysis:** Sampled 6 calls via TREAT:\n- 5 of 6 calls: Normal, MOS ~4.5\n- 1 call (via Twilio): Routing error + MOS 1.0 with 861 flaws\n\n**Finding:** No clear carrier concentration; isolated issues on external SIP origination (Twilio).",
+      "notes": "Recommended JS SDK upgrade (2.25.15+) and review of Twilio SIP integration.",
+      "response": "Analysis complete. Most calls healthy; one outlier via Twilio SIP. Recommended SDK upgrade.",
+      "tags": ["voice", "mass-disconnect", "twilio", "sdk", "enrollhere", "vip"],
+      "createdAt": "2026-03-11T00:00:00Z",
+      "updatedAt": "2026-03-19T23:30:00Z"
+    },
+    {
+      "id": "case-2754032",
+      "ticketId": "2754032",
+      "title": "SMS Segment Count vs Display - Customer Education",
+      "customer": "Iterable (Jena) - VIP Advanced 365",
+      "category": "messaging",
+      "status": "resolved",
+      "findings": "**Issue:** Customer confused why 2 SMS segments display as 1 message on recipient device.\n\n**Explanation:** UDH (User Data Header) enables device reassembly. Segments are transport-level; display is unified by recipient device.\n\n**Key Facts:**\n- GSM-7: 160 chars single / 153 chars per multipart segment\n- UTF-16: 70 chars single / 67 chars per multipart segment\n- Billing is per segment, display is unified",
+      "notes": "Cited Telnyx documentation for accuracy.",
+      "response": "Explained UDH-based segment reassembly with Telnyx doc references.",
+      "tags": ["messaging", "sms", "segments", "udh", "customer-education", "iterable", "vip"],
+      "createdAt": "2026-03-19T00:00:00Z",
+      "updatedAt": "2026-03-19T23:30:00Z"
+    },
+    {
       "id": "case-2757241",
       "ticketId": "2757241",
       "title": "PSTN numbers appearing as SIP calls",
       "customer": "Ringba",
       "category": "voice",
       "status": "resolved",
-      "findings": "**Root Cause:** Customer's Call Control application webhook logic was transforming destinations to SIP URIs (LiveKit endpoints) - not Telnyx infrastructure.\n\n**Call Samples Analyzed:**\n- 71a2a3d2-1efa-11f1-b6af-02420aef50a0\n- e19ebbd2-219b-11f1-b28e-02420aef3ca0\n\n**Conclusion:** Application-level behavior in customer webhook, not automatic Telnyx conversion.",
-      "notes": "Customer initially claimed Telnyx was converting PSTN to SIP. Analysis showed webhook logic was the source.",
-      "response": "Explained this is application-level behavior in webhook, not Telnyx automatic conversion.",
-      "tags": ["voice", "call-control", "sip", "webhook", "customer-implementation"],
+      "findings": "**Root Cause:** Customer's Call Control application webhook logic was transforming destinations to SIP URIs (LiveKit endpoints) - not Telnyx infrastructure.\n\n**Key Detail:** Calls route through Vocara's Call Control app (account `e90489f7-ebd8-4f10-bfa7-73d5a43d5489`) which transforms PSTN destinations to LiveKit SIP URIs on transfer leg.\n\n**Call Samples Analyzed:**\n- 71a2a3d2-1efa-11f1-b6af-02420aef50a0\n- e19ebbd2-219b-11f1-b28e-02420aef3ca0\n\n**Conclusion:** Application-level behavior in customer webhook, not automatic Telnyx conversion.",
+      "notes": "Customer initially claimed Telnyx was converting PSTN to SIP. Analysis showed Vocara webhook logic was the source.",
+      "response": "Explained this is application-level behavior in Vocara's Call Control app, not Telnyx automatic conversion.",
+      "tags": ["voice", "call-control", "sip", "webhook", "customer-implementation", "vocara", "ringba"],
       "createdAt": "2026-03-18T00:00:00Z",
-      "updatedAt": "2026-03-18T19:00:00Z"
+      "updatedAt": "2026-03-19T23:30:00Z"
     },
     {
       "id": "case-2757114",
@@ -169,5 +211,5 @@
       "updatedAt": "2026-03-12T23:48:00Z"
     }
   ],
-  "lastUpdated": "2026-03-18T19:00:00Z"
+  "lastUpdated": "2026-03-19T23:30:00Z"
 }

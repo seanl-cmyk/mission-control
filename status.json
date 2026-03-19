@@ -1,7 +1,7 @@
 {
-  "state": "online",
-  "message": "Midday sync complete - 2026-03-19",
+  "state": "offline",
+  "message": "End-of-day sync complete - 2026-03-19",
   "ticketId": null,
   "startedAt": "2026-03-19T15:00:00Z",
-  "updatedAt": "2026-03-19T19:00:00Z"
+  "updatedAt": "2026-03-19T23:30:00Z"
 }
