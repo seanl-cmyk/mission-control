@@ -16,7 +16,7 @@ def run_mcporter(query):
     env['ZENDESK_MCP_TOKEN'] = os.getenv('ZENDESK_MCP_TOKEN', '')
     
     result = subprocess.run(
-        ['mcporter', 'call', 'zendesk.search', f'query={query}', 'per_page=100'],
+        ['mcporter', 'call', 'zendesk.search', f'query={query}', 'per_page=25'],
         capture_output=True, text=True, env=env
     )
     
