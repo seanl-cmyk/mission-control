@@ -1,6 +1,62 @@
 {
   "cases": [
     {
+      "id": "case-2751246",
+      "ticketId": "2751246",
+      "title": "T-Mobile SMS Blocking - Service Not Available",
+      "customer": "Call Box (VIP Prime)",
+      "category": "messaging",
+      "status": "open",
+      "findings": "**Issue:** T-Mobile users can't text customer's numbers — receiving \"Sorry, this service is not available\" error.\n\n**Root Cause:** T-Mobile network-level blocking (MO messages rejected before reaching Telnyx).\n\n**Timeline:**\n- T-Mobile claimed fix on 3/20\n- Customer retested 3/21 & 3/23 — still broken",
+      "notes": "Sean escalated to Syniverse further. Ongoing T-Mobile carrier issue.",
+      "response": "Escalated to Syniverse for T-Mobile network-level blocking investigation.",
+      "tags": ["messaging", "sms", "t-mobile", "carrier-blocking", "syniverse", "callbox", "vip"],
+      "createdAt": "2026-03-20T00:00:00Z",
+      "updatedAt": "2026-03-26T19:00:00Z"
+    },
+    {
+      "id": "case-2741117",
+      "ticketId": "2741117",
+      "title": "WebSocket Media Streaming Timeout - 422 Error 90046",
+      "customer": "Anteryon (Rendall van der Leeuw)",
+      "category": "voice",
+      "status": "open",
+      "findings": "**Issue:** WebSocket media streaming fails with 422 / error 90046 \"Failed to connect to destination\".\n\n**Engineering Finding:** WebSocket takes ~4.5s to establish → exceeds call control timeout.\n\n**Customer Rebuttal:** App is warm, handshake completes ~2.5-3s, but 422 returns before handshake finishes.\n\n**Customer Ask:** Increase media streaming timeout for number +3677201027.",
+      "notes": "ENGDESK: 50333. Sean pushed back to engineering with customer's rebuttal (03-26).",
+      "response": "Engineering investigating timeout discrepancy. Customer reports handshake completes faster than measured.",
+      "tags": ["voice", "websocket", "media-streaming", "timeout", "422", "engdesk", "anteryon"],
+      "createdAt": "2026-03-10T00:00:00Z",
+      "updatedAt": "2026-03-26T19:00:00Z"
+    },
+    {
+      "id": "case-2775957",
+      "ticketId": "2775957",
+      "title": "Hangup Source Discrepancy - UI vs Buyer Perspective",
+      "customer": "Ringba (VIP)",
+      "category": "voice",
+      "status": "resolved",
+      "findings": "**Issue:** Conflicting hangup source — UI shows \"target hung up\" but buyer shows \"caller hung up\".\n\n**Root Cause:** Perspective difference — Twilio/buyer disconnected first, but from their view Telnyx is the \"caller\".\n\n**Explanation:** When Ringba transfers to buyer via Twilio, the buyer sees Telnyx/Ringba as the originator. If buyer hangs up, from their CDRs it's \"caller\" (Ringba) that caused disconnection, but from Ringba's view, the \"target\" (buyer) hung up.",
+      "notes": "Customer education case — explained perspective difference in call flow.",
+      "response": "Explained perspective difference: both views are correct from different vantage points in the call flow.",
+      "tags": ["voice", "hangup-source", "perspective", "twilio", "ringba", "vip", "customer-education"],
+      "createdAt": "2026-03-26T00:00:00Z",
+      "updatedAt": "2026-03-26T19:00:00Z"
+    },
+    {
+      "id": "case-2775860",
+      "ticketId": "2775860",
+      "title": "Call Control 503 Errors - No Healthy Upstream",
+      "customer": "Kauneonga LLC (High Priority)",
+      "category": "voice",
+      "status": "escalated",
+      "findings": "**Issue:** Intermittent 503 \"no healthy upstream\" errors on Call Control dial/transfer operations.\n\n**Root Cause:** Telnyx originate service in US region returning 503s — backend capacity/health issue.\n\n**Evidence:** 443K errors in Graylog over 2h window, confirmed by engineering investigation.",
+      "notes": "Escalated to engineering, awaiting further investigation/fix.",
+      "response": "Confirmed platform-side issue. Engineering investigating originate service health in US region.",
+      "tags": ["voice", "call-control", "503", "upstream", "capacity", "kauneonga", "escalated"],
+      "createdAt": "2026-03-26T00:00:00Z",
+      "updatedAt": "2026-03-26T19:00:00Z"
+    },
+    {
       "id": "case-2755796",
       "ticketId": "2755796",
       "title": "D18/D30 Error - Call Control to WebRTC transfer failure",
@@ -211,5 +267,5 @@
       "updatedAt": "2026-03-12T23:48:00Z"
     }
   ],
-  "lastUpdated": "2026-03-19T23:30:00Z"
+  "lastUpdated": "2026-03-26T19:00:00Z"
 }
