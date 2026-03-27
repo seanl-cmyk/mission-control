@@ -10,7 +10,15 @@
       "findings": "**Issue:** T-Mobile users can't text customer's numbers — receiving \"Sorry, this service is not available\" error.\n\n**Root Cause:** T-Mobile network-level blocking (MO messages rejected before reaching Telnyx).\n\n**Timeline:**\n- T-Mobile claimed fix on 3/20\n- Customer retested 3/21 & 3/23 — still broken",
       "notes": "Sean escalated to Syniverse further. Ongoing T-Mobile carrier issue.",
       "response": "Escalated to Syniverse for T-Mobile network-level blocking investigation.",
-      "tags": ["messaging", "sms", "t-mobile", "carrier-blocking", "syniverse", "callbox", "vip"],
+      "tags": [
+        "messaging",
+        "sms",
+        "t-mobile",
+        "carrier-blocking",
+        "syniverse",
+        "callbox",
+        "vip"
+      ],
       "createdAt": "2026-03-20T00:00:00Z",
       "updatedAt": "2026-03-26T19:00:00Z"
     },
@@ -24,7 +32,15 @@
       "findings": "**Issue:** WebSocket media streaming fails with 422 / error 90046 \"Failed to connect to destination\".\n\n**Engineering Finding:** WebSocket takes ~4.5s to establish → exceeds call control timeout.\n\n**Customer Rebuttal:** App is warm, handshake completes ~2.5-3s, but 422 returns before handshake finishes.\n\n**Customer Ask:** Increase media streaming timeout for number +3677201027.",
       "notes": "ENGDESK: 50333. Sean pushed back to engineering with customer's rebuttal (03-26).",
       "response": "Engineering investigating timeout discrepancy. Customer reports handshake completes faster than measured.",
-      "tags": ["voice", "websocket", "media-streaming", "timeout", "422", "engdesk", "anteryon"],
+      "tags": [
+        "voice",
+        "websocket",
+        "media-streaming",
+        "timeout",
+        "422",
+        "engdesk",
+        "anteryon"
+      ],
       "createdAt": "2026-03-10T00:00:00Z",
       "updatedAt": "2026-03-26T19:00:00Z"
     },
@@ -38,7 +54,15 @@
       "findings": "**Issue:** Conflicting hangup source — UI shows \"target hung up\" but buyer shows \"caller hung up\".\n\n**Root Cause:** Perspective difference — Twilio/buyer disconnected first, but from their view Telnyx is the \"caller\".\n\n**Explanation:** When Ringba transfers to buyer via Twilio, the buyer sees Telnyx/Ringba as the originator. If buyer hangs up, from their CDRs it's \"caller\" (Ringba) that caused disconnection, but from Ringba's view, the \"target\" (buyer) hung up.",
       "notes": "Customer education case — explained perspective difference in call flow.",
       "response": "Explained perspective difference: both views are correct from different vantage points in the call flow.",
-      "tags": ["voice", "hangup-source", "perspective", "twilio", "ringba", "vip", "customer-education"],
+      "tags": [
+        "voice",
+        "hangup-source",
+        "perspective",
+        "twilio",
+        "ringba",
+        "vip",
+        "customer-education"
+      ],
       "createdAt": "2026-03-26T00:00:00Z",
       "updatedAt": "2026-03-26T19:00:00Z"
     },
@@ -52,7 +76,15 @@
       "findings": "**Issue:** Intermittent 503 \"no healthy upstream\" errors on Call Control dial/transfer operations.\n\n**Root Cause:** Telnyx originate service in US region returning 503s — backend capacity/health issue.\n\n**Evidence:** 443K errors in Graylog over 2h window, confirmed by engineering investigation.",
       "notes": "Escalated to engineering, awaiting further investigation/fix.",
       "response": "Confirmed platform-side issue. Engineering investigating originate service health in US region.",
-      "tags": ["voice", "call-control", "503", "upstream", "capacity", "kauneonga", "escalated"],
+      "tags": [
+        "voice",
+        "call-control",
+        "503",
+        "upstream",
+        "capacity",
+        "kauneonga",
+        "escalated"
+      ],
       "createdAt": "2026-03-26T00:00:00Z",
       "updatedAt": "2026-03-26T19:00:00Z"
     },
@@ -66,7 +98,15 @@
       "findings": "**Issue:** D18 error when transferring Call Control calls to WebRTC endpoint.\n\n**Initial Root Cause:** Target credential connection `1716660028770879136` was deactivated (`active: false`).\n\n**Resolution Step 1:** Customer reactivated connection.\n\n**Follow-up Issue:** New D30 error \"Invalid SIP URI calling preference\" on credential `gencredPV93NckUqFOJQcbWt2I1URLzkxDyVnNG311lznvpu3`.",
       "notes": "Customer reactivated connection but hit second error. Investigating credential configuration.",
       "response": "Initial D18 resolved by reactivating connection. Now investigating D30 credential config issue.",
-      "tags": ["voice", "call-control", "webrtc", "d18", "d30", "credential", "lender"],
+      "tags": [
+        "voice",
+        "call-control",
+        "webrtc",
+        "d18",
+        "d30",
+        "credential",
+        "lender"
+      ],
       "createdAt": "2026-03-19T00:00:00Z",
       "updatedAt": "2026-03-19T23:30:00Z"
     },
@@ -80,7 +120,14 @@
       "findings": "**Issue:** ~100+ calls dropped simultaneously with audio issues on March 11.\n\n**Analysis:** Sampled 6 calls via TREAT:\n- 5 of 6 calls: Normal, MOS ~4.5\n- 1 call (via Twilio): Routing error + MOS 1.0 with 861 flaws\n\n**Finding:** No clear carrier concentration; isolated issues on external SIP origination (Twilio).",
       "notes": "Recommended JS SDK upgrade (2.25.15+) and review of Twilio SIP integration.",
       "response": "Analysis complete. Most calls healthy; one outlier via Twilio SIP. Recommended SDK upgrade.",
-      "tags": ["voice", "mass-disconnect", "twilio", "sdk", "enrollhere", "vip"],
+      "tags": [
+        "voice",
+        "mass-disconnect",
+        "twilio",
+        "sdk",
+        "enrollhere",
+        "vip"
+      ],
       "createdAt": "2026-03-11T00:00:00Z",
       "updatedAt": "2026-03-19T23:30:00Z"
     },
@@ -94,7 +141,15 @@
       "findings": "**Issue:** Customer confused why 2 SMS segments display as 1 message on recipient device.\n\n**Explanation:** UDH (User Data Header) enables device reassembly. Segments are transport-level; display is unified by recipient device.\n\n**Key Facts:**\n- GSM-7: 160 chars single / 153 chars per multipart segment\n- UTF-16: 70 chars single / 67 chars per multipart segment\n- Billing is per segment, display is unified",
       "notes": "Cited Telnyx documentation for accuracy.",
       "response": "Explained UDH-based segment reassembly with Telnyx doc references.",
-      "tags": ["messaging", "sms", "segments", "udh", "customer-education", "iterable", "vip"],
+      "tags": [
+        "messaging",
+        "sms",
+        "segments",
+        "udh",
+        "customer-education",
+        "iterable",
+        "vip"
+      ],
       "createdAt": "2026-03-19T00:00:00Z",
       "updatedAt": "2026-03-19T23:30:00Z"
     },
@@ -108,7 +163,15 @@
       "findings": "**Root Cause:** Customer's Call Control application webhook logic was transforming destinations to SIP URIs (LiveKit endpoints) - not Telnyx infrastructure.\n\n**Key Detail:** Calls route through Vocara's Call Control app (account `e90489f7-ebd8-4f10-bfa7-73d5a43d5489`) which transforms PSTN destinations to LiveKit SIP URIs on transfer leg.\n\n**Call Samples Analyzed:**\n- 71a2a3d2-1efa-11f1-b6af-02420aef50a0\n- e19ebbd2-219b-11f1-b28e-02420aef3ca0\n\n**Conclusion:** Application-level behavior in customer webhook, not automatic Telnyx conversion.",
       "notes": "Customer initially claimed Telnyx was converting PSTN to SIP. Analysis showed Vocara webhook logic was the source.",
       "response": "Explained this is application-level behavior in Vocara's Call Control app, not Telnyx automatic conversion.",
-      "tags": ["voice", "call-control", "sip", "webhook", "customer-implementation", "vocara", "ringba"],
+      "tags": [
+        "voice",
+        "call-control",
+        "sip",
+        "webhook",
+        "customer-implementation",
+        "vocara",
+        "ringba"
+      ],
       "createdAt": "2026-03-18T00:00:00Z",
       "updatedAt": "2026-03-19T23:30:00Z"
     },
@@ -122,7 +185,13 @@
       "findings": "**Issue:** Hosted messaging order stuck in 'provisioning' status due to OSR mismatch.\n\n**Order ID:** 80019cf7-f612-4df8-8645-5db0b15c2683\n\n**Numbers Affected:**\n- +1 904 371 2900\n- +1 904 572 1700\n- +1 904 222 6988",
       "notes": "Internal escalation drafted for messaging/numbers team.",
       "response": "Escalated internally to messaging/numbers team for OSR mismatch investigation.",
-      "tags": ["messaging", "hosted-messaging", "provisioning", "osr-mismatch", "escalation"],
+      "tags": [
+        "messaging",
+        "hosted-messaging",
+        "provisioning",
+        "osr-mismatch",
+        "escalation"
+      ],
       "createdAt": "2026-03-18T00:00:00Z",
       "updatedAt": "2026-03-18T19:00:00Z"
     },
@@ -136,7 +205,14 @@
       "findings": "**Issue:** Unable to send fax to +1 866-288-4455 (toll-free), ongoing 15 days.\n\n**Root Cause:** T.38/G.711 race condition\n- Call starts with G.711 PCMU audio passthrough\n- During V.17/V.29 fax modem training, carrier sends T.38 re-INVITE\n- Switchover mid-training causes T.30 handshake desync\n- Session stalls, carrier times out\n\n**Resolution Applied:**\n- Disabled T.38 on Fax API connection via private API\n- Connection ID: 2153687997793437157\n- API Response: {\"changes\":\"applied\"}",
       "notes": "Customer can't disable T.38 themselves for Fax API connections - requires server-side fix via private API.\n\nLearning: Fax API T.38 toggle endpoint: http://faxes.service.ch1b-prod.consul:4014/private/v2/admin/connection_settings",
       "response": "T.38 disabled on connection. Awaiting customer retest to confirm resolution.",
-      "tags": ["fax", "t38", "g711", "race-condition", "toll-free", "paxyl"],
+      "tags": [
+        "fax",
+        "t38",
+        "g711",
+        "race-condition",
+        "toll-free",
+        "paxyl"
+      ],
       "createdAt": "2026-03-03T00:00:00Z",
       "updatedAt": "2026-03-18T19:00:00Z"
     },
@@ -150,7 +226,16 @@
       "findings": "**Root Cause:** Customer's AudioCodes SBC sends RTP No-Op packets (PT=120, payload 00000000) as keepalives when no audio is flowing. Carrier (Verizon Wireless) terminates with RTP-RTCP Timeout despite Telnyx forwarding transcoded packets.\n\n**Call Pattern:**\n- 0-8 sec: No-Ops sent (call setup)\n- 9-14 sec: G.729 audio (IVR prompt plays)\n- 15+ sec: Only No-Ops at 1/sec (audio stops)\n- ~40-48 sec: Carrier BYE with RTP-RTCP Timeout\n\n**PCAP Analysis:**\n- Sample 1: 39 No-Op packets (frames 116, 217, 318...)\n- Sample 2: 34 No-Op packets (frames 115, 216, 1338...)\n- Telnyx B2BUA transcodes to AMR-WB (PT=102) and forwards\n- Carrier still terminates despite receiving continuous RTP\n\n**Key Question:** What does B2BUA generate when receiving PT=120 No-Op with zero payload?",
       "notes": "VIP account - 2+ months ongoing.\n\nWireshark filter: rtp.p_type == 120\n\nEscalated to internal engineering team 2026-03-16.",
       "response": "Escalated internally. Investigating how B2BUA handles RTP No-Op packets (PT=120). Will update when we have findings.",
-      "tags": ["voice", "rtp", "no-op", "audiocodes", "verizon", "carrier-timeout", "ms-teams", "escalated"],
+      "tags": [
+        "voice",
+        "rtp",
+        "no-op",
+        "audiocodes",
+        "verizon",
+        "carrier-timeout",
+        "ms-teams",
+        "escalated"
+      ],
       "createdAt": "2026-01-14T00:00:00Z",
       "updatedAt": "2026-03-16T19:27:00Z"
     },
@@ -164,7 +249,16 @@
       "findings": "**Issue:** SIMs in Zambia connect with good signal but get virtually no data throughput.\n\n**ICCIDs:**\n- 89311210000005412490 (original)\n- 89311210000006059191 (new report)\n\n**WDR Analysis (99 sessions):**\n- 60% showed 0 bytes transferred\n- 35% showed <1KB downlink only, 0 uplink\n- Only 1 session out of 99 had bidirectional data\n\n**Root Cause:** Bearer path / GTP-U tunnel issue between Sparkle roaming platform and Airtel Zambia (MCC 645 / MNC 01). PDP context activates but data plane is broken.",
       "notes": "Pattern: PSSGW events with 0 bytes = signaling works, data plane broken.\n\nEscalation doc prepared for Sparkle.",
       "response": "Data analysis confirms systematic uplink failure on Airtel Zambia. Escalating to Sparkle for GTP-U tunnel investigation.",
-      "tags": ["wireless", "sim", "zambia", "airtel", "sparkle", "gtp-u", "uplink-failure", "honest-mobile"],
+      "tags": [
+        "wireless",
+        "sim",
+        "zambia",
+        "airtel",
+        "sparkle",
+        "gtp-u",
+        "uplink-failure",
+        "honest-mobile"
+      ],
       "createdAt": "2026-03-16T00:00:00Z",
       "updatedAt": "2026-03-16T19:27:00Z"
     },
@@ -178,7 +272,13 @@
       "findings": "**Pattern identified across all 3 examples:**\nAgent leg disconnects before conference dial-out completes, leaving original caller stranded.\n\n**Call a7cfa766 timeline:**\n- 19:24:02 — Agent bridged to caller\n- 19:28:09 — Agent leg disconnected\n- 19:30:35 — Conference dial-outs initiated (2+ min after agent gone)\n- 19:30:53 — Conference targets answered but never bridged\n- 19:32:52 — Original caller hung up after 4+ min alone\n\n**Root Cause:** Call Control flow timing issue — conference dial-outs created after agent has disconnected.",
       "notes": "Customer-side Call Control implementation issue, not a Telnyx platform bug.\n\nAsked customer:\n1. What triggers agent leg hangup?\n2. Is there webhook handling to prevent conference initiation if agent is gone?",
       "response": "Analysis complete. Agent leg disconnects before conference completes. This is a Call Control flow timing issue in customer implementation.",
-      "tags": ["call-control", "conference", "bridge-failure", "kauneonga", "customer-implementation"],
+      "tags": [
+        "call-control",
+        "conference",
+        "bridge-failure",
+        "kauneonga",
+        "customer-implementation"
+      ],
       "createdAt": "2026-03-11T15:44:24Z",
       "updatedAt": "2026-03-12T16:48:00Z"
     },
@@ -192,7 +292,14 @@
       "findings": "**Sample Call Analysis:**\n- B2BUA: tel-ams3-ibm-prod-226 (Amsterdam, EU)\n- Customer IP: 103.26.174.36 (Australia)\n\n**Issue:** Customer had Sydney configured but calls routed to EU.\n\n**Root Cause:** Unknown - need fresh test call with Sydney config.",
       "notes": "Customer changed anchorsite to Chicago as workaround.\n\nRequested customer to run live test with Sydney config.",
       "response": "Confirmed EU routing in sample call. Requested customer to run live test with Sydney config to determine if issue persists.",
-      "tags": ["anchorsite", "sydney", "rtp-routing", "australia", "eu-routing", "axient"],
+      "tags": [
+        "anchorsite",
+        "sydney",
+        "rtp-routing",
+        "australia",
+        "eu-routing",
+        "axient"
+      ],
       "createdAt": "2026-03-10T00:03:22Z",
       "updatedAt": "2026-03-11T23:23:00Z"
     },
@@ -206,7 +313,14 @@
       "findings": "**Example 1 (Albania):** Session timer refresh, not Telnyx issue\n\n**Example 2 & 3 (Georgia):**\n- Carrier: DeutscheTelecom\n- Inbound MOS: 4.49 ✓ | Outbound MOS: 1.0 ✗\n- Root Cause: Media path asymmetry - RTP not returning from carrier\n\n**Conclusion:** Georgia routing via DeutscheTelecom has systematic media path issue.",
       "notes": "Escalated to carrier team for DeutscheTelecom Georgia routing investigation.",
       "response": "Ex 1 (Albania): Session timer issue.\nEx 2 & 3 (Georgia): Carrier-side media path issue identified, escalated.",
-      "tags": ["one-way-audio", "audio-quality", "cloudtalk", "georgia", "carrier-escalation", "deutschetelecom"],
+      "tags": [
+        "one-way-audio",
+        "audio-quality",
+        "cloudtalk",
+        "georgia",
+        "carrier-escalation",
+        "deutschetelecom"
+      ],
       "createdAt": "2026-03-11T16:09:00Z",
       "updatedAt": "2026-03-11T18:02:00Z"
     },
@@ -220,7 +334,12 @@
       "findings": "Customer has credit balance, no payment due. March charges accruing against credit.",
       "notes": "Customer confused by negative balance on invoice. Explained negative = credit.",
       "response": "Confirmed Feb charges are $2,934.94 but no payment needed - account has $2,908.71 credit balance.",
-      "tags": ["billing", "invoice", "credit-balance", "replicant"],
+      "tags": [
+        "billing",
+        "invoice",
+        "credit-balance",
+        "replicant"
+      ],
       "createdAt": "2026-03-09T15:12:25Z",
       "updatedAt": "2026-03-11T20:42:00Z"
     },
@@ -234,7 +353,14 @@
       "findings": "**Root Cause:** Canadian carrier-level A2P filtering of unregistered long code traffic.\n\nNo TCR campaign registration. Customer sending dental appointment reminders from unregistered long codes.",
       "notes": "Recommended toll-free verification for Canada A2P messaging.",
       "response": "Carrier-level rejections, not Telnyx blocking. Recommended toll-free number with verification.",
-      "tags": ["sms", "a2p", "canada", "spam-filter", "carrier-rejection", "toll-free"],
+      "tags": [
+        "sms",
+        "a2p",
+        "canada",
+        "spam-filter",
+        "carrier-rejection",
+        "toll-free"
+      ],
       "createdAt": "2026-03-12T18:31:24Z",
       "updatedAt": "2026-03-12T20:00:00Z"
     },
@@ -248,7 +374,15 @@
       "findings": "**Root Cause:** LRN misrouting - calls routed via intermediary carriers instead of direct to Lumen.\n\nLumen OCN rejection (403) forcing failover to wrong endpoints.",
       "notes": "NOC submitted Lumen direct routing request.",
       "response": "Confirmed LRN misrouting to wrong endpoint. Lumen direct routing requested by NOC.",
-      "tags": ["voice", "lumen", "centurylink", "lrn", "misrouting", "ocn", "callbox"],
+      "tags": [
+        "voice",
+        "lumen",
+        "centurylink",
+        "lrn",
+        "misrouting",
+        "ocn",
+        "callbox"
+      ],
       "createdAt": "2026-03-12T19:09:32Z",
       "updatedAt": "2026-03-12T22:35:00Z"
     },
@@ -262,9 +396,58 @@
       "findings": "**Root Cause:** Stale dialplan mapping after number reap/reassignment.",
       "notes": "Potential platform bug - number ownership updated but dialplan didn't refresh.",
       "response": "Root cause identified: stale dialplan mapping. Number now correctly mapped.",
-      "tags": ["voice", "404", "dialplan", "number-porting", "sync-issue", "smrtphone"],
+      "tags": [
+        "voice",
+        "404",
+        "dialplan",
+        "number-porting",
+        "sync-issue",
+        "smrtphone"
+      ],
       "createdAt": "2026-03-05T15:46:13Z",
       "updatedAt": "2026-03-12T23:48:00Z"
+    },
+    {
+      "id": "case-2772326",
+      "ticketId": "2772326",
+      "title": "AT&T Link Stripping - Click-through Drop to 0%",
+      "customer": "Respondflow/TextVolt (Gold)",
+      "category": "messaging",
+      "status": "open",
+      "findings": "**Issue:** AT&T click-through dropped from 17% to 0%.\n\n**Customer Confirmed:** Messages arrive but links are stripped by AT&T before delivery.\n\n**Root Cause:** AT&T content filtering actively removing URLs from messages.",
+      "notes": "Customer provided samples dated March 13th (aged out of logs). Recent samples show delivered but links stripped. Needs escalation to messaging team for AT&T investigation.",
+      "response": "Drafted response acknowledging link stripping and escalating to messaging team for AT&T filtering investigation.",
+      "tags": [
+        "messaging",
+        "sms",
+        "att",
+        "link-stripping",
+        "content-filtering",
+        "textvolt",
+        "respondflow"
+      ],
+      "createdAt": "2026-03-25T14:41:19Z",
+      "updatedAt": "2026-03-27T18:00:00Z"
+    },
+    {
+      "id": "case-2775891",
+      "ticketId": "2775891",
+      "title": "API Errors & Call Join Issues (Duplicate)",
+      "customer": "Kauneonga LLC (High Priority)",
+      "category": "voice",
+      "status": "open",
+      "findings": "**Issue:** Same as #2775860 — API error code 10007, HTTP 500, call join issues.\n\n**Analysis:** Duplicate ticket for same customer/issue.",
+      "notes": "Recommended merging with #2775860 where engineering escalation already exists.",
+      "response": "Identified as duplicate of #2775860. Recommended consolidation.",
+      "tags": [
+        "voice",
+        "api",
+        "503",
+        "duplicate",
+        "kauneonga"
+      ],
+      "createdAt": "2026-03-26T16:51:42Z",
+      "updatedAt": "2026-03-27T18:00:00Z"
     }
   ],
   "lastUpdated": "2026-03-26T19:00:00Z"
