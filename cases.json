@@ -448,6 +448,51 @@
       ],
       "createdAt": "2026-03-26T16:51:42Z",
       "updatedAt": "2026-03-27T18:00:00Z"
+    },
+    {
+      "id": "case-2774898",
+      "ticketId": "2774898",
+      "title": "Israeli Numbers Not Connecting - PPT Block",
+      "customer": "Verkada (High Priority)",
+      "category": "voice",
+      "status": "open",
+      "findings": "**Issue:** Israeli mobile numbers purchased for Zoom, approved and assignable, but all outbound calls fail.\n\n**Root Cause:** Profit Protection (PPT) blocking routes. Customer rate $0.2791/min with PPT=1.0 — vendors cost more than allowed threshold.\n\n**Error:** PE2 503 no routes found — routes available but more expensive than user rate.\n\n**Attempted Fix:** Tried to increase PPT to 2.0 via Tariff Manager API — got HTTP 500 error.",
+      "notes": "Escalated to pricing/carrier team for PPT adjustment. Tariff ID: global_conver_no_markup_06f7c39a73, Prefix: 447790",
+      "response": "Drafted internal escalation for PPT adjustment with call sample and API error details.",
+      "tags": [
+        "voice",
+        "ppt",
+        "profit-protection",
+        "zoom",
+        "israeli-numbers",
+        "verkada",
+        "tariff-manager"
+      ],
+      "createdAt": "2026-03-26T11:25:57Z",
+      "updatedAt": "2026-03-27T20:09:00Z"
+    },
+    {
+      "id": "case-2736172",
+      "ticketId": "2736172",
+      "title": "API Connection Errors & Bridge/Conference Timeouts",
+      "customer": "Kauneonga LLC (High Priority)",
+      "category": "voice",
+      "status": "open",
+      "findings": "**Issue:** Intermittent API connection errors + call control timeouts (bridge failures, conference add failures).\n\n**TREAT Analysis:** Conference profile creation delayed 62 seconds due to FreeSWITCH resource contention — multiple concurrent originate commands overwhelmed session management.\n\n**Call 1 (Mar 26):** Bridge failure on canary B2BUA — call answered but never bridged.\n**Call 2 (Mar 23):** Conference add timeout — 62-second profile creation delay.",
+      "notes": "Different layer than #2775860 (API/503 vs media plane). Potentially related via platform load. Customer asking about retry logic and best practices.",
+      "response": "Provided TREAT analysis showing FreeSWITCH congestion. Recommended client-side retry logic and rate limiting concurrent originates.",
+      "tags": [
+        "voice",
+        "api",
+        "timeout",
+        "conference",
+        "bridge-failure",
+        "freeswitch",
+        "kauneonga",
+        "treat"
+      ],
+      "createdAt": "2026-03-09T17:04:52Z",
+      "updatedAt": "2026-03-27T22:11:00Z"
     }
   ],
   "lastUpdated": "2026-03-26T19:00:00Z"
