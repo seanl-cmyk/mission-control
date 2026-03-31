@@ -494,6 +494,52 @@
       "createdAt": "2026-03-09T17:04:52Z",
       "updatedAt": "2026-03-27T22:11:00Z"
     }
+    ,
+    {
+      "id": "case-2781312",
+      "ticketId": "2781312",
+      "title": "France Outbound D00/Flash-Answer - 51.7% Error Rate",
+      "customer": "Unknown",
+      "category": "voice",
+      "status": "resolved",
+      "findings": "**Issue:** Customer reporting 51.7% D00 error rate on France outbound calls.\n\n**100 call IDs analyzed** using CDR tools and TREAT.\n\n**Root Causes Identified:**\n1. **Application-controlled termination** — Customer's webhook answering then immediately killing calls (uuid_kill within 57ms)\n2. **Early answer + carrier rejection** — Telnyx answering inbound before outbound confirmed, then carrier rejects (486 Busy, 404 Not Found)\n3. **Carrier rejections** — AVM returning 484 Address Incomplete, 404 Not Found for some France destinations\n\n**Key Finding:** NOT a carrier spam filter — it's application/webhook behavior + early answer configuration.",
+      "notes": "Comprehensive analysis of 100 call samples. Customer education case.",
+      "response": "Explained root causes, recommended reviewing webhook logic and early answer settings.",
+      "tags": [
+        "voice",
+        "d00",
+        "flash-answer",
+        "france",
+        "webhook",
+        "early-answer",
+        "customer-implementation"
+      ],
+      "createdAt": "2026-03-30T00:00:00Z",
+      "updatedAt": "2026-03-30T23:00:00Z"
+    },
+    {
+      "id": "case-2781567",
+      "ticketId": "2781567",
+      "title": "Australia No Audio - NAT/SDP Mismatch",
+      "customer": "GoDaddy (VIP)",
+      "category": "voice",
+      "status": "resolved",
+      "findings": "**Issue:** One-way audio on calls.\n\n**TREAT Analysis:** Media endpoint mismatch during mid-call re-INVITE.\n\n**Root Cause:** Customer's Cisco gateway advertising public IP in SDP but sending RTP from private IP.\n\n**MOS Scores:**\n- Outbound MOS: 1.0 ✗\n- Inbound MOS: 4.48 ✓\n\n**Confirms:** One-way audio caused by customer-side NAT/SDP handling issue.",
+      "notes": "VIP account. Customer-side equipment configuration issue.",
+      "response": "Identified NAT/SDP mismatch on customer's Cisco gateway. RTP source IP doesn't match advertised SDP.",
+      "tags": [
+        "voice",
+        "one-way-audio",
+        "nat",
+        "sdp",
+        "cisco",
+        "godaddy",
+        "vip",
+        "customer-equipment"
+      ],
+      "createdAt": "2026-03-30T00:00:00Z",
+      "updatedAt": "2026-03-30T23:00:00Z"
+    }
   ],
-  "lastUpdated": "2026-03-26T19:00:00Z"
+  "lastUpdated": "2026-03-31T00:00:00Z"
 }
