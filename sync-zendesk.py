@@ -32,12 +32,13 @@ def run_mcporter(query):
         return []
 
 def get_ticket_counts():
-    """Get ticket counts by status."""
+    """Get ticket counts by status, including resolved this week."""
     counts = {}
+    env = os.environ.copy()
+    env['ZENDESK_MCP_TOKEN'] = os.getenv('ZENDESK_MCP_TOKEN', '')
+    
+    # Active ticket counts
     for status in ['open', 'pending', 'hold']:
-        env = os.environ.copy()
-        env['ZENDESK_MCP_TOKEN'] = os.getenv('ZENDESK_MCP_TOKEN', '')
-        
         result = subprocess.run(
             ['mcporter', 'call', 'zendesk.search_count', f'query=type:ticket assignee:sean status:{status}'],
             capture_output=True, text=True, env=env
@@ -48,6 +49,28 @@ def get_ticket_counts():
             counts[status] = data.get('count', 0)
         except:
             counts[status] = 0
+    
+    # Resolved this week (solved/closed, updated in last 7 days)
+    result = subprocess.run(
+        ['mcporter', 'call', 'zendesk.search_count', 'query=type:ticket assignee:sean status:solved updated>7days'],
+        capture_output=True, text=True, env=env
+    )
+    try:
+        data = json.loads(result.stdout)
+        counts['resolved_week'] = data.get('count', 0)
+    except:
+        counts['resolved_week'] = 0
+    
+    # Also count closed tickets this week
+    result = subprocess.run(
+        ['mcporter', 'call', 'zendesk.search_count', 'query=type:ticket assignee:sean status:closed updated>7days'],
+        capture_output=True, text=True, env=env
+    )
+    try:
+        data = json.loads(result.stdout)
+        counts['resolved_week'] += data.get('count', 0)
+    except:
+        pass
     
     return counts
 
@@ -106,7 +129,7 @@ def update_index_html(tickets, counts):
         f.write(content)
     
     print(f"Updated index.html with {len(tickets)} tickets")
-    print(f"Counts: Open={counts.get('open',0)}, Pending={counts.get('pending',0)}, Hold={counts.get('hold',0)}")
+    print(f"Counts: Open={counts.get('open',0)}, Pending={counts.get('pending',0)}, Hold={counts.get('hold',0)}, Resolved(week)={counts.get('resolved_week',0)}")
 
 def main():
     print(f"Syncing Zendesk tickets at {datetime.now().isoformat()}")
