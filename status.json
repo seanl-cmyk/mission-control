@@ -1,7 +1,7 @@
 {
-  "state": "offline",
-  "message": "Dashboard sync — April 1, 2026",
+  "state": "online",
+  "message": "Active — working tickets",
   "ticketId": null,
   "startedAt": null,
-  "updatedAt": "2026-04-01T19:00:00Z"
+  "updatedAt": "2026-04-01T19:08:00Z"
 }
