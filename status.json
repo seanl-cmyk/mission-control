@@ -1,7 +1,7 @@
 {
   "state": "online",
-  "message": "Active — working tickets",
+  "message": "EOD sync - 00:04 UTC",
   "ticketId": null,
-  "startedAt": null,
-  "updatedAt": "2026-04-01T19:08:00Z"
+  "startedAt": "2026-04-02T00:04:26Z",
+  "updatedAt": "2026-04-02T00:04:26Z"
 }
