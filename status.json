@@ -1,7 +1,14 @@
 {
   "state": "offline",
-  "message": "End of day - April 2, 2026",
+  "message": "End of day - April 3, 2026",
   "ticketId": null,
-  "startedAt": "2026-04-02T15:00:00Z",
-  "updatedAt": "2026-04-03T00:00:00Z"
+  "startedAt": "2026-04-03T15:00:00Z",
+  "updatedAt": "2026-04-03T19:00:00Z",
+  "lastSync": "2026-04-03T19:00:00Z",
+  "ticketCounts": {
+    "open": 6,
+    "pending": 9,
+    "hold": 1,
+    "resolvedThisWeek": 28
+  }
 }
