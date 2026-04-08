@@ -1,243 +1,19 @@
 {
   "cases": [
     {
-      "id": "case-2794053",
-      "ticketId": "2794053",
-      "title": "403 Forbidden After SIP Auth - Credential Issue",
-      "customer": "Raja Bilal (callrolin.com)",
-      "category": "voice",
-      "status": "pending",
-      "findings": "**Issue:** INVITE \u2192 407 (auth challenge) \u2192 INVITE with creds \u2192 403 Forbidden (no D-code)\n\n**Account:** 1464132c-5812-4bd1-90ff-638121e71f92\n**Username:** userimbilalraja14623\n**Phone:** +1-585-821-1009\n**Source IP:** 204.168.170.153\n**Balance:** $7.98 \u2705\n\n**Analysis:** Plain 403 (no D-code) = authentication rejected at credential level, not call routing. No CDRs generated (expected \u2014 auth failures don't complete). SIP proxy auth logs not in accessible Graylog streams.\n\n**Probable Causes:**\n1. Username mismatch (case-sensitive)\n2. Missing Outbound Voice Profile on connection\n3. SIP client digest auth bug with special characters\n4. Connection disabled",
-      "notes": "Deep dive analysis performed. Sent customer checklist to verify config.",
-      "response": "Sent configuration verification checklist covering username, OVP, and connection status.",
-      "tags": [
-        "voice",
-        "sip",
-        "403",
-        "authentication",
-        "credential",
-        "callrolin"
-      ],
-      "createdAt": "2026-04-03T00:00:00Z",
-      "updatedAt": "2026-04-03T23:00:00Z"
-    },
-    {
-      "id": "case-2793539",
-      "ticketId": "2793539",
-      "title": "TFN/Account Verification",
-      "customer": "ambrose@jfcloud.hk",
-      "category": "account",
-      "status": "pending",
-      "findings": "Toll-free number and account verification request.",
-      "notes": "Standard verification workflow.",
-      "response": "Verification steps provided.",
-      "tags": [
-        "account",
-        "verification",
-        "tfn"
-      ],
-      "createdAt": "2026-04-03T00:00:00Z",
-      "updatedAt": "2026-04-03T23:00:00Z"
-    },
-    {
-      "id": "case-2793512",
-      "ticketId": "2793512",
-      "title": "Notifications Issue",
-      "customer": "Akshay Padhye",
-      "category": "account",
-      "status": "pending",
-      "findings": "Customer reporting notification delivery issues.",
-      "notes": "Investigating notification configuration.",
-      "response": "Investigating notification settings.",
-      "tags": [
-        "account",
-        "notifications"
-      ],
-      "createdAt": "2026-04-03T00:00:00Z",
-      "updatedAt": "2026-04-03T23:00:00Z"
-    },
-    {
-      "id": "case-2792821",
-      "ticketId": "2792821",
-      "title": "Phone Service Not Working",
-      "customer": "Chandra Mavuluri",
-      "category": "voice",
-      "status": "pending",
-      "findings": "Customer unable to make/receive calls.",
-      "notes": "Troubleshooting in progress.",
-      "response": "Gathering diagnostic information.",
-      "tags": [
-        "voice",
-        "service-outage"
-      ],
-      "createdAt": "2026-04-03T00:00:00Z",
-      "updatedAt": "2026-04-03T23:00:00Z"
-    },
-    {
-      "id": "case-2792757",
-      "ticketId": "2792757",
-      "title": "CSP Confirmation",
-      "customer": "Julien Naegeli",
-      "category": "account",
-      "status": "resolved",
-      "findings": "CSP (Customer Service Profile) confirmation completed.",
-      "notes": "Resolved same day.",
-      "response": "CSP confirmed and documented.",
-      "tags": [
-        "account",
-        "csp",
-        "resolved"
-      ],
-      "createdAt": "2026-04-03T00:00:00Z",
-      "updatedAt": "2026-04-03T23:00:00Z"
-    },
-    {
-      "id": "case-2792710",
-      "ticketId": "2792710",
-      "title": "Call Drops",
-      "customer": "Sanjay Kumar",
-      "category": "voice",
-      "status": "pending",
-      "findings": "Customer experiencing intermittent call drops.",
-      "notes": "Requested call samples for analysis.",
-      "response": "Requested specific call IDs and timestamps for investigation.",
-      "tags": [
-        "voice",
-        "call-drops"
-      ],
-      "createdAt": "2026-04-03T00:00:00Z",
-      "updatedAt": "2026-04-03T23:00:00Z"
-    },
-    {
-      "id": "case-2790887",
-      "ticketId": "2790887",
-      "title": "Billing/Service Down (Urgent)",
-      "customer": "Sanshray IT Solutions",
-      "category": "billing",
-      "status": "pending",
-      "findings": "Urgent billing issue affecting service availability.",
-      "notes": "Priority handling due to service impact.",
-      "response": "Investigating billing status and service restoration.",
-      "tags": [
-        "billing",
-        "urgent",
-        "service-outage"
-      ],
-      "createdAt": "2026-04-03T00:00:00Z",
-      "updatedAt": "2026-04-03T23:00:00Z"
-    },
-    {
-      "id": "case-2789799",
-      "ticketId": "2789799",
-      "title": "Number Not Assigned to Retell-AI",
-      "customer": "Patrick Andrews",
-      "category": "voice",
-      "status": "pending",
-      "findings": "Customer unable to assign number to Retell-AI integration.",
-      "notes": "Checking number assignment and Retell-AI configuration.",
-      "response": "Investigating number assignment workflow.",
-      "tags": [
-        "voice",
-        "integration",
-        "retell-ai"
-      ],
-      "createdAt": "2026-04-03T00:00:00Z",
-      "updatedAt": "2026-04-03T23:00:00Z"
-    },
-    {
-      "id": "case-2789680",
-      "ticketId": "2789680",
-      "title": "Calls Rejected (VIP Prime)",
-      "customer": "smrtphone",
-      "category": "voice",
-      "status": "pending",
-      "findings": "VIP Prime customer experiencing call rejections.",
-      "notes": "Priority VIP handling.",
-      "response": "Investigating call rejection patterns.",
-      "tags": [
-        "voice",
-        "call-rejection",
-        "vip",
-        "smrtphone"
-      ],
-      "createdAt": "2026-04-03T00:00:00Z",
-      "updatedAt": "2026-04-03T23:00:00Z"
-    },
-    {
-      "id": "case-2789022",
-      "ticketId": "2789022",
-      "title": "Wireless Order Tracking",
-      "customer": "Trifali Concept",
-      "category": "wireless",
-      "status": "hold",
-      "findings": "Customer tracking wireless SIM order status.",
-      "notes": "On hold pending order fulfillment update.",
-      "response": "Order status provided, awaiting fulfillment.",
-      "tags": [
-        "wireless",
-        "order",
-        "tracking"
-      ],
-      "createdAt": "2026-04-03T00:00:00Z",
-      "updatedAt": "2026-04-03T23:00:00Z"
-    },
-    {
-      "id": "case-2788928",
-      "ticketId": "2788928",
-      "title": "T-Mobile Outbound Issues",
-      "customer": "Matthew Malkowski",
-      "category": "voice",
-      "status": "pending",
-      "findings": "Customer experiencing issues with outbound calls to T-Mobile numbers.",
-      "notes": "Investigating carrier routing to T-Mobile.",
-      "response": "Analyzing call samples for T-Mobile routing issues.",
-      "tags": [
-        "voice",
-        "t-mobile",
-        "outbound",
-        "carrier"
-      ],
-      "createdAt": "2026-04-03T00:00:00Z",
-      "updatedAt": "2026-04-03T23:00:00Z"
-    },
-    {
-      "id": "case-2782912",
-      "ticketId": "2782912",
-      "title": "Phone Number Cannot Receive Messages",
-      "customer": "Mr Rashed",
+      "id": "case-2800616",
+      "ticketId": "2800616",
+      "title": "GoDaddy SMS to Cambodia Failing",
+      "customer": "GoDaddy (VIP Prime)",
       "category": "messaging",
-      "status": "pending",
-      "findings": "Customer reporting +1 206 445 1742 cannot receive messages.",
-      "notes": "Live chat ticket, messaging investigation.",
-      "response": "Investigating messaging capability on number.",
-      "tags": [
-        "messaging",
-        "sms",
-        "inbound"
-      ],
-      "createdAt": "2026-03-30T16:27:52Z",
-      "updatedAt": "2026-04-03T23:09:26Z"
-    },
-    {
-      "id": "case-2741587",
-      "ticketId": "2741587",
-      "title": "Webhook Timeout - Double Payments Issue",
-      "customer": "PayTweak (Heng Zeng)",
-      "category": "voice",
-      "status": "resolved",
-      "findings": "**Issue:** Bank payment processor takes >30 seconds to respond. Telnyx retries webhook before response, causing double payment initiation for EDF.\n\n**Customer Ask:** Increase webhook timeout from 30s to 60s.\n\n**Finding:** Portal limits timeout to 30 seconds max.",
-      "notes": "High priority VIP. Customer experiencing double payments due to webhook retry behavior.",
-      "response": "Resolved \u2014 webhook timeout configuration addressed.",
-      "tags": [
-        "voice",
-        "webhook",
-        "timeout",
-        "payments",
-        "paytweak",
-        "vip"
-      ],
-      "createdAt": "2026-03-11T12:51:26Z",
-      "updatedAt": "2026-04-04T00:01:19Z"
+      "status": "hold",
+      "priority": "high",
+      "findings": "SMS to +85592686821 failing. Carrier escalated.",
+      "notes": "VIP Prime customer via ClearFeed Slack. On hold pending carrier investigation.",
+      "response": "Escalated to carrier for investigation.",
+      "tags": ["messaging", "sms", "cambodia", "vip", "godaddy", "carrier-escalated"],
+      "createdAt": "2026-04-07T14:33:22Z",
+      "updatedAt": "2026-04-08T17:48:11Z"
     },
     {
       "id": "case-2751246",
@@ -246,212 +22,104 @@
       "customer": "Call Box (VIP Prime)",
       "category": "messaging",
       "status": "open",
-      "findings": "**Issue:** T-Mobile users can't text customer's numbers \u2014 receiving \"Sorry, this service is not available\" error.\n\n**Root Cause:** T-Mobile network-level blocking (MO messages rejected before reaching Telnyx).\n\n**Timeline:**\n- T-Mobile claimed fix on 3/20\n- Customer retested 3/21 & 3/23 \u2014 still broken",
-      "notes": "Sean escalated to Syniverse further. Ongoing T-Mobile carrier issue.",
+      "priority": "normal",
+      "findings": "T-Mobile users can't text customer's numbers - receiving 'Sorry, this service is not available' error. T-Mobile network-level blocking (MO messages rejected before reaching Telnyx).",
+      "notes": "Ongoing T-Mobile carrier issue. Escalated to Syniverse.",
       "response": "Escalated to Syniverse for T-Mobile network-level blocking investigation.",
-      "tags": [
-        "messaging",
-        "sms",
-        "t-mobile",
-        "carrier-blocking",
-        "syniverse",
-        "callbox",
-        "vip"
-      ],
-      "createdAt": "2026-03-20T00:00:00Z",
-      "updatedAt": "2026-03-26T19:00:00Z"
+      "tags": ["messaging", "sms", "t-mobile", "carrier-blocking", "syniverse", "callbox", "vip"],
+      "createdAt": "2026-03-16T14:58:30Z",
+      "updatedAt": "2026-04-08T18:58:09Z"
     },
     {
-      "id": "case-2741117",
-      "ticketId": "2741117",
-      "title": "WebSocket Media Streaming Timeout - 422 Error 90046",
-      "customer": "Anteryon (Rendall van der Leeuw)",
-      "category": "voice",
-      "status": "open",
-      "findings": "**Issue:** WebSocket media streaming fails with 422 / error 90046 \"Failed to connect to destination\".\n\n**Engineering Finding:** WebSocket takes ~4.5s to establish \u2192 exceeds call control timeout.\n\n**Customer Rebuttal:** App is warm, handshake completes ~2.5-3s, but 422 returns before handshake finishes.\n\n**Customer Ask:** Increase media streaming timeout for number +3677201027.",
-      "notes": "ENGDESK: 50333. Sean pushed back to engineering with customer's rebuttal (03-26).",
-      "response": "Engineering investigating timeout discrepancy. Customer reports handshake completes faster than measured.",
-      "tags": [
-        "voice",
-        "websocket",
-        "media-streaming",
-        "timeout",
-        "422",
-        "engdesk",
-        "anteryon"
-      ],
-      "createdAt": "2026-03-10T00:00:00Z",
-      "updatedAt": "2026-03-26T19:00:00Z"
-    },
-    {
-      "id": "case-2618917",
-      "ticketId": "2618917",
-      "title": "MS Teams Call Me drops after ~40 seconds (RTP No-Op handling)",
-      "customer": "FLUOR MARINE PROPULSION, LLC (via AudioCodes)",
-      "category": "voice",
-      "status": "escalated",
-      "findings": "**Root Cause:** Customer's AudioCodes SBC sends RTP No-Op packets (PT=120, payload 00000000) as keepalives when no audio is flowing. Carrier (Verizon Wireless) terminates with RTP-RTCP Timeout despite Telnyx forwarding transcoded packets.",
-      "notes": "VIP account - 2+ months ongoing. Escalated to internal engineering team.",
-      "response": "Escalated internally. Investigating how B2BUA handles RTP No-Op packets (PT=120).",
-      "tags": [
-        "voice",
-        "rtp",
-        "no-op",
-        "audiocodes",
-        "verizon",
-        "carrier-timeout",
-        "ms-teams",
-        "escalated"
-      ],
-      "createdAt": "2026-01-14T00:00:00Z",
-      "updatedAt": "2026-03-16T19:27:00Z"
-    },
-    {
-      "id": "case-2731701",
-      "ticketId": "2731701",
-      "title": "Zambia SIM connectivity - 0 bytes transferred, uplink broken",
-      "customer": "Honest Mobile (Will Hodge) - VIP",
-      "category": "wireless",
-      "status": "escalated",
-      "findings": "**Issue:** SIMs in Zambia connect with good signal but get virtually no data throughput.\n\n**Root Cause:** Bearer path / GTP-U tunnel issue between Sparkle roaming platform and Airtel Zambia.",
-      "notes": "Escalation doc prepared for Sparkle.",
-      "response": "Data analysis confirms systematic uplink failure on Airtel Zambia. Escalating to Sparkle for GTP-U tunnel investigation.",
-      "tags": [
-        "wireless",
-        "sim",
-        "zambia",
-        "airtel",
-        "sparkle",
-        "gtp-u",
-        "uplink-failure",
-        "honest-mobile"
-      ],
-      "createdAt": "2026-03-16T00:00:00Z",
-      "updatedAt": "2026-03-16T19:27:00Z"
-    },
-    {
-      "id": "case-2770250",
-      "ticketId": "2770250",
-      "title": "Call Recording Only 13s - Hold Event Triggered",
-      "customer": "Ringba (Jonathan)",
-      "category": "voice",
-      "status": "pending",
-      "findings": "**Issue:** Recording only 13s but call was 3:40\n**Session:** 0368ea4a-24a7-11f1-b667-02420aef55a0\n**Root Cause:** SIP re-INVITE with sendonly SDP triggered hold 14s after bridge, killing RTP flow. Recording stopped on silence detection.\n**CDR Evidence:** hold_stamp 21:52:21, hold_accum_seconds: 179, record_completion_cause: success-silence\n**Customer disputes hold** but CDR data is definitive.",
-      "notes": "VIP customer. Corrected typo in follow-up (21:55:21\u219221:52:21). Deep CDR analysis with Sean.",
-      "response": "Full CDR timeline sent with hold event explanation. Follow-up correcting typo and explaining SIP re-INVITE hold mechanism.",
-      "tags": [
-        "voice",
-        "recording",
-        "hold",
-        "vip",
-        "ringba",
-        "collaborative"
-      ],
-      "createdAt": "2026-03-20T00:00:00Z",
-      "updatedAt": "2026-04-06T23:00:00Z"
-    },
-    {
-      "id": "case-2792989",
-      "ticketId": "2792989",
+      "id": "case-2786458",
+      "ticketId": "2786458",
       "title": "SMS Deliverability - Messages Not Received",
-      "customer": "Sumit (Adit)",
+      "customer": "Adit (Sumit Kumar Jangir)",
       "category": "messaging",
-      "status": "pending",
-      "findings": "**Issue:** SMS to patients not received\n**Samples analyzed:** 937-376-4055\u2192937-830-6748 (Apr 2), 937-376-4055\u2192937-919-3278 (Apr 1)\n**Verdict:** All MDRs show DELIVRD:000 from carrier. Issue is downstream (handset spam filter, RCS, DND).",
-      "notes": "Sean reminded to remove carrier names from customer response. Collaborative analysis.",
-      "response": "Explained carrier-confirmed delivery, suggested downstream causes (spam filters, DND).",
-      "tags": [
-        "messaging",
-        "sms",
-        "deliverability",
-        "collaborative"
-      ],
-      "createdAt": "2026-04-01T00:00:00Z",
-      "updatedAt": "2026-04-06T23:00:00Z"
+      "status": "hold",
+      "priority": "urgent",
+      "findings": "SMS to patients not received but shows as delivered in logs. Investigation ongoing.",
+      "notes": "High priority. Customer reports incorrect delivery status in SMS logs.",
+      "response": "Investigating delivery status discrepancy.",
+      "tags": ["messaging", "sms", "deliverability", "adit", "urgent"],
+      "createdAt": "2026-03-31T18:30:14Z",
+      "updatedAt": "2026-04-08T18:33:09Z"
     },
     {
-      "id": "case-2798050",
-      "ticketId": "2798050",
-      "title": "Same-Number SMS Restriction (from=to) - Enterprise Onboarding",
-      "customer": "Giselle (Aloha/getaloha.com)",
-      "category": "messaging",
-      "status": "pending",
-      "findings": "**Issue:** Migrating from Bandwidth, workflow sends SMS where from=to (self-notification). Error 40310.\n**Account:** e8adedee-940b-436c-b32f-3dd2bac65c20\n**Escalated to messaging team** \u2014 hard platform restriction, no feature flag.\n**Workarounds not viable:** Second number not scalable, master number = HIPAA/deliverability risk.",
-      "notes": "Enterprise onboarding customer. Escalated internally. Collaborative analysis with Sean.",
-      "response": "Provided workaround options (dedicated notification pool, webhook/email, feature request via portal).",
-      "tags": [
-        "messaging",
-        "sms",
-        "enterprise",
-        "onboarding",
-        "platform-limitation",
-        "collaborative"
-      ],
-      "createdAt": "2026-04-06T00:00:00Z",
-      "updatedAt": "2026-04-06T23:00:00Z"
-    },
-    {
-      "id": "case-2798563",
-      "ticketId": "2798563",
-      "title": "SMS Spam Blocks - Syniverse REJECTD:045",
-      "customer": "DriveSolutions (Kia/Hyundai of Bedford)",
-      "category": "messaging",
-      "status": "pending",
-      "findings": "**Issue:** Messages blocked as spam over last 7 days\n**Campaigns:** C8XSZC0 (+14405772300), CQY6BT3 (+14407979995) \u2014 both TCR REGISTERED\n**Failure:** REJECTD:045 / spam_block_temporary (40002) via Syniverse\n**Antispam:** Passed Proofpoint and Telnyx internal checks\n**Pattern:** URL-heavy messages, retries to same recipients.",
-      "notes": "Escalating to Syniverse. Collaborative analysis with Sean.",
-      "response": "Customer response + internal notes drafted. Escalation to carrier pending.",
-      "tags": [
-        "messaging",
-        "sms",
-        "spam-block",
-        "syniverse",
-        "tcr",
-        "collaborative"
-      ],
-      "createdAt": "2026-04-06T00:00:00Z",
-      "updatedAt": "2026-04-06T23:00:00Z"
-    },
-    {
-      "id": "case-2798573",
-      "ticketId": "2798573",
-      "title": "No Audio / Spinning on Calls - Network Quality",
-      "customer": "CareCo AI (Oarabile)",
+      "id": "case-2775870",
+      "ticketId": "2775870",
+      "title": "Call Bridge Failures",
+      "customer": "EnrollHere (VIP)",
       "category": "voice",
       "status": "pending",
-      "findings": "**Issue:** Calls spinning/connecting, no audio\n**Account:** 3307ca65-df56-4f15-8ba7-589d584d215b\n**Call:** 3244948c-31e9-11f1-824b-02420aef24a0\n**Root Cause:** Customer-side network \u2014 A-leg MOS 2.79, 41% packet loss, jitter 43,555ms (WebRTC). B-leg MOS 4.50 (perfect).",
-      "notes": "Clear network issue on customer side. Collaborative analysis with Sean.",
-      "response": "Network troubleshooting steps provided with MOS/packet loss data.",
-      "tags": [
-        "voice",
-        "audio",
-        "network",
-        "webrtc",
-        "collaborative"
-      ],
-      "createdAt": "2026-04-06T00:00:00Z",
-      "updatedAt": "2026-04-06T23:00:00Z"
+      "priority": "urgent",
+      "findings": "Call bridging operation failures. JIRA escalated.",
+      "notes": "VIP customer. Multiple call control IDs provided. JIRA escalation in progress.",
+      "response": "Investigating bridge failures with engineering.",
+      "tags": ["voice", "call-control", "bridge", "vip", "enrollhere", "jira-escalated"],
+      "createdAt": "2026-03-26T16:43:47Z",
+      "updatedAt": "2026-04-08T18:58:08Z"
     },
     {
-      "id": "case-2778892",
-      "ticketId": "2778892",
-      "title": "No Audio on Bridged Calls - Voice AI App",
-      "customer": "HeyRevia (Yi Guo)",
+      "id": "case-2773587",
+      "ticketId": "2773587",
+      "title": "SIP 503 Analysis - Offshore Calls",
+      "customer": "Superbill (VIP Advanced 365)",
       "category": "voice",
-      "status": "pending",
-      "findings": "**Issue:** (1) Premature hangup ~500ms (customer-side, acknowledged) (2) No audio on bridged calls\n**Account:** aa61ac1c-9d84-42b5-ab94-47a607c3a7de\n**ENGDESK:** ENGDESK-50793\n**Media streaming:** Working correctly (168 frames delivered, 10 received back). Customer sent only 10 frames in 3.8s.\n**Post-bridge audio:** 67s bridged call with no audio \u2014 B2BUA/FreeSWITCH path needs investigation.",
-      "notes": "Marcin Sikora confirmed streaming service not the issue. Asked customer for fresh samples. Collaborative follow-up with Sean.",
-      "response": "Asked for fresh call samples if issue persists.",
-      "tags": [
-        "voice",
-        "audio",
-        "bridge",
-        "voice-ai",
-        "engdesk",
-        "collaborative"
-      ],
-      "createdAt": "2026-03-28T00:00:00Z",
-      "updatedAt": "2026-04-06T23:00:00Z"
+      "status": "hold",
+      "priority": "urgent",
+      "findings": "25% of offshore calls receiving 503 response. Multiple toll-free numbers affected. JIRA escalated.",
+      "notes": "VIP customer provided extensive call control IDs. WebRTC call events not visible via API.",
+      "response": "Analyzing 503 patterns and media stream disruptions.",
+      "tags": ["voice", "503", "webrtc", "vip", "superbill", "jira-escalated"],
+      "createdAt": "2026-03-25T20:44:36Z",
+      "updatedAt": "2026-04-08T17:54:05Z"
+    },
+    {
+      "id": "case-2770736",
+      "ticketId": "2770736",
+      "title": "Philippines SMART Network - EDGE Only",
+      "customer": "Internal (Renata Reis)",
+      "category": "wireless",
+      "status": "hold",
+      "priority": "normal",
+      "findings": "Users in Philippines limited to EDGE instead of 4G/5G on SMART networks. IMSI 311210394334361 affected.",
+      "notes": "Internal escalation from Wireless team. Complex investigation.",
+      "response": "Investigating signaling for affected IMSIs.",
+      "tags": ["wireless", "sim", "philippines", "smart", "rat-restriction"],
+      "createdAt": "2026-03-24T21:00:23Z",
+      "updatedAt": "2026-04-07T21:31:49Z"
+    },
+    {
+      "id": "case-2718543",
+      "ticketId": "2718543",
+      "title": "SIM Cards Not Connecting",
+      "customer": "Jonathan (Self-Service)",
+      "category": "wireless",
+      "status": "open",
+      "priority": "urgent",
+      "findings": "3 SIM cards not connecting or dropping connection. Waiting for ICCIDs from customer.",
+      "notes": "Self-service customer. Urgent priority. Complex investigation pending customer info.",
+      "response": "Requested SIM ICCIDs for investigation.",
+      "tags": ["wireless", "sim", "connectivity", "urgent"],
+      "createdAt": "2026-02-27T22:34:36Z",
+      "updatedAt": "2026-04-08T17:54:05Z"
+    },
+    {
+      "id": "case-2706965",
+      "ticketId": "2706965",
+      "title": "Big Jitter - Telnyx to AudioCodes",
+      "customer": "AudioCodes (VIP)",
+      "category": "voice",
+      "status": "hold",
+      "priority": "urgent",
+      "findings": "290ms jitter from Telnyx peers to AudioCodes SBC. Two call samples provided with high jitter on RTP streams.",
+      "notes": "VIP customer. JIRA escalated. Media quality investigation.",
+      "response": "Investigating RTP jitter between Telnyx and AudioCodes.",
+      "tags": ["voice", "jitter", "rtp", "media-quality", "vip", "audiocodes", "jira-escalated"],
+      "createdAt": "2026-02-23T14:31:28Z",
+      "updatedAt": "2026-04-08T18:21:57Z"
     }
   ],
-  "lastUpdated": "2026-04-04T00:04:00Z"
+  "lastUpdated": "2026-04-08T19:00:00Z"
 }
