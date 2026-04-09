@@ -1,36 +1,6 @@
 {
   "cases": [
     {
-      "id": "case-2800616",
-      "ticketId": "2800616",
-      "title": "GoDaddy SMS to Cambodia Failing",
-      "customer": "GoDaddy (VIP Prime)",
-      "category": "messaging",
-      "status": "hold",
-      "priority": "high",
-      "findings": "SMS to +85592686821 failing. Carrier escalated.",
-      "notes": "VIP Prime customer via ClearFeed Slack. On hold pending carrier investigation.",
-      "response": "Escalated to carrier for investigation.",
-      "tags": ["messaging", "sms", "cambodia", "vip", "godaddy", "carrier-escalated"],
-      "createdAt": "2026-04-07T14:33:22Z",
-      "updatedAt": "2026-04-08T17:48:11Z"
-    },
-    {
-      "id": "case-2751246",
-      "ticketId": "2751246",
-      "title": "T-Mobile SMS Blocking - Service Not Available",
-      "customer": "Call Box (VIP Prime)",
-      "category": "messaging",
-      "status": "open",
-      "priority": "normal",
-      "findings": "T-Mobile users can't text customer's numbers - receiving 'Sorry, this service is not available' error. T-Mobile network-level blocking (MO messages rejected before reaching Telnyx).",
-      "notes": "Ongoing T-Mobile carrier issue. Escalated to Syniverse.",
-      "response": "Escalated to Syniverse for T-Mobile network-level blocking investigation.",
-      "tags": ["messaging", "sms", "t-mobile", "carrier-blocking", "syniverse", "callbox", "vip"],
-      "createdAt": "2026-03-16T14:58:30Z",
-      "updatedAt": "2026-04-08T18:58:09Z"
-    },
-    {
       "id": "case-2786458",
       "ticketId": "2786458",
       "title": "SMS Deliverability - Messages Not Received",
@@ -43,7 +13,7 @@
       "response": "Investigating delivery status discrepancy.",
       "tags": ["messaging", "sms", "deliverability", "adit", "urgent"],
       "createdAt": "2026-03-31T18:30:14Z",
-      "updatedAt": "2026-04-08T18:33:09Z"
+      "updatedAt": "2026-04-08T22:46:11Z"
     },
     {
       "id": "case-2775870",
@@ -61,12 +31,27 @@
       "updatedAt": "2026-04-08T18:58:08Z"
     },
     {
+      "id": "case-2775665",
+      "ticketId": "2775665",
+      "title": "TBD",
+      "customer": "Unknown",
+      "category": "voice",
+      "status": "hold",
+      "priority": "normal",
+      "findings": "",
+      "notes": "",
+      "response": "",
+      "tags": [],
+      "createdAt": "",
+      "updatedAt": "2026-04-09T00:00:00Z"
+    },
+    {
       "id": "case-2773587",
       "ticketId": "2773587",
       "title": "SIP 503 Analysis - Offshore Calls",
       "customer": "Superbill (VIP Advanced 365)",
       "category": "voice",
-      "status": "hold",
+      "status": "pending",
       "priority": "urgent",
       "findings": "25% of offshore calls receiving 503 response. Multiple toll-free numbers affected. JIRA escalated.",
       "notes": "VIP customer provided extensive call control IDs. WebRTC call events not visible via API.",
@@ -91,19 +76,19 @@
       "updatedAt": "2026-04-07T21:31:49Z"
     },
     {
-      "id": "case-2718543",
-      "ticketId": "2718543",
-      "title": "SIM Cards Not Connecting",
-      "customer": "Jonathan (Self-Service)",
-      "category": "wireless",
-      "status": "open",
-      "priority": "urgent",
-      "findings": "3 SIM cards not connecting or dropping connection. Waiting for ICCIDs from customer.",
-      "notes": "Self-service customer. Urgent priority. Complex investigation pending customer info.",
-      "response": "Requested SIM ICCIDs for investigation.",
-      "tags": ["wireless", "sim", "connectivity", "urgent"],
-      "createdAt": "2026-02-27T22:34:36Z",
-      "updatedAt": "2026-04-08T17:54:05Z"
+      "id": "case-2751246",
+      "ticketId": "2751246",
+      "title": "T-Mobile SMS Blocking - Service Not Available",
+      "customer": "Call Box (VIP Prime)",
+      "category": "messaging",
+      "status": "hold",
+      "priority": "normal",
+      "findings": "T-Mobile users can't text customer's numbers - receiving 'Sorry, this service is not available' error. T-Mobile network-level blocking (MO messages rejected before reaching Telnyx).",
+      "notes": "Ongoing T-Mobile carrier issue. Escalated to Syniverse.",
+      "response": "Escalated to Syniverse for T-Mobile network-level blocking investigation.",
+      "tags": ["messaging", "sms", "t-mobile", "carrier-blocking", "syniverse", "callbox", "vip"],
+      "createdAt": "2026-03-16T14:58:30Z",
+      "updatedAt": "2026-04-08T18:58:09Z"
     },
     {
       "id": "case-2706965",
@@ -119,7 +104,22 @@
       "tags": ["voice", "jitter", "rtp", "media-quality", "vip", "audiocodes", "jira-escalated"],
       "createdAt": "2026-02-23T14:31:28Z",
       "updatedAt": "2026-04-08T18:21:57Z"
+    },
+    {
+      "id": "case-2690849",
+      "ticketId": "2690849",
+      "title": "TBD",
+      "customer": "Unknown",
+      "category": "voice",
+      "status": "pending",
+      "priority": "normal",
+      "findings": "",
+      "notes": "",
+      "response": "",
+      "tags": [],
+      "createdAt": "",
+      "updatedAt": "2026-04-09T00:00:00Z"
     }
   ],
-  "lastUpdated": "2026-04-08T19:00:00Z"
+  "lastUpdated": "2026-04-09T00:00:00Z"
 }

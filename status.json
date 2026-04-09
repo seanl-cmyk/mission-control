@@ -1,25 +1,21 @@
 {
-  "state": "active",
-  "message": "Midday sync - April 8, 2026. 8 active tickets in queue. No tickets updated by Sean today yet (1 PM Belize time).",
+  "state": "offline",
+  "message": "End of shift - April 8, 2026. Dashboard sync complete.",
   "ticketId": null,
   "startedAt": "2026-04-08T15:00:00Z",
-  "updatedAt": "2026-04-08T19:00:00Z",
-  "lastSync": "2026-04-08T19:00:00Z",
+  "updatedAt": "2026-04-09T00:00:00Z",
+  "lastSync": "2026-04-09T00:00:00Z",
   "ticketCounts": {
-    "open": 2,
-    "pending": 1,
+    "open": 0,
+    "pending": 3,
     "hold": 5,
-    "resolvedThisWeek": 32
+    "resolvedThisWeek": 34
   },
-  "todayHighlights": [],
-  "yesterdayHighlights": [
-    "Weave VIP - U.S. Cellular call issues (waiting on call UUIDs)",
-    "Cisco VIP - ESA validation escalated to carrier",
-    "AudioCodes VIP - UK 404 routing fix applied",
-    "VOXO High Priority - STIR/SHAKEN B attestation identified",
-    "AudioCodes/MKS VIP - Israeli short codes (blocked on customer)",
-    "Vianova - SIM outbound calling (waiting on customer info)",
-    "Cosmo/SJobe - SIM API 500 errors resolved, RCA pending",
-    "Thoughtly - calls disconnecting (customer has workaround)"
-  ]
+  "todayHighlights": [
+    "Billing Proxy OAuth Issue - Resolved: GLM-5 configured as primary, Claude fallback",
+    "Ticket #2770250 - Hold Events Investigation (response drafted)",
+    "Ticket #2800616 - GoDaddy SMS to Cambodia (carrier escalation in progress)",
+    "Ticket #2718543 - Matcha Electric SIM Issue (root cause identified)"
+  ],
+  "yesterdayHighlights": []
 }
