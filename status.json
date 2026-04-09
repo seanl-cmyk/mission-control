@@ -1,21 +1,24 @@
 {
-  "state": "offline",
-  "message": "End of shift - April 8, 2026. Dashboard sync complete.",
+  "state": "active",
+  "message": "Dashboard sync - April 9, 2026 19:00 UTC",
   "ticketId": null,
-  "startedAt": "2026-04-08T15:00:00Z",
-  "updatedAt": "2026-04-09T00:00:00Z",
-  "lastSync": "2026-04-09T00:00:00Z",
+  "startedAt": "2026-04-09T15:00:00Z",
+  "updatedAt": "2026-04-09T19:00:34Z",
+  "lastSync": "2026-04-09T19:00:34Z",
   "ticketCounts": {
-    "open": 0,
-    "pending": 3,
-    "hold": 5,
-    "resolvedThisWeek": 34
+    "open": 5,
+    "pending": 0,
+    "hold": 1,
+    "resolvedThisWeek": 38
   },
   "todayHighlights": [
-    "Billing Proxy OAuth Issue - Resolved: GLM-5 configured as primary, Claude fallback",
-    "Ticket #2770250 - Hold Events Investigation (response drafted)",
-    "Ticket #2800616 - GoDaddy SMS to Cambodia (carrier escalation in progress)",
-    "Ticket #2718543 - Matcha Electric SIM Issue (root cause identified)"
+    "Dashboard sync complete - 6 tickets updated",
+    "Open: 5 | Hold: 1 | Resolved this week: 38"
   ],
-  "yesterdayHighlights": []
+  "yesterdayHighlights": [
+    "Billing Proxy OAuth Issue - Resolved",
+    "Ticket #2770250 - Hold Events Investigation",
+    "Ticket #2800616 - GoDaddy SMS to Cambodia",
+    "Ticket #2718543 - Matcha Electric SIM Issue"
+  ]
 }
