@@ -1,6 +1,21 @@
 {
   "cases": [
     {
+      "id": "case-2806456",
+      "ticketId": "2806456",
+      "title": "Mass Call Drops During Maintenance",
+      "customer": "Enroll Here (Tim Strakeljahn)",
+      "category": "voice",
+      "status": "open",
+      "priority": "urgent",
+      "findings": "Customer reported simultaneous call drops at ~17:00 UTC. Root cause identified as scheduled B2BUA restart during Telephony Service Upgrade US/EU maintenance. Calls in signaling phase were terminated immediately; calls after 17:00:00 connected normally. Draft response provided. ⚠️ TIMEZONE ISSUE: Customer's graphs are in EST - need to verify actual timestamp before finalizing response.",
+      "notes": "Sensei-assisted analysis. Critical lesson learned: Always verify timezone before correlating customer-reported events with maintenance windows.",
+      "response": "Maintenance-related B2BUA restart caused in-flight calls to drop. Pending timezone verification with customer.",
+      "tags": ["voice", "maintenance", "b2bua", "calldrops", "vip", "enrollhere", "sensei-analyzed", "timezone-check-needed"],
+      "createdAt": "2026-04-09T17:07:07Z",
+      "updatedAt": "2026-04-09T21:49:14Z"
+    },
+    {
       "id": "case-2786458",
       "ticketId": "2786458",
       "title": "SMS Deliverability - Messages Not Received",
@@ -29,21 +44,6 @@
       "tags": ["voice", "call-control", "bridge", "vip", "enrollhere", "jira-escalated"],
       "createdAt": "2026-03-26T16:43:47Z",
       "updatedAt": "2026-04-08T18:58:08Z"
-    },
-    {
-      "id": "case-2775665",
-      "ticketId": "2775665",
-      "title": "TBD",
-      "customer": "Unknown",
-      "category": "voice",
-      "status": "hold",
-      "priority": "normal",
-      "findings": "",
-      "notes": "",
-      "response": "",
-      "tags": [],
-      "createdAt": "",
-      "updatedAt": "2026-04-09T00:00:00Z"
     },
     {
       "id": "case-2773587",
@@ -104,22 +104,7 @@
       "tags": ["voice", "jitter", "rtp", "media-quality", "vip", "audiocodes", "jira-escalated"],
       "createdAt": "2026-02-23T14:31:28Z",
       "updatedAt": "2026-04-08T18:21:57Z"
-    },
-    {
-      "id": "case-2690849",
-      "ticketId": "2690849",
-      "title": "TBD",
-      "customer": "Unknown",
-      "category": "voice",
-      "status": "pending",
-      "priority": "normal",
-      "findings": "",
-      "notes": "",
-      "response": "",
-      "tags": [],
-      "createdAt": "",
-      "updatedAt": "2026-04-09T00:00:00Z"
     }
   ],
-  "lastUpdated": "2026-04-09T00:00:00Z"
+  "lastUpdated": "2026-04-10T00:00:00Z"
 }

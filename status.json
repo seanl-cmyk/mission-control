@@ -1,24 +1,22 @@
 {
-  "state": "active",
-  "message": "Dashboard sync - April 9, 2026 19:00 UTC",
+  "state": "offline",
+  "message": "End of day - April 9, 2026",
   "ticketId": null,
   "startedAt": "2026-04-09T15:00:00Z",
-  "updatedAt": "2026-04-09T19:00:34Z",
-  "lastSync": "2026-04-09T19:00:34Z",
+  "updatedAt": "2026-04-10T00:00:00Z",
+  "lastSync": "2026-04-10T00:00:00Z",
   "ticketCounts": {
-    "open": 5,
-    "pending": 0,
-    "hold": 1,
-    "resolvedThisWeek": 38
+    "open": 1,
+    "pending": 2,
+    "hold": 4,
+    "resolvedThisWeek": 37
   },
   "todayHighlights": [
-    "Dashboard sync complete - 6 tickets updated",
-    "Open: 5 | Hold: 1 | Resolved this week: 38"
+    "Ticket #2806456 - Mass Call Drops During Maintenance (Sensei-analyzed)",
+    "Root cause: B2BUA restart during scheduled maintenance",
+    "⚠️ Timezone verification needed before customer response"
   ],
-  "yesterdayHighlights": [
-    "Billing Proxy OAuth Issue - Resolved",
-    "Ticket #2770250 - Hold Events Investigation",
-    "Ticket #2800616 - GoDaddy SMS to Cambodia",
-    "Ticket #2718543 - Matcha Electric SIM Issue"
+  "lessonsLearned": [
+    "Always verify timezone before correlating customer events with maintenance windows"
   ]
 }
