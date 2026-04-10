@@ -1,22 +1,31 @@
 {
-  "state": "offline",
-  "message": "End of day - April 9, 2026",
+  "state": "active",
+  "message": "Midday sync - April 10, 2026",
   "ticketId": null,
-  "startedAt": "2026-04-09T15:00:00Z",
-  "updatedAt": "2026-04-10T00:00:00Z",
-  "lastSync": "2026-04-10T00:00:00Z",
+  "startedAt": "2026-04-10T15:00:00Z",
+  "updatedAt": "2026-04-10T19:00:00Z",
+  "lastSync": "2026-04-10T19:00:00Z",
   "ticketCounts": {
-    "open": 1,
-    "pending": 2,
+    "open": 3,
+    "pending": 3,
     "hold": 4,
+    "solved": 3,
     "resolvedThisWeek": 37
   },
   "todayHighlights": [
-    "Ticket #2806456 - Mass Call Drops During Maintenance (Sensei-analyzed)",
-    "Root cause: B2BUA restart during scheduled maintenance",
-    "⚠️ Timezone verification needed before customer response"
+    "#2806456 — Enroll Here: Correction needed, root cause was network instability NOT maintenance (Sensei-analyzed)",
+    "#2803630 — CarWars: Dead air/one way audio, Hyundai of Fresno",
+    "#2801084 — Ringba: Dead air calls, urgent P2",
+    "#2803468 — Honest Mobile: SIMs no data on specific PWGs, hold for investigation",
+    "#2806001 — CareCo: Call cutting out/lagging, pending",
+    "#2797899 — Aloha: Expedited hosted SMS order, pending",
+    "#2806548 — Weave: 10DLC provisioning — SOLVED",
+    "#2806175 — MangoVoice: NNID release — SOLVED",
+    "#2806134 — Outbound SMS: Syniverse campaign fix — SOLVED"
   ],
   "lessonsLearned": [
-    "Always verify timezone before correlating customer events with maintenance windows"
+    "Never attribute a customer issue to a coincidental event without evidence",
+    "Always verify timezone before correlating customer-reported events with maintenance windows",
+    "Shreya corrected #2806456 root cause — maintenance was NOT the cause, it was network instability"
   ]
 }

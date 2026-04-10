@@ -3,17 +3,162 @@
     {
       "id": "case-2806456",
       "ticketId": "2806456",
-      "title": "Mass Call Drops During Maintenance",
+      "title": "Enroll Here Update - Call Drops / Network Instability",
       "customer": "Enroll Here (Tim Strakeljahn)",
       "category": "voice",
       "status": "open",
       "priority": "urgent",
-      "findings": "Customer reported simultaneous call drops at ~17:00 UTC. Root cause identified as scheduled B2BUA restart during Telephony Service Upgrade US/EU maintenance. Calls in signaling phase were terminated immediately; calls after 17:00:00 connected normally. Draft response provided. ⚠️ TIMEZONE ISSUE: Customer's graphs are in EST - need to verify actual timestamp before finalizing response.",
-      "notes": "Sensei-assisted analysis. Critical lesson learned: Always verify timezone before correlating customer-reported events with maintenance windows.",
-      "response": "Maintenance-related B2BUA restart caused in-flight calls to drop. Pending timezone verification with customer.",
-      "tags": ["voice", "maintenance", "b2bua", "calldrops", "vip", "enrollhere", "sensei-analyzed", "timezone-check-needed"],
+      "findings": "⚠️ CORRECTION: Original analysis blamed maintenance; Shreya confirmed root cause was network instability, NOT maintenance. Customer (Tim) is now asking for clarification: 'So unrelated to maintenance?' Also raising separate issue: calls ending with 200 hangup code in prior incidents. Action needed: Sean should post a correction retracting the maintenance explanation. Need actual EST timestamps from customer's graphs to re-analyze. Need to address the 200 hangup code question.",
+      "notes": "Sensei-assisted analysis. CRITICAL LESSON: Never attribute customer issues to coincidental events without evidence. Shreya corrected at 21:15 UTC Apr 9 — 'network instability issue'. Customer pushed back strongly ('hope this is a bad joke').",
+      "response": "Pending correction from Sean retracting the maintenance explanation.",
+      "tags": ["voice", "network-instability", "b2bua", "calldrops", "vip", "enrollhere", "sensei-analyzed", "correction-needed", "200-hangup"],
       "createdAt": "2026-04-09T17:07:07Z",
-      "updatedAt": "2026-04-09T21:49:14Z"
+      "updatedAt": "2026-04-10T18:58:46Z",
+      "source": "collaborative"
+    },
+    {
+      "id": "case-2803630",
+      "ticketId": "2803630",
+      "title": "Dead Air/One Way Audio - Hyundai of Fresno",
+      "customer": "CarWars (help@carwars.com)",
+      "category": "voice",
+      "status": "open",
+      "priority": "normal",
+      "findings": "Customer reports one way audio/dead air on outbound calls to DID. Customer not hearing ringing/audio. Example call from +18554543643 to +15594407969 on Apr 8 at 13:16:59 CDT.",
+      "notes": "VIP Prime customer. Complex media quality issue.",
+      "response": "Investigation in progress.",
+      "tags": ["voice", "media-quality", "dead-air", "one-way-audio", "vip-prime", "carwars", "complex"],
+      "createdAt": "2026-04-08T20:01:39Z",
+      "updatedAt": "2026-04-10T18:58:46Z",
+      "source": "solo"
+    },
+    {
+      "id": "case-2801084",
+      "ticketId": "2801084",
+      "title": "Dead Air Calls - Ringba",
+      "customer": "Ringba (Gustavo Siqueira)",
+      "category": "voice",
+      "status": "open",
+      "priority": "urgent",
+      "findings": "Customer reports dead air calls — their side shows successfully connected with recording, but final destination claims they never received the calls. Recordings have no sound. Multiple call UUIDs provided.",
+      "notes": "VIP customer. Major P2 impact. ClearFeed/Slack integration with #shared-ringba-telnyx.",
+      "response": "Investigating dead air with recording discrepancies.",
+      "tags": ["voice", "dead-air", "media-quality", "vip", "ringba", "complex", "urgent"],
+      "createdAt": "2026-04-07T16:33:55Z",
+      "updatedAt": "2026-04-10T15:25:21Z",
+      "source": "solo"
+    },
+    {
+      "id": "case-2803468",
+      "ticketId": "2803468",
+      "title": "SIMs with Signal - No Data Connection (Honest Mobile)",
+      "customer": "Honest Mobile (Will)",
+      "category": "wireless",
+      "status": "hold",
+      "priority": "urgent",
+      "findings": "SIMs showing signal but no data connection. Issue isolated to specific PWGs (honest-pwg-eu-prod-*). Moving SIMs to Default PWG restores data immediately; moving back to original PWG drops data again. Affected SIMs in Mexico (Telcel), Albania (One.al), Cyprus (Cyta). Possible PWG blocklist or 3G blocking impact.",
+      "notes": "VIP customer. Complex investigation. Could be PWG-specific blocklist or 3G sunset impact.",
+      "response": "Investigating PWG-specific data session failures.",
+      "tags": ["wireless", "sim", "data-connection", "pwg", "blocklist", "vip", "honestmobile", "complex"],
+      "createdAt": "2026-04-08T17:15:51Z",
+      "updatedAt": "2026-04-10T15:25:20Z",
+      "source": "solo"
+    },
+    {
+      "id": "case-2806001",
+      "ticketId": "2806001",
+      "title": "Call Cutting Out / Lagging - CareCo",
+      "customer": "CareCo (Oarabile)",
+      "category": "voice",
+      "status": "pending",
+      "priority": "urgent",
+      "findings": "User experiencing call cutting out and lagging during calls. Call control ID provided: v3:VGBht5IC-tJ7JDOk5CqN8shbNjb-22YuJ8nKjQQDIqBsqhfb2QMy0A",
+      "notes": "Onboarding-select customer. Major P2. ClearFeed/Slack integration with #shared-careco-telnyx.",
+      "response": "Awaiting investigation with call control ID.",
+      "tags": ["voice", "call-quality", "lagging", "cutting-out", "careco", "onboarding"],
+      "createdAt": "2026-04-09T15:16:33Z",
+      "updatedAt": "2026-04-10T17:18:35Z",
+      "source": "solo"
+    },
+    {
+      "id": "case-2797899",
+      "ticketId": "2797899",
+      "title": "EXPEDITE: ALOHA Hosted SMS Order",
+      "customer": "Aloha (Matthew Wissman)",
+      "category": "messaging",
+      "status": "pending",
+      "priority": "high",
+      "findings": "Hosted SMS Order 80019d53-f9ef-4688-807d-2346eb3cc0a4 pending >48 hours. LOA attached. Client needs texting live ASAP.",
+      "notes": "Porting handover to NOC. Onboarding customer.",
+      "response": "Processing expedited hosted SMS order.",
+      "tags": ["messaging", "hosted-sms", "porting", "expedite", "aloha", "onboarding"],
+      "createdAt": "2026-04-06T15:10:05Z",
+      "updatedAt": "2026-04-09T19:09:46Z",
+      "source": "solo"
+    },
+    {
+      "id": "case-2806548",
+      "ticketId": "2806548",
+      "title": "10DLC Provisioning Error - Weave",
+      "customer": "Weave (Jackson Parr)",
+      "category": "messaging",
+      "status": "solved",
+      "priority": "high",
+      "findings": "TN 5417478272 showing as not fully provisioned, giving 10DLC errors when trying to send SMS.",
+      "notes": "VIP customer. Simple topic. Resolved.",
+      "response": "Resolved — 10DLC provisioning issue addressed.",
+      "tags": ["messaging", "10dlc", "provisioning", "vip", "weave", "solved"],
+      "createdAt": "2026-04-09T17:27:17Z",
+      "updatedAt": "2026-04-09T18:53:09Z",
+      "source": "solo"
+    },
+    {
+      "id": "case-2806175",
+      "ticketId": "2806175",
+      "title": "Release NNID on TN 8177319487 - MangoVoice",
+      "customer": "MangoVoice (Cynthia)",
+      "category": "messaging",
+      "status": "solved",
+      "priority": "high",
+      "findings": "Request to release NNID on TN (817) 731-9487.",
+      "notes": "VIP customer. Numbering request. Resolved.",
+      "response": "NNID released.",
+      "tags": ["messaging", "numbering", "nnid", "vip", "mangovoice", "solved"],
+      "createdAt": "2026-04-09T15:53:38Z",
+      "updatedAt": "2026-04-09T16:15:06Z",
+      "source": "solo"
+    },
+    {
+      "id": "case-2806134",
+      "ticketId": "2806134",
+      "title": "Outbound SMS - Marked Delivered But Not Received",
+      "customer": "Vendor org",
+      "category": "messaging",
+      "status": "solved",
+      "priority": "low",
+      "findings": "SMS from +19702238775 to +18054555328 marked as delivered but not received over 3 days (Apr 6-8). Syniverse confirmed TN failed to add to campaign CFTTMD9 on Apr 6. Resubmitted — TN now properly provisioned.",
+      "notes": "Self-service customer. Low priority. Resolved via Syniverse fix.",
+      "response": "Resolved — Syniverse resubmitted campaign add request, TN now provisioned.",
+      "tags": ["messaging", "sms", "deliverability", "syniverse", "10dlc", "solved"],
+      "createdAt": "2026-04-09T15:43:30Z",
+      "updatedAt": "2026-04-09T19:15:39Z",
+      "source": "solo"
+    },
+    {
+      "id": "case-2770736",
+      "ticketId": "2770736",
+      "title": "Philippines SMART Network - EDGE Only",
+      "customer": "Internal (Renata Reis)",
+      "category": "wireless",
+      "status": "hold",
+      "priority": "normal",
+      "findings": "Users in Philippines limited to EDGE instead of 4G/5G on SMART networks. IMSI 311210394334361 affected.",
+      "notes": "Internal escalation from Wireless team. Complex investigation.",
+      "response": "Investigating signaling for affected IMSIs.",
+      "tags": ["wireless", "sim", "philippines", "smart", "rat-restriction"],
+      "createdAt": "2026-04-09T22:30:06Z",
+      "updatedAt": "2026-04-09T22:30:06Z",
+      "source": "solo"
     },
     {
       "id": "case-2786458",
@@ -28,7 +173,8 @@
       "response": "Investigating delivery status discrepancy.",
       "tags": ["messaging", "sms", "deliverability", "adit", "urgent"],
       "createdAt": "2026-03-31T18:30:14Z",
-      "updatedAt": "2026-04-08T22:46:11Z"
+      "updatedAt": "2026-04-08T22:46:11Z",
+      "source": "solo"
     },
     {
       "id": "case-2775870",
@@ -43,7 +189,8 @@
       "response": "Investigating bridge failures with engineering.",
       "tags": ["voice", "call-control", "bridge", "vip", "enrollhere", "jira-escalated"],
       "createdAt": "2026-03-26T16:43:47Z",
-      "updatedAt": "2026-04-08T18:58:08Z"
+      "updatedAt": "2026-04-08T18:58:08Z",
+      "source": "solo"
     },
     {
       "id": "case-2773587",
@@ -58,22 +205,8 @@
       "response": "Analyzing 503 patterns and media stream disruptions.",
       "tags": ["voice", "503", "webrtc", "vip", "superbill", "jira-escalated"],
       "createdAt": "2026-03-25T20:44:36Z",
-      "updatedAt": "2026-04-08T17:54:05Z"
-    },
-    {
-      "id": "case-2770736",
-      "ticketId": "2770736",
-      "title": "Philippines SMART Network - EDGE Only",
-      "customer": "Internal (Renata Reis)",
-      "category": "wireless",
-      "status": "hold",
-      "priority": "normal",
-      "findings": "Users in Philippines limited to EDGE instead of 4G/5G on SMART networks. IMSI 311210394334361 affected.",
-      "notes": "Internal escalation from Wireless team. Complex investigation.",
-      "response": "Investigating signaling for affected IMSIs.",
-      "tags": ["wireless", "sim", "philippines", "smart", "rat-restriction"],
-      "createdAt": "2026-03-24T21:00:23Z",
-      "updatedAt": "2026-04-07T21:31:49Z"
+      "updatedAt": "2026-04-08T17:54:05Z",
+      "source": "solo"
     },
     {
       "id": "case-2751246",
@@ -83,12 +216,13 @@
       "category": "messaging",
       "status": "hold",
       "priority": "normal",
-      "findings": "T-Mobile users can't text customer's numbers - receiving 'Sorry, this service is not available' error. T-Mobile network-level blocking (MO messages rejected before reaching Telnyx).",
+      "findings": "T-Mobile users can't text customer's numbers - receiving 'Sorry, this service is not available' error. T-Mobile network-level blocking.",
       "notes": "Ongoing T-Mobile carrier issue. Escalated to Syniverse.",
       "response": "Escalated to Syniverse for T-Mobile network-level blocking investigation.",
       "tags": ["messaging", "sms", "t-mobile", "carrier-blocking", "syniverse", "callbox", "vip"],
       "createdAt": "2026-03-16T14:58:30Z",
-      "updatedAt": "2026-04-08T18:58:09Z"
+      "updatedAt": "2026-04-08T18:58:09Z",
+      "source": "solo"
     },
     {
       "id": "case-2706965",
@@ -103,8 +237,9 @@
       "response": "Investigating RTP jitter between Telnyx and AudioCodes.",
       "tags": ["voice", "jitter", "rtp", "media-quality", "vip", "audiocodes", "jira-escalated"],
       "createdAt": "2026-02-23T14:31:28Z",
-      "updatedAt": "2026-04-08T18:21:57Z"
+      "updatedAt": "2026-04-08T18:21:57Z",
+      "source": "solo"
     }
   ],
-  "lastUpdated": "2026-04-10T00:00:00Z"
+  "lastUpdated": "2026-04-10T19:00:00Z"
 }
