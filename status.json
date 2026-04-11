@@ -1,16 +1,16 @@
 {
-  "state": "active",
-  "message": "Midday sync - April 10, 2026",
+  "state": "offline",
+  "message": "End of day — April 10, 2026",
   "ticketId": null,
   "startedAt": "2026-04-10T15:00:00Z",
-  "updatedAt": "2026-04-10T19:00:00Z",
-  "lastSync": "2026-04-10T19:00:00Z",
+  "updatedAt": "2026-04-11T00:00:00Z",
+  "lastSync": "2026-04-11T00:00:00Z",
   "ticketCounts": {
     "open": 3,
-    "pending": 3,
-    "hold": 4,
+    "pending": 4,
+    "hold": 5,
     "solved": 3,
-    "resolvedThisWeek": 37
+    "resolvedThisWeek": 36
   },
   "todayHighlights": [
     "#2806456 — Enroll Here: Correction needed, root cause was network instability NOT maintenance (Sensei-analyzed)",
