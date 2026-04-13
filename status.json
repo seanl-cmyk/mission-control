@@ -1,27 +1,29 @@
 {
-  "state": "offline",
-  "message": "End of day — April 10, 2026",
+  "state": "active",
+  "message": "Midday sync — April 13, 2026",
   "ticketId": null,
-  "startedAt": "2026-04-10T15:00:00Z",
-  "updatedAt": "2026-04-11T00:00:00Z",
-  "lastSync": "2026-04-11T00:00:00Z",
+  "startedAt": "2026-04-13T15:00:00Z",
+  "updatedAt": "2026-04-13T19:00:00Z",
+  "lastSync": "2026-04-13T19:00:00Z",
   "ticketCounts": {
-    "open": 3,
-    "pending": 4,
-    "hold": 5,
-    "solved": 3,
-    "resolvedThisWeek": 36
+    "open": 5,
+    "pending": 1,
+    "hold": 3,
+    "solved": 2,
+    "closed": 1,
+    "resolvedThisWeek": 29
   },
   "todayHighlights": [
-    "#2806456 — Enroll Here: Correction needed, root cause was network instability NOT maintenance (Sensei-analyzed)",
-    "#2803630 — CarWars: Dead air/one way audio, Hyundai of Fresno",
-    "#2801084 — Ringba: Dead air calls, urgent P2",
-    "#2803468 — Honest Mobile: SIMs no data on specific PWGs, hold for investigation",
-    "#2806001 — CareCo: Call cutting out/lagging, pending",
-    "#2797899 — Aloha: Expedited hosted SMS order, pending",
-    "#2806548 — Weave: 10DLC provisioning — SOLVED",
-    "#2806175 — MangoVoice: NNID release — SOLVED",
-    "#2806134 — Outbound SMS: Syniverse campaign fix — SOLVED"
+    "#2718543 — Matcha Electric: Brooklyn SIM analysis confirms different failure mode vs Plantsville (sensei-analyzed)",
+    "#2772701 — Univoxx: 911 call dispatched to wrong state, P1 critical",
+    "#2807283 — Adit/Sequatchie Valley: Call connectivity failure, new",
+    "#2813700 — Vendor: Outbound call failure, new",
+    "#2806001 — CareCo: Call cutting out — SOLVED",
+    "#2761702 — Verstela: Deleted number +12064053300 — SOLVED",
+    "#2785735 — Weave: Number ownership check — CLOSED",
+    "#2788983 — CareCo: Destination out of order errors, on hold",
+    "#2751693 — Inulti: WebRTC peer connection failures, pending",
+    "#2806456 — Enroll Here: Correction still pending (network instability, not maintenance)"
   ],
   "lessonsLearned": [
     "Never attribute a customer issue to a coincidental event without evidence",
