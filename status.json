@@ -1,17 +1,17 @@
 {
-  "state": "active",
-  "message": "Midday sync — April 13, 2026",
+  "state": "offline",
+  "message": "End of day — April 13, 2026",
   "ticketId": null,
   "startedAt": "2026-04-13T15:00:00Z",
-  "updatedAt": "2026-04-13T19:00:00Z",
-  "lastSync": "2026-04-13T19:00:00Z",
+  "updatedAt": "2026-04-14T00:00:00Z",
+  "lastSync": "2026-04-14T00:00:00Z",
   "ticketCounts": {
     "open": 5,
     "pending": 1,
     "hold": 3,
     "solved": 2,
     "closed": 1,
-    "resolvedThisWeek": 29
+    "resolvedThisWeek": 25
   },
   "todayHighlights": [
     "#2718543 — Matcha Electric: Brooklyn SIM analysis confirms different failure mode vs Plantsville (sensei-analyzed)",
