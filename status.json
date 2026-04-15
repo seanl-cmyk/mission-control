@@ -1,28 +1,35 @@
 {
-  "state": "active",
-  "message": "Midday sync — April 14, 2026",
+  "state": "offline",
+  "message": "End of day — April 14, 2026",
   "ticketId": null,
   "startedAt": "2026-04-14T15:00:00Z",
-  "updatedAt": "2026-04-14T19:00:00Z",
-  "lastSync": "2026-04-14T19:00:00Z",
+  "updatedAt": "2026-04-15T00:00:00Z",
+  "lastSync": "2026-04-15T00:00:00Z",
   "ticketCounts": {
-    "open": 6,
-    "pending": 3,
-    "hold": 3,
-    "solved": 4,
-    "resolvedThisWeek": 27
+    "open": 0,
+    "pending": 1,
+    "hold": 9,
+    "solved": 10,
+    "resolvedThisWeek": 30
   },
   "todayHighlights": [
-    "#2798158 — CareCo: OB messages 'delivered' but not received by patient (sensei-analyzed, MDR lookup pending Graylog)",
-    "#2810268 — Adit: Inbound fax failure on DID 402-715-5855 (new, JIRA escalated)",
-    "#2813916 — Assistable: AI transfer goes to bot instead of transfer tool (new, VIP, P2)",
-    "#2810350 — Iterable: SMS 40012 error, VIP 365 (new, hold)",
-    "#2809820 — DomuAI/Vapi: 70%+ call failures, term vendor 403 (new, P2)",
-    "#2816647 — Canna Cabana: MMS 40008 to Canadian number (new, hold)",
+    "#2817023 — Ringba: Busy signal = 603 Decline from destination, not network (sensei-analyzed SIP)",
+    "#2798158 — CareCo: OB messages 'delivered' but not received (sensei-analyzed, MDR lookup pending Graylog)",
+    "#2810268 — Adit: Inbound fax failure on DID 402-715-5855 (JIRA escalated, hold)",
+    "#2813916 — Assistable: AI transfer goes to bot instead of transfer tool (VIP, P2, pending)",
+    "#2810350 — Iterable: SMS 40012 error, VIP 365 (hold)",
+    "#2809820 — DomuAI/Vapi: 70%+ call failures, term vendor 403 (P2, pending)",
+    "#2816647 — Canna Cabana: MMS 40008 to Canadian number (hold)",
     "#2803630 — CarWars: Dead air/one-way audio — SOLVED",
     "#2814827 — Emergency Property Response: 2FA disable — SOLVED",
     "#2815080 — 2FA reset — SOLVED",
     "#2815973 — Concurrent channel limit increase — SOLVED",
+    "#2817528 — Outbound Shortcodes SMS Failure — SOLVED",
+    "#2817020 — Outbound SMS — SOLVED",
+    "#2814489 — Account email change request — SOLVED",
+    "#2796499 — Can't login (Greystone Digital) — SOLVED",
+    "#2798756 — Error updating phone number address — SOLVED",
+    "#2761702 — Phone number inadvertently deleted — SOLVED",
     "#2718543 — Matcha Electric: Ongoing USC DS3 circuit issue (sensei-analyzed)",
     "#2772701 — Univoxx: 911 dispatched to wrong state, P1 critical",
     "#2806456 — Enroll Here: Correction still pending (sensei-analyzed)",
@@ -33,7 +40,8 @@
   "lessonsLearned": [
     "Never attribute a customer issue to a coincidental event without evidence",
     "Always verify timezone before correlating customer-reported events with maintenance windows",
-    "Shreya corrected #2806456 root cause — maintenance was NOT the cause, it was network instability",
-    "MDR lookups can fail due to replication lag (~4h) — need fallback via Graylog"
+    "Shreya corrected #2806456 — root cause was network instability, NOT maintenance",
+    "MDR lookups can fail due to replication lag (~4h) — need fallback via Graylog",
+    "Ringba #2817023: 603 Decline from far end means destination is actively rejecting — not a network issue"
   ]
 }
