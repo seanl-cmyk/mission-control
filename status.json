@@ -1,37 +1,7 @@
 {
-  "state": "active",
-  "message": "Midday sync — April 15, 2026",
-  "ticketId": null,
-  "startedAt": "2026-04-15T15:00:00Z",
-  "updatedAt": "2026-04-15T19:00:00Z",
-  "lastSync": "2026-04-15T19:00:00Z",
-  "ticketCounts": {
-    "open": 9,
-    "pending": 4,
-    "hold": 4,
-    "solved": 7,
-    "resolvedThisWeek": 31
-  },
-  "todayHighlights": [
-    "#2718543 — SIM Cards Not Connecting — Matcha Electric (USC DS3 Circuit Issue) (sensei-analyzed)",
-    "#2807283 — Call Connectivity Failure — Sequatchie Valley Dental (Adit)",
-    "#2772701 — 911 Call Dispatched to Wrong State — P1",
-    "#2810268 — Inbound Fax Failure — Aesthetic Family Dentistry (Adit)",
-    "#2798158 — OB Messages Not Reaching End User Despite 'Delivered' Status — CareCo (sensei-analyzed)",
-    "#2813916 — AI Call Transfer to Bot Number Instead of Transfer Tool — Assistable",
-    "#2809820 — High Volume Call Failures (70%+) — DomuAI/Vapi",
-    "#2751693 — Peer Connection Failure Errors — Inulti (WebRTC)",
-    "#2806456 — Enroll Here Update - Call Drops / Network Instability (sensei-analyzed)",
-    "#2817023 — Outbound Busy Signal Investigation — Ringba (sensei-analyzed)",
-    "#2816077 — AI Pronunciation & Voice Silence — Assistable",
-    "#2808416 — Blocked Carriers Still Generating Usage/Charges — Honest Mobile",
-    "#2819280 — Data Deletion Request — Callova AI"
-  ],
-  "lessonsLearned": [
-    "Never attribute a customer issue to a coincidental event without evidence",
-    "Always verify timezone before correlating customer-reported events with maintenance windows",
-    "Shreya corrected #2806456 — root cause was network instability, NOT maintenance",
-    "MDR lookups can fail due to replication lag (~4h) — need fallback via Graylog",
-    "Ringba #2817023: 603 Decline from far end means destination is actively rejecting — not a network issue"
-  ]
+  "status": "offline",
+  "lastUpdated": "2026-04-16T00:00:00Z",
+  "operator": "seanl",
+  "activeTickets": 0,
+  "note": "End of day April 15, 2026"
 }
