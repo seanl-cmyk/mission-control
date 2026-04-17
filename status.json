@@ -1,11 +1,11 @@
 {
-  "status": "online",
-  "lastUpdated": "2026-04-16T19:00:00Z",
+  "status": "offline",
+  "lastUpdated": "2026-04-17T00:00:00Z",
   "operator": "seanl",
   "activeTickets": 7,
-  "openTickets": ["2718543", "2807283", "2772701", "2810268", "2798158", "2806456", "2817023", "2816077", "2808416", "2768579", "2732680", "2819865"],
+  "openTickets": ["2718543", "2807283", "2772701", "2810268", "2798158", "2806456", "2817023", "2816077", "2808416", "2768579", "2732680", "2819865", "2823607", "2822254", "2823297", "2820819"],
   "pendingTickets": ["2813916", "2809820", "2751693", "2820370", "2821214"],
-  "holdTickets": ["2810350", "2788983", "2816647", "2819717", "2789688"],
-  "solvedToday": ["2820826", "2776237", "2774644", "2767769", "2763635", "2763159"],
-  "note": "Midday sync April 16, 2026 — 9 tickets updated today. 6 solved (mostly verifications/cancellations). 2 new cancellation tickets. Signal flakiness being monitored."
+  "holdTickets": ["2810350", "2788983", "2816647", "2819717", "2789688", "2820819"],
+  "solvedToday": ["2820826", "2776237", "2774644", "2767769", "2763635", "2763159", "2756038", "2751238", "2738556", "2735116", "2723049", "2722196", "2720864", "2806548", "2806134"],
+  "note": "End-of-day sync April 16, 2026. 15 tickets solved (verification/cancellation batch). 7 Sensei-collaborative investigations. Status set to offline."
 }
