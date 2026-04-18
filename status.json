@@ -1,11 +1,11 @@
 {
   "status": "offline",
-  "lastUpdated": "2026-04-17T00:00:00Z",
+  "lastUpdated": "2026-04-18T00:00:00Z",
   "operator": "seanl",
   "activeTickets": 7,
-  "openTickets": ["2718543", "2807283", "2772701", "2810268", "2798158", "2806456", "2817023", "2816077", "2808416", "2768579", "2732680", "2819865", "2823607", "2822254", "2823297", "2820819"],
+  "openTickets": ["2718543", "2807283", "2772701", "2810268", "2798158", "2806456", "2817023", "2816077", "2808416", "2768579", "2732680", "2819865", "2823607", "2822254", "2823297", "2820819", "2820014", "2823290"],
   "pendingTickets": ["2813916", "2809820", "2751693", "2820370", "2821214"],
-  "holdTickets": ["2810350", "2788983", "2816647", "2819717", "2789688", "2820819"],
-  "solvedToday": ["2820826", "2776237", "2774644", "2767769", "2763635", "2763159", "2756038", "2751238", "2738556", "2735116", "2723049", "2722196", "2720864", "2806548", "2806134"],
-  "note": "End-of-day sync April 16, 2026. 15 tickets solved (verification/cancellation batch). 7 Sensei-collaborative investigations. Status set to offline."
+  "holdTickets": ["2810350", "2788983", "2816647", "2819717", "2789688", "2820819", "2808416", "2803468", "2803688", "2792552", "2820014"],
+  "solvedToday": ["2820256", "2820826"],
+  "note": "End-of-day sync April 17, 2026. 2 tickets solved. 2 new Sensei-collaborative analyses (Adit DTMF, Matcha SIM improvement). New tickets: UJET SDK failures, Honest Mobile PWG issue, Orrick E911 follow-up, RespondFlow deliverability. Status set to offline."
 }
