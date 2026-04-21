@@ -1,12 +1,12 @@
 {
-  "status": "online",
-  "lastUpdated": "2026-04-20T19:00:00Z",
+  "status": "offline",
+  "lastUpdated": "2026-04-21T00:00:00Z",
   "operator": "seanl",
-  "activeTickets": 8,
-  "openTickets": ["2821214", "2810215"],
-  "pendingTickets": ["2830551", "2826825"],
-  "holdTickets": ["2820819", "2794104"],
-  "solvedToday": ["2817350"],
-  "closedToday": ["2806001"],
-  "note": "Midday sync April 20, 2026. 8 tickets touched today. No collaborative analyses with Sensei today. Key items: EnrollHere recording errors (P1/VIP), United Airlines SMS not delivered, GoDaddy SMS Serbia delivery issue, OneReach 40008 errors (carrier escalation). Syniverse resolved blocks for Outbound SMS failure ticket."
+  "activeTickets": 18,
+  "openTickets": [],
+  "pendingTickets": ["2830551", "2826825", "2816533", "2810215"],
+  "holdTickets": ["2820819", "2819865", "2808416", "2794922", "2794104", "2732680"],
+  "solvedToday": ["2821214", "2817350"],
+  "closedToday": ["2830900", "2830324", "2806001", "2803630", "2798756", "2761702"],
+  "note": "End-of-day sync April 20, 2026. 18 tickets touched. Key items: EnrollHere recording errors (urgent/VIP), GoDaddy SMS Serbia delivery, United Airlines SMS not delivered, Italian number routing, OneReach 40008 errors, Honest Mobile blocked carriers, SIM API 500s. CareCo call quality closed. CarWars dead air closed. Syniverse updates on outbound SMS failure."
 }
