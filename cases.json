@@ -1,6 +1,180 @@
 {
   "cases": [
     {
+      "id": "case-2830878",
+      "ticketId": "2830878",
+      "title": "Dead Air/Lumen Misrouting — BMW/CDJR of Ann Arbor",
+      "customer": "BMW/CDJR of Ann Arbor",
+      "category": "voice",
+      "status": "open",
+      "priority": "normal",
+      "findings": "Dead air / Lumen misrouting issue affecting BMW/CDJR of Ann Arbor. VIP Prime customer.",
+      "notes": "Sean working independently. Complex voice/media quality issue.",
+      "response": "",
+      "tags": [
+        "voice",
+        "media-quality",
+        "dead-air",
+        "vip-prime",
+        "complex"
+      ],
+      "createdAt": "2026-04-20T16:10:21Z",
+      "updatedAt": "2026-04-21T17:52:18Z",
+      "source": "solo"
+    },
+    {
+      "id": "case-2831406",
+      "ticketId": "2831406",
+      "title": "CSS Impact — Auto-Reply Webhook Not Firing",
+      "customer": "CSS Impact (Eric Beck)",
+      "category": "messaging",
+      "status": "pending",
+      "priority": "urgent",
+      "findings": "Auto-reply messages (opt-in/opt-out confirmations) not sent to webhook endpoint. MDR API can retrieve message body. Auto-reply text is customer-configured in messaging profile — deterministic. Whether auto-replies fire message.sent/message.finalized to profile webhook is unverified — flagged for messaging team confirmation.",
+      "notes": "Sensei-assisted analysis. 3 options provided to customer: MR API, profile-based lookup, Mission Control. Webhook behavior flagged for internal confirmation. Sean approved response.",
+      "response": "",
+      "tags": [
+        "messaging",
+        "webhooks",
+        "auto-reply",
+        "urgent",
+        "vip"
+      ],
+      "createdAt": "2026-04-20T18:45:59Z",
+      "updatedAt": "2026-04-21T17:49:40Z",
+      "source": "collab"
+    },
+    {
+      "id": "case-2831155",
+      "ticketId": "2831155",
+      "title": "Messages Rejected — Number 5168737100",
+      "customer": "BlinkVoice",
+      "category": "messaging",
+      "status": "open",
+      "priority": "urgent",
+      "findings": "Messages from number 5168737100 being rejected by Telnyx. P2/major impact. Messaging deliverability.",
+      "notes": "Sean working independently. Onboarding-select priority.",
+      "response": "",
+      "tags": [
+        "messaging",
+        "deliverability",
+        "urgent",
+        "onboarding"
+      ],
+      "createdAt": "2026-04-20T17:40:11Z",
+      "updatedAt": "2026-04-21T17:49:40Z",
+      "source": "solo"
+    },
+    {
+      "id": "case-2827077",
+      "ticketId": "2827077",
+      "title": "Gigi's Playhouse — 40008 Errors for All Messages",
+      "customer": "Gigi's Playhouse",
+      "category": "messaging",
+      "status": "solved",
+      "priority": "high",
+      "findings": "40008 errors for all messages in batch. SOLVED. VIP customer (Gigi's Playhouse).",
+      "notes": "Solved today. Jira-escalated.",
+      "response": "",
+      "tags": [
+        "messaging",
+        "deliverability",
+        "40008",
+        "vip",
+        "jira-escalated",
+        "solved"
+      ],
+      "createdAt": "2026-04-17T20:34:20Z",
+      "updatedAt": "2026-04-21T17:48:33Z",
+      "source": "solo"
+    },
+    {
+      "id": "case-2830551",
+      "ticketId": "2830551",
+      "title": "SMS to +38169703995 show delivered but not received",
+      "customer": "GoDaddy (taylor0035)",
+      "category": "messaging_deliverability",
+      "status": "hold",
+      "priority": "high",
+      "findings": "SMS to +38169703995 (Serbia, Telenor) shows delivered but not received by recipient. GoDaddy VIP.",
+      "notes": "Updated today via Zendesk sync. Via: slack",
+      "response": "",
+      "tags": [
+        "messaging_deliverability",
+        "vip"
+      ],
+      "createdAt": "2026-04-20T19:00:00Z",
+      "updatedAt": "2026-04-21T17:26:51Z",
+      "source": "solo"
+    },
+    {
+      "id": "case-2790819",
+      "ticketId": "2790819",
+      "title": "Vontobel Call Drops — RTP Timestamp Discontinuity",
+      "customer": "Vontobel (Martin Babjak/AudioCodes MSP)",
+      "category": "voice",
+      "status": "pending",
+      "priority": "high",
+      "findings": "Vontobel call drops after re-enabling TLS/SRTP. Same root cause as ENGDESK-50159 — RTP timestamp discontinuity in B2BUA. PR #2676 (SEND_NORMALISED_TIMESTAMPS) merged Apr 14, NOT yet enabled on production connection. New sample confirmed: A-leg jitter max 72,917ms (B2BUA timestamp artifact), 67.2% skip rate.",
+      "notes": "Sensei-assisted TREAT + CDR analysis. A-leg/b-leg blob analysis done. Pushing customer to create test SIP connection for validation. VIP customer (bank).",
+      "response": "",
+      "tags": [
+        "voice",
+        "call-drops",
+        "srtp",
+        "b2bua",
+        "vip",
+        "jira-escalated",
+        "ENGDESK-50159"
+      ],
+      "createdAt": "2026-04-02T07:23:20Z",
+      "updatedAt": "2026-04-21T17:10:30Z",
+      "source": "collab"
+    },
+    {
+      "id": "case-2823199",
+      "ticketId": "2823199",
+      "title": "Gamma DTMF Duplication",
+      "customer": "Gamma (Chris Cook)",
+      "category": "voice",
+      "status": "open",
+      "priority": "high",
+      "findings": "DTMF events for payments duplicated intermittently (~20% of calls). Live trace approved for Apr 22, 9am-1pm UK time.",
+      "notes": "Sensei aware. Live trace scheduled for tomorrow. Sean to provide internal context from Gamma discussions.",
+      "response": "",
+      "tags": [
+        "voice",
+        "dtmf",
+        "duplication",
+        "gamma",
+        "complex"
+      ],
+      "createdAt": "2026-04-15T00:00:00Z",
+      "updatedAt": "2026-04-21T17:00:00Z",
+      "source": "collab"
+    },
+    {
+      "id": "case-2815973",
+      "ticketId": "2815973",
+      "title": "Request to Increase Concurrent Channel Limit",
+      "customer": "Unknown",
+      "category": "voice",
+      "status": "closed",
+      "priority": "low",
+      "findings": "Request to increase concurrent channel limit. Closed today.",
+      "notes": "Simple request, completed.",
+      "response": "",
+      "tags": [
+        "voice",
+        "channel-limit",
+        "simple",
+        "closed"
+      ],
+      "createdAt": "2026-04-14T14:45:24Z",
+      "updatedAt": "2026-04-21T16:40:02Z",
+      "source": "solo"
+    },
+    {
       "id": "case-2803630",
       "ticketId": "2803630",
       "title": "Dead Air/One Way Audio — CarWars/Hyundai of Fresno",
@@ -164,25 +338,6 @@
         "vip",
         "jira_escalated",
         "critical"
-      ],
-      "createdAt": "2026-04-20T19:00:00Z",
-      "updatedAt": "2026-04-20T19:00:00Z",
-      "source": "zendesk-sync"
-    },
-    {
-      "id": "case-2830551",
-      "ticketId": "2830551",
-      "title": "SMS to +38169703995 show delivered but not received",
-      "customer": "GoDaddy (taylor0035)",
-      "category": "messaging_deliverability",
-      "status": "pending",
-      "priority": "high",
-      "findings": "",
-      "notes": "Updated today via Zendesk sync. Via: slack",
-      "response": "",
-      "tags": [
-        "messaging_deliverability",
-        "vip"
       ],
       "createdAt": "2026-04-20T19:00:00Z",
       "updatedAt": "2026-04-20T19:00:00Z",

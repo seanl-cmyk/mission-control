@@ -1,12 +1,48 @@
 {
-  "status": "offline",
-  "lastUpdated": "2026-04-21T00:00:00Z",
+  "status": "online",
+  "lastUpdated": "2026-04-21T19:02:03Z",
   "operator": "seanl",
-  "activeTickets": 18,
-  "openTickets": [],
-  "pendingTickets": ["2830551", "2826825", "2816533", "2810215"],
-  "holdTickets": ["2820819", "2819865", "2808416", "2794922", "2794104", "2732680"],
-  "solvedToday": ["2821214", "2817350"],
-  "closedToday": ["2830900", "2830324", "2806001", "2803630", "2798756", "2761702"],
-  "note": "End-of-day sync April 20, 2026. 18 tickets touched. Key items: EnrollHere recording errors (urgent/VIP), GoDaddy SMS Serbia delivery, United Airlines SMS not delivered, Italian number routing, OneReach 40008 errors, Honest Mobile blocked carriers, SIM API 500s. CareCo call quality closed. CarWars dead air closed. Syniverse updates on outbound SMS failure."
+  "activeTickets": 41,
+  "openTickets": [
+    "2830878",
+    "2831155",
+    "2823199",
+    "2718543",
+    "2823290",
+    "2798158",
+    "2806456",
+    "2817023",
+    "2823607",
+    "2822254"
+  ],
+  "pendingTickets": [
+    "2831406",
+    "2790819",
+    "2810215",
+    "2826825",
+    "2816533",
+    "2813916",
+    "2809820",
+    "2751693",
+    "2820370"
+  ],
+  "holdTickets": [
+    "2830551",
+    "2808416",
+    "2819865",
+    "2732680",
+    "2820819",
+    "2794104",
+    "2794922",
+    "2803468",
+    "2792552",
+    "2820014"
+  ],
+  "solvedToday": [
+    "2827077"
+  ],
+  "closedToday": [
+    "2815973"
+  ],
+  "note": "Midday sync April 21, 2026. 65 total cases. Key items: Vontobel call drops (ENGDESK-50159, test connection pending), CSS Impact auto-reply webhook (awaiting internal confirmation), Gamma DTMF live trace tomorrow, BMW dead air, BlinkVoice messaging rejected."
 }
