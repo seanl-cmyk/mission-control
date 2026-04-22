@@ -1,6 +1,6 @@
 {
-  "status": "online",
-  "lastUpdated": "2026-04-21T19:02:03Z",
+  "status": "offline",
+  "lastUpdated": "2026-04-22T00:00:05Z",
   "operator": "seanl",
   "activeTickets": 41,
   "openTickets": [
@@ -44,5 +44,6 @@
   "closedToday": [
     "2815973"
   ],
-  "note": "Midday sync April 21, 2026. 65 total cases. Key items: Vontobel call drops (ENGDESK-50159, test connection pending), CSS Impact auto-reply webhook (awaiting internal confirmation), Gamma DTMF live trace tomorrow, BMW dead air, BlinkVoice messaging rejected."
+  "note": "Midday sync April 21, 2026. 65 total cases. Key items: Vontobel call drops (ENGDESK-50159, test connection pending), CSS Impact auto-reply webhook (awaiting internal confirmation), Gamma DTMF live trace tomorrow, BMW dead air, BlinkVoice messaging rejected.",
+  "endOfDay": "2026-04-21"
 }
