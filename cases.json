@@ -1,6 +1,34 @@
 {
   "cases": [
     {
+      "id": "case-2817519",
+      "ticketId": "2817519",
+      "title": "Ringba Warm Transfer / Audio Cutoff \u2014 Gustavo Siqueira",
+      "customer": "Ringba (Gustavo Siqueira)",
+      "category": "voice",
+      "status": "open",
+      "priority": "high",
+      "findings": "Call appears to connect then audio cuts off, seems transferred to another line (warm transfer). B-leg to Twilio SIP endpoint playing comfort noise after bridge. Not a Telnyx issue \u2014 Twilio-side routing. ENGDESK-51252 open.",
+      "notes": "Sensei-assisted CDR analysis. A-leg: T-Mobile inbound, MOS 4.49. B-leg: Twilio SIP endpoint with playback of noise.wav after bridge. Transfer happening on Twilio side. Awaiting direction.",
+      "response": "",
+      "tags": [
+        "voice",
+        "warm-transfer",
+        "twilio",
+        "ringba",
+        "vip",
+        "sensei-analyzed",
+        "ENGDESK-51252"
+      ],
+      "createdAt": "2026-04-22T14:00:00Z",
+      "updatedAt": "2026-04-22T19:00:00Z",
+      "source": "collab",
+      "todayActivity": "collaborative",
+      "todaySummary": "Warm transfer/audio cutoff. CDR analysis shows B-leg to Twilio SIP endpoint. Not a Telnyx issue. ENGDESK-51252 open with Telephony Apps.",
+      "todayDetail": "Customer: Gustavo Siqueira, Ringba. Session c3a86d40-3748-11f1-b774-02420aef321f (Apr 13). A-leg +16163490228\u2192+16072608464, 67s, MOS 4.49. B-leg to Twilio SIP endpoint, last_app: playback (noise.wav). Transfer is Twilio-side routing. Awaiting Sean direction.",
+      "lastUpdated": "2026-04-22"
+    },
+    {
       "id": "case-2830878",
       "ticketId": "2830878",
       "title": "Dead Air/Lumen Misrouting \u2014 BMW/CDJR of Ann Arbor",
@@ -1538,33 +1566,30 @@
       "lastUpdated": "2026-04-21"
     }
   ],
-  "lastUpdated": "2026-04-21T00:00:00Z",
+  "lastUpdated": "2026-04-22T19:00:00Z",
   "daySummary": {
-    "date": "2026-04-21",
-    "totalUpdated": 11,
+    "date": "2026-04-22",
+    "totalUpdated": 14,
     "collaborative": [
       "2831406",
-      "2810215",
       "2790819",
-      "2823199"
+      "2823199",
+      "2810215",
+      "2817519"
     ],
     "soloWork": [
-      "2835368",
-      "2831155",
       "2830878",
+      "2831155",
+      "2815973",
       "2826825",
+      "2751693",
+      "2835368",
       "2802932",
       "2817020",
-      "2815973",
-      "2796499",
-      "2751693"
-    ],
-    "closedToday": [
-      "2817020",
-      "2815973",
       "2796499"
     ],
-    "notes": "Heavy analysis day: Vontobel new sample confirmed ENGDESK-50159, CSS Impact auto-reply webhook investigation, EnrollHere fix confirmed deployed, Gamma live trace scheduled for tomorrow."
+    "closedToday": [],
+    "notes": "New analysis: Ringba warm transfer (2817519) \u2014 Twilio-side issue, not Telnyx. Zendesk rate-limited during sync; no new solo tickets detected today. Continuing from yesterday active cases."
   },
-  "lastSync": "2026-04-22T00:00:00Z"
+  "lastSync": "2026-04-22T19:00:00Z"
 }

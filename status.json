@@ -1,6 +1,6 @@
 {
-  "status": "offline",
-  "lastUpdated": "2026-04-22T00:00:05Z",
+  "status": "online",
+  "lastUpdated": "2026-04-22T19:00:00Z",
   "operator": "seanl",
   "activeTickets": 41,
   "openTickets": [
@@ -38,12 +38,8 @@
     "2792552",
     "2820014"
   ],
-  "solvedToday": [
-    "2827077"
-  ],
-  "closedToday": [
-    "2815973"
-  ],
-  "note": "Midday sync April 21, 2026. 65 total cases. Key items: Vontobel call drops (ENGDESK-50159, test connection pending), CSS Impact auto-reply webhook (awaiting internal confirmation), Gamma DTMF live trace tomorrow, BMW dead air, BlinkVoice messaging rejected.",
-  "endOfDay": "2026-04-21"
+  "solvedToday": [],
+  "closedToday": [],
+  "note": "Midday sync Apr 22, 2026. New: Ringba 2817519 warm transfer analysis (Twilio-side). Zendesk rate-limited. Gamma DTMF live trace today 9am-1pm UK. Vontobel test connection pending.",
+  "endOfDay": "2026-04-22"
 }
