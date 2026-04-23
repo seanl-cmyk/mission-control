@@ -50,8 +50,8 @@
       "updatedAt": "2026-04-21T17:52:18Z",
       "source": "solo",
       "todayActivity": "solo",
-      "todaySummary": "BMW dead air investigation. On hold pending further data.",
-      "lastUpdated": "2026-04-21"
+      "todaySummary": "Dead air/Lumen misrouting investigation. Open/urgent.",
+      "lastUpdated": "2026-04-23"
     },
     {
       "id": "case-2831406",
@@ -86,7 +86,7 @@
       "title": "Messages Rejected \u2014 Number 5168737100",
       "customer": "BlinkVoice",
       "category": "messaging",
-      "status": "pending",
+      "status": "open",
       "priority": "urgent",
       "findings": "Messages from number 5168737100 being rejected by Telnyx. P2/major impact. Messaging deliverability.",
       "notes": "Sean working independently. Onboarding-select priority.",
@@ -101,8 +101,8 @@
       "updatedAt": "2026-04-21T17:49:40Z",
       "source": "solo",
       "todayActivity": "solo",
-      "todaySummary": "BlinkVoice messaging rejected. Urgent priority.",
-      "lastUpdated": "2026-04-21"
+      "todaySummary": "BlinkVoice messaging rejected from 5168737100. Open/urgent. Active today.",
+      "lastUpdated": "2026-04-23"
     },
     {
       "id": "case-2827077",
@@ -1224,7 +1224,7 @@
       "title": "Account Cancellation \u2014 Jaye Miller / Liquidstyle Digital",
       "customer": "Jaye Miller (Liquidstyle Digital)",
       "category": "account",
-      "status": "solved",
+      "status": "closed",
       "priority": "low",
       "findings": "Customer created account same day, found developer already had one. Wants cancellation. Self-service.",
       "notes": "Solved today. Entry-level, simple cancellation.",
@@ -1238,7 +1238,10 @@
       ],
       "createdAt": "2026-04-16T00:46:20Z",
       "updatedAt": "2026-04-16T16:43:11Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "Account cancellation. Closed today.",
+      "lastUpdated": "2026-04-23"
     },
     {
       "id": "case-2776237",
@@ -1246,7 +1249,7 @@
       "title": "GitHub Verification Rejected \u2014 Roger AI / CloudAura",
       "customer": "Roger AI (CloudAura)",
       "category": "account",
-      "status": "solved",
+      "status": "closed",
       "priority": "low",
       "findings": "GitHub verification rejected during account upgrade. Wants to test Voice AI feature. Fraud/L2-verification category.",
       "notes": "Solved today. Entry-level verification issue.",
@@ -1260,7 +1263,10 @@
       ],
       "createdAt": "2026-03-26T18:24:21Z",
       "updatedAt": "2026-04-16T15:29:46Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "GitHub verification rejected. Closed today.",
+      "lastUpdated": "2026-04-23"
     },
     {
       "id": "case-2774644",
@@ -1268,7 +1274,7 @@
       "title": "Freemium Verification Issue \u2014 Shiva / insmsout.com",
       "customer": "Shiva (insmsout.com)",
       "category": "account",
-      "status": "solved",
+      "status": "closed",
       "priority": "low",
       "findings": "Unable to upgrade account \u2014 verification issues. Fraud/L2-verification.",
       "notes": "Solved today.",
@@ -1282,7 +1288,10 @@
       ],
       "createdAt": "2026-03-26T08:19:22Z",
       "updatedAt": "2026-04-16T15:29:26Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "Freemium verification. Closed today.",
+      "lastUpdated": "2026-04-23"
     },
     {
       "id": "case-2767769",
@@ -1290,7 +1299,7 @@
       "title": "Account Verification Issue \u2014 David Petrashov / Qx Home Buyers",
       "customer": "David Petrashov (Qx Home Buyers)",
       "category": "account",
-      "status": "solved",
+      "status": "closed",
       "priority": "low",
       "findings": "Signed up, wants info on offerings. Cannot verify account. Fraud/L2-verification.",
       "notes": "Solved today.",
@@ -1304,7 +1313,10 @@
       ],
       "createdAt": "2026-03-23T23:04:22Z",
       "updatedAt": "2026-04-16T15:29:00Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "Account verification issue. Closed today.",
+      "lastUpdated": "2026-04-23"
     },
     {
       "id": "case-2763635",
@@ -1312,7 +1324,7 @@
       "title": "Freemium Verification Rejection \u2014 Bruno Coimbra",
       "customer": "Bruno Coimbra",
       "category": "account",
-      "status": "solved",
+      "status": "closed",
       "priority": "low",
       "findings": "Repeated verification rejections despite accurate info and GitHub profile. Frustrated with lack of feedback. Willing to do manual verification. Fraud/freemium queue.",
       "notes": "Solved today.",
@@ -1326,7 +1338,10 @@
       ],
       "createdAt": "2026-03-20T19:10:23Z",
       "updatedAt": "2026-04-16T15:28:23Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "Freemium verification rejection. Closed today.",
+      "lastUpdated": "2026-04-23"
     },
     {
       "id": "case-2763159",
@@ -1334,7 +1349,7 @@
       "title": "Account Authentication Loop \u2014 Musausman",
       "customer": "Mr Musausman",
       "category": "account",
-      "status": "solved",
+      "status": "closed",
       "priority": "low",
       "findings": "Cannot authenticate/upgrade. Keeps redirecting to empty page. Fraud/freemium queue.",
       "notes": "Solved today.",
@@ -1348,7 +1363,10 @@
       ],
       "createdAt": "2026-03-20T16:22:28Z",
       "updatedAt": "2026-04-16T15:25:43Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "Freemium verification. Closed today.",
+      "lastUpdated": "2026-04-23"
     },
     {
       "id": "case-2820370",
@@ -1400,7 +1418,7 @@
       "title": "KYC Pending After Multiple Follow-ups",
       "customer": "Self-service",
       "category": "account",
-      "status": "solved",
+      "status": "closed",
       "priority": "low",
       "findings": "KYC verification pending. Fraud/freemium queue.",
       "notes": "Solved today.",
@@ -1414,7 +1432,10 @@
       ],
       "createdAt": "2026-03-19T00:00:00Z",
       "updatedAt": "2026-04-16T00:00:00Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "KYC pending issue. Closed today.",
+      "lastUpdated": "2026-04-23"
     },
     {
       "id": "case-2738556",
@@ -1422,7 +1443,7 @@
       "title": "Help Request \u2014 Account Verification",
       "customer": "Self-service",
       "category": "account",
-      "status": "solved",
+      "status": "closed",
       "priority": "low",
       "findings": "Account verification help request. Fraud/freemium queue.",
       "notes": "Solved today.",
@@ -1436,7 +1457,10 @@
       ],
       "createdAt": "2026-03-12T00:00:00Z",
       "updatedAt": "2026-04-16T00:00:00Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "Help request/verification. Closed today.",
+      "lastUpdated": "2026-04-23"
     },
     {
       "id": "case-2735116",
@@ -1444,7 +1468,7 @@
       "title": "Inbound Support Request \u2014 monboune.fr",
       "customer": "Adriel Aiach (monboune.fr)",
       "category": "account",
-      "status": "solved",
+      "status": "closed",
       "priority": "low",
       "findings": "Inbound support request for verification.",
       "notes": "Solved today.",
@@ -1457,7 +1481,10 @@
       ],
       "createdAt": "2026-03-10T00:00:00Z",
       "updatedAt": "2026-04-16T00:00:00Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "Inbound support request. Closed today.",
+      "lastUpdated": "2026-04-23"
     },
     {
       "id": "case-2723049",
@@ -1465,7 +1492,7 @@
       "title": "Account Verification \u2014 GitHub Rejected",
       "customer": "Self-service",
       "category": "account",
-      "status": "solved",
+      "status": "closed",
       "priority": "low",
       "findings": "GitHub verification rejected. Fraud/freemium queue.",
       "notes": "Solved today.",
@@ -1479,7 +1506,10 @@
       ],
       "createdAt": "2026-03-06T00:00:00Z",
       "updatedAt": "2026-04-16T00:00:00Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "GitHub verification rejected. Closed today.",
+      "lastUpdated": "2026-04-23"
     },
     {
       "id": "case-2722196",
@@ -1487,7 +1517,7 @@
       "title": "KYC Verification Loop \u2014 Passport Marked as Expired",
       "customer": "Self-service",
       "category": "account",
-      "status": "solved",
+      "status": "closed",
       "priority": "low",
       "findings": "KYC verification loop \u2014 passport incorrectly marked as expired. Fraud/freemium queue.",
       "notes": "Solved today.",
@@ -1501,7 +1531,10 @@
       ],
       "createdAt": "2026-03-05T00:00:00Z",
       "updatedAt": "2026-04-16T00:00:00Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "KYC verification loop. Closed today.",
+      "lastUpdated": "2026-04-23"
     },
     {
       "id": "case-2720864",
@@ -1509,7 +1542,7 @@
       "title": "Confirm Account",
       "customer": "Self-service",
       "category": "account",
-      "status": "solved",
+      "status": "closed",
       "priority": "low",
       "findings": "Account confirmation/verification request. Fraud/freemium queue.",
       "notes": "Solved today.",
@@ -1523,7 +1556,10 @@
       ],
       "createdAt": "2026-03-04T00:00:00Z",
       "updatedAt": "2026-04-16T00:00:00Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "Account confirmation. Closed today.",
+      "lastUpdated": "2026-04-23"
     },
     {
       "id": "case-2835368",
@@ -1575,35 +1611,125 @@
       "findings": "Recordings captured by B2BUA but not accessible via API or portal. All recording IDs return 10005 Resource not found. S3 upload pipeline broken after release. HTTP 403 from S3. Platform-wide issue, not Ringba-specific.",
       "notes": "Sensei-assisted. P1/urgent. Escalated to recording team. Sean approved internal + customer responses.",
       "lastUpdated": "2026-04-22"
+    },
+    {
+      "id": "case-2801084",
+      "ticketId": "2801084",
+      "title": "Dead Air Calls \u2014 TeXML",
+      "customer": "Unknown",
+      "category": "voice",
+      "status": "open",
+      "priority": "urgent",
+      "findings": "Dead air on calls. TeXML form. Complex/media quality. P2 significant impact. ClearFeed ticket.",
+      "notes": "Updated today. Voice/media quality. Open/urgent.",
+      "response": "",
+      "tags": [
+        "voice",
+        "media-quality",
+        "dead-air",
+        "texml",
+        "clearfeed",
+        "complex",
+        "urgent"
+      ],
+      "createdAt": "2026-04-07T16:33:55Z",
+      "updatedAt": "2026-04-23T18:11:18Z",
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "Dead air on TeXML calls. Open/urgent. P2.",
+      "lastUpdated": "2026-04-23"
+    },
+    {
+      "id": "case-2819740",
+      "ticketId": "2819740",
+      "title": "No In-Progress Event on Call \u2014 TeXML",
+      "customer": "Unknown",
+      "category": "voice",
+      "status": "hold",
+      "priority": "urgent",
+      "findings": "No call.in-progress event firing on calls. TeXML form. AI CDR + PCAP analysis done. Complex. ClearFeed ticket.",
+      "notes": "Updated today. Voice/call control. Hold/urgent.",
+      "response": "",
+      "tags": [
+        "voice",
+        "call-control",
+        "texml",
+        "clearfeed",
+        "complex",
+        "urgent"
+      ],
+      "createdAt": "2026-04-15T17:46:19Z",
+      "updatedAt": "2026-04-23T15:21:28Z",
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "No in-progress event on TeXML calls. Hold/urgent.",
+      "lastUpdated": "2026-04-23"
+    },
+    {
+      "id": "case-2837729",
+      "ticketId": "2837729",
+      "title": "Feature Request: Branded Calling / Voice Integrity Services",
+      "customer": "Unknown",
+      "category": "voice",
+      "status": "hold",
+      "priority": "normal",
+      "findings": "Feature request for branded calling / voice integrity services. Caller ID related. High priority advanced. ClearFeed ticket.",
+      "notes": "New ticket. Feature request. Hold/normal.",
+      "response": "",
+      "tags": [
+        "voice",
+        "caller-id",
+        "branded-calling",
+        "feature-request",
+        "clearfeed"
+      ],
+      "createdAt": "2026-04-22T13:56:03Z",
+      "updatedAt": "2026-04-23T15:16:56Z",
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "Branded calling feature request. Hold/normal.",
+      "lastUpdated": "2026-04-23"
     }
   ],
-  "lastUpdated": "2026-04-23T00:00:00Z",
+  "lastUpdated": "2026-04-23T19:00:00Z",
   "daySummary": {
-    "date": "2026-04-22",
-    "totalUpdated": 14,
-    "collaborative": [
-      "2817519",
-      "2831406",
-      "2790819",
-      "2823199",
-      "2810215",
-      "2838445"
-    ],
+    "date": "2026-04-23",
+    "totalUpdated": 17,
+    "collaborative": [],
     "soloWork": [
       "2830878",
       "2831155",
-      "2815973",
-      "2826825",
-      "2751693",
-      "2835368",
-      "2802932",
-      "2817020",
-      "2796499"
+      "2820826",
+      "2776237",
+      "2774644",
+      "2767769",
+      "2763635",
+      "2763159",
+      "2751238",
+      "2738556",
+      "2735116",
+      "2723049",
+      "2722196",
+      "2720864",
+      "2801084",
+      "2819740",
+      "2837729"
     ],
     "closedToday": [
-      "2815973"
+      "2820826",
+      "2776237",
+      "2774644",
+      "2767769",
+      "2763635",
+      "2763159",
+      "2751238",
+      "2738556",
+      "2735116",
+      "2723049",
+      "2722196",
+      "2720864"
     ],
-    "notes": "End-of-day Apr 22. Major collaborative: Ringba recordings 2838445 (P1 - S3 storage pipeline broken, platform-wide), Ringba warm transfer 2817519 (Twilio-side issue), Vontobel call drops 2790819 (RTP timestamp), Gamma DTMF 2823199 (live trace scheduled), CSS webhook 2831406, EnrollHere recording errors 2810215. Zendesk rate-limited during syncs. TREAT/Graylog tooling had intermittent issues."
+    "notes": "Midday sync Apr 23. Sean worked independently on 16 tickets. Bulk KYC/verification closures (12 closed). Active urgent: #2801084 dead air, #2831155 messaging rejected, #2819740 no in-progress event. No collaborative analysis sessions today. New ticket #2837729 branded calling feature request."
   },
-  "lastSync": "2026-04-23T00:00:00Z"
+  "lastSync": "2026-04-23T19:00:00Z"
 }
