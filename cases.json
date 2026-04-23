@@ -1564,18 +1564,30 @@
       "todayActivity": "solo",
       "todaySummary": "Closed today.",
       "lastUpdated": "2026-04-21"
+    },
+    {
+      "id": "case-2838445",
+      "ticketId": "2838445",
+      "customer": "Ringba (Jessica Faes)",
+      "category": "voice",
+      "status": "open",
+      "priority": "urgent",
+      "findings": "Recordings captured by B2BUA but not accessible via API or portal. All recording IDs return 10005 Resource not found. S3 upload pipeline broken after release. HTTP 403 from S3. Platform-wide issue, not Ringba-specific.",
+      "notes": "Sensei-assisted. P1/urgent. Escalated to recording team. Sean approved internal + customer responses.",
+      "lastUpdated": "2026-04-22"
     }
   ],
-  "lastUpdated": "2026-04-22T19:00:00Z",
+  "lastUpdated": "2026-04-23T00:00:00Z",
   "daySummary": {
     "date": "2026-04-22",
     "totalUpdated": 14,
     "collaborative": [
+      "2817519",
       "2831406",
       "2790819",
       "2823199",
       "2810215",
-      "2817519"
+      "2838445"
     ],
     "soloWork": [
       "2830878",
@@ -1588,8 +1600,10 @@
       "2817020",
       "2796499"
     ],
-    "closedToday": [],
-    "notes": "New analysis: Ringba warm transfer (2817519) \u2014 Twilio-side issue, not Telnyx. Zendesk rate-limited during sync; no new solo tickets detected today. Continuing from yesterday active cases."
+    "closedToday": [
+      "2815973"
+    ],
+    "notes": "End-of-day Apr 22. Major collaborative: Ringba recordings 2838445 (P1 - S3 storage pipeline broken, platform-wide), Ringba warm transfer 2817519 (Twilio-side issue), Vontobel call drops 2790819 (RTP timestamp), Gamma DTMF 2823199 (live trace scheduled), CSS webhook 2831406, EnrollHere recording errors 2810215. Zendesk rate-limited during syncs. TREAT/Graylog tooling had intermittent issues."
   },
-  "lastSync": "2026-04-22T19:00:00Z"
+  "lastSync": "2026-04-23T00:00:00Z"
 }
