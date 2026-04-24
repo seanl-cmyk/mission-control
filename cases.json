@@ -23,8 +23,8 @@
       "createdAt": "2026-04-22T14:00:00Z",
       "updatedAt": "2026-04-22T19:00:00Z",
       "source": "collab",
-      "todayActivity": "collaborative",
-      "todaySummary": "Warm transfer/audio cutoff. CDR analysis shows B-leg to Twilio SIP endpoint. Not a Telnyx issue. ENGDESK-51252 open with Telephony Apps.",
+      "todayActivity": "none",
+      "todaySummary": "",
       "todayDetail": "Customer: Gustavo Siqueira, Ringba. Session c3a86d40-3748-11f1-b774-02420aef321f (Apr 13). A-leg +16163490228\u2192+16072608464, 67s, MOS 4.49. B-leg to Twilio SIP endpoint, last_app: playback (noise.wav). Transfer is Twilio-side routing. Awaiting Sean direction.",
       "lastUpdated": "2026-04-22"
     },
@@ -75,8 +75,8 @@
       "updatedAt": "2026-04-21T17:49:40Z",
       "source": "collab",
       "subject": "CSS Impact: Auto-Reply Webhook Issue",
-      "todayActivity": "collaborative",
-      "todaySummary": "Auto-reply messages not sent to webhook. Analyzed MDR API options, drafted response with 3 approaches. Flagged internal question about message.sent/message.finalized for auto-replies. Response approved by Sean.",
+      "todayActivity": "none",
+      "todaySummary": "",
       "todayDetail": "Customer: Eric Beck, CSS Impact. Outbound auto-replies (opt-in/opt-out) not triggering webhooks. Options provided: (1) MDR API lookup by message ID, (2) Profile-based mapping of autoresponse_type to text, (3) Mission Control. Awaiting internal confirmation on whether auto-replies fire message.sent/finalized webhooks.",
       "lastUpdated": "2026-04-21"
     },
@@ -86,7 +86,7 @@
       "title": "Messages Rejected \u2014 Number 5168737100",
       "customer": "BlinkVoice",
       "category": "messaging",
-      "status": "open",
+      "status": "solved",
       "priority": "urgent",
       "findings": "Messages from number 5168737100 being rejected by Telnyx. P2/major impact. Messaging deliverability.",
       "notes": "Sean working independently. Onboarding-select priority.",
@@ -100,8 +100,8 @@
       "createdAt": "2026-04-20T17:40:11Z",
       "updatedAt": "2026-04-21T17:49:40Z",
       "source": "solo",
-      "todayActivity": "solo",
-      "todaySummary": "BlinkVoice messaging rejected from 5168737100. Open/urgent. Active today.",
+      "todayActivity": "closed",
+      "todaySummary": "Closed \u2014 Messages rejected \u2014 number 5168737100",
       "lastUpdated": "2026-04-23"
     },
     {
@@ -170,8 +170,8 @@
       "updatedAt": "2026-04-21T17:10:30Z",
       "source": "collab",
       "subject": "Vontobel Call Drops (VIP)",
-      "todayActivity": "collaborative",
-      "todaySummary": "Call drops with TLS/SRTP re-enabled. Same ENGDESK-50159 root cause (RTP timestamp discontinuity). PR #2676 merged Apr 14 but not yet enabled. New sample analyzed - confirmed 72.9s jitter variance. Pushing customer for test connection setup.",
+      "todayActivity": "none",
+      "todaySummary": "",
       "todayDetail": "Customer: Martin Babjak/AudioCodes for Vontobel. Latest sample: SIP Call-ID 15349664962142026105538@20.23.76.94, A-leg jitter max 72,917ms (timestamp artifact), B-leg max 635ms. Same ENGDESK-50159. Waiting for customer to create test SIP connection for validation. TREAT and CDR links documented.",
       "lastUpdated": "2026-04-21"
     },
@@ -197,8 +197,8 @@
       "updatedAt": "2026-04-21T17:00:00Z",
       "source": "collab",
       "subject": "Gamma DTMF Duplication",
-      "todayActivity": "collaborative",
-      "todaySummary": "DTMF events duplicated ~20% of calls. Live trace approved for Apr 22, 9am-1pm UK time. Sean to provide internal context from Gamma discussions.",
+      "todayActivity": "none",
+      "todaySummary": "",
       "todayDetail": "Customer: Gamma (Chris Cook). DTMF duplication on payment calls. Live trace scheduled tomorrow. Reminders set for Sean.",
       "lastUpdated": "2026-04-21"
     },
@@ -222,8 +222,8 @@
       "createdAt": "2026-04-14T14:45:24Z",
       "updatedAt": "2026-04-21T16:40:02Z",
       "source": "solo",
-      "todayActivity": "solo",
-      "todaySummary": "Closed today.",
+      "todayActivity": "none",
+      "todaySummary": "",
       "lastUpdated": "2026-04-21"
     },
     {
@@ -395,8 +395,8 @@
       "updatedAt": "2026-04-20T19:00:00Z",
       "source": "zendesk-sync",
       "subject": "EnrollHere Recording Start/Answer Errors (VIP/P1)",
-      "todayActivity": "collaborative",
-      "todaySummary": "B2BUA crash in audio_bridge_function() causing recording start errors. Fix (TEL-6840/ENGDESK-51168) deployed to production. Drafted customer confirmation. Approved by Sean.",
+      "todayActivity": "none",
+      "todaySummary": "",
       "todayDetail": "Customer: Tim Strakeljahn, EnrollHere. B2BUA crash at mod_dptools.c:3754. Fix confirmed deployed. Customer response sent confirming resolution.",
       "lastUpdated": "2026-04-21"
     },
@@ -418,8 +418,8 @@
       "createdAt": "2026-04-20T19:00:00Z",
       "updatedAt": "2026-04-20T19:00:00Z",
       "source": "zendesk-sync",
-      "todayActivity": "solo",
-      "todaySummary": "United messaging deliverability issue.",
+      "todayActivity": "none",
+      "todaySummary": "",
       "lastUpdated": "2026-04-21"
     },
     {
@@ -1093,8 +1093,8 @@
       "createdAt": "2026-03-16T16:49:28Z",
       "updatedAt": "2026-04-16T19:00:00Z",
       "source": "solo",
-      "todayActivity": "solo",
-      "todaySummary": "SIP peer connection failures. Updated today.",
+      "todayActivity": "none",
+      "todaySummary": "",
       "lastUpdated": "2026-04-21"
     },
     {
@@ -1200,7 +1200,7 @@
       "title": "Poor Call Termination to +19064492223 \u2014 PCI-Pal (OPS-13671)",
       "customer": "PCI-Pal (Richard Clarke)",
       "category": "voice",
-      "status": "open",
+      "status": "pending",
       "priority": "high",
       "findings": "Calls to +19064492223 ring 18 seconds before answer then hit wrong voicemail instead of UPPCO IVR. JIRA escalated. Technical skill. High priority gold.",
       "notes": "Updated today. JIRA escalated. Voice/SIP trunking outbound delivery issue.",
@@ -1216,7 +1216,9 @@
       ],
       "createdAt": "2026-03-24T11:41:25Z",
       "updatedAt": "2026-04-16T19:00:00Z",
-      "source": "solo"
+      "source": "solo",
+      "lastUpdated": "2026-04-23",
+      "todayActivity": "solo"
     },
     {
       "id": "case-2820826",
@@ -1239,8 +1241,8 @@
       "createdAt": "2026-04-16T00:46:20Z",
       "updatedAt": "2026-04-16T16:43:11Z",
       "source": "solo",
-      "todayActivity": "solo",
-      "todaySummary": "Account cancellation. Closed today.",
+      "todayActivity": "closed",
+      "todaySummary": "Closed \u2014 Account Cancellation",
       "lastUpdated": "2026-04-23"
     },
     {
@@ -1264,8 +1266,8 @@
       "createdAt": "2026-03-26T18:24:21Z",
       "updatedAt": "2026-04-16T15:29:46Z",
       "source": "solo",
-      "todayActivity": "solo",
-      "todaySummary": "GitHub verification rejected. Closed today.",
+      "todayActivity": "closed",
+      "todaySummary": "Closed \u2014 GitHub verification rejected",
       "lastUpdated": "2026-04-23"
     },
     {
@@ -1289,8 +1291,8 @@
       "createdAt": "2026-03-26T08:19:22Z",
       "updatedAt": "2026-04-16T15:29:26Z",
       "source": "solo",
-      "todayActivity": "solo",
-      "todaySummary": "Freemium verification. Closed today.",
+      "todayActivity": "closed",
+      "todaySummary": "Closed \u2014 Freemium Support Request",
       "lastUpdated": "2026-04-23"
     },
     {
@@ -1314,8 +1316,8 @@
       "createdAt": "2026-03-23T23:04:22Z",
       "updatedAt": "2026-04-16T15:29:00Z",
       "source": "solo",
-      "todayActivity": "solo",
-      "todaySummary": "Account verification issue. Closed today.",
+      "todayActivity": "closed",
+      "todaySummary": "Closed \u2014 Account verification issue",
       "lastUpdated": "2026-04-23"
     },
     {
@@ -1339,8 +1341,8 @@
       "createdAt": "2026-03-20T19:10:23Z",
       "updatedAt": "2026-04-16T15:28:23Z",
       "source": "solo",
-      "todayActivity": "solo",
-      "todaySummary": "Freemium verification rejection. Closed today.",
+      "todayActivity": "closed",
+      "todaySummary": "Closed \u2014 Freemium Support Request",
       "lastUpdated": "2026-04-23"
     },
     {
@@ -1364,8 +1366,8 @@
       "createdAt": "2026-03-20T16:22:28Z",
       "updatedAt": "2026-04-16T15:25:43Z",
       "source": "solo",
-      "todayActivity": "solo",
-      "todaySummary": "Freemium verification. Closed today.",
+      "todayActivity": "closed",
+      "todaySummary": "Closed \u2014 Freemium Support Request",
       "lastUpdated": "2026-04-23"
     },
     {
@@ -1433,8 +1435,8 @@
       "createdAt": "2026-03-19T00:00:00Z",
       "updatedAt": "2026-04-16T00:00:00Z",
       "source": "solo",
-      "todayActivity": "solo",
-      "todaySummary": "KYC pending issue. Closed today.",
+      "todayActivity": "closed",
+      "todaySummary": "Closed \u2014 KYC still pending after multiple follow-up",
       "lastUpdated": "2026-04-23"
     },
     {
@@ -1458,8 +1460,8 @@
       "createdAt": "2026-03-12T00:00:00Z",
       "updatedAt": "2026-04-16T00:00:00Z",
       "source": "solo",
-      "todayActivity": "solo",
-      "todaySummary": "Help request/verification. Closed today.",
+      "todayActivity": "closed",
+      "todaySummary": "Closed \u2014 Help request",
       "lastUpdated": "2026-04-23"
     },
     {
@@ -1482,8 +1484,8 @@
       "createdAt": "2026-03-10T00:00:00Z",
       "updatedAt": "2026-04-16T00:00:00Z",
       "source": "solo",
-      "todayActivity": "solo",
-      "todaySummary": "Inbound support request. Closed today.",
+      "todayActivity": "closed",
+      "todaySummary": "Closed \u2014 Inbound Support Request \u2014 monboune.fr",
       "lastUpdated": "2026-04-23"
     },
     {
@@ -1507,8 +1509,8 @@
       "createdAt": "2026-03-06T00:00:00Z",
       "updatedAt": "2026-04-16T00:00:00Z",
       "source": "solo",
-      "todayActivity": "solo",
-      "todaySummary": "GitHub verification rejected. Closed today.",
+      "todayActivity": "closed",
+      "todaySummary": "Closed \u2014 Account verification - GitHub rejected",
       "lastUpdated": "2026-04-23"
     },
     {
@@ -1532,8 +1534,8 @@
       "createdAt": "2026-03-05T00:00:00Z",
       "updatedAt": "2026-04-16T00:00:00Z",
       "source": "solo",
-      "todayActivity": "solo",
-      "todaySummary": "KYC verification loop. Closed today.",
+      "todayActivity": "closed",
+      "todaySummary": "Closed \u2014 KYC verification loop \u2013 passport incorrectly marked as expired",
       "lastUpdated": "2026-04-23"
     },
     {
@@ -1557,8 +1559,8 @@
       "createdAt": "2026-03-04T00:00:00Z",
       "updatedAt": "2026-04-16T00:00:00Z",
       "source": "solo",
-      "todayActivity": "solo",
-      "todaySummary": "Account confirmation. Closed today.",
+      "todayActivity": "closed",
+      "todaySummary": "Closed \u2014 Confirm Account",
       "lastUpdated": "2026-04-23"
     },
     {
@@ -1567,8 +1569,8 @@
       "subject": "Escalation for Trouble Ticket ID: 137609",
       "status": "hold",
       "priority": "low",
-      "todayActivity": "solo",
-      "todaySummary": "FAS/dead air escalation. Vendor org ticket, auto-triaged.",
+      "todayActivity": "none",
+      "todaySummary": "",
       "lastUpdated": "2026-04-21"
     },
     {
@@ -1577,8 +1579,8 @@
       "subject": "SIM connection in Cambodia",
       "status": "hold",
       "priority": "high",
-      "todayActivity": "solo",
-      "todaySummary": "Wireless SIM connectivity issue in Cambodia.",
+      "todayActivity": "none",
+      "todaySummary": "",
       "lastUpdated": "2026-04-21"
     },
     {
@@ -1587,8 +1589,8 @@
       "subject": "Outbound SMS",
       "status": "closed",
       "priority": "low",
-      "todayActivity": "solo",
-      "todaySummary": "Closed today.",
+      "todayActivity": "none",
+      "todaySummary": "",
       "lastUpdated": "2026-04-21"
     },
     {
@@ -1597,8 +1599,8 @@
       "subject": "Can't login",
       "status": "closed",
       "priority": "normal",
-      "todayActivity": "solo",
-      "todaySummary": "Closed today.",
+      "todayActivity": "none",
+      "todaySummary": "",
       "lastUpdated": "2026-04-21"
     },
     {
@@ -1618,7 +1620,7 @@
       "title": "Dead Air Calls \u2014 TeXML",
       "customer": "Unknown",
       "category": "voice",
-      "status": "open",
+      "status": "pending",
       "priority": "urgent",
       "findings": "Dead air on calls. TeXML form. Complex/media quality. P2 significant impact. ClearFeed ticket.",
       "notes": "Updated today. Voice/media quality. Open/urgent.",
@@ -1689,6 +1691,101 @@
       "todayActivity": "solo",
       "todaySummary": "Branded calling feature request. Hold/normal.",
       "lastUpdated": "2026-04-23"
+    },
+    {
+      "id": "case-2837728",
+      "ticketId": "2837728",
+      "title": "Shopper 369594759, sms to +971563802890 time out",
+      "customer": "",
+      "category": "general",
+      "status": "hold",
+      "priority": "normal",
+      "findings": "",
+      "notes": "",
+      "response": "",
+      "tags": [],
+      "createdAt": "2026-04-23T00:00:00Z",
+      "updatedAt": "2026-04-23T23:59:00Z",
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "Shopper 369594759, sms to +971563802890 time out",
+      "lastUpdated": "2026-04-23"
+    },
+    {
+      "id": "case-2769943",
+      "ticketId": "2769943",
+      "title": "SIP call connection issues",
+      "customer": "",
+      "category": "general",
+      "status": "hold",
+      "priority": "normal",
+      "findings": "",
+      "notes": "",
+      "response": "",
+      "tags": [],
+      "createdAt": "2026-04-23T00:00:00Z",
+      "updatedAt": "2026-04-23T23:59:00Z",
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "SIP call connection issues",
+      "lastUpdated": "2026-04-23"
+    },
+    {
+      "id": "case-2706965",
+      "ticketId": "2706965",
+      "title": "Big Jitter from Telnyx to Audiocodes",
+      "customer": "",
+      "category": "general",
+      "status": "hold",
+      "priority": "normal",
+      "findings": "",
+      "notes": "",
+      "response": "",
+      "tags": [],
+      "createdAt": "2026-04-23T00:00:00Z",
+      "updatedAt": "2026-04-23T23:59:00Z",
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "Big Jitter from Telnyx to Audiocodes",
+      "lastUpdated": "2026-04-23"
+    },
+    {
+      "id": "case-2692335",
+      "ticketId": "2692335",
+      "title": "How can we enhance...",
+      "customer": "",
+      "category": "general",
+      "status": "hold",
+      "priority": "normal",
+      "findings": "",
+      "notes": "",
+      "response": "",
+      "tags": [],
+      "createdAt": "2026-04-23T00:00:00Z",
+      "updatedAt": "2026-04-23T23:59:00Z",
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "How can we enhance...",
+      "lastUpdated": "2026-04-23"
+    },
+    {
+      "id": "case-2838521",
+      "ticketId": "2838521",
+      "title": "Qualfon corrective actions status",
+      "customer": "",
+      "category": "general",
+      "status": "hold",
+      "priority": "normal",
+      "findings": "",
+      "notes": "",
+      "response": "",
+      "tags": [],
+      "createdAt": "2026-04-23T00:00:00Z",
+      "updatedAt": "2026-04-23T23:59:00Z",
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "Qualfon corrective actions status",
+      "lastUpdated": "2026-04-23"
     }
   ],
   "lastUpdated": "2026-04-23T19:00:00Z",
@@ -1731,5 +1828,6 @@
     ],
     "notes": "Midday sync Apr 23. Sean worked independently on 16 tickets. Bulk KYC/verification closures (12 closed). Active urgent: #2801084 dead air, #2831155 messaging rejected, #2819740 no in-progress event. No collaborative analysis sessions today. New ticket #2837729 branded calling feature request."
   },
-  "lastSync": "2026-04-23T19:00:00Z"
+  "lastSync": "2026-04-24T00:01:05.594298+00:00",
+  "date": "2026-04-23"
 }
