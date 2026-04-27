@@ -2006,34 +2006,125 @@
       "todaySummary": "New ticket \u2014 closed",
       "todayDetail": "",
       "lastUpdated": "2026-04-24"
+    },
+    {
+      "id": "case-2843249",
+      "ticketId": "2843249",
+      "title": "Invalid Call Control IDs / Zero Webhooks \u2014 Superbill",
+      "customer": "Superbill (Austin Near)",
+      "category": "voice",
+      "status": "hold",
+      "priority": "high",
+      "findings": "POST /v2/calls returns 200 with call_control_id but zero webhooks received. GET /v2/calls/{id} returns 422 Invalid Call Control ID. Other calls on same connection work fine. 5 affected call control IDs. Connection 2096789565250471726.",
+      "notes": "Sean working independently. VIP Advanced 365 customer. Via ClearFeed #shared-superbill-telnyx. Customer corrected form from fax to voice.",
+      "response": "",
+      "tags": [
+        "voice",
+        "call-control",
+        "invalid-id",
+        "superbill",
+        "vip-365",
+        "clearfeed",
+        "complex"
+      ],
+      "createdAt": "2026-04-23T23:55:35Z",
+      "updatedAt": "2026-04-27T15:50:16Z",
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "Invalid call control IDs / no webhooks. Hold/high.",
+      "lastUpdated": "2026-04-27"
+    },
+    {
+      "id": "case-2842487",
+      "ticketId": "2842487",
+      "title": "BEMS01978063 \u2014 Inbound Unknown Callers / Blocked Caller ID Being Blocked",
+      "customer": "BEMS",
+      "category": "voice",
+      "status": "pending",
+      "priority": "high",
+      "findings": "Inbound unknown callers or blocked Caller ID are being blocked. BEMS ticket 01978063.",
+      "notes": "Sean working independently. Updated today. Pending/high.",
+      "response": "",
+      "tags": [
+        "voice",
+        "caller-id",
+        "blocked-calls",
+        "bems",
+        "high"
+      ],
+      "createdAt": "2026-04-24T00:00:00Z",
+      "updatedAt": "2026-04-27T18:35:25Z",
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "Inbound blocked Caller ID calls being blocked. Pending/high.",
+      "lastUpdated": "2026-04-27"
+    },
+    {
+      "id": "case-2841766",
+      "ticketId": "2841766",
+      "title": "Carrier Routing for +1-250-851-4097",
+      "customer": "Jobe",
+      "category": "voice",
+      "status": "hold",
+      "priority": "urgent",
+      "findings": "Which carrier is +1-250-851-4097 pointed to. Appears to be 1 ring on IVR causing issue.",
+      "notes": "Sean working independently. Updated today. Hold/urgent.",
+      "response": "",
+      "tags": [
+        "voice",
+        "carrier-routing",
+        "ivr",
+        "urgent"
+      ],
+      "createdAt": "2026-04-24T00:00:00Z",
+      "updatedAt": "2026-04-27T15:23:37Z",
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "Carrier routing for +12508514097. Hold/urgent.",
+      "lastUpdated": "2026-04-27"
+    },
+    {
+      "id": "case-2840732",
+      "ticketId": "2840732",
+      "title": "Intermittent API Failures on /v2/messages",
+      "customer": "Jobe",
+      "category": "messaging",
+      "status": "hold",
+      "priority": "high",
+      "findings": "Intermittent Telnyx API failures on /v2/messages and related endpoints. Jobe responding directly to customer. Checking if NOC assistance needed \u2014 determined no NOC help required at this time.",
+      "notes": "Sean working independently. Jobe handling customer response. No NOC action needed. Hold/high.",
+      "response": "",
+      "tags": [
+        "messaging",
+        "api-failures",
+        "intermittent",
+        "high"
+      ],
+      "createdAt": "2026-04-24T00:00:00Z",
+      "updatedAt": "2026-04-27T17:43:56Z",
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "Intermittent /v2/messages API failures. Jobe handling. No NOC needed. Hold/high.",
+      "lastUpdated": "2026-04-27"
     }
   ],
-  "lastUpdated": "2026-04-23T19:00:00Z",
+  "lastUpdated": "2026-04-27T19:01:32.649945Z",
   "daySummary": {
-    "date": "2026-04-24",
-    "totalUpdated": 10,
+    "date": "2026-04-27",
+    "totalUpdated": 4,
     "collaborative": [],
     "soloWork": [
-      "2756038",
-      "2842321",
-      "2842176",
-      "2841223",
-      "2836553",
-      "2830763",
-      "2826051",
-      "2842333",
-      "2842279",
-      "2775214"
+      "2843249",
+      "2842487",
+      "2841766",
+      "2840732"
     ],
-    "closedToday": [
-      "2756038",
-      "2775214"
-    ],
+    "closedToday": [],
     "urgentActive": [
-      "2830763"
+      "2841766"
     ],
-    "notes": "End-of-day sync 2026-04-24. Sean worked independently on 10 tickets. No collaborative analysis sessions today. New urgent: #2830763 (Data.net APN issue). Closed: #2775214 (40002 Temp Block), #2756038 (Verification rejected)."
+    "notes": "Midday sync 2026-04-27. Sean worked independently on 4 tickets. No collaborative analysis sessions today. Urgent: #2841766 (carrier routing for +12508514097)."
   },
-  "lastSync": "2026-04-25T00:00:57.015666+00:00",
-  "date": "2026-04-24"
+  "lastSync": "2026-04-27T19:01:32.650004",
+  "date": "2026-04-27"
 }
