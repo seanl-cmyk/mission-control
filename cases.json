@@ -2106,25 +2106,50 @@
       "todayActivity": "solo",
       "todaySummary": "Intermittent /v2/messages API failures. Jobe handling. No NOC needed. Hold/high.",
       "lastUpdated": "2026-04-27"
+    },
+    {
+      "id": "case-2849402",
+      "ticketId": "2849402",
+      "title": "Creating Additional Users — Kyra SMS",
+      "customer": "Kyra SMS (Maverick Brenton, CEO)",
+      "category": "account",
+      "status": "pending",
+      "priority": "normal",
+      "findings": "Customer wants to create sub-users for tech team so they don't have to share login/2FA. Organization management request.",
+      "notes": "Sean working independently. Assigned today. Customer: Maverick Brenton, CEO at Kyra SMS.",
+      "response": "",
+      "tags": [
+        "account",
+        "user-management",
+        "organisations",
+        "simple"
+      ],
+      "createdAt": "2026-04-27T16:45:22Z",
+      "updatedAt": "2026-04-27T23:01:27Z",
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "Creating additional users for tech team. Pending/normal.",
+      "lastUpdated": "2026-04-27"
     }
   ],
-  "lastUpdated": "2026-04-27T19:01:32.649945Z",
+  "lastUpdated": "2026-04-28T00:00:30Z",
   "daySummary": {
     "date": "2026-04-27",
-    "totalUpdated": 4,
+    "totalUpdated": 5,
     "collaborative": [],
     "soloWork": [
       "2843249",
       "2842487",
       "2841766",
-      "2840732"
+      "2840732",
+      "2849402"
     ],
     "closedToday": [],
     "urgentActive": [
       "2841766"
     ],
-    "notes": "Midday sync 2026-04-27. Sean worked independently on 4 tickets. No collaborative analysis sessions today. Urgent: #2841766 (carrier routing for +12508514097)."
+    "notes": "End-of-day sync 2026-04-27. Sean worked independently on 5 tickets. No collaborative analysis sessions today. New: #2849402 (Kyra SMS sub-user request). Urgent: #2841766 (carrier routing for +12508514097)."
   },
-  "lastSync": "2026-04-27T19:01:32.650004",
+  "lastSync": "2026-04-28T00:00:30Z",
   "date": "2026-04-27"
 }
