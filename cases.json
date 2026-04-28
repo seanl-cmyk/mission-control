@@ -49,7 +49,7 @@
       "createdAt": "2026-04-20T16:10:21Z",
       "updatedAt": "2026-04-21T17:52:18Z",
       "source": "solo",
-      "todayActivity": "solo",
+      "todayActivity": "none",
       "todaySummary": "Dead air/Lumen misrouting investigation. Open/urgent.",
       "lastUpdated": "2026-04-23"
     },
@@ -1218,7 +1218,7 @@
       "updatedAt": "2026-04-16T19:00:00Z",
       "source": "solo",
       "lastUpdated": "2026-04-23",
-      "todayActivity": "solo"
+      "todayActivity": "none"
     },
     {
       "id": "case-2820826",
@@ -1413,7 +1413,7 @@
       "createdAt": "2026-03-22T00:00:00Z",
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
-      "todayActivity": "solo",
+      "todayActivity": "none",
       "todaySummary": "Updated today \u2014 closed",
       "lastUpdated": "2026-04-24"
     },
@@ -1640,7 +1640,7 @@
       "createdAt": "2026-04-07T16:33:55Z",
       "updatedAt": "2026-04-23T18:11:18Z",
       "source": "solo",
-      "todayActivity": "solo",
+      "todayActivity": "none",
       "todaySummary": "Dead air on TeXML calls. Open/urgent. P2.",
       "lastUpdated": "2026-04-23"
     },
@@ -1666,7 +1666,7 @@
       "createdAt": "2026-04-15T17:46:19Z",
       "updatedAt": "2026-04-23T15:21:28Z",
       "source": "solo",
-      "todayActivity": "solo",
+      "todayActivity": "none",
       "todaySummary": "No in-progress event on TeXML calls. Hold/urgent.",
       "lastUpdated": "2026-04-23"
     },
@@ -1691,7 +1691,7 @@
       "createdAt": "2026-04-22T13:56:03Z",
       "updatedAt": "2026-04-23T15:16:56Z",
       "source": "solo",
-      "todayActivity": "solo",
+      "todayActivity": "none",
       "todaySummary": "Branded calling feature request. Hold/normal.",
       "lastUpdated": "2026-04-23"
     },
@@ -1710,7 +1710,7 @@
       "createdAt": "2026-04-23T00:00:00Z",
       "updatedAt": "2026-04-23T23:59:00Z",
       "source": "solo",
-      "todayActivity": "solo",
+      "todayActivity": "none",
       "todaySummary": "Shopper 369594759, sms to +971563802890 time out",
       "lastUpdated": "2026-04-23"
     },
@@ -1729,7 +1729,7 @@
       "createdAt": "2026-04-23T00:00:00Z",
       "updatedAt": "2026-04-23T23:59:00Z",
       "source": "solo",
-      "todayActivity": "solo",
+      "todayActivity": "none",
       "todaySummary": "SIP call connection issues",
       "lastUpdated": "2026-04-23"
     },
@@ -1748,7 +1748,7 @@
       "createdAt": "2026-04-23T00:00:00Z",
       "updatedAt": "2026-04-23T23:59:00Z",
       "source": "solo",
-      "todayActivity": "solo",
+      "todayActivity": "none",
       "todaySummary": "Big Jitter from Telnyx to Audiocodes",
       "lastUpdated": "2026-04-23"
     },
@@ -1767,7 +1767,7 @@
       "createdAt": "2026-04-23T00:00:00Z",
       "updatedAt": "2026-04-23T23:59:00Z",
       "source": "solo",
-      "todayActivity": "solo",
+      "todayActivity": "none",
       "todaySummary": "How can we enhance...",
       "lastUpdated": "2026-04-23"
     },
@@ -1786,7 +1786,7 @@
       "createdAt": "2026-04-23T00:00:00Z",
       "updatedAt": "2026-04-23T23:59:00Z",
       "source": "solo",
-      "todayActivity": "solo",
+      "todayActivity": "none",
       "todaySummary": "Qualfon corrective actions status",
       "lastUpdated": "2026-04-23"
     },
@@ -1809,7 +1809,7 @@
       "createdAt": "2026-04-24T19:01:31Z",
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
-      "todayActivity": "solo",
+      "todayActivity": "none",
       "todaySummary": "New ticket \u2014 open",
       "todayDetail": "",
       "lastUpdated": "2026-04-24"
@@ -1833,7 +1833,7 @@
       "createdAt": "2026-04-24T19:01:31Z",
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
-      "todayActivity": "solo",
+      "todayActivity": "none",
       "todaySummary": "New ticket \u2014 open",
       "todayDetail": "",
       "lastUpdated": "2026-04-24"
@@ -1857,7 +1857,7 @@
       "createdAt": "2026-04-24T19:01:31Z",
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
-      "todayActivity": "solo",
+      "todayActivity": "none",
       "todaySummary": "New ticket \u2014 open",
       "todayDetail": "",
       "lastUpdated": "2026-04-24"
@@ -1881,7 +1881,7 @@
       "createdAt": "2026-04-24T19:01:31Z",
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
-      "todayActivity": "solo",
+      "todayActivity": "none",
       "todaySummary": "New ticket \u2014 open",
       "todayDetail": "",
       "lastUpdated": "2026-04-24"
@@ -1906,7 +1906,7 @@
       "createdAt": "2026-04-24T19:01:31Z",
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
-      "todayActivity": "solo",
+      "todayActivity": "none",
       "todaySummary": "New ticket \u2014 open",
       "todayDetail": "",
       "lastUpdated": "2026-04-24"
@@ -1930,7 +1930,7 @@
       "createdAt": "2026-04-24T19:01:31Z",
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
-      "todayActivity": "solo",
+      "todayActivity": "none",
       "todaySummary": "New ticket \u2014 open",
       "todayDetail": "",
       "lastUpdated": "2026-04-24"
@@ -1954,7 +1954,7 @@
       "createdAt": "2026-04-24T19:01:31Z",
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
-      "todayActivity": "solo",
+      "todayActivity": "none",
       "todaySummary": "New ticket \u2014 pending",
       "todayDetail": "",
       "lastUpdated": "2026-04-24"
@@ -1978,7 +1978,7 @@
       "createdAt": "2026-04-24T19:01:31Z",
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
-      "todayActivity": "solo",
+      "todayActivity": "none",
       "todaySummary": "New ticket \u2014 pending",
       "todayDetail": "",
       "lastUpdated": "2026-04-24"
@@ -2002,7 +2002,7 @@
       "createdAt": "2026-04-24T19:01:31Z",
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
-      "todayActivity": "solo",
+      "todayActivity": "none",
       "todaySummary": "New ticket \u2014 closed",
       "todayDetail": "",
       "lastUpdated": "2026-04-24"
@@ -2030,7 +2030,7 @@
       "createdAt": "2026-04-23T23:55:35Z",
       "updatedAt": "2026-04-27T15:50:16Z",
       "source": "solo",
-      "todayActivity": "solo",
+      "todayActivity": "none",
       "todaySummary": "Invalid call control IDs / no webhooks. Hold/high.",
       "lastUpdated": "2026-04-27"
     },
@@ -2055,7 +2055,7 @@
       "createdAt": "2026-04-24T00:00:00Z",
       "updatedAt": "2026-04-27T18:35:25Z",
       "source": "solo",
-      "todayActivity": "solo",
+      "todayActivity": "none",
       "todaySummary": "Inbound blocked Caller ID calls being blocked. Pending/high.",
       "lastUpdated": "2026-04-27"
     },
@@ -2079,7 +2079,7 @@
       "createdAt": "2026-04-24T00:00:00Z",
       "updatedAt": "2026-04-27T15:23:37Z",
       "source": "solo",
-      "todayActivity": "solo",
+      "todayActivity": "none",
       "todaySummary": "Carrier routing for +12508514097. Hold/urgent.",
       "lastUpdated": "2026-04-27"
     },
@@ -2103,14 +2103,14 @@
       "createdAt": "2026-04-24T00:00:00Z",
       "updatedAt": "2026-04-27T17:43:56Z",
       "source": "solo",
-      "todayActivity": "solo",
+      "todayActivity": "none",
       "todaySummary": "Intermittent /v2/messages API failures. Jobe handling. No NOC needed. Hold/high.",
       "lastUpdated": "2026-04-27"
     },
     {
       "id": "case-2849402",
       "ticketId": "2849402",
-      "title": "Creating Additional Users — Kyra SMS",
+      "title": "Creating Additional Users \u2014 Kyra SMS",
       "customer": "Kyra SMS (Maverick Brenton, CEO)",
       "category": "account",
       "status": "pending",
@@ -2127,29 +2127,153 @@
       "createdAt": "2026-04-27T16:45:22Z",
       "updatedAt": "2026-04-27T23:01:27Z",
       "source": "solo",
-      "todayActivity": "solo",
+      "todayActivity": "none",
       "todaySummary": "Creating additional users for tech team. Pending/normal.",
       "lastUpdated": "2026-04-27"
+    },
+    {
+      "id": "case-2840798",
+      "ticketId": "2840798",
+      "title": "URGENT URGENT URGENT 2fa sms not working",
+      "customer": "Appfront (Samuel)",
+      "category": "messaging",
+      "status": "open",
+      "priority": "high",
+      "findings": "2FA SMS not working - USA customers not receiving auth codes, Swiss numbers not receiving with alphanumeric sender IDs. Messaging deliverability issue.",
+      "notes": "Sean working independently. Updated today. High priority / urgent.",
+      "response": "",
+      "tags": [
+        "messaging",
+        "deliverability",
+        "2fa",
+        "high-priority",
+        "urgent"
+      ],
+      "createdAt": "2026-04-28T00:00:00Z",
+      "updatedAt": "2026-04-28T19:01:58Z",
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "2FA SMS not working - USA customers not receiving auth codes, Swiss numbers not receiving with alpha",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "id": "case-2838172",
+      "ticketId": "2838172",
+      "title": "Feature request: TTS audio prompt to Agent on hangup/invalid destination",
+      "customer": "Unknown",
+      "category": "voice",
+      "status": "open",
+      "priority": "high",
+      "findings": "Feature request for TTS audio prompt when outbound call hangs up due to timeout or invalid destination. AI assistants category.",
+      "notes": "Sean working independently. Updated today. Following up with AI Engineering team.",
+      "response": "",
+      "tags": [
+        "voice",
+        "ai-assistants",
+        "feature-request",
+        "high-priority"
+      ],
+      "createdAt": "2026-04-28T00:00:00Z",
+      "updatedAt": "2026-04-28T19:01:58Z",
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "Feature request for TTS audio prompt when outbound call hangs up due to timeout or invalid destinati",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "id": "case-2817415",
+      "ticketId": "2817415",
+      "title": "Unable to attach messaging profile to numbers",
+      "customer": "Unknown",
+      "category": "messaging",
+      "status": "open",
+      "priority": "high",
+      "findings": "Issue attaching messaging profile to numbers. JIRA escalated. Messaging configuration.",
+      "notes": "Sean working independently. Updated today. ETA shared with customer.",
+      "response": "",
+      "tags": [
+        "messaging",
+        "configuration",
+        "jira-escalated",
+        "high-priority"
+      ],
+      "createdAt": "2026-04-28T00:00:00Z",
+      "updatedAt": "2026-04-28T19:01:58Z",
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "Issue attaching messaging profile to numbers. JIRA escalated. Messaging configuration.",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "id": "case-2845457",
+      "ticketId": "2845457",
+      "title": "Verify numbers are registered with Spam databases",
+      "customer": "Heather Polinski",
+      "category": "messaging",
+      "status": "solved",
+      "priority": "normal",
+      "findings": "Customer wanted to verify numbers registered with spam databases. Resolved - customer confirmed ok to close.",
+      "notes": "Sean closed today. Customer confirmed resolution.",
+      "response": "",
+      "tags": [
+        "messaging",
+        "spam-database",
+        "solved",
+        "entry-level"
+      ],
+      "createdAt": "2026-04-28T00:00:00Z",
+      "updatedAt": "2026-04-28T19:01:58Z",
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "Customer wanted to verify numbers registered with spam databases. Resolved - customer confirmed ok t",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "id": "case-2845418",
+      "ticketId": "2845418",
+      "title": "Outbound SMS from DID +13055324419 not going through",
+      "customer": "Unknown",
+      "category": "messaging",
+      "status": "hold",
+      "priority": "high",
+      "findings": "Outbound SMS from +13055324419 failing. Messaging deliverability. Awaiting partner carrier update via NetNumber case.",
+      "notes": "Sean working independently. Updated today - no updates from partner yet. Hold/high.",
+      "response": "",
+      "tags": [
+        "messaging",
+        "deliverability",
+        "carrier-escalation",
+        "high-priority"
+      ],
+      "createdAt": "2026-04-28T00:00:00Z",
+      "updatedAt": "2026-04-28T19:01:58Z",
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "Outbound SMS from +13055324419 failing. Messaging deliverability. Awaiting partner carrier update vi",
+      "lastUpdated": "2026-04-28"
     }
   ],
-  "lastUpdated": "2026-04-28T00:00:30Z",
+  "lastUpdated": "2026-04-28T19:01:58Z",
   "daySummary": {
-    "date": "2026-04-27",
+    "date": "2026-04-28",
     "totalUpdated": 5,
     "collaborative": [],
     "soloWork": [
-      "2843249",
-      "2842487",
-      "2841766",
-      "2840732",
-      "2849402"
+      "2840798",
+      "2838172",
+      "2817415",
+      "2845457",
+      "2845418"
     ],
-    "closedToday": [],
+    "closedToday": [
+      "2845457"
+    ],
     "urgentActive": [
-      "2841766"
+      "2840798",
+      "2845418"
     ],
-    "notes": "End-of-day sync 2026-04-27. Sean worked independently on 5 tickets. No collaborative analysis sessions today. New: #2849402 (Kyra SMS sub-user request). Urgent: #2841766 (carrier routing for +12508514097)."
+    "notes": "Midday sync 2026-04-28 19:01 UTC. Sean worked independently on 5 tickets. No collaborative analysis sessions today. New: #2840798 (Appfront 2FA SMS), #2838172 (TTS feature request), #2817415 (messaging profile attachment). Closed: #2845457. Urgent: #2840798 (2FA SMS), #2845418 (outbound SMS carrier escalation)."
   },
-  "lastSync": "2026-04-28T00:00:30Z",
-  "date": "2026-04-27"
+  "lastSync": "2026-04-28T19:01:58Z",
+  "date": "2026-04-28"
 }
