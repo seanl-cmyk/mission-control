@@ -2224,9 +2224,10 @@
       "createdAt": "2026-04-28T00:00:00Z",
       "updatedAt": "2026-04-28T19:01:58Z",
       "source": "solo",
-      "todayActivity": "solo",
-      "todaySummary": "Customer wanted to verify numbers registered with spam databases. Resolved - customer confirmed ok t",
-      "lastUpdated": "2026-04-28"
+      "todayActivity": "updated",
+      "todaySummary": "Spam database verification request. Solved.",
+      "lastUpdated": "2026-04-28",
+      "todayDetail": "Hiscall wanted to verify numbers 615-446-3494 and 615-446-3303 are not labeled as spam. Solved."
     },
     {
       "id": "case-2845418",
@@ -2250,6 +2251,82 @@
       "source": "solo",
       "todayActivity": "solo",
       "todaySummary": "Outbound SMS from +13055324419 failing. Messaging deliverability. Awaiting partner carrier update vi",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "id": "case-2844359",
+      "ticketId": "2844359",
+      "title": "Inbound Support Request \u2014 Danny Rettele, TeleSpace",
+      "customer": "TeleSpace (Danny Rettele)",
+      "category": "sales",
+      "status": "hold",
+      "priority": "urgent",
+      "findings": "Inbound sales/support request from TeleSpace. Danny Rettele looking for assistance.",
+      "notes": "Sean working independently. Sales lead, urgent priority.",
+      "response": "",
+      "tags": [
+        "sales",
+        "inbound",
+        "urgent",
+        "telespace"
+      ],
+      "createdAt": "2026-04-28T00:00:00Z",
+      "updatedAt": "2026-04-28T22:39:24Z",
+      "source": "solo",
+      "todayActivity": "updated",
+      "todaySummary": "Inbound support request from TeleSpace (Danny Rettele). On hold.",
+      "todayDetail": "Sales/support lead. Urgent priority. Placed on hold.",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "id": "case-2843078",
+      "ticketId": "2843078",
+      "title": "No Audio on Calls to Certain Valid Numbers \u2014 Van Wyk Trucking",
+      "customer": "Van Wyk Trucking",
+      "category": "voice",
+      "status": "pending",
+      "priority": "normal",
+      "findings": "End user unable to hear audio on calls to certain numbers via Telnyx. Same numbers work fine from cell phone. Call appears to connect but dead air.",
+      "notes": "Sean working independently. Voice/audio quality issue, partial call failure.",
+      "response": "",
+      "tags": [
+        "voice",
+        "dead-air",
+        "call-quality",
+        "partial-failure"
+      ],
+      "createdAt": "2026-04-28T00:00:00Z",
+      "updatedAt": "2026-04-28T15:43:48Z",
+      "source": "solo",
+      "todayActivity": "updated",
+      "todaySummary": "No audio on calls to specific numbers. Pending investigation.",
+      "todayDetail": "Van Wyk Trucking reports calls to certain numbers connect but have no audio. Cell phone calls to same numbers work fine. Indicates SIP/media path issue on Telnyx side.",
+      "lastUpdated": "2026-04-28"
+    },
+    {
+      "id": "case-2840824",
+      "ticketId": "2840824",
+      "title": "Agent-to-Agent Call Bugs \u2014 Missing Cost Webhook & Incorrect ai_assistant_start",
+      "customer": "Unknown",
+      "category": "voice",
+      "status": "hold",
+      "priority": "normal",
+      "findings": "Two bugs reported with agent-to-agent calls: (1) Missing cost webhook for these calls, (2) Incorrect ai_assistant_start response. Customer testing call flows between two Telnyx AI agents.",
+      "notes": "Sean working independently. API/platform bug report.",
+      "response": "",
+      "tags": [
+        "voice",
+        "ai-assistant",
+        "api-bug",
+        "webhooks",
+        "agent-to-agent"
+      ],
+      "createdAt": "2026-04-28T00:00:00Z",
+      "updatedAt": "2026-04-28T15:29:29Z",
+      "source": "solo",
+      "todayActivity": "updated",
+      "todaySummary": "Agent-to-agent call bugs: missing cost webhook + incorrect ai_assistant_start. On hold.",
+      "todayDetail": "Two bugs with agent-to-agent call scenarios: (1) No cost webhook fired, (2) ai_assistant_start response incorrect. Customer using agents to test call flows. On hold awaiting engineering.",
       "lastUpdated": "2026-04-28"
     }
   ],
