@@ -3,12 +3,12 @@
     {
       "id": "case-2817519",
       "ticketId": "2817519",
-      "title": "Ringba Warm Transfer / Audio Cutoff \u2014 Gustavo Siqueira",
+      "title": "Ringba Warm Transfer / Audio Cutoff — Gustavo Siqueira",
       "customer": "Ringba (Gustavo Siqueira)",
       "category": "voice",
       "status": "open",
       "priority": "high",
-      "findings": "Call appears to connect then audio cuts off, seems transferred to another line (warm transfer). B-leg to Twilio SIP endpoint playing comfort noise after bridge. Not a Telnyx issue \u2014 Twilio-side routing. ENGDESK-51252 open.",
+      "findings": "Call appears to connect then audio cuts off, seems transferred to another line (warm transfer). B-leg to Twilio SIP endpoint playing comfort noise after bridge. Not a Telnyx issue — Twilio-side routing. ENGDESK-51252 open.",
       "notes": "Sensei-assisted CDR analysis. A-leg: T-Mobile inbound, MOS 4.49. B-leg: Twilio SIP endpoint with playback of noise.wav after bridge. Transfer happening on Twilio side. Awaiting direction.",
       "response": "",
       "tags": [
@@ -25,13 +25,13 @@
       "source": "collab",
       "todayActivity": "none",
       "todaySummary": "",
-      "todayDetail": "Customer: Gustavo Siqueira, Ringba. Session c3a86d40-3748-11f1-b774-02420aef321f (Apr 13). A-leg +16163490228\u2192+16072608464, 67s, MOS 4.49. B-leg to Twilio SIP endpoint, last_app: playback (noise.wav). Transfer is Twilio-side routing. Awaiting Sean direction.",
+      "todayDetail": "Customer: Gustavo Siqueira, Ringba. Session c3a86d40-3748-11f1-b774-02420aef321f (Apr 13). A-leg +16163490228→+16072608464, 67s, MOS 4.49. B-leg to Twilio SIP endpoint, last_app: playback (noise.wav). Transfer is Twilio-side routing. Awaiting Sean direction.",
       "lastUpdated": "2026-04-22"
     },
     {
       "id": "case-2830878",
       "ticketId": "2830878",
-      "title": "Dead Air/Lumen Misrouting \u2014 BMW/CDJR of Ann Arbor",
+      "title": "Dead Air/Lumen Misrouting — BMW/CDJR of Ann Arbor",
       "customer": "BMW/CDJR of Ann Arbor",
       "category": "voice",
       "status": "hold",
@@ -50,18 +50,18 @@
       "updatedAt": "2026-04-21T17:52:18Z",
       "source": "solo",
       "todayActivity": "none",
-      "todaySummary": "Dead air/Lumen misrouting investigation. Open/urgent.",
+      "todaySummary": "",
       "lastUpdated": "2026-04-23"
     },
     {
       "id": "case-2831406",
       "ticketId": "2831406",
-      "title": "CSS Impact \u2014 Auto-Reply Webhook Not Firing",
+      "title": "CSS Impact — Auto-Reply Webhook Not Firing",
       "customer": "CSS Impact (Eric Beck)",
       "category": "messaging",
       "status": "pending",
       "priority": "urgent",
-      "findings": "Auto-reply messages (opt-in/opt-out confirmations) not sent to webhook endpoint. MDR API can retrieve message body. Auto-reply text is customer-configured in messaging profile \u2014 deterministic. Whether auto-replies fire message.sent/message.finalized to profile webhook is unverified \u2014 flagged for messaging team confirmation.",
+      "findings": "Auto-reply messages (opt-in/opt-out confirmations) not sent to webhook endpoint. MDR API can retrieve message body. Auto-reply text is customer-configured in messaging profile — deterministic. Whether auto-replies fire message.sent/message.finalized to profile webhook is unverified — flagged for messaging team confirmation.",
       "notes": "Sensei-assisted analysis. 3 options provided to customer: MR API, profile-based lookup, Mission Control. Webhook behavior flagged for internal confirmation. Sean approved response.",
       "response": "",
       "tags": [
@@ -83,7 +83,7 @@
     {
       "id": "case-2831155",
       "ticketId": "2831155",
-      "title": "Messages Rejected \u2014 Number 5168737100",
+      "title": "Messages Rejected — Number 5168737100",
       "customer": "BlinkVoice",
       "category": "messaging",
       "status": "solved",
@@ -100,14 +100,14 @@
       "createdAt": "2026-04-20T17:40:11Z",
       "updatedAt": "2026-04-21T17:49:40Z",
       "source": "solo",
-      "todayActivity": "closed",
-      "todaySummary": "Closed \u2014 Messages rejected \u2014 number 5168737100",
+      "todayActivity": "none",
+      "todaySummary": "",
       "lastUpdated": "2026-04-23"
     },
     {
       "id": "case-2827077",
       "ticketId": "2827077",
-      "title": "Gigi's Playhouse \u2014 40008 Errors for All Messages",
+      "title": "Gigi's Playhouse — 40008 Errors for All Messages",
       "customer": "Gigi's Playhouse",
       "category": "messaging",
       "status": "solved",
@@ -125,7 +125,9 @@
       ],
       "createdAt": "2026-04-17T20:34:20Z",
       "updatedAt": "2026-04-21T17:48:33Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2830551",
@@ -144,17 +146,19 @@
       ],
       "createdAt": "2026-04-20T19:00:00Z",
       "updatedAt": "2026-04-21T17:26:51Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2790819",
       "ticketId": "2790819",
-      "title": "Vontobel Call Drops \u2014 RTP Timestamp Discontinuity",
+      "title": "Vontobel Call Drops — RTP Timestamp Discontinuity",
       "customer": "Vontobel (Martin Babjak/AudioCodes MSP)",
       "category": "voice",
       "status": "pending",
       "priority": "high",
-      "findings": "Vontobel call drops after re-enabling TLS/SRTP. Same root cause as ENGDESK-50159 \u2014 RTP timestamp discontinuity in B2BUA. PR #2676 (SEND_NORMALISED_TIMESTAMPS) merged Apr 14, NOT yet enabled on production connection. New sample confirmed: A-leg jitter max 72,917ms (B2BUA timestamp artifact), 67.2% skip rate.",
+      "findings": "Vontobel call drops after re-enabling TLS/SRTP. Same root cause as ENGDESK-50159 — RTP timestamp discontinuity in B2BUA. PR #2676 (SEND_NORMALISED_TIMESTAMPS) merged Apr 14, NOT yet enabled on production connection. New sample confirmed: A-leg jitter max 72,917ms (B2BUA timestamp artifact), 67.2% skip rate.",
       "notes": "Sensei-assisted TREAT + CDR analysis. A-leg/b-leg blob analysis done. Pushing customer to create test SIP connection for validation. VIP customer (bank).",
       "response": "",
       "tags": [
@@ -229,7 +233,7 @@
     {
       "id": "case-2803630",
       "ticketId": "2803630",
-      "title": "Dead Air/One Way Audio \u2014 CarWars/Hyundai of Fresno",
+      "title": "Dead Air/One Way Audio — CarWars/Hyundai of Fresno",
       "customer": "CarWars (help@carwars.com)",
       "category": "voice",
       "status": "closed",
@@ -249,19 +253,21 @@
       ],
       "createdAt": "2026-04-08T20:01:39Z",
       "updatedAt": "2026-04-20T19:00:00Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2808416",
       "ticketId": "2808416",
-      "title": "Blocked Carriers Still Generating Usage/Charges \u2014 Honest Mobile",
+      "title": "Blocked Carriers Still Generating Usage/Charges — Honest Mobile",
       "customer": "Honest Mobile (George Guthrie)",
       "category": "wireless",
       "status": "hold",
       "priority": "urgent",
       "findings": "Carriers advertised as blocked (on Sparkle/IMSI1) are still generating usage and charges. Examples: MCC 530 MNC 1 (NZ One NZ) had 1680MB/$106 yesterday. Also MCC 248 MNC 2 and MCC 310 MNC 260 on Sparkle/IMSI1. VIP. P2.",
       "notes": "Wireless billing/roaming issue. Via ClearFeed #shared-honestmobile-telnyx.",
-      "response": "Pending investigation \u2014 need to verify blocked carrier configs vs actual usage.",
+      "response": "Pending investigation — need to verify blocked carrier configs vs actual usage.",
       "tags": [
         "wireless",
         "billing",
@@ -275,19 +281,21 @@
       ],
       "createdAt": "2026-04-10T11:35:25Z",
       "updatedAt": "2026-04-20T19:00:00Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2819865",
       "ticketId": "2819865",
-      "title": "No Routes Found PE2 \u2014 Ringba (Alaska PPT Filtering)",
+      "title": "No Routes Found PE2 — Ringba (Alaska PPT Filtering)",
       "customer": "Ringba (Marcella Pimentel, VIP P2)",
       "category": "voice",
       "status": "hold",
       "priority": "urgent",
-      "findings": "Root cause: Profit Protection Threshold (PPT) filtering blocks Alaska (+19076005911) routes. Customer tariff $0.0035/min, PPT $0.10/min. Available carriers at $0.04/min and $0.225/min \u2014 both blocked by PPT. no_routes_found_with_ppt=true confirmed in TREAT routing response. Initial CDR analysis incorrectly identified missing outbound profile \u2014 CORRECTED after TREAT showed PPT is the actual issue. Call Control/TeXML transfers route through app layer, not via assigned outbound profile.",
-      "notes": "Sensei-assisted deep analysis. TREAT confirmed PPT root cause on 3/5 samples (2 timed out, re-queried). Key lesson: don't rely on CDR outbound_profile_id=null for Call Control transfers \u2014 verify routing response data. Response sent to customer \u2014 waiting for customer to choose option (adjust PPT vs custom Alaska rate).",
-      "response": "Sent to customer \u2014 awaiting choice: (1) adjust PPT with cost acceptance, (2) escalate to billing for custom Alaska rate.",
+      "findings": "Root cause: Profit Protection Threshold (PPT) filtering blocks Alaska (+19076005911) routes. Customer tariff $0.0035/min, PPT $0.10/min. Available carriers at $0.04/min and $0.225/min — both blocked by PPT. no_routes_found_with_ppt=true confirmed in TREAT routing response. Initial CDR analysis incorrectly identified missing outbound profile — CORRECTED after TREAT showed PPT is the actual issue. Call Control/TeXML transfers route through app layer, not via assigned outbound profile.",
+      "notes": "Sensei-assisted deep analysis. TREAT confirmed PPT root cause on 3/5 samples (2 timed out, re-queried). Key lesson: don't rely on CDR outbound_profile_id=null for Call Control transfers — verify routing response data. Response sent to customer — waiting for customer to choose option (adjust PPT vs custom Alaska rate).",
+      "response": "Sent to customer — awaiting choice: (1) adjust PPT with cost acceptance, (2) escalate to billing for custom Alaska rate.",
       "tags": [
         "voice",
         "ppt",
@@ -301,19 +309,21 @@
       ],
       "createdAt": "2026-04-15T19:15:00Z",
       "updatedAt": "2026-04-20T19:00:00Z",
-      "source": "collaborative"
+      "source": "collaborative",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2732680",
       "ticketId": "2732680",
-      "title": "MKS Instruments \u2014 Carrier Drop / Israel Shortcodes \u2014 AudioCodes",
+      "title": "MKS Instruments — Carrier Drop / Israel Shortcodes — AudioCodes",
       "customer": "AudioCodes/MKS Instruments (Mustafa Husni)",
       "category": "voice",
       "status": "hold",
       "priority": "high",
       "findings": "Call drop 404 'The special call is not supported D59' for Israel shortcodes (*3123, *6272). Customer cannot call any local short codes in Israel. VIP. JIRA escalated. Voice/SIP trunking outbound delivery.",
       "notes": "Updated today. VIP + JIRA escalated. Multiple collaborators. Shortcodes not supported in current routing.",
-      "response": "Under investigation \u2014 Israel shortcode routing support.",
+      "response": "Under investigation — Israel shortcode routing support.",
       "tags": [
         "voice",
         "sip-trunking",
@@ -327,19 +337,21 @@
       ],
       "createdAt": "2026-03-06T17:39:22Z",
       "updatedAt": "2026-04-20T19:00:00Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2821214",
       "ticketId": "2821214",
-      "title": "Close My Account \u2014 Joseph Manea / JMP Electronics",
+      "title": "Close My Account — Joseph Manea / JMP Electronics",
       "customer": "Joseph Manea (JMP Electronics)",
       "category": "account",
       "status": "solved",
       "priority": "low",
       "findings": "Customer wants to close account for landline 714-730-5503. Getting auto credit card update emails. Entry-level.",
       "notes": "Updated today. Pending closure.",
-      "response": "Pending \u2014 processing account closure.",
+      "response": "Pending — processing account closure.",
       "tags": [
         "account",
         "cancellation",
@@ -349,7 +361,9 @@
       ],
       "createdAt": "2026-04-16T04:10:23Z",
       "updatedAt": "2026-04-20T19:00:00Z",
-      "source": "zendesk-sync"
+      "source": "zendesk-sync",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2820819",
@@ -372,7 +386,9 @@
       ],
       "createdAt": "2026-04-16T00:40:35Z",
       "updatedAt": "2026-04-20T19:00:00Z",
-      "source": "zendesk-sync"
+      "source": "zendesk-sync",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2810215",
@@ -439,7 +455,9 @@
       ],
       "createdAt": "2026-04-20T19:00:00Z",
       "updatedAt": "2026-04-20T19:00:00Z",
-      "source": "zendesk-sync"
+      "source": "zendesk-sync",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2794104",
@@ -459,7 +477,9 @@
       ],
       "createdAt": "2026-04-20T19:00:00Z",
       "updatedAt": "2026-04-20T19:00:00Z",
-      "source": "zendesk-sync"
+      "source": "zendesk-sync",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2806001",
@@ -478,7 +498,9 @@
       ],
       "createdAt": "2026-04-20T19:00:00Z",
       "updatedAt": "2026-04-20T19:00:00Z",
-      "source": "zendesk-sync"
+      "source": "zendesk-sync",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2816533",
@@ -494,7 +516,9 @@
       "tags": [],
       "createdAt": "2026-04-20T19:00:00Z",
       "updatedAt": "2026-04-20T19:00:00Z",
-      "source": "zendesk-sync"
+      "source": "zendesk-sync",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2794922",
@@ -510,7 +534,9 @@
       "tags": [],
       "createdAt": "2026-04-20T19:00:00Z",
       "updatedAt": "2026-04-20T19:00:00Z",
-      "source": "zendesk-sync"
+      "source": "zendesk-sync",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2830900",
@@ -526,7 +552,9 @@
       "tags": [],
       "createdAt": "2026-04-20T19:00:00Z",
       "updatedAt": "2026-04-20T19:00:00Z",
-      "source": "zendesk-sync"
+      "source": "zendesk-sync",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2830324",
@@ -542,7 +570,9 @@
       "tags": [],
       "createdAt": "2026-04-20T19:00:00Z",
       "updatedAt": "2026-04-20T19:00:00Z",
-      "source": "zendesk-sync"
+      "source": "zendesk-sync",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2798756",
@@ -558,7 +588,9 @@
       "tags": [],
       "createdAt": "2026-04-20T19:00:00Z",
       "updatedAt": "2026-04-20T19:00:00Z",
-      "source": "zendesk-sync"
+      "source": "zendesk-sync",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2761702",
@@ -574,17 +606,19 @@
       "tags": [],
       "createdAt": "2026-04-20T19:00:00Z",
       "updatedAt": "2026-04-20T19:00:00Z",
-      "source": "zendesk-sync"
+      "source": "zendesk-sync",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2718543",
       "ticketId": "2718543",
-      "title": "SIM Cards Not Connecting \u2014 Matcha Electric (USC DS3 Circuit Issue)",
+      "title": "SIM Cards Not Connecting — Matcha Electric (USC DS3 Circuit Issue)",
       "customer": "Matcha Electric (Jonathan Sobin)",
       "category": "wireless",
       "status": "open",
       "priority": "urgent",
-      "findings": "USC DS3 circuit drops causing Delete Session Requests on Plantsville, CT SIMs. Customer reports significant improvement in last week. USC escalation CW-3824. Brooklyn SIM confirmed as power issue (not Telnyx). IMSI prefix 311210 NOT supported by roaming partners \u2014 only 311588 works.",
+      "findings": "USC DS3 circuit drops causing Delete Session Requests on Plantsville, CT SIMs. Customer reports significant improvement in last week. USC escalation CW-3824. Brooklyn SIM confirmed as power issue (not Telnyx). IMSI prefix 311210 NOT supported by roaming partners — only 311588 works.",
       "notes": "Sensei-assisted analysis. Drafted customer response explaining carrier DS3 repair, improvement likely from AT&T fix, awaiting formal confirmation. Noted 311210 IMSI prefix unsupported for Brooklyn SIM. Sean approved.",
       "response": "Awaiting USC repair on DS3 circuit. JIRA CW-3824.",
       "tags": [
@@ -600,19 +634,21 @@
       ],
       "createdAt": "2026-02-27T22:34:36Z",
       "updatedAt": "2026-04-18T00:00:00Z",
-      "source": "collaborative"
+      "source": "collaborative",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2823290",
       "ticketId": "2823290",
-      "title": "DTMF # Not Working \u2014 Adit (Asterisk Payload Mismatch)",
+      "title": "DTMF # Not Working — Adit (Asterisk Payload Mismatch)",
       "customer": "Adit (VIP)",
       "category": "voice",
       "status": "open",
       "priority": "urgent",
-      "findings": "DTMF # not forwarded to upstream carrier. Root cause: Asterisk payload type mismatch \u2014 Asterisk advertises PT 103 for telephone-event in SDP answer but sends DTMF events on PT 101. B2BUA correctly ignores PT 101 per RFC 3264. Affects ALL DTMF digits, not just #. PCAP confirms 30 DTMF events on PT 101 from Asterisk.",
+      "findings": "DTMF # not forwarded to upstream carrier. Root cause: Asterisk payload type mismatch — Asterisk advertises PT 103 for telephone-event in SDP answer but sends DTMF events on PT 101. B2BUA correctly ignores PT 101 per RFC 3264. Affects ALL DTMF digits, not just #. PCAP confirms 30 DTMF events on PT 101 from Asterisk.",
       "notes": "Sensei-assisted deep analysis. PCAP + SDP analysis identified Asterisk config mismatch. Drafted customer-facing response recommending Asterisk config fixes. Sean approved.",
-      "response": "Response sent to customer \u2014 Asterisk dtmfmode=rfc2833 config fix recommended.",
+      "response": "Response sent to customer — Asterisk dtmfmode=rfc2833 config fix recommended.",
       "tags": [
         "voice",
         "dtmf",
@@ -627,19 +663,21 @@
       ],
       "createdAt": "2026-04-17T00:00:00Z",
       "updatedAt": "2026-04-18T00:00:00Z",
-      "source": "collaborative"
+      "source": "collaborative",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2803468",
       "ticketId": "2803468",
-      "title": "SIMs with Signal but No Data \u2014 Honest Mobile (PWG/Blocklist Issue)",
+      "title": "SIMs with Signal but No Data — Honest Mobile (PWG/Blocklist Issue)",
       "customer": "Honest Mobile (Will)",
       "category": "wireless",
       "status": "hold",
       "priority": "urgent",
-      "findings": "SIMs have signal but no data connection. Moving to default PWG restores connectivity; moving back to custom PWG (honest-pwg-eu-prod) drops data again. Tested in Mexico (Telcel), Albania (One.al), Cyprus (Cyta) \u2014 all same pattern. VIP. P2.",
+      "findings": "SIMs have signal but no data connection. Moving to default PWG restores connectivity; moving back to custom PWG (honest-pwg-eu-prod) drops data again. Tested in Mexico (Telcel), Albania (One.al), Cyprus (Cyta) — all same pattern. VIP. P2.",
       "notes": "New to Sean today. Wireless connectivity. PWG/blocklist configuration issue causing data drops. Via ClearFeed #shared-honestmobile-telnyx.",
-      "response": "Under investigation \u2014 PWG configuration causing data session failures.",
+      "response": "Under investigation — PWG configuration causing data session failures.",
       "tags": [
         "wireless",
         "sim",
@@ -653,19 +691,21 @@
       ],
       "createdAt": "2026-04-08T17:15:51Z",
       "updatedAt": "2026-04-17T22:06:24Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2792552",
       "ticketId": "2792552",
-      "title": "Strange Deliverability Issues \u2014 RespondFlow (iPhone Only)",
+      "title": "Strange Deliverability Issues — RespondFlow (iPhone Only)",
       "customer": "RespondFlow (Leo)",
       "category": "messaging",
       "status": "hold",
       "priority": "high",
       "findings": "Messages showing delivered but not received on iPhones. Android devices receive fine. 7 outbound message IDs provided. High Priority Gold. Via ClearFeed #shared-respondflow-telnyx.",
       "notes": "Updated today. Messaging deliverability. iPhone-specific delivery issue. Possible iMessage/RCS interference or carrier filtering.",
-      "response": "Under investigation \u2014 iPhone-specific delivery discrepancy.",
+      "response": "Under investigation — iPhone-specific delivery discrepancy.",
       "tags": [
         "messaging",
         "sms",
@@ -677,19 +717,21 @@
       ],
       "createdAt": "2026-04-02T19:45:57Z",
       "updatedAt": "2026-04-17T21:44:49Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2820256",
       "ticketId": "2820256",
-      "title": "Outbound SMS Delivery Investigation \u2014 Life Line Screening",
+      "title": "Outbound SMS Delivery Investigation — Life Line Screening",
       "customer": "Life Line Screening (Vendor Org)",
       "category": "messaging",
       "status": "solved",
       "priority": "low",
       "findings": "Customer asking if messages from +12163770592 are being delivered. Campaign C1MUGHM. Sample shows delivered status. Syniverse closed their investigation ticket (INC000001813086).",
       "notes": "Solved today. Self-service/triage ticket.",
-      "response": "Resolved \u2014 messages showing delivered status.",
+      "response": "Resolved — messages showing delivered status.",
       "tags": [
         "messaging",
         "sms",
@@ -700,12 +742,14 @@
       ],
       "createdAt": "2026-04-15T20:28:15Z",
       "updatedAt": "2026-04-17T21:34:51Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2820014",
       "ticketId": "2820014",
-      "title": "SDK Call Failures \u2014 UJET (VIP Prime)",
+      "title": "SDK Call Failures — UJET (VIP Prime)",
       "customer": "UJET (Cedar Coleman)",
       "category": "voice",
       "status": "hold",
@@ -725,19 +769,21 @@
       ],
       "createdAt": "2026-04-15T19:09:57Z",
       "updatedAt": "2026-04-17T21:34:39Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2803688",
       "ticketId": "2803688",
-      "title": "Orrick \u2014 Enable ES on DE TNs (E911 Follow-up)",
+      "title": "Orrick — Enable ES on DE TNs (E911 Follow-up)",
       "customer": "AudioCodes/Orrick (Andy Potts)",
       "category": "voice",
       "status": "hold",
       "priority": "high",
-      "findings": "Follow-up to #2723480 \u2014 enabling Emergency Services on German numbers. Customer getting error during update. VIP. E911 mission control category. JIRA escalated.",
+      "findings": "Follow-up to #2723480 — enabling Emergency Services on German numbers. Customer getting error during update. VIP. E911 mission control category. JIRA escalated.",
       "notes": "Updated today. E911 follow-up. VIP + JIRA escalated.",
-      "response": "Under investigation \u2014 JIRA escalated for ES activation on DE TNs.",
+      "response": "Under investigation — JIRA escalated for ES activation on DE TNs.",
       "tags": [
         "voice",
         "e911",
@@ -750,19 +796,21 @@
       ],
       "createdAt": "2026-04-08T20:36:21Z",
       "updatedAt": "2026-04-17T18:39:36Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2798158",
       "ticketId": "2798158",
-      "title": "OB Messages Not Reaching End User Despite 'Delivered' Status \u2014 CareCo",
+      "title": "OB Messages Not Reaching End User Despite 'Delivered' Status — CareCo",
       "customer": "CareCo (Shlomo)",
       "category": "messaging",
       "status": "open",
       "priority": "high",
-      "findings": "Messages to +19192108438 show 'delivered' status but patient cannot see them in messaging app (including spam). Example delivery ID: 023fbd74-6564-4601-87e3-de3c8c4eb22e. Also investigated delivery ID 896f0acf-f948-4ff8-b16d-ec0f8526717a \u2014 ClickHouse lookup failed (replication lag), internal API and Metabase lookups also failed.",
-      "notes": "Sensei-assisted analysis. Attempted MDR lookup via ClickHouse, internal API, Metabase \u2014 all failed due to replication lag or config issues. Graylog lookup pending. Possible phantom DLR or carrier-side delivery failure.",
-      "response": "Investigating \u2014 need Graylog search to find message sample and confirm actual delivery vs phantom DLR.",
+      "findings": "Messages to +19192108438 show 'delivered' status but patient cannot see them in messaging app (including spam). Example delivery ID: 023fbd74-6564-4601-87e3-de3c8c4eb22e. Also investigated delivery ID 896f0acf-f948-4ff8-b16d-ec0f8526717a — ClickHouse lookup failed (replication lag), internal API and Metabase lookups also failed.",
+      "notes": "Sensei-assisted analysis. Attempted MDR lookup via ClickHouse, internal API, Metabase — all failed due to replication lag or config issues. Graylog lookup pending. Possible phantom DLR or carrier-side delivery failure.",
+      "response": "Investigating — need Graylog search to find message sample and confirm actual delivery vs phantom DLR.",
       "tags": [
         "messaging",
         "sms",
@@ -775,7 +823,9 @@
       ],
       "createdAt": "2026-04-06T16:34:50Z",
       "updatedAt": "2026-04-17T00:00:00Z",
-      "source": "collaborative"
+      "source": "collaborative",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2806456",
@@ -785,7 +835,7 @@
       "category": "voice",
       "status": "open",
       "priority": "urgent",
-      "findings": "\u26a0\ufe0f CORRECTION: Original analysis blamed maintenance; Shreya confirmed root cause was network instability, NOT maintenance. Customer asking for clarification + raising 200 hangup code issue. Correction still pending from Sean.",
+      "findings": "⚠️ CORRECTION: Original analysis blamed maintenance; Shreya confirmed root cause was network instability, NOT maintenance. Customer asking for clarification + raising 200 hangup code issue. Correction still pending from Sean.",
       "notes": "Sensei-assisted analysis. CRITICAL LESSON: Never attribute customer issues to coincidental events without evidence.",
       "response": "Pending correction from Sean retracting the maintenance explanation.",
       "tags": [
@@ -801,19 +851,21 @@
       ],
       "createdAt": "2026-04-09T17:07:07Z",
       "updatedAt": "2026-04-17T00:00:00Z",
-      "source": "collaborative"
+      "source": "collaborative",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2817023",
       "ticketId": "2817023",
-      "title": "Outbound Busy Signal Investigation \u2014 Ringba",
+      "title": "Outbound Busy Signal Investigation — Ringba",
       "customer": "Ringba (Marcella Pimentel)",
       "category": "voice",
       "status": "open",
       "priority": "high",
       "findings": "Outbound calls getting busy signal; client's call center says calls never reached them. SIP analysis of 5 call legs shows: initial carrier gateway 503 errors, then 603 Decline from far end, then eventual success on final attempt. The 'busy' = destination actively declining (603 Decline). Carrier gateways returning 503 on initial attempts also concerning. Client uses sequential dialing (tries multiple targets).",
       "notes": "Sensei-assisted SIP analysis. 5 UUIDs analyzed. Key finding: 603 Decline from far end = destination rejecting, not network issue. 503 from carrier gateways on initial attempts = pre-routing rejection. Call center may have PBX auto-reject or queue capacity limits.",
-      "response": "SIP analysis shared \u2014 recommend client check PBX/ACD auto-reject rules and queue capacity.",
+      "response": "SIP analysis shared — recommend client check PBX/ACD auto-reject rules and queue capacity.",
       "tags": [
         "voice",
         "sip-analysis",
@@ -827,17 +879,19 @@
       ],
       "createdAt": "2026-04-14T20:00:00Z",
       "updatedAt": "2026-04-17T00:00:00Z",
-      "source": "collaborative"
+      "source": "collaborative",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2823607",
       "ticketId": "2823607",
-      "title": "One-Way Audio After Call Transfers \u2014 HelloPatient",
+      "title": "One-Way Audio After Call Transfers — HelloPatient",
       "customer": "HelloPatient (Patrick McJury)",
       "category": "voice",
       "status": "open",
       "priority": "urgent",
-      "findings": "After call transfers, callee cannot be heard (one-way audio). NOT cross-DC \u2014 all legs on LV1. NOT new \u2014 present yesterday too. B2BUA Opus jitter anomaly: 5500-7100ms reported vs <1ms in PCAP. Multi-codec transcoding (PCMU+G722+Opus) causes FreeSWITCH Opus jitter buffer issues. Dan from internal team handling via ClearFeed. Finding: silent RTP (0xFF) from downstream carrier.",
+      "findings": "After call transfers, callee cannot be heard (one-way audio). NOT cross-DC — all legs on LV1. NOT new — present yesterday too. B2BUA Opus jitter anomaly: 5500-7100ms reported vs <1ms in PCAP. Multi-codec transcoding (PCMU+G722+Opus) causes FreeSWITCH Opus jitter buffer issues. Dan from internal team handling via ClearFeed. Finding: silent RTP (0xFF) from downstream carrier.",
       "notes": "Sensei-assisted deep analysis. PCAP analysis, CDR correlation, codec path investigation. Root cause: B2BUA Opus jitter buffer artifact under multi-codec load. Quick fix: PCMU-only on outbound PSTN connection.",
       "response": "Dan handling via ClearFeed. Silent RTP from downstream carrier confirmed.",
       "tags": [
@@ -854,12 +908,14 @@
       ],
       "createdAt": "2026-04-16T12:00:00Z",
       "updatedAt": "2026-04-17T00:00:00Z",
-      "source": "collaborative"
+      "source": "collaborative",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2822254",
       "ticketId": "2822254",
-      "title": "Orphaned Messaging Profile \u2014 Cosmo Together (VIP)",
+      "title": "Orphaned Messaging Profile — Cosmo Together (VIP)",
       "customer": "Cosmo Together",
       "category": "messaging",
       "status": "open",
@@ -878,12 +934,14 @@
       ],
       "createdAt": "2026-04-16T14:00:00Z",
       "updatedAt": "2026-04-17T00:00:00Z",
-      "source": "collaborative"
+      "source": "collaborative",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2823297",
       "ticketId": "2823297",
-      "title": "IR Outbound Calls Failing \u2014 CommsTel",
+      "title": "IR Outbound Calls Failing — CommsTel",
       "customer": "CommsTel",
       "category": "voice",
       "status": "open",
@@ -901,19 +959,21 @@
       ],
       "createdAt": "2026-04-16T16:00:00Z",
       "updatedAt": "2026-04-17T00:00:00Z",
-      "source": "collaborative"
+      "source": "collaborative",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2807283",
       "ticketId": "2807283",
-      "title": "Call Connectivity Failure \u2014 Sequatchie Valley Dental (Adit)",
+      "title": "Call Connectivity Failure — Sequatchie Valley Dental (Adit)",
       "customer": "Adit (Anees Bhan)",
       "category": "voice",
       "status": "open",
       "priority": "high",
       "findings": "Calls fail to connect from Telnyx but go through from cellphone. Two call control IDs provided. P3 priority. Via ClearFeed/Slack #shared-adit-telnyx.",
       "notes": "Call connectivity issue with specific destination.",
-      "response": "Investigation pending \u2014 need to analyze CDRs for failed calls.",
+      "response": "Investigation pending — need to analyze CDRs for failed calls.",
       "tags": [
         "voice",
         "call-connectivity",
@@ -923,19 +983,21 @@
       ],
       "createdAt": "2026-04-09T22:00:55Z",
       "updatedAt": "2026-04-16T19:00:00Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2772701",
       "ticketId": "2772701",
-      "title": "911 Call Dispatched to Wrong State \u2014 P1",
+      "title": "911 Call Dispatched to Wrong State — P1",
       "customer": "Univoxx (Chintan Shah)",
       "category": "voice",
       "status": "open",
       "priority": "urgent",
       "findings": "Nurses making 911 calls dispatched to different state despite valid dynamic emergency address ID being passed. AI analysis done, PCAP analysis done. Multiple collaborators/followers. E911 mission control category.",
-      "notes": "Critical P1 \u2014 911 emergency services misrouting. Auto-acked. Multiple stakeholders involved.",
-      "response": "Under investigation \u2014 dynamic emergency address was passed correctly but routing went to wrong PSAP/dispatch.",
+      "notes": "Critical P1 — 911 emergency services misrouting. Auto-acked. Multiple stakeholders involved.",
+      "response": "Under investigation — dynamic emergency address was passed correctly but routing went to wrong PSAP/dispatch.",
       "tags": [
         "voice",
         "e911",
@@ -949,12 +1011,14 @@
       ],
       "createdAt": "2026-03-25T16:17:25Z",
       "updatedAt": "2026-04-16T19:00:00Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2810268",
       "ticketId": "2810268",
-      "title": "Inbound Fax Failure \u2014 Aesthetic Family Dentistry (Adit)",
+      "title": "Inbound Fax Failure — Aesthetic Family Dentistry (Adit)",
       "customer": "Adit (Anees Bhan)",
       "category": "fax",
       "status": "open",
@@ -972,19 +1036,21 @@
       ],
       "createdAt": "2026-04-10T21:06:05Z",
       "updatedAt": "2026-04-16T19:00:00Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2813916",
       "ticketId": "2813916",
-      "title": "AI Call Transfer to Bot Number Instead of Transfer Tool \u2014 Assistable",
+      "title": "AI Call Transfer to Bot Number Instead of Transfer Tool — Assistable",
       "customer": "Assistable (Shabbi Nasir)",
       "category": "voice",
       "status": "pending",
       "priority": "urgent",
       "findings": "AI assistant transfers calls back to its own bot number instead of the configured transfer tool number. Call control ID: v3:WLdBOt0ZvwrPXM6O7yqLnq9iiy1nmCyA5VeWXj_jONi-t30Wol5uFA. P2. VIP customer. AI CDR and PCAP analysis done.",
       "notes": "New ticket assigned today. AI assistants category. Likely configuration issue with transfer tool setup.",
-      "response": "Pending investigation \u2014 need to analyze call flow for transfer routing.",
+      "response": "Pending investigation — need to analyze call flow for transfer routing.",
       "tags": [
         "voice",
         "ai-assistants",
@@ -996,19 +1062,21 @@
       ],
       "createdAt": "2026-04-13T20:01:50Z",
       "updatedAt": "2026-04-16T19:00:00Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2810350",
       "ticketId": "2810350",
-      "title": "SMS Not Received / 40012 Error \u2014 Iterable",
+      "title": "SMS Not Received / 40012 Error — Iterable",
       "customer": "Iterable (Stan Takashima)",
       "category": "messaging",
       "status": "hold",
       "priority": "urgent",
       "findings": "Customer not receiving test SMS sends. Message ID 40018739-253f-4a1f-a4c1-a3d7350897ee returned 40012 error. VIP Advanced 365 customer. Via ClearFeed #shared-telnyx-iterable-gtm.",
       "notes": "New ticket assigned today. Messaging deliverability. P2.",
-      "response": "Pending investigation \u2014 need to check 40012 error details.",
+      "response": "Pending investigation — need to check 40012 error details.",
       "tags": [
         "messaging",
         "sms",
@@ -1020,19 +1088,21 @@
       ],
       "createdAt": "2026-04-10T21:59:27Z",
       "updatedAt": "2026-04-16T19:00:00Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2809820",
       "ticketId": "2809820",
-      "title": "High Volume Call Failures (70%+) \u2014 DomuAI/Vapi",
+      "title": "High Volume Call Failures (70%+) — DomuAI/Vapi",
       "customer": "DomuAI (Kai/Mark)",
       "category": "voice",
       "status": "pending",
       "priority": "high",
       "findings": "Vapi reporting 70%+ call failure rate with error 'call.in-progress.error-sip-outbound-call-failed-to-connect'. Vapi sees SIP 482 'Request merged'. Term vendor sending 403 Forbidden. PCAP ID 47dbf0bc-3507-11f1-9604-02420aef2520. Handover to outage team. P2.",
       "notes": "New ticket assigned today. Vapi blaming downstream Telnyx issue. Term vendor rejecting with 403.",
-      "response": "Pending \u2014 term vendor 403 issue under investigation.",
+      "response": "Pending — term vendor 403 issue under investigation.",
       "tags": [
         "voice",
         "call-connectivity",
@@ -1045,19 +1115,21 @@
       ],
       "createdAt": "2026-04-10T18:41:25Z",
       "updatedAt": "2026-04-16T19:00:00Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2788983",
       "ticketId": "2788983",
-      "title": "Destination Out of Order Errors \u2014 CareCo",
+      "title": "Destination Out of Order Errors — CareCo",
       "customer": "CareCo (Oarabile)",
       "category": "voice",
       "status": "hold",
       "priority": "urgent",
       "findings": "User getting 'destination out of order' errors when calling patients. Must retry multiple times before calls ring through. 8 call control IDs provided. P2. Outbound delivery issue. AI CDR and PCAP analysis done.",
-      "notes": "Related to CareCo's other ticket #2806001 (which was solved). This one still on hold \u2014 intermittent SIP 503/destination-out-of-order.",
-      "response": "Under investigation \u2014 intermittent outbound delivery failures.",
+      "notes": "Related to CareCo's other ticket #2806001 (which was solved). This one still on hold — intermittent SIP 503/destination-out-of-order.",
+      "response": "Under investigation — intermittent outbound delivery failures.",
       "tags": [
         "voice",
         "call-connectivity",
@@ -1069,19 +1141,21 @@
       ],
       "createdAt": "2026-04-01T15:50:35Z",
       "updatedAt": "2026-04-16T19:00:00Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2751693",
       "ticketId": "2751693",
-      "title": "Peer Connection Failure Errors \u2014 Inulti (WebRTC)",
+      "title": "Peer Connection Failure Errors — Inulti (WebRTC)",
       "customer": "Inulti (mantas l)",
       "category": "voice",
       "status": "hold",
       "priority": "urgent",
       "findings": "Multiple WebRTC peerConnectionFailureError events across different locations/network providers. 6 call control IDs provided. WebRTC category. Outbound delivery issue via call control. P2.",
       "notes": "Long-running WebRTC connectivity issue. Still pending.",
-      "response": "Under investigation \u2014 WebRTC peer connection failures.",
+      "response": "Under investigation — WebRTC peer connection failures.",
       "tags": [
         "voice",
         "webrtc",
@@ -1100,14 +1174,14 @@
     {
       "id": "case-2816647",
       "ticketId": "2816647",
-      "title": "Outbound MMS Failure \u2014 Canna Cabana",
+      "title": "Outbound MMS Failure — Canna Cabana",
       "customer": "Canna Cabana",
       "category": "messaging",
       "status": "hold",
       "priority": "low",
       "findings": "MMS messages failing with error 40008. Sending from 16399743732 to 14383547414 (Canadian number). Payload includes image/webp content. 3 samples provided. P4.",
       "notes": "New ticket created today. Vendor org. Triage pending.",
-      "response": "Pending triage \u2014 MMS 40008 error investigation needed.",
+      "response": "Pending triage — MMS 40008 error investigation needed.",
       "tags": [
         "messaging",
         "mms",
@@ -1118,19 +1192,21 @@
       ],
       "createdAt": "2026-04-14T17:39:09Z",
       "updatedAt": "2026-04-16T19:00:00Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2816077",
       "ticketId": "2816077",
-      "title": "AI Pronunciation & Voice Silence \u2014 Assistable",
+      "title": "AI Pronunciation & Voice Silence — Assistable",
       "customer": "Assistable (Shabbi Nasir)",
       "category": "voice",
       "status": "open",
       "priority": "urgent",
-      "findings": "Two issues: 1) AI mispronouncing letters when spelling back to users (pronunciation dictionary question). 2) AI going silent at end of calls \u2014 transcription shows full message but voice disappears. Call control ID: v3:-C8PJQkLa7-o-yUZVYsqpZYkx8O3FzFg8N_M4pwrYeqScCHYj5X8ZQ. VIP. P2.",
+      "findings": "Two issues: 1) AI mispronouncing letters when spelling back to users (pronunciation dictionary question). 2) AI going silent at end of calls — transcription shows full message but voice disappears. Call control ID: v3:-C8PJQkLa7-o-yUZVYsqpZYkx8O3FzFg8N_M4pwrYeqScCHYj5X8ZQ. VIP. P2.",
       "notes": "New ticket from Assistable (also has #2813916 for transfer issue). Via ClearFeed #shared-assistable-telnyx.",
-      "response": "Pending investigation \u2014 need to analyze call flow for TTS/silence issue.",
+      "response": "Pending investigation — need to analyze call flow for TTS/silence issue.",
       "tags": [
         "voice",
         "ai-assistants",
@@ -1144,19 +1220,21 @@
       ],
       "createdAt": "2026-04-14T15:15:54Z",
       "updatedAt": "2026-04-16T19:00:00Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2819717",
       "ticketId": "2819717",
-      "title": "SMS to T-Mobile Shows Delivered But Not Received \u2014 Adit",
+      "title": "SMS to T-Mobile Shows Delivered But Not Received — Adit",
       "customer": "Adit (Sumit Kumar Jangir)",
       "category": "messaging",
       "status": "hold",
       "priority": "urgent",
       "findings": "SMS from (770) 807-8733 to T-Mobile numbers showing 'delivered' in logs but not actually received by end users. Number assigned to 10DLC campaign 4b30019d. Two message IDs provided. Via ClearFeed #shared-adit-telnyx.",
-      "notes": "P2 urgent. Discrepancy between Telnyx delivery status and actual handset receipt. On hold \u2014 likely needs T-Mobile escalation or further MDR analysis.",
-      "response": "Under investigation \u2014 checking MDRs for actual delivery receipts vs status.",
+      "notes": "P2 urgent. Discrepancy between Telnyx delivery status and actual handset receipt. On hold — likely needs T-Mobile escalation or further MDR analysis.",
+      "response": "Under investigation — checking MDRs for actual delivery receipts vs status.",
       "tags": [
         "messaging",
         "sms",
@@ -1168,19 +1246,21 @@
       ],
       "createdAt": "2026-04-15T17:40:03Z",
       "updatedAt": "2026-04-16T19:00:00Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2789688",
       "ticketId": "2789688",
-      "title": "409 Conflict Attaching Messaging Profile to Canadian Number \u2014 Cosmo",
+      "title": "409 Conflict Attaching Messaging Profile to Canadian Number — Cosmo",
       "customer": "Cosmo (Usama)",
       "category": "messaging",
       "status": "hold",
       "priority": "high",
       "findings": "Attaching messaging profile to Canadian number +15875348716 returns 409 conflict with error 40323 'Messaging activation failed'. Production-impacting for Cosmo customer. JIRA escalated. Via ClearFeed #shared-cosmo-telnyx.",
       "notes": "P3 high. JIRA escalation in progress. Canadian number messaging activation issue.",
-      "response": "JIRA escalated \u2014 awaiting resolution for Canadian messaging profile activation.",
+      "response": "JIRA escalated — awaiting resolution for Canadian messaging profile activation.",
       "tags": [
         "messaging",
         "canadian-number",
@@ -1192,19 +1272,21 @@
       ],
       "createdAt": "2026-04-01T19:33:04Z",
       "updatedAt": "2026-04-16T19:00:00Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2768579",
       "ticketId": "2768579",
-      "title": "Poor Call Termination to +19064492223 \u2014 PCI-Pal (OPS-13671)",
+      "title": "Poor Call Termination to +19064492223 — PCI-Pal (OPS-13671)",
       "customer": "PCI-Pal (Richard Clarke)",
       "category": "voice",
       "status": "pending",
       "priority": "high",
       "findings": "Calls to +19064492223 ring 18 seconds before answer then hit wrong voicemail instead of UPPCO IVR. JIRA escalated. Technical skill. High priority gold.",
       "notes": "Updated today. JIRA escalated. Voice/SIP trunking outbound delivery issue.",
-      "response": "Under investigation \u2014 call routing to wrong destination for Ontario number.",
+      "response": "Under investigation — call routing to wrong destination for Ontario number.",
       "tags": [
         "voice",
         "sip-trunking",
@@ -1218,19 +1300,20 @@
       "updatedAt": "2026-04-16T19:00:00Z",
       "source": "solo",
       "lastUpdated": "2026-04-23",
-      "todayActivity": "none"
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2820826",
       "ticketId": "2820826",
-      "title": "Account Cancellation \u2014 Jaye Miller / Liquidstyle Digital",
+      "title": "Account Cancellation — Jaye Miller / Liquidstyle Digital",
       "customer": "Jaye Miller (Liquidstyle Digital)",
       "category": "account",
       "status": "closed",
       "priority": "low",
       "findings": "Customer created account same day, found developer already had one. Wants cancellation. Self-service.",
       "notes": "Solved today. Entry-level, simple cancellation.",
-      "response": "Resolved \u2014 account cancelled.",
+      "response": "Resolved — account cancelled.",
       "tags": [
         "account",
         "cancellation",
@@ -1241,14 +1324,14 @@
       "createdAt": "2026-04-16T00:46:20Z",
       "updatedAt": "2026-04-16T16:43:11Z",
       "source": "solo",
-      "todayActivity": "closed",
-      "todaySummary": "Closed \u2014 Account Cancellation",
+      "todayActivity": "none",
+      "todaySummary": "",
       "lastUpdated": "2026-04-23"
     },
     {
       "id": "case-2776237",
       "ticketId": "2776237",
-      "title": "GitHub Verification Rejected \u2014 Roger AI / CloudAura",
+      "title": "GitHub Verification Rejected — Roger AI / CloudAura",
       "customer": "Roger AI (CloudAura)",
       "category": "account",
       "status": "closed",
@@ -1266,19 +1349,19 @@
       "createdAt": "2026-03-26T18:24:21Z",
       "updatedAt": "2026-04-16T15:29:46Z",
       "source": "solo",
-      "todayActivity": "closed",
-      "todaySummary": "Closed \u2014 GitHub verification rejected",
+      "todayActivity": "none",
+      "todaySummary": "",
       "lastUpdated": "2026-04-23"
     },
     {
       "id": "case-2774644",
       "ticketId": "2774644",
-      "title": "Freemium Verification Issue \u2014 Shiva / insmsout.com",
+      "title": "Freemium Verification Issue — Shiva / insmsout.com",
       "customer": "Shiva (insmsout.com)",
       "category": "account",
       "status": "closed",
       "priority": "low",
-      "findings": "Unable to upgrade account \u2014 verification issues. Fraud/L2-verification.",
+      "findings": "Unable to upgrade account — verification issues. Fraud/L2-verification.",
       "notes": "Solved today.",
       "response": "Resolved.",
       "tags": [
@@ -1291,14 +1374,14 @@
       "createdAt": "2026-03-26T08:19:22Z",
       "updatedAt": "2026-04-16T15:29:26Z",
       "source": "solo",
-      "todayActivity": "closed",
-      "todaySummary": "Closed \u2014 Freemium Support Request",
+      "todayActivity": "none",
+      "todaySummary": "",
       "lastUpdated": "2026-04-23"
     },
     {
       "id": "case-2767769",
       "ticketId": "2767769",
-      "title": "Account Verification Issue \u2014 David Petrashov / Qx Home Buyers",
+      "title": "Account Verification Issue — David Petrashov / Qx Home Buyers",
       "customer": "David Petrashov (Qx Home Buyers)",
       "category": "account",
       "status": "closed",
@@ -1316,14 +1399,14 @@
       "createdAt": "2026-03-23T23:04:22Z",
       "updatedAt": "2026-04-16T15:29:00Z",
       "source": "solo",
-      "todayActivity": "closed",
-      "todaySummary": "Closed \u2014 Account verification issue",
+      "todayActivity": "none",
+      "todaySummary": "",
       "lastUpdated": "2026-04-23"
     },
     {
       "id": "case-2763635",
       "ticketId": "2763635",
-      "title": "Freemium Verification Rejection \u2014 Bruno Coimbra",
+      "title": "Freemium Verification Rejection — Bruno Coimbra",
       "customer": "Bruno Coimbra",
       "category": "account",
       "status": "closed",
@@ -1341,14 +1424,14 @@
       "createdAt": "2026-03-20T19:10:23Z",
       "updatedAt": "2026-04-16T15:28:23Z",
       "source": "solo",
-      "todayActivity": "closed",
-      "todaySummary": "Closed \u2014 Freemium Support Request",
+      "todayActivity": "none",
+      "todaySummary": "",
       "lastUpdated": "2026-04-23"
     },
     {
       "id": "case-2763159",
       "ticketId": "2763159",
-      "title": "Account Authentication Loop \u2014 Musausman",
+      "title": "Account Authentication Loop — Musausman",
       "customer": "Mr Musausman",
       "category": "account",
       "status": "closed",
@@ -1366,21 +1449,21 @@
       "createdAt": "2026-03-20T16:22:28Z",
       "updatedAt": "2026-04-16T15:25:43Z",
       "source": "solo",
-      "todayActivity": "closed",
-      "todaySummary": "Closed \u2014 Freemium Support Request",
+      "todayActivity": "none",
+      "todaySummary": "",
       "lastUpdated": "2026-04-23"
     },
     {
       "id": "case-2820370",
       "ticketId": "2820370",
-      "title": "Cancel Telnyx Account \u2014 Boocler",
+      "title": "Cancel Telnyx Account — Boocler",
       "customer": "Boocler (Dev)",
       "category": "account",
       "status": "pending",
       "priority": "low",
       "findings": "Customer struggling with verifications, wants to cancel. Auto-acked. AI escalation. Entry-level.",
       "notes": "Updated today. Pending cancellation.",
-      "response": "Pending \u2014 processing account cancellation.",
+      "response": "Pending — processing account cancellation.",
       "tags": [
         "account",
         "cancellation",
@@ -1390,7 +1473,9 @@
       ],
       "createdAt": "2026-04-15T21:09:23Z",
       "updatedAt": "2026-04-16T15:19:46Z",
-      "source": "solo"
+      "source": "solo",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2756038",
@@ -1414,7 +1499,7 @@
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
       "todayActivity": "none",
-      "todaySummary": "Updated today \u2014 closed",
+      "todaySummary": "",
       "lastUpdated": "2026-04-24"
     },
     {
@@ -1438,14 +1523,14 @@
       "createdAt": "2026-03-19T00:00:00Z",
       "updatedAt": "2026-04-16T00:00:00Z",
       "source": "solo",
-      "todayActivity": "closed",
-      "todaySummary": "Closed \u2014 KYC still pending after multiple follow-up",
+      "todayActivity": "none",
+      "todaySummary": "",
       "lastUpdated": "2026-04-23"
     },
     {
       "id": "case-2738556",
       "ticketId": "2738556",
-      "title": "Help Request \u2014 Account Verification",
+      "title": "Help Request — Account Verification",
       "customer": "Self-service",
       "category": "account",
       "status": "closed",
@@ -1463,14 +1548,14 @@
       "createdAt": "2026-03-12T00:00:00Z",
       "updatedAt": "2026-04-16T00:00:00Z",
       "source": "solo",
-      "todayActivity": "closed",
-      "todaySummary": "Closed \u2014 Help request",
+      "todayActivity": "none",
+      "todaySummary": "",
       "lastUpdated": "2026-04-23"
     },
     {
       "id": "case-2735116",
       "ticketId": "2735116",
-      "title": "Inbound Support Request \u2014 monboune.fr",
+      "title": "Inbound Support Request — monboune.fr",
       "customer": "Adriel Aiach (monboune.fr)",
       "category": "account",
       "status": "closed",
@@ -1487,14 +1572,14 @@
       "createdAt": "2026-03-10T00:00:00Z",
       "updatedAt": "2026-04-16T00:00:00Z",
       "source": "solo",
-      "todayActivity": "closed",
-      "todaySummary": "Closed \u2014 Inbound Support Request \u2014 monboune.fr",
+      "todayActivity": "none",
+      "todaySummary": "",
       "lastUpdated": "2026-04-23"
     },
     {
       "id": "case-2723049",
       "ticketId": "2723049",
-      "title": "Account Verification \u2014 GitHub Rejected",
+      "title": "Account Verification — GitHub Rejected",
       "customer": "Self-service",
       "category": "account",
       "status": "closed",
@@ -1512,19 +1597,19 @@
       "createdAt": "2026-03-06T00:00:00Z",
       "updatedAt": "2026-04-16T00:00:00Z",
       "source": "solo",
-      "todayActivity": "closed",
-      "todaySummary": "Closed \u2014 Account verification - GitHub rejected",
+      "todayActivity": "none",
+      "todaySummary": "",
       "lastUpdated": "2026-04-23"
     },
     {
       "id": "case-2722196",
       "ticketId": "2722196",
-      "title": "KYC Verification Loop \u2014 Passport Marked as Expired",
+      "title": "KYC Verification Loop — Passport Marked as Expired",
       "customer": "Self-service",
       "category": "account",
       "status": "closed",
       "priority": "low",
-      "findings": "KYC verification loop \u2014 passport incorrectly marked as expired. Fraud/freemium queue.",
+      "findings": "KYC verification loop — passport incorrectly marked as expired. Fraud/freemium queue.",
       "notes": "Solved today.",
       "response": "Resolved.",
       "tags": [
@@ -1537,8 +1622,8 @@
       "createdAt": "2026-03-05T00:00:00Z",
       "updatedAt": "2026-04-16T00:00:00Z",
       "source": "solo",
-      "todayActivity": "closed",
-      "todaySummary": "Closed \u2014 KYC verification loop \u2013 passport incorrectly marked as expired",
+      "todayActivity": "none",
+      "todaySummary": "",
       "lastUpdated": "2026-04-23"
     },
     {
@@ -1562,8 +1647,8 @@
       "createdAt": "2026-03-04T00:00:00Z",
       "updatedAt": "2026-04-16T00:00:00Z",
       "source": "solo",
-      "todayActivity": "closed",
-      "todaySummary": "Closed \u2014 Confirm Account",
+      "todayActivity": "none",
+      "todaySummary": "",
       "lastUpdated": "2026-04-23"
     },
     {
@@ -1615,12 +1700,14 @@
       "priority": "urgent",
       "findings": "Recordings captured by B2BUA but not accessible via API or portal. All recording IDs return 10005 Resource not found. S3 upload pipeline broken after release. HTTP 403 from S3. Platform-wide issue, not Ringba-specific.",
       "notes": "Sensei-assisted. P1/urgent. Escalated to recording team. Sean approved internal + customer responses.",
-      "lastUpdated": "2026-04-22"
+      "lastUpdated": "2026-04-22",
+      "todayActivity": "none",
+      "todaySummary": ""
     },
     {
       "id": "case-2801084",
       "ticketId": "2801084",
-      "title": "Dead Air Calls \u2014 TeXML",
+      "title": "Dead Air Calls — TeXML",
       "customer": "Unknown",
       "category": "voice",
       "status": "pending",
@@ -1641,13 +1728,13 @@
       "updatedAt": "2026-04-23T18:11:18Z",
       "source": "solo",
       "todayActivity": "none",
-      "todaySummary": "Dead air on TeXML calls. Open/urgent. P2.",
+      "todaySummary": "",
       "lastUpdated": "2026-04-23"
     },
     {
       "id": "case-2819740",
       "ticketId": "2819740",
-      "title": "No In-Progress Event on Call \u2014 TeXML",
+      "title": "No In-Progress Event on Call — TeXML",
       "customer": "Unknown",
       "category": "voice",
       "status": "hold",
@@ -1667,7 +1754,7 @@
       "updatedAt": "2026-04-23T15:21:28Z",
       "source": "solo",
       "todayActivity": "none",
-      "todaySummary": "No in-progress event on TeXML calls. Hold/urgent.",
+      "todaySummary": "",
       "lastUpdated": "2026-04-23"
     },
     {
@@ -1692,7 +1779,7 @@
       "updatedAt": "2026-04-23T15:16:56Z",
       "source": "solo",
       "todayActivity": "none",
-      "todaySummary": "Branded calling feature request. Hold/normal.",
+      "todaySummary": "",
       "lastUpdated": "2026-04-23"
     },
     {
@@ -1711,7 +1798,7 @@
       "updatedAt": "2026-04-23T23:59:00Z",
       "source": "solo",
       "todayActivity": "none",
-      "todaySummary": "Shopper 369594759, sms to +971563802890 time out",
+      "todaySummary": "",
       "lastUpdated": "2026-04-23"
     },
     {
@@ -1730,7 +1817,7 @@
       "updatedAt": "2026-04-23T23:59:00Z",
       "source": "solo",
       "todayActivity": "none",
-      "todaySummary": "SIP call connection issues",
+      "todaySummary": "",
       "lastUpdated": "2026-04-23"
     },
     {
@@ -1749,7 +1836,7 @@
       "updatedAt": "2026-04-23T23:59:00Z",
       "source": "solo",
       "todayActivity": "none",
-      "todaySummary": "Big Jitter from Telnyx to Audiocodes",
+      "todaySummary": "",
       "lastUpdated": "2026-04-23"
     },
     {
@@ -1768,7 +1855,7 @@
       "updatedAt": "2026-04-23T23:59:00Z",
       "source": "solo",
       "todayActivity": "none",
-      "todaySummary": "How can we enhance...",
+      "todaySummary": "",
       "lastUpdated": "2026-04-23"
     },
     {
@@ -1787,7 +1874,7 @@
       "updatedAt": "2026-04-23T23:59:00Z",
       "source": "solo",
       "todayActivity": "none",
-      "todaySummary": "Qualfon corrective actions status",
+      "todaySummary": "",
       "lastUpdated": "2026-04-23"
     },
     {
@@ -1810,7 +1897,7 @@
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
       "todayActivity": "none",
-      "todaySummary": "New ticket \u2014 open",
+      "todaySummary": "",
       "todayDetail": "",
       "lastUpdated": "2026-04-24"
     },
@@ -1834,7 +1921,7 @@
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
       "todayActivity": "none",
-      "todaySummary": "New ticket \u2014 open",
+      "todaySummary": "",
       "todayDetail": "",
       "lastUpdated": "2026-04-24"
     },
@@ -1858,7 +1945,7 @@
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
       "todayActivity": "none",
-      "todaySummary": "New ticket \u2014 open",
+      "todaySummary": "",
       "todayDetail": "",
       "lastUpdated": "2026-04-24"
     },
@@ -1882,7 +1969,7 @@
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
       "todayActivity": "none",
-      "todaySummary": "New ticket \u2014 open",
+      "todaySummary": "",
       "todayDetail": "",
       "lastUpdated": "2026-04-24"
     },
@@ -1907,7 +1994,7 @@
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
       "todayActivity": "none",
-      "todaySummary": "New ticket \u2014 open",
+      "todaySummary": "",
       "todayDetail": "",
       "lastUpdated": "2026-04-24"
     },
@@ -1931,7 +2018,7 @@
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
       "todayActivity": "none",
-      "todaySummary": "New ticket \u2014 open",
+      "todaySummary": "",
       "todayDetail": "",
       "lastUpdated": "2026-04-24"
     },
@@ -1955,7 +2042,7 @@
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
       "todayActivity": "none",
-      "todaySummary": "New ticket \u2014 pending",
+      "todaySummary": "",
       "todayDetail": "",
       "lastUpdated": "2026-04-24"
     },
@@ -1979,7 +2066,7 @@
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
       "todayActivity": "none",
-      "todaySummary": "New ticket \u2014 pending",
+      "todaySummary": "",
       "todayDetail": "",
       "lastUpdated": "2026-04-24"
     },
@@ -2003,14 +2090,14 @@
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
       "todayActivity": "none",
-      "todaySummary": "New ticket \u2014 closed",
+      "todaySummary": "",
       "todayDetail": "",
       "lastUpdated": "2026-04-24"
     },
     {
       "id": "case-2843249",
       "ticketId": "2843249",
-      "title": "Invalid Call Control IDs / Zero Webhooks \u2014 Superbill",
+      "title": "Invalid Call Control IDs / Zero Webhooks — Superbill",
       "customer": "Superbill (Austin Near)",
       "category": "voice",
       "status": "hold",
@@ -2031,13 +2118,13 @@
       "updatedAt": "2026-04-27T15:50:16Z",
       "source": "solo",
       "todayActivity": "none",
-      "todaySummary": "Invalid call control IDs / no webhooks. Hold/high.",
+      "todaySummary": "",
       "lastUpdated": "2026-04-27"
     },
     {
       "id": "case-2842487",
       "ticketId": "2842487",
-      "title": "BEMS01978063 \u2014 Inbound Unknown Callers / Blocked Caller ID Being Blocked",
+      "title": "BEMS01978063 — Inbound Unknown Callers / Blocked Caller ID Being Blocked",
       "customer": "BEMS",
       "category": "voice",
       "status": "pending",
@@ -2056,7 +2143,7 @@
       "updatedAt": "2026-04-27T18:35:25Z",
       "source": "solo",
       "todayActivity": "none",
-      "todaySummary": "Inbound blocked Caller ID calls being blocked. Pending/high.",
+      "todaySummary": "",
       "lastUpdated": "2026-04-27"
     },
     {
@@ -2080,7 +2167,7 @@
       "updatedAt": "2026-04-27T15:23:37Z",
       "source": "solo",
       "todayActivity": "none",
-      "todaySummary": "Carrier routing for +12508514097. Hold/urgent.",
+      "todaySummary": "",
       "lastUpdated": "2026-04-27"
     },
     {
@@ -2091,7 +2178,7 @@
       "category": "messaging",
       "status": "hold",
       "priority": "high",
-      "findings": "Intermittent Telnyx API failures on /v2/messages and related endpoints. Jobe responding directly to customer. Checking if NOC assistance needed \u2014 determined no NOC help required at this time.",
+      "findings": "Intermittent Telnyx API failures on /v2/messages and related endpoints. Jobe responding directly to customer. Checking if NOC assistance needed — determined no NOC help required at this time.",
       "notes": "Sean working independently. Jobe handling customer response. No NOC action needed. Hold/high.",
       "response": "",
       "tags": [
@@ -2104,13 +2191,13 @@
       "updatedAt": "2026-04-27T17:43:56Z",
       "source": "solo",
       "todayActivity": "none",
-      "todaySummary": "Intermittent /v2/messages API failures. Jobe handling. No NOC needed. Hold/high.",
+      "todaySummary": "",
       "lastUpdated": "2026-04-27"
     },
     {
       "id": "case-2849402",
       "ticketId": "2849402",
-      "title": "Creating Additional Users \u2014 Kyra SMS",
+      "title": "Creating Additional Users — Kyra SMS",
       "customer": "Kyra SMS (Maverick Brenton, CEO)",
       "category": "account",
       "status": "pending",
@@ -2128,7 +2215,7 @@
       "updatedAt": "2026-04-27T23:01:27Z",
       "source": "solo",
       "todayActivity": "none",
-      "todaySummary": "Creating additional users for tech team. Pending/normal.",
+      "todaySummary": "",
       "lastUpdated": "2026-04-27"
     },
     {
@@ -2152,8 +2239,8 @@
       "createdAt": "2026-04-28T00:00:00Z",
       "updatedAt": "2026-04-28T19:01:58Z",
       "source": "solo",
-      "todayActivity": "solo",
-      "todaySummary": "2FA SMS not working - USA customers not receiving auth codes, Swiss numbers not receiving with alpha",
+      "todayActivity": "none",
+      "todaySummary": "",
       "lastUpdated": "2026-04-28"
     },
     {
@@ -2176,8 +2263,8 @@
       "createdAt": "2026-04-28T00:00:00Z",
       "updatedAt": "2026-04-28T19:01:58Z",
       "source": "solo",
-      "todayActivity": "solo",
-      "todaySummary": "Feature request for TTS audio prompt when outbound call hangs up due to timeout or invalid destinati",
+      "todayActivity": "none",
+      "todaySummary": "",
       "lastUpdated": "2026-04-28"
     },
     {
@@ -2200,8 +2287,8 @@
       "createdAt": "2026-04-28T00:00:00Z",
       "updatedAt": "2026-04-28T19:01:58Z",
       "source": "solo",
-      "todayActivity": "solo",
-      "todaySummary": "Issue attaching messaging profile to numbers. JIRA escalated. Messaging configuration.",
+      "todayActivity": "none",
+      "todaySummary": "",
       "lastUpdated": "2026-04-28"
     },
     {
@@ -2224,8 +2311,8 @@
       "createdAt": "2026-04-28T00:00:00Z",
       "updatedAt": "2026-04-28T19:01:58Z",
       "source": "solo",
-      "todayActivity": "updated",
-      "todaySummary": "Spam database verification request. Solved.",
+      "todayActivity": "none",
+      "todaySummary": "",
       "lastUpdated": "2026-04-28",
       "todayDetail": "Hiscall wanted to verify numbers 615-446-3494 and 615-446-3303 are not labeled as spam. Solved."
     },
@@ -2249,14 +2336,14 @@
       "createdAt": "2026-04-28T00:00:00Z",
       "updatedAt": "2026-04-28T19:01:58Z",
       "source": "solo",
-      "todayActivity": "solo",
-      "todaySummary": "Outbound SMS from +13055324419 failing. Messaging deliverability. Awaiting partner carrier update vi",
+      "todayActivity": "none",
+      "todaySummary": "",
       "lastUpdated": "2026-04-28"
     },
     {
       "id": "case-2844359",
       "ticketId": "2844359",
-      "title": "Inbound Support Request \u2014 Danny Rettele, TeleSpace",
+      "title": "Inbound Support Request — Danny Rettele, TeleSpace",
       "customer": "TeleSpace (Danny Rettele)",
       "category": "sales",
       "status": "hold",
@@ -2273,15 +2360,15 @@
       "createdAt": "2026-04-28T00:00:00Z",
       "updatedAt": "2026-04-28T22:39:24Z",
       "source": "solo",
-      "todayActivity": "updated",
-      "todaySummary": "Inbound support request from TeleSpace (Danny Rettele). On hold.",
+      "todayActivity": "none",
+      "todaySummary": "",
       "todayDetail": "Sales/support lead. Urgent priority. Placed on hold.",
       "lastUpdated": "2026-04-28"
     },
     {
       "id": "case-2843078",
       "ticketId": "2843078",
-      "title": "No Audio on Calls to Certain Valid Numbers \u2014 Van Wyk Trucking",
+      "title": "No Audio on Calls to Certain Valid Numbers — Van Wyk Trucking",
       "customer": "Van Wyk Trucking",
       "category": "voice",
       "status": "pending",
@@ -2298,15 +2385,15 @@
       "createdAt": "2026-04-28T00:00:00Z",
       "updatedAt": "2026-04-28T15:43:48Z",
       "source": "solo",
-      "todayActivity": "updated",
-      "todaySummary": "No audio on calls to specific numbers. Pending investigation.",
+      "todayActivity": "none",
+      "todaySummary": "",
       "todayDetail": "Van Wyk Trucking reports calls to certain numbers connect but have no audio. Cell phone calls to same numbers work fine. Indicates SIP/media path issue on Telnyx side.",
       "lastUpdated": "2026-04-28"
     },
     {
       "id": "case-2840824",
       "ticketId": "2840824",
-      "title": "Agent-to-Agent Call Bugs \u2014 Missing Cost Webhook & Incorrect ai_assistant_start",
+      "title": "Agent-to-Agent Call Bugs — Missing Cost Webhook & Incorrect ai_assistant_start",
       "customer": "Unknown",
       "category": "voice",
       "status": "hold",
@@ -2324,33 +2411,69 @@
       "createdAt": "2026-04-28T00:00:00Z",
       "updatedAt": "2026-04-28T15:29:29Z",
       "source": "solo",
-      "todayActivity": "updated",
-      "todaySummary": "Agent-to-agent call bugs: missing cost webhook + incorrect ai_assistant_start. On hold.",
+      "todayActivity": "none",
+      "todaySummary": "",
       "todayDetail": "Two bugs with agent-to-agent call scenarios: (1) No cost webhook fired, (2) ai_assistant_start response incorrect. Customer using agents to test call flows. On hold awaiting engineering.",
       "lastUpdated": "2026-04-28"
+    },
+    {
+      "id": "case-2853873",
+      "ticketId": "2853873",
+      "title": "NOC Related Social Media Post/Comment Review",
+      "customer": "Internal (Social Media)",
+      "category": "general",
+      "status": "open",
+      "priority": "urgent",
+      "findings": "NOC social media monitoring flagged a negative post. Review and respond as needed.",
+      "notes": "Auto-generated from social media monitoring. Assigned to Sean today.",
+      "response": "",
+      "tags": [
+        "social-media",
+        "noc",
+        "internal",
+        "urgent"
+      ],
+      "createdAt": "2026-04-28T20:15:25Z",
+      "updatedAt": "2026-04-29T15:24:47Z",
+      "source": "solo",
+      "todayActivity": "solo",
+      "todaySummary": "NOC social media post review — auto-generated from monitoring",
+      "lastUpdated": "2026-04-29"
     }
   ],
-  "lastUpdated": "2026-04-28T19:01:58Z",
+  "lastUpdated": "2026-04-29T19:02:33.236062Z",
   "daySummary": {
-    "date": "2026-04-28",
-    "totalUpdated": 5,
+    "date": "2026-04-29",
+    "totalUpdated": 1,
     "collaborative": [],
     "soloWork": [
-      "2840798",
-      "2838172",
-      "2817415",
-      "2845457",
-      "2845418"
+      "2853873"
     ],
-    "closedToday": [
-      "2845457"
-    ],
+    "closedToday": [],
     "urgentActive": [
-      "2840798",
-      "2845418"
+      "2831406",
+      "2808416",
+      "2819865",
+      "2810215",
+      "2816533",
+      "2794922",
+      "2718543",
+      "2823290",
+      "2803468",
+      "2820014",
+      "2806456",
+      "2823607",
+      "2772701",
+      "2813916",
+      "2810350",
+      "2788983",
+      "2751693",
+      "2816077",
+      "2819717",
+      "2838445"
     ],
-    "notes": "Midday sync 2026-04-28 19:01 UTC. Sean worked independently on 5 tickets. No collaborative analysis sessions today. New: #2840798 (Appfront 2FA SMS), #2838172 (TTS feature request), #2817415 (messaging profile attachment). Closed: #2845457. Urgent: #2840798 (2FA SMS), #2845418 (outbound SMS carrier escalation)."
+    "notes": "Midday sync 2026-04-29 19:00 UTC. Sean worked on 1 ticket(s). New: #2853873 (social media review). No collaborative sessions today. Quiet day — light activity."
   },
-  "lastSync": "2026-04-28T19:01:58Z",
-  "date": "2026-04-28"
+  "lastSync": "2026-04-29T19:02:33.236062Z",
+  "date": "2026-04-29"
 }
