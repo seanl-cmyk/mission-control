@@ -1,6 +1,6 @@
 {
-  "status": "online",
-  "lastUpdated": "2026-04-29T19:02:38.997844+00:00",
+  "status": "offline",
+  "lastUpdated": "2026-04-30T00:00:36.372410+00:00",
   "operator": "seanl",
   "activeTickets": 73,
   "openTickets": [
@@ -118,13 +118,9 @@
     "urgent": 26
   },
   "todayActivity": {
-    "date": "2026-04-29",
-    "ticketsUpdated": [
-      "2853873"
-    ],
+    "date": "2026-04-30",
+    "ticketsUpdated": [],
     "collaborative": [],
-    "solo": [
-      "2853873"
-    ]
+    "solo": []
   }
 }
