@@ -21,9 +21,9 @@
       "createdAt": "2026-04-29T19:30:19Z",
       "updatedAt": "2026-04-29T20:35:40Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-29"
+      "todayActivity": "updated",
+      "todaySummary": "Updated \u2014 False delivery inquiry (Syniverse). Still on hold.",
+      "lastUpdated": "2026-04-30"
     },
     {
       "id": "case-2829435",
@@ -2489,6 +2489,119 @@
       "todayActivity": "solo",
       "todaySummary": "NOC social media post review \u2014 auto-generated from monitoring",
       "lastUpdated": "2026-04-29"
+    },
+    {
+      "id": "case-2860172",
+      "ticketId": "2860172",
+      "title": "Following up on Inteliquent Ticket ID 975216",
+      "customer": "vendor_org",
+      "category": "voice",
+      "status": "hold",
+      "priority": "low",
+      "findings": "Following up on vendor ticket 975216 for one-way audio. Customer reports no audio from caller on some inbound calls, while a call a minute later works fine. PCAPs attached.",
+      "notes": "Updated by Sean on 2026-04-30",
+      "response": "",
+      "tags": [
+        "voice",
+        "one-way-audio",
+        "vendor"
+      ],
+      "createdAt": "2026-04-30T20:09:11Z",
+      "updatedAt": "2026-04-30T21:01:34Z",
+      "source": "solo",
+      "todayActivity": "updated",
+      "todaySummary": "Updated \u2014 Following up on Inteliquent Ticket ID 975216",
+      "lastUpdated": "2026-04-30"
+    },
+    {
+      "id": "case-2860120",
+      "ticketId": "2860120",
+      "title": "Inbound SMS Failures",
+      "customer": "vendor_org",
+      "category": "messaging",
+      "status": "hold",
+      "priority": "low",
+      "findings": "Inbound SMS failures from several AT&T numbers to +18503256468 (campaign CIMRTZM). Multiple failed examples from Apr 28-29.",
+      "notes": "Updated by Sean on 2026-04-30",
+      "response": "",
+      "tags": [
+        "messaging",
+        "inbound-sms",
+        "att",
+        "vendor"
+      ],
+      "createdAt": "2026-04-30T19:51:31Z",
+      "updatedAt": "2026-04-30T21:15:27Z",
+      "source": "solo",
+      "todayActivity": "updated",
+      "todaySummary": "Updated \u2014 Inbound SMS Failures",
+      "lastUpdated": "2026-04-30"
+    },
+    {
+      "id": "case-2857167",
+      "ticketId": "2857167",
+      "title": "NNID Update",
+      "customer": "Callbox",
+      "category": "messaging",
+      "status": "pending",
+      "priority": "normal",
+      "findings": "Callbox reporting NNID not properly mapped to campaign CT4GXP5 despite TCR showing ADDED status for all carriers. VIP Prime.",
+      "notes": "Updated by Sean on 2026-04-30",
+      "response": "",
+      "tags": [
+        "messaging",
+        "nnid",
+        "10dlc",
+        "vip-prime"
+      ],
+      "createdAt": "2026-04-29T20:50:23Z",
+      "updatedAt": "2026-04-30T22:21:22Z",
+      "source": "solo",
+      "todayActivity": "updated",
+      "todaySummary": "Updated \u2014 NNID Update",
+      "lastUpdated": "2026-04-30"
+    },
+    {
+      "id": "case-2855990",
+      "ticketId": "2855990",
+      "title": "Inbound delivery failures from AT&T users (Aloha)",
+      "customer": "Aloha",
+      "category": "voice",
+      "status": "solved",
+      "priority": "normal",
+      "findings": "",
+      "notes": "Updated by Sean on 2026-04-30",
+      "response": "",
+      "tags": [],
+      "createdAt": "2026-04-29T15:55:08Z",
+      "updatedAt": "2026-04-30T20:03:50Z",
+      "source": "solo",
+      "todayActivity": "updated",
+      "todaySummary": "Solved \u2014 Inbound delivery failures from AT&T users (Aloha)",
+      "lastUpdated": "2026-04-30"
+    },
+    {
+      "id": "case-2856946",
+      "ticketId": "2856946",
+      "title": "Outbound SMS failure",
+      "customer": "vendor_org",
+      "category": "messaging",
+      "status": "solved",
+      "priority": "low",
+      "findings": "Outbound SMS failure for campaign CZFZMOV. Error 40002 on messages from +12156318570.",
+      "notes": "Updated by Sean on 2026-04-30",
+      "response": "",
+      "tags": [
+        "messaging",
+        "outbound-sms",
+        "vendor"
+      ],
+      "createdAt": "2026-04-29T19:35:36Z",
+      "updatedAt": "2026-04-29T19:42:04Z",
+      "source": "solo",
+      "todayActivity": "updated",
+      "todaySummary": "Solved \u2014 Outbound SMS failure (CZFZMOV)",
+      "lastUpdated": "2026-04-30"
     }
   ],
   "lastUpdated": "2026-04-29T19:02:33.236062Z",
@@ -2525,5 +2638,26 @@
     "notes": "Midday sync 2026-04-29 19:00 UTC. Sean worked on 1 ticket(s). New: #2853873 (social media review). No collaborative sessions today. Quiet day \u2014 light activity."
   },
   "lastSync": "2026-04-29T19:02:33.236062Z",
-  "date": "2026-04-29"
+  "date": "2026-04-29",
+  "todayActivity": {
+    "date": "2026-04-30",
+    "ticketsUpdated": [
+      "2860172",
+      "2860120",
+      "2857167",
+      "2856899",
+      "2855990",
+      "2856946"
+    ],
+    "solo": [
+      "2860172",
+      "2860120",
+      "2857167",
+      "2856899",
+      "2855990",
+      "2856946"
+    ],
+    "collaborative": [],
+    "summary": "6 tickets touched: 2 solved (Aloha AT&T inbound SMS, outbound SMS CZFZMOV), 3 hold (vendor voice/SMS follow-ups), 1 pending (Callbox NNID)"
+  }
 }
