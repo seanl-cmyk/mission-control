@@ -1,6 +1,6 @@
 {
   "status": "offline",
-  "lastUpdated": "2026-05-04T19:02:01.847176+00:00",
+  "lastUpdated": "2026-05-05T00:00:59.040228+00:00",
   "operator": "seanl",
   "activeTickets": 42,
   "openTickets": [
@@ -172,14 +172,20 @@
   "todayActivity": {
     "date": "2026-05-04",
     "ticketsUpdated": [
-      "2857941"
+      "2857941",
+      "2845457"
     ],
     "collaborative": [],
     "solo": [
       {
         "ticketId": "2857941",
         "title": "IoT DNS/Routing Failure on data00.telnyx APN in Australia (Optus Roaming)",
-        "summary": "Ticket updated \u2014 likely internal review or status change. Customer provided detailed diagnostic samples on May 1. Awaiting escalation to core wireless team."
+        "summary": "Updated \u2014 internal review or status change. Awaiting escalation to core wireless team."
+      },
+      {
+        "ticketId": "2845457",
+        "title": "Verify Numbers Registered with Spam Databases \u2014 Hiscall",
+        "summary": "Closed. Auto-closed after 3-day resolution confirmation. Customer confirmed resolution on Apr 27."
       }
     ]
   }

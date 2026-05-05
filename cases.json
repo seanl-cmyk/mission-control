@@ -2347,7 +2347,7 @@
       "title": "Verify numbers are registered with Spam databases",
       "customer": "Heather Polinski",
       "category": "messaging",
-      "status": "solved",
+      "status": "closed",
       "priority": "normal",
       "findings": "Customer wanted to verify numbers registered with spam databases. Resolved - customer confirmed ok to close.",
       "notes": "Sean closed today. Customer confirmed resolution.",
@@ -2359,11 +2359,11 @@
         "entry-level"
       ],
       "createdAt": "2026-04-28T00:00:00Z",
-      "updatedAt": "2026-04-28T19:01:58Z",
+      "updatedAt": "2026-05-04T19:56:01Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-28",
+      "todayActivity": "closed",
+      "todaySummary": "Ticket auto-closed after 3-day resolution confirmation. Customer (Heather Polinski, Hiscall) confirmed okay to close on Apr 27. Sean sent resolution confirmation on Apr 27, ticket closed May 4.",
+      "lastUpdated": "2026-05-04",
       "todayDetail": "Hiscall wanted to verify numbers 615-446-3494 and 615-446-3303 are not labeled as spam. Solved."
     },
     {
@@ -2630,7 +2630,7 @@
       "updatedAt": "2026-05-04T16:36:34Z",
       "source": "solo",
       "todayActivity": "updated",
-      "todaySummary": "Ticket updated \u2014 likely internal review or status change. Customer provided detailed diagnostic samples on May 1. Awaiting escalation to core wireless team.",
+      "todaySummary": "Internal review or status change on IoT DNS/Routing issue. Customer provided detailed diagnostics on May 1 (100.81.x.x IP range, Optus roaming, 8.8.8.8 unreachable during affected sessions). Awaiting escalation to core wireless team.",
       "lastUpdated": "2026-05-04"
     }
   ],
@@ -2674,9 +2674,23 @@
   "lastSync": "2026-05-02T00:01:12.358260Z",
   "date": "2026-05-01",
   "todayActivity": {
-    "date": "2026-05-01",
-    "ticketsUpdated": [],
-    "solo": [],
+    "date": "2026-05-04",
+    "ticketsUpdated": [
+      "2857941",
+      "2845457"
+    ],
+    "solo": [
+      {
+        "ticketId": "2857941",
+        "title": "IoT DNS/Routing Failure on data00.telnyx APN in Australia (Optus Roaming)",
+        "summary": "Updated \u2014 internal review or status change. Customer reported intermittent DNS failure where 8.8.8.8 is completely unreachable during affected sessions. All devices on 100.81.x.x IP range, roaming on Optus Australia. Awaiting escalation to core wireless team."
+      },
+      {
+        "ticketId": "2845457",
+        "title": "Verify Numbers Registered with Spam Databases \u2014 Hiscall",
+        "summary": "Closed. Customer confirmed okay to close on Apr 27. Auto-closed after 3-day resolution confirmation period. Spam labeling verification request for 615-446-3494 and 615-446-3303."
+      }
+    ],
     "collaborative": [],
     "summary": "No Zendesk activity on May 1 (Friday). Quiet day \u2014 no tickets updated, no collaborative sessions."
   }
