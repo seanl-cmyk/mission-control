@@ -2323,7 +2323,7 @@
       "title": "Unable to attach messaging profile to numbers",
       "customer": "Unknown",
       "category": "messaging",
-      "status": "open",
+      "status": "closed",
       "priority": "high",
       "findings": "Issue attaching messaging profile to numbers. JIRA escalated. Messaging configuration.",
       "notes": "Sean working independently. Updated today. ETA shared with customer.",
@@ -2337,9 +2337,9 @@
       "createdAt": "2026-04-28T00:00:00Z",
       "updatedAt": "2026-04-28T19:01:58Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-28"
+      "todayActivity": "closed",
+      "todaySummary": "Ticket closed. Canadian number messaging activation 409/40323 error \u2014 resolved.",
+      "lastUpdated": "2026-05-05"
     },
     {
       "id": "case-2845457",
@@ -2361,8 +2361,8 @@
       "createdAt": "2026-04-28T00:00:00Z",
       "updatedAt": "2026-05-04T19:56:01Z",
       "source": "solo",
-      "todayActivity": "closed",
-      "todaySummary": "Ticket auto-closed after 3-day resolution confirmation. Customer (Heather Polinski, Hiscall) confirmed okay to close on Apr 27. Sean sent resolution confirmation on Apr 27, ticket closed May 4.",
+      "todayActivity": "none",
+      "todaySummary": "",
       "lastUpdated": "2026-05-04",
       "todayDetail": "Hiscall wanted to verify numbers 615-446-3494 and 615-446-3303 are not labeled as spam. Solved."
     },
@@ -2629,8 +2629,8 @@
       "createdAt": "2026-04-30T05:33:18Z",
       "updatedAt": "2026-05-04T16:36:34Z",
       "source": "solo",
-      "todayActivity": "updated",
-      "todaySummary": "Internal review or status change on IoT DNS/Routing issue. Customer provided detailed diagnostics on May 1 (100.81.x.x IP range, Optus roaming, 8.8.8.8 unreachable during affected sessions). Awaiting escalation to core wireless team.",
+      "todayActivity": "none",
+      "todaySummary": "",
       "lastUpdated": "2026-05-04"
     }
   ],
@@ -2651,5 +2651,9 @@
     "solo": [],
     "collaborative": [],
     "summary": "No Zendesk activity detected for May 5 (Monday). No tickets updated by Sean today. No collaborative sessions with Sensei."
+  },
+  "meta": {
+    "lastSync": "2026-05-06T00:00:00Z",
+    "syncType": "end-of-day"
   }
 }
