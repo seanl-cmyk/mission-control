@@ -9,7 +9,7 @@
       "status": "solved",
       "priority": "high",
       "findings": "Account verification / class issue",
-      "notes": "Updated 2026-05-08. a major service is broken",
+      "notes": "Account fully verified. Sean confirmed level 2 access approved.",
       "response": "",
       "tags": [
         "account",
@@ -21,7 +21,10 @@
       "source": "solo",
       "todayActivity": "updated",
       "todaySummary": "Account verification / class issue",
-      "lastUpdated": "2026-05-08"
+      "lastUpdated": "2026-05-08T18:28:00Z",
+      "subject": "Conversation with freemium890@outlook.com - Account Verification",
+      "updated": "2026-05-08T18:28:00Z",
+      "today_activity": true
     },
     {
       "id": "case-2877408",
@@ -32,7 +35,7 @@
       "status": "pending",
       "priority": "urgent",
       "findings": "impossible to change the email from support@ccbtec.com to douglas.klein@gmail.com. Your server is sending me a 403 error and several 500 errors",
-      "notes": "Updated 2026-05-08. service is fully down",
+      "notes": "Identity verification needed for account change. Sean requested security confirmation.",
       "response": "",
       "tags": [
         "account",
@@ -44,14 +47,17 @@
       "source": "solo",
       "todayActivity": "updated",
       "todaySummary": "impossible to change the email from support@ccbtec.com to douglas.klein@gmail.com. Your server is se",
-      "lastUpdated": "2026-05-08"
+      "lastUpdated": "2026-05-08T18:24:00Z",
+      "subject": "Conversation with Douglas Klein - Account Change",
+      "updated": "2026-05-08T18:24:00Z",
+      "today_activity": true
     },
     {
       "id": "case-2876080",
       "ticketId": "2876080",
       "title": "Especially with calls to CZ I see them failing a lot, please check the routing. \u2014 Janine Dunkley",
       "customer": "Janine Dunkley",
-      "category": "voice",
+      "category": "live_chat",
       "status": "open",
       "priority": "high",
       "findings": "Especially with calls to CZ I see them failing a lot, please check the routing.",
@@ -67,7 +73,10 @@
       "source": "solo",
       "todayActivity": "updated",
       "todaySummary": "Especially with calls to CZ I see them failing a lot, please check the routing.",
-      "lastUpdated": "2026-05-08"
+      "lastUpdated": "2026-05-08T23:29:00Z",
+      "subject": "Conversation with Janine Dunkley",
+      "updated": "2026-05-08T23:29:00Z",
+      "today_activity": true
     },
     {
       "id": "case-2875674",
@@ -75,7 +84,7 @@
       "title": "SMS being rejected by local operators in Sweden \u2014 Ali Ahmad",
       "customer": "Ali Ahmad",
       "category": "messaging",
-      "status": "open",
+      "status": "pending",
       "priority": "normal",
       "findings": "SMS being rejected by local operators in Sweden",
       "notes": "Updated 2026-05-08. i have an issue that is slowing me down",
@@ -90,18 +99,21 @@
       "source": "solo",
       "todayActivity": "updated",
       "todaySummary": "SMS being rejected by local operators in Sweden",
-      "lastUpdated": "2026-05-08"
+      "lastUpdated": "2026-05-08T23:28:00Z",
+      "subject": "Conversation with Ali Ahmad",
+      "updated": "2026-05-08T23:28:00Z",
+      "today_activity": true
     },
     {
       "id": "case-2869572",
       "ticketId": "2869572",
       "title": "You have tried too many times to verify a phone number. No further attempts are  \u2014 Nicholai Hansen",
       "customer": "Nicholai Hansen",
-      "category": "account",
+      "category": "auth",
       "status": "pending",
       "priority": "high",
       "findings": "You have tried too many times to verify a phone number. No further attempts are allowed at this time. | can you please unlock this for me - I'm losing a lot of clients",
-      "notes": "Updated 2026-05-08. a major service is broken",
+      "notes": "SMS verification reset by support team. Sean asked customer to retry.",
       "response": "",
       "tags": [
         "account",
@@ -113,15 +125,18 @@
       "source": "solo",
       "todayActivity": "updated",
       "todaySummary": "You have tried too many times to verify a phone number. No further attempts are allowed at this time",
-      "lastUpdated": "2026-05-08"
+      "lastUpdated": "2026-05-08T18:15:00Z",
+      "subject": "Conversation with Nicholai Hansen - Login Issues",
+      "updated": "2026-05-08T18:15:00Z",
+      "today_activity": true
     },
     {
       "id": "case-2868881",
       "ticketId": "2868881",
       "title": "After Configure SIP trunking how i can start calling from purchased number? Shou \u2014 Web User 69f9873d51f0fd5ef494a35d",
       "customer": "Web User 69f9873d51f0fd5ef494a35d",
-      "category": "voice",
-      "status": "open",
+      "category": "general",
+      "status": "solved",
       "priority": "low",
       "findings": "After Configure SIP trunking how i can start calling from purchased number? Should i need to configure an dialpad or is there any suggestion ?",
       "notes": "Updated 2026-05-08. i have a question",
@@ -137,18 +152,21 @@
       "source": "solo",
       "todayActivity": "updated",
       "todaySummary": "After Configure SIP trunking how i can start calling from purchased number? Should i need to configu",
-      "lastUpdated": "2026-05-08"
+      "lastUpdated": "2026-05-08T22:21:00Z",
+      "subject": "Conversation with Web User 69f9873d",
+      "updated": "2026-05-08T22:21:00Z",
+      "today_activity": true
     },
     {
       "id": "case-2877439",
       "ticketId": "2877439",
       "title": "An unexpected error occurred. I cant see my files in my bucket! 0 Files \u2014 sales@covanny.com",
       "customer": "sales@covanny.com",
-      "category": "ai-storage",
+      "category": "ai_storage",
       "status": "pending",
       "priority": "urgent",
       "findings": "An unexpected error occurred. I cant see my files in my bucket! 0 Files",
-      "notes": "Updated 2026-05-08. service is fully down",
+      "notes": "Customer unable to see files in bucket. Sean responded requesting details.",
       "response": "",
       "tags": [
         "ai-storage",
@@ -160,7 +178,10 @@
       "source": "solo",
       "todayActivity": "updated",
       "todaySummary": "An unexpected error occurred. I cant see my files in my bucket! 0 Files",
-      "lastUpdated": "2026-05-08"
+      "lastUpdated": "2026-05-08T23:35:00Z",
+      "subject": "Conversation with sales@covanny.com - AI Storage Issue",
+      "updated": "2026-05-08T23:35:00Z",
+      "today_activity": true
     },
     {
       "id": "case-2866472",
@@ -168,10 +189,10 @@
       "title": "We are receiving SIP response: 403 User channel limit exceeded D1. Please increa \u2014 Vadym Shuvalov",
       "customer": "Vadym Shuvalov",
       "category": "voice",
-      "status": "open",
+      "status": "pending",
       "priority": "normal",
       "findings": "We are receiving SIP response: 403 User channel limit exceeded D1. Please increase our concurrent outbound call limit to 20.",
-      "notes": "Updated 2026-05-08. i have an issue that is slowing me down",
+      "notes": "Customer reported 503 error calling UK number. Sean investigated call UUID and responded with findings.",
       "response": "",
       "tags": [
         "sip_trunking",
@@ -183,7 +204,10 @@
       "source": "solo",
       "todayActivity": "updated",
       "todaySummary": "We are receiving SIP response: 403 User channel limit exceeded D1. Please increase our concurrent ou",
-      "lastUpdated": "2026-05-08"
+      "lastUpdated": "2026-05-08T23:28:00Z",
+      "subject": "Conversation with Vadym Shuvalov - UK 503 Error",
+      "updated": "2026-05-08T23:28:00Z",
+      "today_activity": true
     },
     {
       "id": "case-2876881",
@@ -194,7 +218,7 @@
       "status": "pending",
       "priority": "low",
       "findings": "I would like to settle the amount on my account but it is too small.",
-      "notes": "Updated 2026-05-08. i have a question",
+      "notes": "Customer asking about minimum top-up amount and email updates.",
       "response": "",
       "tags": [
         "billing",
@@ -205,18 +229,21 @@
       "source": "solo",
       "todayActivity": "updated",
       "todaySummary": "I would like to settle the amount on my account but it is too small.",
-      "lastUpdated": "2026-05-08"
+      "lastUpdated": "2026-05-08T17:35:00Z",
+      "subject": "Conversation with Andrew Godley - Account/Billing",
+      "updated": "2026-05-08T17:35:00Z",
+      "today_activity": true
     },
     {
       "id": "case-2876659",
       "ticketId": "2876659",
       "title": "Billing question - account settlement \u2014 maxagiraldo@gmail.com",
       "customer": "maxagiraldo@gmail.com",
-      "category": "billing",
+      "category": "account",
       "status": "pending",
       "priority": "low",
       "findings": "Billing question - account settlement",
-      "notes": "Updated 2026-05-08. i have a question",
+      "notes": "Customer wants to change email. Sean requested security passphrase.",
       "response": "",
       "tags": [
         "billing",
@@ -227,18 +254,21 @@
       "source": "solo",
       "todayActivity": "updated",
       "todaySummary": "Billing question - account settlement",
-      "lastUpdated": "2026-05-08"
+      "lastUpdated": "2026-05-08T17:12:00Z",
+      "subject": "Conversation with maxagiraldo@gmail.com - Email Change",
+      "updated": "2026-05-08T17:12:00Z",
+      "today_activity": true
     },
     {
       "id": "case-2877240",
       "ticketId": "2877240",
       "title": "getting 503 errors on all S3 operations \u2014 Raphael Polniak",
       "customer": "Raphael Polniak",
-      "category": "ai-storage",
+      "category": "cloud_storage",
       "status": "solved",
       "priority": "high",
       "findings": "getting 503 errors on all S3 operations",
-      "notes": "Updated 2026-05-08. a major service is broken",
+      "notes": "Customer migrating away from Telnyx Cloud Storage due to outages. Sean provided follow-up.",
       "response": "",
       "tags": [
         "ai-storage",
@@ -250,7 +280,10 @@
       "source": "solo",
       "todayActivity": "updated",
       "todaySummary": "getting 503 errors on all S3 operations",
-      "lastUpdated": "2026-05-08"
+      "lastUpdated": "2026-05-08T15:57:00Z",
+      "subject": "Conversation with Raphael Polniak - Cloud Storage Migration",
+      "updated": "2026-05-08T15:57:00Z",
+      "today_activity": true
     },
     {
       "id": "case-2840607",
@@ -3159,7 +3192,7 @@
     "closedToday": [],
     "notes": "Midday sync for 2026-05-05. Quiet day - no Sean activity on Zendesk."
   },
-  "lastSync": "2026-05-05T19:00:54.421614+00:00",
+  "lastSync": "2026-05-09T00:02:18.659717+00:00",
   "date": "2026-05-05",
   "todayActivity": {
     "date": "2026-05-05",
@@ -3171,5 +3204,18 @@
   "meta": {
     "lastSync": "2026-05-06T00:00:00Z",
     "syncType": "end-of-day"
+  },
+  "metrics": {
+    "totalCases": 131,
+    "activeCases": 93,
+    "todayUpdated": 11,
+    "byStatus": {
+      "solved": 12,
+      "pending": 26,
+      "open": 27,
+      "hold": 40,
+      "closed": 26
+    },
+    "todayDate": "2026-05-08"
   }
 }
