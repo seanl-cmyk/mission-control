@@ -1,6 +1,224 @@
 {
   "cases": [
     {
+      "id": "case-2882473",
+      "ticketId": "2882473",
+      "title": "AI Voice Assistants completely silent \u2014 iaynegocios.net",
+      "customer": "Francisco Oca\u00f1a",
+      "category": "ai_assistants",
+      "status": "pending",
+      "priority": "urgent",
+      "findings": "AI Voice Assistants completely silent \u2014 iaynegocios.net",
+      "notes": "Updated 2026-05-11. AI Voice Assistants completely silent \u2014 iaynegocios.net",
+      "response": "",
+      "tags": [
+        "ai_assistants"
+      ],
+      "createdAt": "2026-05-11T17:44:37Z",
+      "updatedAt": "2026-05-11T17:44:37Z",
+      "source": "solo",
+      "todayActivity": "updated",
+      "todaySummary": "AI Voice Assistants completely silent \u2014 iaynegocios.net",
+      "lastUpdated": "2026-05-11T17:44:37Z",
+      "subject": "AI Voice Assistants completely silent \u2014 iaynegocios.net",
+      "updated": "2026-05-11T17:44:37Z",
+      "today_activity": true
+    },
+    {
+      "id": "case-2880314",
+      "ticketId": "2880314",
+      "title": "Number Lookup Issues on US managed account",
+      "customer": "LivePerson",
+      "category": "number_lookup",
+      "status": "pending",
+      "priority": "urgent",
+      "findings": "Number Lookup Issues on US managed account",
+      "notes": "Updated 2026-05-11. Number Lookup Issues on US managed account",
+      "response": "",
+      "tags": [
+        "number_lookup"
+      ],
+      "createdAt": "2026-05-11T20:31:19Z",
+      "updatedAt": "2026-05-11T20:31:19Z",
+      "source": "solo",
+      "todayActivity": "updated",
+      "todaySummary": "Number Lookup Issues on US managed account",
+      "lastUpdated": "2026-05-11T20:31:19Z",
+      "subject": "Number Lookup Issues on US managed account",
+      "updated": "2026-05-11T20:31:19Z",
+      "today_activity": true
+    },
+    {
+      "id": "case-2870722",
+      "ticketId": "2870722",
+      "title": "UK ESA job failure",
+      "customer": "Cisco",
+      "category": "e911",
+      "status": "hold",
+      "priority": "high",
+      "findings": "UK ESA job failure",
+      "notes": "Updated 2026-05-11. UK ESA job failure",
+      "response": "",
+      "tags": [
+        "e911"
+      ],
+      "createdAt": "2026-05-11T21:50:22Z",
+      "updatedAt": "2026-05-11T21:50:22Z",
+      "source": "solo",
+      "todayActivity": "updated",
+      "todaySummary": "UK ESA job failure",
+      "lastUpdated": "2026-05-11T21:50:22Z",
+      "subject": "UK ESA job failure",
+      "updated": "2026-05-11T21:50:22Z",
+      "today_activity": true
+    },
+    {
+      "id": "case-2866539",
+      "ticketId": "2866539",
+      "title": "Sustained spike of SIP 480 on dial to agent WebRTC SIP (Inulti/Shahin)",
+      "customer": "Inulti/Shahin",
+      "category": "webrtc",
+      "status": "hold",
+      "priority": "urgent",
+      "findings": "Sustained spike of SIP 480 on dial to agent WebRTC SIP (Inulti/Shahin)",
+      "notes": "Updated 2026-05-11. Sustained spike of SIP 480 on dial to agent WebRTC SIP (Inulti/Shahin)",
+      "response": "",
+      "tags": [
+        "webrtc"
+      ],
+      "createdAt": "2026-05-11T22:09:30Z",
+      "updatedAt": "2026-05-11T22:09:30Z",
+      "source": "solo",
+      "todayActivity": "updated",
+      "todaySummary": "Sustained spike of SIP 480 on dial to agent WebRTC SIP (Inulti/Shahin)",
+      "lastUpdated": "2026-05-11T22:09:30Z",
+      "subject": "Sustained spike of SIP 480 on dial to agent WebRTC SIP (Inulti/Shahin)",
+      "updated": "2026-05-11T22:09:30Z",
+      "today_activity": true
+    },
+    {
+      "id": "case-2866472",
+      "ticketId": "2866472",
+      "title": "We are receiving SIP response: 403 User channel limit exceeded D1. Please increa \u2014 Vadym Shuvalov",
+      "customer": "Vadym Shuvalov",
+      "category": "voice",
+      "status": "solved",
+      "priority": "normal",
+      "findings": "We are receiving SIP response: 403 User channel limit exceeded D1. Please increase our concurrent outbound call limit to 20.",
+      "notes": "Customer reported 503 error calling UK number. Sean investigated call UUID and responded with findings.",
+      "response": "",
+      "tags": [
+        "sip_trunking",
+        "voice",
+        "channel-limit"
+      ],
+      "createdAt": "2026-05-08T00:00:00Z",
+      "updatedAt": "2026-05-08T17:35:11Z",
+      "source": "solo",
+      "todayActivity": "updated",
+      "todaySummary": "Outbound call limit increase request \u2014 Vadym Shuvalov",
+      "lastUpdated": "2026-05-11T09:49:20Z",
+      "subject": "Conversation with Vadym Shuvalov - UK 503 Error",
+      "updated": "2026-05-11T09:49:20Z",
+      "today_activity": true
+    },
+    {
+      "id": "case-2856711",
+      "ticketId": "2856711",
+      "title": "Calls with 1 hour duration (Ringba)",
+      "customer": "Ringba",
+      "category": "call_connectivity",
+      "status": "pending",
+      "priority": "urgent",
+      "findings": "Calls with 1 hour duration (Ringba)",
+      "notes": "Updated 2026-05-11. Calls with 1 hour duration (Ringba)",
+      "response": "",
+      "tags": [
+        "call_connectivity"
+      ],
+      "createdAt": "2026-05-11T22:44:32Z",
+      "updatedAt": "2026-05-11T22:44:32Z",
+      "source": "solo",
+      "todayActivity": "updated",
+      "todaySummary": "Calls with 1 hour duration (Ringba)",
+      "lastUpdated": "2026-05-11T22:44:32Z",
+      "subject": "Calls with 1 hour duration (Ringba)",
+      "updated": "2026-05-11T22:44:32Z",
+      "today_activity": true
+    },
+    {
+      "id": "case-2855914",
+      "ticketId": "2855914",
+      "title": "Shopmonkey Billing \u2014 dual payment method",
+      "customer": "Shopmonkey",
+      "category": "billing",
+      "status": "hold",
+      "priority": "normal",
+      "findings": "Shopmonkey Billing \u2014 dual payment method",
+      "notes": "Updated 2026-05-11. Shopmonkey Billing \u2014 dual payment method",
+      "response": "",
+      "tags": [
+        "billing"
+      ],
+      "createdAt": "2026-05-11T20:32:01Z",
+      "updatedAt": "2026-05-11T20:32:01Z",
+      "source": "solo",
+      "todayActivity": "updated",
+      "todaySummary": "Shopmonkey Billing \u2014 dual payment method",
+      "lastUpdated": "2026-05-11T20:32:01Z",
+      "subject": "Shopmonkey Billing \u2014 dual payment method",
+      "updated": "2026-05-11T20:32:01Z",
+      "today_activity": true
+    },
+    {
+      "id": "case-2833906",
+      "ticketId": "2833906",
+      "title": "Outbound faxes still failing (ADIT)",
+      "customer": "ADIT/Northlake Dental",
+      "category": "fax",
+      "status": "pending",
+      "priority": "urgent",
+      "findings": "Outbound faxes still failing (ADIT)",
+      "notes": "Updated 2026-05-11. Outbound faxes still failing (ADIT)",
+      "response": "",
+      "tags": [
+        "fax"
+      ],
+      "createdAt": "2026-05-11T19:33:10Z",
+      "updatedAt": "2026-05-11T19:33:10Z",
+      "source": "solo",
+      "todayActivity": "updated",
+      "todaySummary": "Outbound faxes still failing (ADIT)",
+      "lastUpdated": "2026-05-11T19:33:10Z",
+      "subject": "Outbound faxes still failing (ADIT)",
+      "updated": "2026-05-11T19:33:10Z",
+      "today_activity": true
+    },
+    {
+      "id": "case-2816398",
+      "ticketId": "2816398",
+      "title": "\"Destination out of order\" on outbound calls (CareCo)",
+      "customer": "CareCo",
+      "category": "call_connectivity",
+      "status": "hold",
+      "priority": "urgent",
+      "findings": "\"Destination out of order\" on outbound calls (CareCo)",
+      "notes": "Updated 2026-05-11. \"Destination out of order\" on outbound calls (CareCo)",
+      "response": "",
+      "tags": [
+        "call_connectivity"
+      ],
+      "createdAt": "2026-05-11T20:32:47Z",
+      "updatedAt": "2026-05-11T20:32:47Z",
+      "source": "solo",
+      "todayActivity": "updated",
+      "todaySummary": "\"Destination out of order\" on outbound calls (CareCo)",
+      "lastUpdated": "2026-05-11T20:32:47Z",
+      "subject": "\"Destination out of order\" on outbound calls (CareCo)",
+      "updated": "2026-05-11T20:32:47Z",
+      "today_activity": true
+    },
+    {
       "id": "case-2864899",
       "ticketId": "2864899",
       "title": "Account verification / class issue \u2014 freemium890@outlook.com",
@@ -19,12 +237,12 @@
       "createdAt": "2026-05-08T00:00:00Z",
       "updatedAt": "2026-05-08T18:28:50Z",
       "source": "solo",
-      "todayActivity": "updated",
-      "todaySummary": "Account verification / class issue",
+      "todayActivity": null,
+      "todaySummary": null,
       "lastUpdated": "2026-05-08T18:28:00Z",
       "subject": "Conversation with freemium890@outlook.com - Account Verification",
       "updated": "2026-05-08T18:28:00Z",
-      "today_activity": true
+      "today_activity": false
     },
     {
       "id": "case-2877408",
@@ -45,12 +263,12 @@
       "createdAt": "2026-05-08T00:00:00Z",
       "updatedAt": "2026-05-08T18:24:02Z",
       "source": "solo",
-      "todayActivity": "updated",
-      "todaySummary": "impossible to change the email from support@ccbtec.com to douglas.klein@gmail.com. Your server is se",
+      "todayActivity": null,
+      "todaySummary": null,
       "lastUpdated": "2026-05-08T18:24:00Z",
       "subject": "Conversation with Douglas Klein - Account Change",
       "updated": "2026-05-08T18:24:00Z",
-      "today_activity": true
+      "today_activity": false
     },
     {
       "id": "case-2876080",
@@ -71,12 +289,12 @@
       "createdAt": "2026-05-08T00:00:00Z",
       "updatedAt": "2026-05-08T18:18:47Z",
       "source": "solo",
-      "todayActivity": "updated",
-      "todaySummary": "Especially with calls to CZ I see them failing a lot, please check the routing.",
+      "todayActivity": null,
+      "todaySummary": null,
       "lastUpdated": "2026-05-08T23:29:00Z",
       "subject": "Conversation with Janine Dunkley",
       "updated": "2026-05-08T23:29:00Z",
-      "today_activity": true
+      "today_activity": false
     },
     {
       "id": "case-2875674",
@@ -97,12 +315,12 @@
       "createdAt": "2026-05-08T00:00:00Z",
       "updatedAt": "2026-05-08T18:15:19Z",
       "source": "solo",
-      "todayActivity": "updated",
-      "todaySummary": "SMS being rejected by local operators in Sweden",
+      "todayActivity": null,
+      "todaySummary": null,
       "lastUpdated": "2026-05-08T23:28:00Z",
       "subject": "Conversation with Ali Ahmad",
       "updated": "2026-05-08T23:28:00Z",
-      "today_activity": true
+      "today_activity": false
     },
     {
       "id": "case-2869572",
@@ -123,12 +341,12 @@
       "createdAt": "2026-05-08T00:00:00Z",
       "updatedAt": "2026-05-08T18:15:19Z",
       "source": "solo",
-      "todayActivity": "updated",
-      "todaySummary": "You have tried too many times to verify a phone number. No further attempts are allowed at this time",
+      "todayActivity": null,
+      "todaySummary": null,
       "lastUpdated": "2026-05-08T18:15:00Z",
       "subject": "Conversation with Nicholai Hansen - Login Issues",
       "updated": "2026-05-08T18:15:00Z",
-      "today_activity": true
+      "today_activity": false
     },
     {
       "id": "case-2868881",
@@ -150,12 +368,12 @@
       "createdAt": "2026-05-08T00:00:00Z",
       "updatedAt": "2026-05-08T17:44:35Z",
       "source": "solo",
-      "todayActivity": "updated",
-      "todaySummary": "After Configure SIP trunking how i can start calling from purchased number? Should i need to configu",
+      "todayActivity": null,
+      "todaySummary": null,
       "lastUpdated": "2026-05-08T22:21:00Z",
       "subject": "Conversation with Web User 69f9873d",
       "updated": "2026-05-08T22:21:00Z",
-      "today_activity": true
+      "today_activity": false
     },
     {
       "id": "case-2877439",
@@ -176,38 +394,12 @@
       "createdAt": "2026-05-08T00:00:00Z",
       "updatedAt": "2026-05-08T17:44:35Z",
       "source": "solo",
-      "todayActivity": "updated",
-      "todaySummary": "An unexpected error occurred. I cant see my files in my bucket! 0 Files",
+      "todayActivity": null,
+      "todaySummary": null,
       "lastUpdated": "2026-05-08T23:35:00Z",
       "subject": "Conversation with sales@covanny.com - AI Storage Issue",
       "updated": "2026-05-08T23:35:00Z",
-      "today_activity": true
-    },
-    {
-      "id": "case-2866472",
-      "ticketId": "2866472",
-      "title": "We are receiving SIP response: 403 User channel limit exceeded D1. Please increa \u2014 Vadym Shuvalov",
-      "customer": "Vadym Shuvalov",
-      "category": "voice",
-      "status": "pending",
-      "priority": "normal",
-      "findings": "We are receiving SIP response: 403 User channel limit exceeded D1. Please increase our concurrent outbound call limit to 20.",
-      "notes": "Customer reported 503 error calling UK number. Sean investigated call UUID and responded with findings.",
-      "response": "",
-      "tags": [
-        "sip_trunking",
-        "voice",
-        "channel-limit"
-      ],
-      "createdAt": "2026-05-08T00:00:00Z",
-      "updatedAt": "2026-05-08T17:35:11Z",
-      "source": "solo",
-      "todayActivity": "updated",
-      "todaySummary": "We are receiving SIP response: 403 User channel limit exceeded D1. Please increase our concurrent ou",
-      "lastUpdated": "2026-05-08T23:28:00Z",
-      "subject": "Conversation with Vadym Shuvalov - UK 503 Error",
-      "updated": "2026-05-08T23:28:00Z",
-      "today_activity": true
+      "today_activity": false
     },
     {
       "id": "case-2876881",
@@ -227,12 +419,12 @@
       "createdAt": "2026-05-08T00:00:00Z",
       "updatedAt": "2026-05-08T17:35:11Z",
       "source": "solo",
-      "todayActivity": "updated",
-      "todaySummary": "I would like to settle the amount on my account but it is too small.",
+      "todayActivity": null,
+      "todaySummary": null,
       "lastUpdated": "2026-05-08T17:35:00Z",
       "subject": "Conversation with Andrew Godley - Account/Billing",
       "updated": "2026-05-08T17:35:00Z",
-      "today_activity": true
+      "today_activity": false
     },
     {
       "id": "case-2876659",
@@ -252,12 +444,12 @@
       "createdAt": "2026-05-08T00:00:00Z",
       "updatedAt": "2026-05-08T17:12:31Z",
       "source": "solo",
-      "todayActivity": "updated",
-      "todaySummary": "Billing question - account settlement",
+      "todayActivity": null,
+      "todaySummary": null,
       "lastUpdated": "2026-05-08T17:12:00Z",
       "subject": "Conversation with maxagiraldo@gmail.com - Email Change",
       "updated": "2026-05-08T17:12:00Z",
-      "today_activity": true
+      "today_activity": false
     },
     {
       "id": "case-2877240",
@@ -278,12 +470,12 @@
       "createdAt": "2026-05-08T00:00:00Z",
       "updatedAt": "2026-05-08T15:57:03Z",
       "source": "solo",
-      "todayActivity": "updated",
-      "todaySummary": "getting 503 errors on all S3 operations",
+      "todayActivity": null,
+      "todaySummary": null,
       "lastUpdated": "2026-05-08T15:57:00Z",
       "subject": "Conversation with Raphael Polniak - Cloud Storage Migration",
       "updated": "2026-05-08T15:57:00Z",
-      "today_activity": true
+      "today_activity": false
     },
     {
       "id": "case-2840607",
@@ -305,9 +497,10 @@
       "createdAt": "2026-04-23T06:44:03Z",
       "updatedAt": "2026-05-07T22:05:54Z",
       "source": "solo",
-      "todayActivity": "solved",
-      "todaySummary": "CLI modified ticket solved \u2014 carrier confirmed limitation.",
-      "lastUpdated": "2026-05-07"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-05-07",
+      "today_activity": false
     },
     {
       "id": "case-2839101",
@@ -329,9 +522,10 @@
       "createdAt": "2026-04-22T19:24:16Z",
       "updatedAt": "2026-05-07T22:04:54Z",
       "source": "solo",
-      "todayActivity": "solved",
-      "todaySummary": "API RPS increase for RingBoost solved. Customer informed.",
-      "lastUpdated": "2026-05-07"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-05-07",
+      "today_activity": false
     },
     {
       "id": "case-2867344",
@@ -359,9 +553,10 @@
       "createdAt": "2026-05-04T17:56:38Z",
       "updatedAt": "2026-05-07T21:49:30Z",
       "source": "solo",
-      "todayActivity": "updated",
-      "todaySummary": "DTMF/RTP issue updated. Hold status.",
-      "lastUpdated": "2026-05-07"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-05-07",
+      "today_activity": false
     },
     {
       "id": "case-2868601",
@@ -384,9 +579,10 @@
       "createdAt": "2026-05-05T02:02:47Z",
       "updatedAt": "2026-05-07T21:49:08Z",
       "source": "solo",
-      "todayActivity": "updated",
-      "todaySummary": "Follow-up on Branded Calling pricing inquiry. Hold pending product team response.",
-      "lastUpdated": "2026-05-07"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-05-07",
+      "today_activity": false
     },
     {
       "id": "case-2823856",
@@ -409,9 +605,10 @@
       "createdAt": "2026-04-16T19:11:30Z",
       "updatedAt": "2026-05-07T21:48:45Z",
       "source": "solo",
-      "todayActivity": "updated",
-      "todaySummary": "AI hang-up / voicemail disconnection issue updated.",
-      "lastUpdated": "2026-05-07"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-05-07",
+      "today_activity": false
     },
     {
       "id": "case-2861348",
@@ -434,9 +631,10 @@
       "createdAt": "2026-05-01T11:48:22Z",
       "updatedAt": "2026-05-07T21:48:19Z",
       "source": "solo",
-      "todayActivity": "updated",
-      "todaySummary": "Orbio World EMEA SMS deliverability escalation updated.",
-      "lastUpdated": "2026-05-07"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-05-07",
+      "today_activity": false
     },
     {
       "id": "case-2855990",
@@ -453,9 +651,10 @@
       "createdAt": "2026-04-29T15:55:08Z",
       "updatedAt": "2026-05-07T20:44:49Z",
       "source": "solo",
-      "todayActivity": "closed",
-      "todaySummary": "Inbound delivery failures from AT&T \u2014 closed.",
-      "lastUpdated": "2026-05-07"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-05-07",
+      "today_activity": false
     },
     {
       "id": "case-2828391",
@@ -479,9 +678,10 @@
       "createdAt": "2026-04-19T07:06:20Z",
       "updatedAt": "2026-05-07T19:21:07Z",
       "source": "solo",
-      "todayActivity": "updated",
-      "todaySummary": "Number activation issue updated. Hold status.",
-      "lastUpdated": "2026-05-07"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-05-07",
+      "today_activity": false
     },
     {
       "id": "case-2831757",
@@ -508,9 +708,10 @@
       "createdAt": "2026-04-20T20:15:59Z",
       "updatedAt": "2026-05-07T17:17:49Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-05-07"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-05-07",
+      "today_activity": false
     },
     {
       "id": "case-2854976",
@@ -536,9 +737,10 @@
       "createdAt": "2026-04-29T10:05:24Z",
       "updatedAt": "2026-05-07T17:02:25Z",
       "source": "solo",
-      "todayActivity": "updated",
-      "todaySummary": "Outbound call blocking issue updated. Pending response.",
-      "lastUpdated": "2026-05-07"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-05-07",
+      "today_activity": false
     },
     {
       "id": "case-2874459",
@@ -564,9 +766,10 @@
       "createdAt": "2026-05-06T20:34:08Z",
       "updatedAt": "2026-05-07T15:55:23Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-05-07"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-05-07",
+      "today_activity": false
     },
     {
       "id": "case-2845457",
@@ -588,10 +791,11 @@
       "createdAt": "2026-04-28T00:00:00Z",
       "updatedAt": "2026-05-04T19:56:01Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
+      "todayActivity": null,
+      "todaySummary": null,
       "lastUpdated": "2026-05-04",
-      "todayDetail": "Hiscall wanted to verify numbers 615-446-3494 and 615-446-3303 are not labeled as spam. Solved."
+      "todayDetail": "Hiscall wanted to verify numbers 615-446-3494 and 615-446-3303 are not labeled as spam. Solved.",
+      "today_activity": false
     },
     {
       "id": "case-2857941",
@@ -619,9 +823,10 @@
       "createdAt": "2026-04-30T05:33:18Z",
       "updatedAt": "2026-05-04T16:36:34Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-05-04"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-05-04",
+      "today_activity": false
     },
     {
       "id": "case-2857167",
@@ -643,9 +848,10 @@
       "createdAt": "2026-04-29T20:50:23Z",
       "updatedAt": "2026-04-30T22:21:22Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-30"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-30",
+      "today_activity": false
     },
     {
       "id": "case-2860120",
@@ -667,9 +873,10 @@
       "createdAt": "2026-04-30T19:51:31Z",
       "updatedAt": "2026-04-30T21:15:27Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-30"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-30",
+      "today_activity": false
     },
     {
       "id": "case-2860172",
@@ -690,9 +897,10 @@
       "createdAt": "2026-04-30T20:09:11Z",
       "updatedAt": "2026-04-30T21:01:34Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-30"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-30",
+      "today_activity": false
     },
     {
       "id": "case-2829435",
@@ -715,9 +923,10 @@
       "createdAt": "2026-04-20T09:02:00Z",
       "updatedAt": "2026-04-30T10:01:27Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-30"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-30",
+      "today_activity": false
     },
     {
       "id": "case-2856899",
@@ -740,9 +949,10 @@
       "createdAt": "2026-04-29T19:30:19Z",
       "updatedAt": "2026-04-29T20:35:40Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-30"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-30",
+      "today_activity": false
     },
     {
       "id": "case-2856946",
@@ -763,9 +973,10 @@
       "createdAt": "2026-04-29T19:35:36Z",
       "updatedAt": "2026-04-29T19:42:04Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-30"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-30",
+      "today_activity": false
     },
     {
       "id": "case-2853873",
@@ -787,9 +998,10 @@
       "createdAt": "2026-04-28T20:15:25Z",
       "updatedAt": "2026-04-29T15:24:47Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-29"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-29",
+      "today_activity": false
     },
     {
       "id": "case-2844359",
@@ -811,10 +1023,11 @@
       "createdAt": "2026-04-28T00:00:00Z",
       "updatedAt": "2026-04-28T22:39:24Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
+      "todayActivity": null,
+      "todaySummary": null,
       "todayDetail": "Sales/support lead. Urgent priority. Placed on hold.",
-      "lastUpdated": "2026-04-28"
+      "lastUpdated": "2026-04-28",
+      "today_activity": false
     },
     {
       "id": "case-2840798",
@@ -837,9 +1050,10 @@
       "createdAt": "2026-04-28T00:00:00Z",
       "updatedAt": "2026-04-28T19:01:58Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-28"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-28",
+      "today_activity": false
     },
     {
       "id": "case-2838172",
@@ -861,9 +1075,10 @@
       "createdAt": "2026-04-28T00:00:00Z",
       "updatedAt": "2026-04-28T19:01:58Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-28"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-28",
+      "today_activity": false
     },
     {
       "id": "case-2817415",
@@ -885,9 +1100,10 @@
       "createdAt": "2026-04-28T00:00:00Z",
       "updatedAt": "2026-04-28T19:01:58Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-05-05"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-05-05",
+      "today_activity": false
     },
     {
       "id": "case-2845418",
@@ -909,9 +1125,10 @@
       "createdAt": "2026-04-28T00:00:00Z",
       "updatedAt": "2026-04-28T19:01:58Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-28"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-28",
+      "today_activity": false
     },
     {
       "id": "case-2843078",
@@ -933,10 +1150,11 @@
       "createdAt": "2026-04-28T00:00:00Z",
       "updatedAt": "2026-04-28T15:43:48Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
+      "todayActivity": null,
+      "todaySummary": null,
       "todayDetail": "Van Wyk Trucking reports calls to certain numbers connect but have no audio. Cell phone calls to same numbers work fine. Indicates SIP/media path issue on Telnyx side.",
-      "lastUpdated": "2026-04-28"
+      "lastUpdated": "2026-04-28",
+      "today_activity": false
     },
     {
       "id": "case-2840824",
@@ -959,10 +1177,11 @@
       "createdAt": "2026-04-28T00:00:00Z",
       "updatedAt": "2026-04-28T15:29:29Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
+      "todayActivity": null,
+      "todaySummary": null,
       "todayDetail": "Two bugs with agent-to-agent call scenarios: (1) No cost webhook fired, (2) ai_assistant_start response incorrect. Customer using agents to test call flows. On hold awaiting engineering.",
-      "lastUpdated": "2026-04-28"
+      "lastUpdated": "2026-04-28",
+      "today_activity": false
     },
     {
       "id": "case-2849402",
@@ -984,9 +1203,10 @@
       "createdAt": "2026-04-27T16:45:22Z",
       "updatedAt": "2026-04-27T23:01:27Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-27"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-27",
+      "today_activity": false
     },
     {
       "id": "case-2842487",
@@ -1009,9 +1229,10 @@
       "createdAt": "2026-04-24T00:00:00Z",
       "updatedAt": "2026-04-27T18:35:25Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-27"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-27",
+      "today_activity": false
     },
     {
       "id": "case-2840732",
@@ -1033,9 +1254,10 @@
       "createdAt": "2026-04-24T00:00:00Z",
       "updatedAt": "2026-04-27T17:43:56Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-27"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-27",
+      "today_activity": false
     },
     {
       "id": "case-2843249",
@@ -1060,9 +1282,10 @@
       "createdAt": "2026-04-23T23:55:35Z",
       "updatedAt": "2026-04-27T15:50:16Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-27"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-27",
+      "today_activity": false
     },
     {
       "id": "case-2841766",
@@ -1084,9 +1307,10 @@
       "createdAt": "2026-04-24T00:00:00Z",
       "updatedAt": "2026-04-27T15:23:37Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-27"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-27",
+      "today_activity": false
     },
     {
       "id": "case-2756038",
@@ -1109,9 +1333,10 @@
       "createdAt": "2026-03-22T00:00:00Z",
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-24"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-24",
+      "today_activity": false
     },
     {
       "id": "case-2842321",
@@ -1132,10 +1357,11 @@
       "createdAt": "2026-04-24T19:01:31Z",
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
+      "todayActivity": null,
+      "todaySummary": null,
       "todayDetail": "",
-      "lastUpdated": "2026-04-24"
+      "lastUpdated": "2026-04-24",
+      "today_activity": false
     },
     {
       "id": "case-2842176",
@@ -1156,10 +1382,11 @@
       "createdAt": "2026-04-24T19:01:31Z",
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
+      "todayActivity": null,
+      "todaySummary": null,
       "todayDetail": "",
-      "lastUpdated": "2026-04-24"
+      "lastUpdated": "2026-04-24",
+      "today_activity": false
     },
     {
       "id": "case-2841223",
@@ -1180,10 +1407,11 @@
       "createdAt": "2026-04-24T19:01:31Z",
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
+      "todayActivity": null,
+      "todaySummary": null,
       "todayDetail": "",
-      "lastUpdated": "2026-04-24"
+      "lastUpdated": "2026-04-24",
+      "today_activity": false
     },
     {
       "id": "case-2836553",
@@ -1204,10 +1432,11 @@
       "createdAt": "2026-04-24T19:01:31Z",
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
+      "todayActivity": null,
+      "todaySummary": null,
       "todayDetail": "",
-      "lastUpdated": "2026-04-24"
+      "lastUpdated": "2026-04-24",
+      "today_activity": false
     },
     {
       "id": "case-2830763",
@@ -1229,10 +1458,11 @@
       "createdAt": "2026-04-24T19:01:31Z",
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
+      "todayActivity": null,
+      "todaySummary": null,
       "todayDetail": "",
-      "lastUpdated": "2026-04-24"
+      "lastUpdated": "2026-04-24",
+      "today_activity": false
     },
     {
       "id": "case-2826051",
@@ -1253,10 +1483,11 @@
       "createdAt": "2026-04-24T19:01:31Z",
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
+      "todayActivity": null,
+      "todaySummary": null,
       "todayDetail": "",
-      "lastUpdated": "2026-04-24"
+      "lastUpdated": "2026-04-24",
+      "today_activity": false
     },
     {
       "id": "case-2842333",
@@ -1277,10 +1508,11 @@
       "createdAt": "2026-04-24T19:01:31Z",
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
+      "todayActivity": null,
+      "todaySummary": null,
       "todayDetail": "",
-      "lastUpdated": "2026-04-24"
+      "lastUpdated": "2026-04-24",
+      "today_activity": false
     },
     {
       "id": "case-2842279",
@@ -1301,10 +1533,11 @@
       "createdAt": "2026-04-24T19:01:31Z",
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
+      "todayActivity": null,
+      "todaySummary": null,
       "todayDetail": "",
-      "lastUpdated": "2026-04-24"
+      "lastUpdated": "2026-04-24",
+      "today_activity": false
     },
     {
       "id": "case-2775214",
@@ -1325,10 +1558,11 @@
       "createdAt": "2026-04-24T19:01:31Z",
       "updatedAt": "2026-04-24T19:01:31Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
+      "todayActivity": null,
+      "todaySummary": null,
       "todayDetail": "",
-      "lastUpdated": "2026-04-24"
+      "lastUpdated": "2026-04-24",
+      "today_activity": false
     },
     {
       "id": "case-2837728",
@@ -1345,9 +1579,10 @@
       "createdAt": "2026-04-23T00:00:00Z",
       "updatedAt": "2026-04-23T23:59:00Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-23"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-23",
+      "today_activity": false
     },
     {
       "id": "case-2769943",
@@ -1364,9 +1599,10 @@
       "createdAt": "2026-04-23T00:00:00Z",
       "updatedAt": "2026-04-23T23:59:00Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-23"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-23",
+      "today_activity": false
     },
     {
       "id": "case-2706965",
@@ -1383,9 +1619,10 @@
       "createdAt": "2026-04-23T00:00:00Z",
       "updatedAt": "2026-04-23T23:59:00Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-23"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-23",
+      "today_activity": false
     },
     {
       "id": "case-2692335",
@@ -1402,9 +1639,10 @@
       "createdAt": "2026-04-23T00:00:00Z",
       "updatedAt": "2026-04-23T23:59:00Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-23"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-23",
+      "today_activity": false
     },
     {
       "id": "case-2838521",
@@ -1421,9 +1659,10 @@
       "createdAt": "2026-04-23T00:00:00Z",
       "updatedAt": "2026-04-23T23:59:00Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-23"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-23",
+      "today_activity": false
     },
     {
       "id": "case-2801084",
@@ -1448,9 +1687,10 @@
       "createdAt": "2026-04-07T16:33:55Z",
       "updatedAt": "2026-04-23T18:11:18Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-23"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-23",
+      "today_activity": false
     },
     {
       "id": "case-2819740",
@@ -1474,9 +1714,10 @@
       "createdAt": "2026-04-15T17:46:19Z",
       "updatedAt": "2026-04-23T15:21:28Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-23"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-23",
+      "today_activity": false
     },
     {
       "id": "case-2837729",
@@ -1499,9 +1740,10 @@
       "createdAt": "2026-04-22T13:56:03Z",
       "updatedAt": "2026-04-23T15:16:56Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-23"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-23",
+      "today_activity": false
     },
     {
       "id": "case-2817519",
@@ -1526,10 +1768,11 @@
       "createdAt": "2026-04-22T14:00:00Z",
       "updatedAt": "2026-04-22T19:00:00Z",
       "source": "collab",
-      "todayActivity": "none",
-      "todaySummary": "",
+      "todayActivity": null,
+      "todaySummary": null,
       "todayDetail": "Customer: Gustavo Siqueira, Ringba. Session c3a86d40-3748-11f1-b774-02420aef321f (Apr 13). A-leg +16163490228\u2192+16072608464, 67s, MOS 4.49. B-leg to Twilio SIP endpoint, last_app: playback (noise.wav). Transfer is Twilio-side routing. Awaiting Sean direction.",
-      "lastUpdated": "2026-04-22"
+      "lastUpdated": "2026-04-22",
+      "today_activity": false
     },
     {
       "id": "case-2830878",
@@ -1552,9 +1795,10 @@
       "createdAt": "2026-04-20T16:10:21Z",
       "updatedAt": "2026-04-21T17:52:18Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-23"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-23",
+      "today_activity": false
     },
     {
       "id": "case-2831406",
@@ -1578,10 +1822,11 @@
       "updatedAt": "2026-04-21T17:49:40Z",
       "source": "collab",
       "subject": "CSS Impact: Auto-Reply Webhook Issue",
-      "todayActivity": "none",
-      "todaySummary": "",
+      "todayActivity": null,
+      "todaySummary": null,
       "todayDetail": "Customer: Eric Beck, CSS Impact. Outbound auto-replies (opt-in/opt-out) not triggering webhooks. Options provided: (1) MDR API lookup by message ID, (2) Profile-based mapping of autoresponse_type to text, (3) Mission Control. Awaiting internal confirmation on whether auto-replies fire message.sent/finalized webhooks.",
-      "lastUpdated": "2026-04-21"
+      "lastUpdated": "2026-04-21",
+      "today_activity": false
     },
     {
       "id": "case-2831155",
@@ -1603,9 +1848,10 @@
       "createdAt": "2026-04-20T17:40:11Z",
       "updatedAt": "2026-04-21T17:49:40Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-23"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-23",
+      "today_activity": false
     },
     {
       "id": "case-2827077",
@@ -1629,8 +1875,9 @@
       "createdAt": "2026-04-17T20:34:20Z",
       "updatedAt": "2026-04-21T17:48:33Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2830551",
@@ -1650,8 +1897,9 @@
       "createdAt": "2026-04-20T19:00:00Z",
       "updatedAt": "2026-04-21T17:26:51Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2790819",
@@ -1677,10 +1925,11 @@
       "updatedAt": "2026-04-21T17:10:30Z",
       "source": "collab",
       "subject": "Vontobel Call Drops (VIP)",
-      "todayActivity": "none",
-      "todaySummary": "",
+      "todayActivity": null,
+      "todaySummary": null,
       "todayDetail": "Customer: Martin Babjak/AudioCodes for Vontobel. Latest sample: SIP Call-ID 15349664962142026105538@20.23.76.94, A-leg jitter max 72,917ms (timestamp artifact), B-leg max 635ms. Same ENGDESK-50159. Waiting for customer to create test SIP connection for validation. TREAT and CDR links documented.",
-      "lastUpdated": "2026-04-21"
+      "lastUpdated": "2026-04-21",
+      "today_activity": false
     },
     {
       "id": "case-2823199",
@@ -1704,10 +1953,11 @@
       "updatedAt": "2026-04-21T17:00:00Z",
       "source": "collab",
       "subject": "Gamma DTMF Duplication",
-      "todayActivity": "none",
-      "todaySummary": "",
+      "todayActivity": null,
+      "todaySummary": null,
       "todayDetail": "Customer: Gamma (Chris Cook). DTMF duplication on payment calls. Live trace scheduled tomorrow. Reminders set for Sean.",
-      "lastUpdated": "2026-04-21"
+      "lastUpdated": "2026-04-21",
+      "today_activity": false
     },
     {
       "id": "case-2815973",
@@ -1729,9 +1979,10 @@
       "createdAt": "2026-04-14T14:45:24Z",
       "updatedAt": "2026-04-21T16:40:02Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-21"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-21",
+      "today_activity": false
     },
     {
       "id": "case-2803630",
@@ -1757,8 +2008,9 @@
       "createdAt": "2026-04-08T20:01:39Z",
       "updatedAt": "2026-04-20T19:00:00Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2808416",
@@ -1785,8 +2037,9 @@
       "createdAt": "2026-04-10T11:35:25Z",
       "updatedAt": "2026-04-20T19:00:00Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2819865",
@@ -1813,8 +2066,9 @@
       "createdAt": "2026-04-15T19:15:00Z",
       "updatedAt": "2026-04-20T19:00:00Z",
       "source": "collaborative",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2732680",
@@ -1841,8 +2095,9 @@
       "createdAt": "2026-03-06T17:39:22Z",
       "updatedAt": "2026-04-20T19:00:00Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2821214",
@@ -1865,8 +2120,9 @@
       "createdAt": "2026-04-16T04:10:23Z",
       "updatedAt": "2026-04-20T19:00:00Z",
       "source": "zendesk-sync",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2820819",
@@ -1890,8 +2146,9 @@
       "createdAt": "2026-04-16T00:40:35Z",
       "updatedAt": "2026-04-20T19:00:00Z",
       "source": "zendesk-sync",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2810215",
@@ -1914,10 +2171,11 @@
       "updatedAt": "2026-04-20T19:00:00Z",
       "source": "zendesk-sync",
       "subject": "EnrollHere Recording Start/Answer Errors (VIP/P1)",
-      "todayActivity": "none",
-      "todaySummary": "",
+      "todayActivity": null,
+      "todaySummary": null,
       "todayDetail": "Customer: Tim Strakeljahn, EnrollHere. B2BUA crash at mod_dptools.c:3754. Fix confirmed deployed. Customer response sent confirming resolution.",
-      "lastUpdated": "2026-04-21"
+      "lastUpdated": "2026-04-21",
+      "today_activity": false
     },
     {
       "id": "case-2826825",
@@ -1937,9 +2195,10 @@
       "createdAt": "2026-04-20T19:00:00Z",
       "updatedAt": "2026-04-20T19:00:00Z",
       "source": "zendesk-sync",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-21"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-21",
+      "today_activity": false
     },
     {
       "id": "case-2817350",
@@ -1959,8 +2218,9 @@
       "createdAt": "2026-04-20T19:00:00Z",
       "updatedAt": "2026-04-20T19:00:00Z",
       "source": "zendesk-sync",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2794104",
@@ -1981,8 +2241,9 @@
       "createdAt": "2026-04-20T19:00:00Z",
       "updatedAt": "2026-04-20T19:00:00Z",
       "source": "zendesk-sync",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2806001",
@@ -2002,8 +2263,9 @@
       "createdAt": "2026-04-20T19:00:00Z",
       "updatedAt": "2026-04-20T19:00:00Z",
       "source": "zendesk-sync",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2816533",
@@ -2020,8 +2282,9 @@
       "createdAt": "2026-04-20T19:00:00Z",
       "updatedAt": "2026-04-20T19:00:00Z",
       "source": "zendesk-sync",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2794922",
@@ -2038,8 +2301,9 @@
       "createdAt": "2026-04-20T19:00:00Z",
       "updatedAt": "2026-04-20T19:00:00Z",
       "source": "zendesk-sync",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2830900",
@@ -2056,8 +2320,9 @@
       "createdAt": "2026-04-20T19:00:00Z",
       "updatedAt": "2026-04-20T19:00:00Z",
       "source": "zendesk-sync",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2830324",
@@ -2074,8 +2339,9 @@
       "createdAt": "2026-04-20T19:00:00Z",
       "updatedAt": "2026-04-20T19:00:00Z",
       "source": "zendesk-sync",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2798756",
@@ -2092,8 +2358,9 @@
       "createdAt": "2026-04-20T19:00:00Z",
       "updatedAt": "2026-04-20T19:00:00Z",
       "source": "zendesk-sync",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2761702",
@@ -2110,8 +2377,9 @@
       "createdAt": "2026-04-20T19:00:00Z",
       "updatedAt": "2026-04-20T19:00:00Z",
       "source": "zendesk-sync",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2718543",
@@ -2138,8 +2406,9 @@
       "createdAt": "2026-02-27T22:34:36Z",
       "updatedAt": "2026-04-18T00:00:00Z",
       "source": "collaborative",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2823290",
@@ -2167,8 +2436,9 @@
       "createdAt": "2026-04-17T00:00:00Z",
       "updatedAt": "2026-04-18T00:00:00Z",
       "source": "collaborative",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2803468",
@@ -2195,8 +2465,9 @@
       "createdAt": "2026-04-08T17:15:51Z",
       "updatedAt": "2026-04-17T22:06:24Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2792552",
@@ -2221,8 +2492,9 @@
       "createdAt": "2026-04-02T19:45:57Z",
       "updatedAt": "2026-04-17T21:44:49Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2820256",
@@ -2246,8 +2518,9 @@
       "createdAt": "2026-04-15T20:28:15Z",
       "updatedAt": "2026-04-17T21:34:51Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2820014",
@@ -2273,8 +2546,9 @@
       "createdAt": "2026-04-15T19:09:57Z",
       "updatedAt": "2026-04-17T21:34:39Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2803688",
@@ -2300,8 +2574,9 @@
       "createdAt": "2026-04-08T20:36:21Z",
       "updatedAt": "2026-04-17T18:39:36Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2798158",
@@ -2327,8 +2602,9 @@
       "createdAt": "2026-04-06T16:34:50Z",
       "updatedAt": "2026-04-17T00:00:00Z",
       "source": "collaborative",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2806456",
@@ -2355,8 +2631,9 @@
       "createdAt": "2026-04-09T17:07:07Z",
       "updatedAt": "2026-04-17T00:00:00Z",
       "source": "collaborative",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2817023",
@@ -2383,8 +2660,9 @@
       "createdAt": "2026-04-14T20:00:00Z",
       "updatedAt": "2026-04-17T00:00:00Z",
       "source": "collaborative",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2823607",
@@ -2412,8 +2690,9 @@
       "createdAt": "2026-04-16T12:00:00Z",
       "updatedAt": "2026-04-17T00:00:00Z",
       "source": "collaborative",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2822254",
@@ -2438,8 +2717,9 @@
       "createdAt": "2026-04-16T14:00:00Z",
       "updatedAt": "2026-04-17T00:00:00Z",
       "source": "collaborative",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2823297",
@@ -2463,8 +2743,9 @@
       "createdAt": "2026-04-16T16:00:00Z",
       "updatedAt": "2026-04-17T00:00:00Z",
       "source": "collaborative",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2807283",
@@ -2487,8 +2768,9 @@
       "createdAt": "2026-04-09T22:00:55Z",
       "updatedAt": "2026-04-16T19:00:00Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2772701",
@@ -2515,8 +2797,9 @@
       "createdAt": "2026-03-25T16:17:25Z",
       "updatedAt": "2026-04-16T19:00:00Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2810268",
@@ -2540,8 +2823,9 @@
       "createdAt": "2026-04-10T21:06:05Z",
       "updatedAt": "2026-04-16T19:00:00Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2813916",
@@ -2566,8 +2850,9 @@
       "createdAt": "2026-04-13T20:01:50Z",
       "updatedAt": "2026-04-16T19:00:00Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2810350",
@@ -2592,8 +2877,9 @@
       "createdAt": "2026-04-10T21:59:27Z",
       "updatedAt": "2026-04-16T19:00:00Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2809820",
@@ -2619,8 +2905,9 @@
       "createdAt": "2026-04-10T18:41:25Z",
       "updatedAt": "2026-04-16T19:00:00Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2788983",
@@ -2645,8 +2932,9 @@
       "createdAt": "2026-04-01T15:50:35Z",
       "updatedAt": "2026-04-16T19:00:00Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2751693",
@@ -2670,9 +2958,10 @@
       "createdAt": "2026-03-16T16:49:28Z",
       "updatedAt": "2026-04-16T19:00:00Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-21"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-21",
+      "today_activity": false
     },
     {
       "id": "case-2816647",
@@ -2696,8 +2985,9 @@
       "createdAt": "2026-04-14T17:39:09Z",
       "updatedAt": "2026-04-16T19:00:00Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2816077",
@@ -2724,8 +3014,9 @@
       "createdAt": "2026-04-14T15:15:54Z",
       "updatedAt": "2026-04-16T19:00:00Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2819717",
@@ -2750,8 +3041,9 @@
       "createdAt": "2026-04-15T17:40:03Z",
       "updatedAt": "2026-04-16T19:00:00Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2789688",
@@ -2776,8 +3068,9 @@
       "createdAt": "2026-04-01T19:33:04Z",
       "updatedAt": "2026-04-16T19:00:00Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2768579",
@@ -2803,8 +3096,9 @@
       "updatedAt": "2026-04-16T19:00:00Z",
       "source": "solo",
       "lastUpdated": "2026-04-23",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2820826",
@@ -2827,9 +3121,10 @@
       "createdAt": "2026-04-16T00:46:20Z",
       "updatedAt": "2026-04-16T16:43:11Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-23"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-23",
+      "today_activity": false
     },
     {
       "id": "case-2776237",
@@ -2852,9 +3147,10 @@
       "createdAt": "2026-03-26T18:24:21Z",
       "updatedAt": "2026-04-16T15:29:46Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-23"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-23",
+      "today_activity": false
     },
     {
       "id": "case-2774644",
@@ -2877,9 +3173,10 @@
       "createdAt": "2026-03-26T08:19:22Z",
       "updatedAt": "2026-04-16T15:29:26Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-23"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-23",
+      "today_activity": false
     },
     {
       "id": "case-2767769",
@@ -2902,9 +3199,10 @@
       "createdAt": "2026-03-23T23:04:22Z",
       "updatedAt": "2026-04-16T15:29:00Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-23"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-23",
+      "today_activity": false
     },
     {
       "id": "case-2763635",
@@ -2927,9 +3225,10 @@
       "createdAt": "2026-03-20T19:10:23Z",
       "updatedAt": "2026-04-16T15:28:23Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-23"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-23",
+      "today_activity": false
     },
     {
       "id": "case-2763159",
@@ -2952,9 +3251,10 @@
       "createdAt": "2026-03-20T16:22:28Z",
       "updatedAt": "2026-04-16T15:25:43Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-23"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-23",
+      "today_activity": false
     },
     {
       "id": "case-2820370",
@@ -2977,8 +3277,9 @@
       "createdAt": "2026-04-15T21:09:23Z",
       "updatedAt": "2026-04-16T15:19:46Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     },
     {
       "id": "case-2751238",
@@ -3001,9 +3302,10 @@
       "createdAt": "2026-03-19T00:00:00Z",
       "updatedAt": "2026-04-16T00:00:00Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-23"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-23",
+      "today_activity": false
     },
     {
       "id": "case-2738556",
@@ -3026,9 +3328,10 @@
       "createdAt": "2026-03-12T00:00:00Z",
       "updatedAt": "2026-04-16T00:00:00Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-23"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-23",
+      "today_activity": false
     },
     {
       "id": "case-2735116",
@@ -3050,9 +3353,10 @@
       "createdAt": "2026-03-10T00:00:00Z",
       "updatedAt": "2026-04-16T00:00:00Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-23"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-23",
+      "today_activity": false
     },
     {
       "id": "case-2723049",
@@ -3075,9 +3379,10 @@
       "createdAt": "2026-03-06T00:00:00Z",
       "updatedAt": "2026-04-16T00:00:00Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-23"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-23",
+      "today_activity": false
     },
     {
       "id": "case-2722196",
@@ -3100,9 +3405,10 @@
       "createdAt": "2026-03-05T00:00:00Z",
       "updatedAt": "2026-04-16T00:00:00Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-23"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-23",
+      "today_activity": false
     },
     {
       "id": "case-2720864",
@@ -3125,9 +3431,10 @@
       "createdAt": "2026-03-04T00:00:00Z",
       "updatedAt": "2026-04-16T00:00:00Z",
       "source": "solo",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-23"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-23",
+      "today_activity": false
     },
     {
       "id": "case-2835368",
@@ -3135,9 +3442,10 @@
       "subject": "Escalation for Trouble Ticket ID: 137609",
       "status": "hold",
       "priority": "low",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-21"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-21",
+      "today_activity": false
     },
     {
       "id": "case-2802932",
@@ -3145,9 +3453,10 @@
       "subject": "SIM connection in Cambodia",
       "status": "hold",
       "priority": "high",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-21"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-21",
+      "today_activity": false
     },
     {
       "id": "case-2817020",
@@ -3155,9 +3464,10 @@
       "subject": "Outbound SMS",
       "status": "closed",
       "priority": "low",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-21"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-21",
+      "today_activity": false
     },
     {
       "id": "case-2796499",
@@ -3165,9 +3475,10 @@
       "subject": "Can't login",
       "status": "closed",
       "priority": "normal",
-      "todayActivity": "none",
-      "todaySummary": "",
-      "lastUpdated": "2026-04-21"
+      "todayActivity": null,
+      "todaySummary": null,
+      "lastUpdated": "2026-04-21",
+      "today_activity": false
     },
     {
       "id": "case-2838445",
@@ -3179,43 +3490,22 @@
       "findings": "Recordings captured by B2BUA but not accessible via API or portal. All recording IDs return 10005 Resource not found. S3 upload pipeline broken after release. HTTP 403 from S3. Platform-wide issue, not Ringba-specific.",
       "notes": "Sensei-assisted. P1/urgent. Escalated to recording team. Sean approved internal + customer responses.",
       "lastUpdated": "2026-04-22",
-      "todayActivity": "none",
-      "todaySummary": ""
+      "todayActivity": null,
+      "todaySummary": null,
+      "today_activity": false
     }
   ],
-  "lastUpdated": "2026-05-05T19:00:54.421580+00:00",
-  "daySummary": {
-    "date": "2026-05-05",
-    "totalUpdated": 0,
-    "collaborative": [],
-    "soloWork": [],
-    "closedToday": [],
-    "notes": "Midday sync for 2026-05-05. Quiet day - no Sean activity on Zendesk."
-  },
-  "lastSync": "2026-05-09T00:02:18.659717+00:00",
-  "date": "2026-05-05",
-  "todayActivity": {
-    "date": "2026-05-05",
-    "ticketsUpdated": [],
-    "solo": [],
-    "collaborative": [],
-    "summary": "No Zendesk activity detected for May 5 (Monday). No tickets updated by Sean today. No collaborative sessions with Sensei."
-  },
-  "meta": {
-    "lastSync": "2026-05-06T00:00:00Z",
-    "syncType": "end-of-day"
-  },
-  "metrics": {
-    "totalCases": 131,
-    "activeCases": 93,
-    "todayUpdated": 11,
+  "summary": {
+    "date": "2026-05-11",
+    "totalActive": 100,
+    "todayUpdated": 9,
+    "collaborativeAnalyzed": 0,
     "byStatus": {
-      "solved": 12,
-      "pending": 26,
+      "pending": 29,
+      "hold": 44,
+      "solved": 13,
       "open": 27,
-      "hold": 40,
       "closed": 26
-    },
-    "todayDate": "2026-05-08"
+    }
   }
 }
