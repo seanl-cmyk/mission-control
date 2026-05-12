@@ -19,10 +19,11 @@
       "source": "solo",
       "todayActivity": "updated",
       "todaySummary": "AI Voice Assistants completely silent \u2014 iaynegocios.net",
-      "lastUpdated": "2026-05-11T17:44:37Z",
+      "lastUpdated": "2026-05-12",
       "subject": "AI Voice Assistants completely silent \u2014 iaynegocios.net",
       "updated": "2026-05-11T17:44:37Z",
-      "today_activity": true
+      "today_activity": true,
+      "soloWork": true
     },
     {
       "id": "case-2880314",
@@ -43,10 +44,11 @@
       "source": "solo",
       "todayActivity": "updated",
       "todaySummary": "Number Lookup Issues on US managed account",
-      "lastUpdated": "2026-05-11T20:31:19Z",
+      "lastUpdated": "2026-05-12",
       "subject": "Number Lookup Issues on US managed account",
       "updated": "2026-05-11T20:31:19Z",
-      "today_activity": true
+      "today_activity": true,
+      "soloWork": true
     },
     {
       "id": "case-2870722",
@@ -67,10 +69,11 @@
       "source": "solo",
       "todayActivity": "updated",
       "todaySummary": "UK ESA job failure",
-      "lastUpdated": "2026-05-11T21:50:22Z",
+      "lastUpdated": "2026-05-12",
       "subject": "UK ESA job failure",
       "updated": "2026-05-11T21:50:22Z",
-      "today_activity": true
+      "today_activity": true,
+      "soloWork": true
     },
     {
       "id": "case-2866539",
@@ -91,10 +94,11 @@
       "source": "solo",
       "todayActivity": "updated",
       "todaySummary": "Sustained spike of SIP 480 on dial to agent WebRTC SIP (Inulti/Shahin)",
-      "lastUpdated": "2026-05-11T22:09:30Z",
+      "lastUpdated": "2026-05-12",
       "subject": "Sustained spike of SIP 480 on dial to agent WebRTC SIP (Inulti/Shahin)",
       "updated": "2026-05-11T22:09:30Z",
-      "today_activity": true
+      "today_activity": true,
+      "soloWork": true
     },
     {
       "id": "case-2866472",
@@ -117,10 +121,11 @@
       "source": "solo",
       "todayActivity": "updated",
       "todaySummary": "Outbound call limit increase request \u2014 Vadym Shuvalov",
-      "lastUpdated": "2026-05-11T09:49:20Z",
+      "lastUpdated": "2026-05-12",
       "subject": "Conversation with Vadym Shuvalov - UK 503 Error",
       "updated": "2026-05-11T09:49:20Z",
-      "today_activity": true
+      "today_activity": true,
+      "soloWork": true
     },
     {
       "id": "case-2856711",
@@ -141,10 +146,11 @@
       "source": "solo",
       "todayActivity": "updated",
       "todaySummary": "Calls with 1 hour duration (Ringba)",
-      "lastUpdated": "2026-05-11T22:44:32Z",
+      "lastUpdated": "2026-05-12",
       "subject": "Calls with 1 hour duration (Ringba)",
       "updated": "2026-05-11T22:44:32Z",
-      "today_activity": true
+      "today_activity": true,
+      "soloWork": true
     },
     {
       "id": "case-2855914",
@@ -165,10 +171,11 @@
       "source": "solo",
       "todayActivity": "updated",
       "todaySummary": "Shopmonkey Billing \u2014 dual payment method",
-      "lastUpdated": "2026-05-11T20:32:01Z",
+      "lastUpdated": "2026-05-12",
       "subject": "Shopmonkey Billing \u2014 dual payment method",
       "updated": "2026-05-11T20:32:01Z",
-      "today_activity": true
+      "today_activity": true,
+      "soloWork": true
     },
     {
       "id": "case-2833906",
@@ -189,10 +196,11 @@
       "source": "solo",
       "todayActivity": "updated",
       "todaySummary": "Outbound faxes still failing (ADIT)",
-      "lastUpdated": "2026-05-11T19:33:10Z",
+      "lastUpdated": "2026-05-12",
       "subject": "Outbound faxes still failing (ADIT)",
       "updated": "2026-05-11T19:33:10Z",
-      "today_activity": true
+      "today_activity": true,
+      "soloWork": true
     },
     {
       "id": "case-2816398",
@@ -213,10 +221,11 @@
       "source": "solo",
       "todayActivity": "updated",
       "todaySummary": "\"Destination out of order\" on outbound calls (CareCo)",
-      "lastUpdated": "2026-05-11T20:32:47Z",
+      "lastUpdated": "2026-05-12",
       "subject": "\"Destination out of order\" on outbound calls (CareCo)",
       "updated": "2026-05-11T20:32:47Z",
-      "today_activity": true
+      "today_activity": true,
+      "soloWork": true
     },
     {
       "id": "case-2864899",
@@ -3493,6 +3502,17 @@
       "todayActivity": null,
       "todaySummary": null,
       "today_activity": false
+    },
+    {
+      "id": "case-2877859",
+      "subject": "Inbound SMS misrouting to handset after port (208) 850-4435 \u2014 ADIT",
+      "status": "open",
+      "priority": "urgent",
+      "collaborative": true,
+      "analysisDate": "2026-05-12",
+      "rootCause": "SMS routing records (NPAC/SMS routing tables) not updated after port - originating carriers still routing SMS to old mobile destination",
+      "analysisSummary": "Neither Telnyx nor Syniverse sees the messages. Traffic never enters either network. Classic SMS porting completion failure - voice port completed but SMS routing lagging. Waiting on Syniverse response to May 11 samples.",
+      "category": "messaging"
     }
   ],
   "summary": {

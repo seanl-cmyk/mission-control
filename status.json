@@ -1,18 +1,18 @@
 {
-  "status": "offline",
-  "lastUpdated": "2026-05-12T00:00:54.864553+00:00",
+  "status": "on_shift",
+  "lastUpdated": "2026-05-12T19:01:06.000000+00:00",
   "operator": "seanl",
-  "shiftEnd": "2026-05-12T00:00:00Z",
-  "message": "Off shift \u2014 May 11, 2026 (Monday). Next shift Tuesday May 12.",
+  "shiftEnd": "2026-05-13T00:00:00Z",
+  "message": "Midday sync \u2014 Tue May 12, 2026",
   "metrics": {
-    "totalCases": 139,
+    "totalCases": 140,
     "activeCases": 100,
-    "todayUpdated": 9,
-    "collaborativeActive": 0,
+    "todayUpdated": 10,
+    "collaborativeActive": 1,
     "byStatus": {
       "pending": 29,
       "hold": 44,
-      "solved": 13,
+      "solved": 14,
       "open": 27,
       "closed": 26
     }
@@ -26,6 +26,15 @@
     "2856711",
     "2855914",
     "2833906",
-    "2816398"
+    "2816398",
+    "2877859"
+  ],
+  "collaborativeCases": [
+    {
+      "id": "2877859",
+      "subject": "Inbound SMS misrouting \u2014 ADIT (208) 850-4435",
+      "rootCause": "SMS routing records not updated after port",
+      "status": "open"
+    }
   ]
 }
