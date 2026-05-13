@@ -1,39 +1,49 @@
 {
-  "status": "on_shift",
-  "lastUpdated": "2026-05-12T19:01:06.000000+00:00",
+  "status": "offline",
+  "lastUpdated": "2026-05-13T00:00:00Z",
   "operator": "seanl",
   "shiftEnd": "2026-05-13T00:00:00Z",
-  "message": "Midday sync \u2014 Tue May 12, 2026",
+  "message": "End of day — Tue May 12, 2026",
   "metrics": {
-    "totalCases": 140,
+    "totalCases": 142,
     "activeCases": 100,
-    "todayUpdated": 10,
-    "collaborativeActive": 1,
+    "todayUpdated": 13,
+    "soloWorked": 11,
+    "collaborativeAnalyzed": 2,
     "byStatus": {
-      "pending": 29,
+      "pending": 30,
       "hold": 44,
       "solved": 14,
-      "open": 27,
+      "open": 28,
       "closed": 26
     }
   },
   "todayCases": [
+    "2888346",
+    "2877859",
     "2882473",
     "2880314",
     "2870722",
     "2866539",
     "2866472",
+    "2864092",
     "2856711",
     "2855914",
     "2833906",
     "2816398",
-    "2877859"
+    "2768579"
   ],
   "collaborativeCases": [
     {
+      "id": "2888346",
+      "subject": "Callbox Audio Buzzing Investigation",
+      "rootCause": "Asterisk PBX generating audible buzz tone at call answer — DC offset and frequency anomaly in RTP",
+      "status": "pending"
+    },
+    {
       "id": "2877859",
-      "subject": "Inbound SMS misrouting \u2014 ADIT (208) 850-4435",
-      "rootCause": "SMS routing records not updated after port",
+      "subject": "Inbound SMS misrouting to handset after port (208) 850-4435 — ADIT",
+      "rootCause": "SMS routing records not updated after port — originating carriers still routing SMS to old destination",
       "status": "open"
     }
   ]
