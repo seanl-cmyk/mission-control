@@ -17,12 +17,11 @@
       "createdAt": "2026-05-11T17:44:37Z",
       "updatedAt": "2026-05-11T17:44:37Z",
       "source": "solo",
-      "todayActivity": "updated",
       "todaySummary": "AI Voice Assistants completely silent on inbound AND outbound since ~2026-05-07. Affects all assistants. Diagnostic clone still silent. Ruled out client-side cause.",
       "lastUpdated": "2026-05-12",
       "subject": "AI Voice Assistants completely silent \u2014 iaynegocios.net (Francisco Oca\u00f1a)",
       "updated": "2026-05-11T17:44:37Z",
-      "today_activity": true,
+      "today_activity": false,
       "soloWork": true
     },
     {
@@ -42,12 +41,11 @@
       "createdAt": "2026-05-11T20:31:19Z",
       "updatedAt": "2026-05-11T20:31:19Z",
       "source": "solo",
-      "todayActivity": "updated",
       "todaySummary": "Number Lookup Issues on US managed account",
       "lastUpdated": "2026-05-12",
       "subject": "Number Lookup Issues on US managed account",
       "updated": "2026-05-11T20:31:19Z",
-      "today_activity": true,
+      "today_activity": false,
       "soloWork": true
     },
     {
@@ -67,12 +65,11 @@
       "createdAt": "2026-05-11T21:50:22Z",
       "updatedAt": "2026-05-11T21:50:22Z",
       "source": "solo",
-      "todayActivity": "updated",
       "todaySummary": "UK ESA job failure",
       "lastUpdated": "2026-05-12",
       "subject": "UK ESA job failure",
       "updated": "2026-05-11T21:50:22Z",
-      "today_activity": true,
+      "today_activity": false,
       "soloWork": true
     },
     {
@@ -92,12 +89,11 @@
       "createdAt": "2026-05-11T22:09:30Z",
       "updatedAt": "2026-05-11T22:09:30Z",
       "source": "solo",
-      "todayActivity": "updated",
       "todaySummary": "Sustained spike of SIP 480 on dial to agent WebRTC SIP (Inulti/Shahin)",
       "lastUpdated": "2026-05-12",
       "subject": "Sustained spike of SIP 480 on dial to agent WebRTC SIP (Inulti/Shahin)",
       "updated": "2026-05-11T22:09:30Z",
-      "today_activity": true,
+      "today_activity": false,
       "soloWork": true
     },
     {
@@ -119,12 +115,11 @@
       "createdAt": "2026-05-08T00:00:00Z",
       "updatedAt": "2026-05-08T17:35:11Z",
       "source": "solo",
-      "todayActivity": "updated",
       "todaySummary": "Outbound call limit increase request \u2014 Vadym Shuvalov",
       "lastUpdated": "2026-05-12",
       "subject": "Conversation with Vadym Shuvalov - UK 503 Error",
       "updated": "2026-05-11T09:49:20Z",
-      "today_activity": true,
+      "today_activity": false,
       "soloWork": true
     },
     {
@@ -144,12 +139,11 @@
       "createdAt": "2026-05-11T22:44:32Z",
       "updatedAt": "2026-05-11T22:44:32Z",
       "source": "solo",
-      "todayActivity": "updated",
       "todaySummary": "Calls with 1 hour duration (Ringba)",
       "lastUpdated": "2026-05-12",
       "subject": "Calls with 1 hour duration (Ringba)",
       "updated": "2026-05-11T22:44:32Z",
-      "today_activity": true,
+      "today_activity": false,
       "soloWork": true
     },
     {
@@ -169,12 +163,11 @@
       "createdAt": "2026-05-11T20:32:01Z",
       "updatedAt": "2026-05-11T20:32:01Z",
       "source": "solo",
-      "todayActivity": "updated",
       "todaySummary": "Shopmonkey Billing \u2014 dual payment method",
       "lastUpdated": "2026-05-12",
       "subject": "Shopmonkey Billing \u2014 dual payment method",
       "updated": "2026-05-11T20:32:01Z",
-      "today_activity": true,
+      "today_activity": false,
       "soloWork": true
     },
     {
@@ -194,12 +187,11 @@
       "createdAt": "2026-05-11T19:33:10Z",
       "updatedAt": "2026-05-11T19:33:10Z",
       "source": "solo",
-      "todayActivity": "updated",
       "todaySummary": "Outbound faxes still failing (ADIT)",
       "lastUpdated": "2026-05-12",
       "subject": "Outbound faxes still failing (ADIT)",
       "updated": "2026-05-11T19:33:10Z",
-      "today_activity": true,
+      "today_activity": false,
       "soloWork": true
     },
     {
@@ -219,12 +211,11 @@
       "createdAt": "2026-05-11T20:32:47Z",
       "updatedAt": "2026-05-11T20:32:47Z",
       "source": "solo",
-      "todayActivity": "updated",
       "todaySummary": "\"Destination out of order\" on outbound calls (CareCo)",
       "lastUpdated": "2026-05-12",
       "subject": "\"Destination out of order\" on outbound calls (CareCo)",
       "updated": "2026-05-11T20:32:47Z",
-      "today_activity": true,
+      "today_activity": false,
       "soloWork": true
     },
     {
@@ -2885,7 +2876,6 @@
       "lastUpdated": "2026-05-12",
       "today_activity": false,
       "subject": "Poor Call Termination to +19064492223 \u2014 PCI-Pal (OPS-13671)",
-      "todayActivity": "updated",
       "todaySummary": "Calls ring 18s then hit wrong voicemail instead of UPPCO IVR. JIRA escalated. High priority gold."
     },
     {
@@ -3258,9 +3248,9 @@
       "category": "messaging",
       "ticketId": "2877859",
       "source": "collaborative",
-      "todayActivity": "analysis_continued",
       "todaySummary": "SMS routing records not updated after port. Neither Telnyx nor Syniverse sees the messages. Classic SMS porting completion failure. Waiting on Syniverse response.",
-      "lastUpdated": "2026-05-12"
+      "lastUpdated": "2026-05-12",
+      "today_activity": false
     },
     {
       "id": "case-2864092",
@@ -3270,9 +3260,9 @@
       "status": "solved",
       "priority": "high",
       "source": "solo",
-      "todayActivity": "updated",
       "todaySummary": "SMS flagged as SPAM from verified 10DLC campaigns. Kia/Hyundai/Toyota dealership messages. Solved today.",
-      "lastUpdated": "2026-05-12"
+      "lastUpdated": "2026-05-12",
+      "today_activity": false
     },
     {
       "id": "case-2888346",
@@ -3282,23 +3272,161 @@
       "status": "pending",
       "priority": "high",
       "source": "collaborative",
-      "todayActivity": "deep_analysis",
       "todaySummary": "Root cause: Callbox's Asterisk PBX generates ~560-620Hz tone with large DC offset at call answer. NOT a carrier issue. Confirmed across Peerless, AT&T, and on-net calls. Byte-level analysis of G.711 \u00b5-law audio.",
       "rootCause": "Asterisk PBX internally generating audible buzz tone at call answer \u2014 DC offset and frequency anomaly in RTP stream",
-      "lastUpdated": "2026-05-12"
+      "lastUpdated": "2026-05-12",
+      "today_activity": false
+    },
+    {
+      "id": "case-2863785",
+      "ticketId": "2863785",
+      "title": "SMS not delivered after port \u2014 662-380-5041 (ADIT)",
+      "subject": "SMS not delivered after port \u2014 662-380-5041 (ADIT)",
+      "category": "messaging_deliverability",
+      "status": "open",
+      "priority": "urgent",
+      "findings": "SMS from ported number 662-380-5041 showing delivered but not received. ADIT/ClearFeed. P2 major impact.",
+      "notes": "SMS from ported number 662-380-5041 showing delivered but not received. ADIT/ClearFeed. P2 major impact.",
+      "response": "",
+      "tags": [
+        "messaging_deliverability"
+      ],
+      "source": "solo",
+      "today_activity": true,
+      "todayActivity": "updated",
+      "todaySummary": "SMS from ported number 662-380-5041 showing delivered but not received. ADIT/ClearFeed. P2 major impact.",
+      "lastUpdated": "2026-05-13",
+      "updated": "2026-05-13T17:41:40Z",
+      "soloWork": true,
+      "createdAt": "2026-05-13T17:41:40Z"
+    },
+    {
+      "id": "case-2874329",
+      "ticketId": "2874329",
+      "title": "NNID not transferred \u2014 +13075875591 (ADIT)",
+      "subject": "NNID not transferred \u2014 +13075875591 (ADIT)",
+      "category": "messaging",
+      "status": "hold",
+      "priority": "urgent",
+      "findings": "NNID still not transferred after port. Cannot assign messaging profile to +13075875591. Hold/urgent.",
+      "notes": "NNID still not transferred after port. Cannot assign messaging profile to +13075875591. Hold/urgent.",
+      "response": "",
+      "tags": [
+        "messaging"
+      ],
+      "source": "solo",
+      "today_activity": true,
+      "todayActivity": "updated",
+      "todaySummary": "NNID still not transferred after port. Cannot assign messaging profile to +13075875591. Hold/urgent.",
+      "lastUpdated": "2026-05-13",
+      "updated": "2026-05-13T17:31:20Z",
+      "soloWork": true,
+      "createdAt": "2026-05-13T17:31:20Z"
+    },
+    {
+      "id": "case-2881335",
+      "ticketId": "2881335",
+      "title": "Centurylink/Lumen Misrouting - Mini of Ramsey (CarWars)",
+      "subject": "Centurylink/Lumen Misrouting - Mini of Ramsey (CarWars)",
+      "category": "call_connectivity",
+      "status": "pending",
+      "priority": "normal",
+      "findings": "Lumen misrouting on DIDs 55177756xx. VIP Prime. Requesting direct Lumen routing setup.",
+      "notes": "Lumen misrouting on DIDs 55177756xx. VIP Prime. Requesting direct Lumen routing setup.",
+      "response": "",
+      "tags": [
+        "call_connectivity"
+      ],
+      "source": "solo",
+      "today_activity": true,
+      "todayActivity": "updated",
+      "todaySummary": "Lumen misrouting on DIDs 55177756xx. VIP Prime. Requesting direct Lumen routing setup.",
+      "lastUpdated": "2026-05-13",
+      "updated": "2026-05-13T17:42:50Z",
+      "soloWork": true,
+      "createdAt": "2026-05-13T17:42:50Z"
+    },
+    {
+      "id": "case-2888324",
+      "ticketId": "2888324",
+      "title": "Call.muteAudio() not muting supervisor leg (Inulti/WebRTC)",
+      "subject": "Call.muteAudio() not muting supervisor leg (Inulti/WebRTC)",
+      "category": "voice",
+      "status": "pending",
+      "priority": "urgent",
+      "findings": "WebRTC SDK call.muteAudio() fails on supervisor leg \u2014 RTP resumes after ~2s despite muted state. P1. Complex. Inulti.",
+      "notes": "WebRTC SDK call.muteAudio() fails on supervisor leg \u2014 RTP resumes after ~2s despite muted state. P1. Complex. Inulti.",
+      "response": "",
+      "tags": [
+        "voice"
+      ],
+      "source": "solo",
+      "today_activity": true,
+      "todayActivity": "updated",
+      "todaySummary": "WebRTC SDK call.muteAudio() fails on supervisor leg \u2014 RTP resumes after ~2s despite muted state. P1. Complex. Inulti.",
+      "lastUpdated": "2026-05-13",
+      "updated": "2026-05-13T18:53:16Z",
+      "soloWork": true,
+      "createdAt": "2026-05-13T18:53:16Z"
+    },
+    {
+      "id": "case-2890303",
+      "ticketId": "2890303",
+      "title": "GoDaddy Choppy Audio/Disconnect",
+      "subject": "GoDaddy Choppy Audio/Disconnect",
+      "category": "voice",
+      "status": "pending",
+      "priority": "urgent",
+      "findings": "PCAP analysis complete (3 calls). Root cause: customer-side network (132.148.54.230/GoDaddy infra). 23.4% loss on Call 3 customer leg, carrier legs pristine. Draft response delivered.",
+      "notes": "PCAP analysis complete (3 calls). Root cause: customer-side network (132.148.54.230/GoDaddy infra). 23.4% loss on Call 3 customer leg, carrier legs pristine. Draft response delivered.",
+      "response": "",
+      "tags": [
+        "voice",
+        "sensei-analyzed"
+      ],
+      "source": "collaborative",
+      "today_activity": true,
+      "todayActivity": "deep_analysis",
+      "todaySummary": "PCAP analysis complete (3 calls). Root cause: customer-side network (132.148.54.230/GoDaddy infra). 23.4% loss on Call 3 customer leg, carrier legs pristine. Draft response delivered.",
+      "lastUpdated": "2026-05-13",
+      "rootCause": "Customer gateway 132.148.54.230 generating severe packet loss and jitter \u2014 NOT Telnyx or carrier infrastructure",
+      "createdAt": "2026-05-13T00:00:00Z"
+    },
+    {
+      "id": "case-2892081",
+      "ticketId": "2892081",
+      "title": "GoDaddy SMS to Brazil Failures",
+      "subject": "GoDaddy SMS to Brazil Failures",
+      "category": "messaging",
+      "status": "pending",
+      "priority": "urgent",
+      "findings": "Customer requesting dashboards/reports for Brazil SMS failures. Identified MDR Detail Records API and MDR Detailed Reports as resources. Draft response pending.",
+      "notes": "Customer requesting dashboards/reports for Brazil SMS failures. Identified MDR Detail Records API and MDR Detailed Reports as resources. Draft response pending.",
+      "response": "",
+      "tags": [
+        "messaging",
+        "sensei-analyzed"
+      ],
+      "source": "collaborative",
+      "today_activity": true,
+      "todayActivity": "deep_analysis",
+      "todaySummary": "Customer requesting dashboards/reports for Brazil SMS failures. Identified MDR Detail Records API and MDR Detailed Reports as resources. Draft response pending.",
+      "lastUpdated": "2026-05-13",
+      "rootCause": "",
+      "createdAt": "2026-05-13T00:00:00Z"
     }
   ],
   "summary": {
-    "date": "2026-05-12",
-    "totalActive": 102,
-    "todayUpdated": 13,
+    "date": "2026-05-13",
+    "totalActive": 108,
+    "todayUpdated": 6,
     "collaborativeAnalyzed": 2,
-    "soloWorked": 11,
+    "soloWorked": 4,
     "byStatus": {
-      "pending": 30,
-      "hold": 44,
+      "pending": 34,
+      "hold": 45,
       "solved": 14,
-      "open": 28,
+      "open": 29,
       "closed": 26
     }
   }

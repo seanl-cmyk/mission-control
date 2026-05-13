@@ -1,50 +1,43 @@
 {
-  "status": "offline",
-  "lastUpdated": "2026-05-13T00:00:00Z",
+  "status": "online",
+  "lastUpdated": "2026-05-13T19:00:00Z",
   "operator": "seanl",
-  "shiftEnd": "2026-05-13T00:00:00Z",
-  "message": "End of day — Tue May 12, 2026",
+  "shiftEnd": "2026-05-14T00:00:00Z",
+  "message": "Mid-shift — Wed May 13, 2026",
   "metrics": {
-    "totalCases": 142,
-    "activeCases": 100,
-    "todayUpdated": 13,
-    "soloWorked": 11,
+    "totalCases": 148,
+    "activeCases": 103,
+    "todayUpdated": 6,
+    "soloWorked": 4,
     "collaborativeAnalyzed": 2,
     "byStatus": {
-      "pending": 30,
-      "hold": 44,
-      "solved": 14,
-      "open": 28,
-      "closed": 26
+      "pending": 32,
+      "hold": 45,
+      "solved": 15,
+      "open": 29,
+      "closed": 27
     }
   },
   "todayCases": [
-    "2888346",
-    "2877859",
-    "2882473",
-    "2880314",
-    "2870722",
-    "2866539",
-    "2866472",
-    "2864092",
-    "2856711",
-    "2855914",
-    "2833906",
-    "2816398",
-    "2768579"
+    "2863785",
+    "2874329",
+    "2881335",
+    "2888324",
+    "2890303",
+    "2892081"
   ],
   "collaborativeCases": [
     {
-      "id": "2888346",
-      "subject": "Callbox Audio Buzzing Investigation",
-      "rootCause": "Asterisk PBX generating audible buzz tone at call answer — DC offset and frequency anomaly in RTP",
+      "id": "2890303",
+      "subject": "GoDaddy Choppy Audio/Disconnect",
+      "rootCause": "Customer gateway 132.148.54.230 generating severe packet loss and jitter — NOT Telnyx or carrier infrastructure",
       "status": "pending"
     },
     {
-      "id": "2877859",
-      "subject": "Inbound SMS misrouting to handset after port (208) 850-4435 — ADIT",
-      "rootCause": "SMS routing records not updated after port — originating carriers still routing SMS to old destination",
-      "status": "open"
+      "id": "2892081",
+      "subject": "GoDaddy SMS to Brazil Failures",
+      "rootCause": "Research phase — identified MDR API/reports for customer. Draft pending.",
+      "status": "pending"
     }
   ]
 }
