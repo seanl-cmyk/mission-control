@@ -1,14 +1,14 @@
 {
-  "status": "online",
-  "lastUpdated": "2026-05-13T19:00:00Z",
+  "status": "offline",
+  "lastUpdated": "2026-05-14T00:00:00Z",
   "operator": "seanl",
   "shiftEnd": "2026-05-14T00:00:00Z",
-  "message": "Mid-shift — Wed May 13, 2026",
+  "message": "End of shift — Wed May 13, 2026",
   "metrics": {
     "totalCases": 148,
     "activeCases": 103,
-    "todayUpdated": 6,
-    "soloWorked": 4,
+    "todayUpdated": 8,
+    "soloWorked": 6,
     "collaborativeAnalyzed": 2,
     "byStatus": {
       "pending": 32,
@@ -17,27 +17,5 @@
       "open": 29,
       "closed": 27
     }
-  },
-  "todayCases": [
-    "2863785",
-    "2874329",
-    "2881335",
-    "2888324",
-    "2890303",
-    "2892081"
-  ],
-  "collaborativeCases": [
-    {
-      "id": "2890303",
-      "subject": "GoDaddy Choppy Audio/Disconnect",
-      "rootCause": "Customer gateway 132.148.54.230 generating severe packet loss and jitter — NOT Telnyx or carrier infrastructure",
-      "status": "pending"
-    },
-    {
-      "id": "2892081",
-      "subject": "GoDaddy SMS to Brazil Failures",
-      "rootCause": "Research phase — identified MDR API/reports for customer. Draft pending.",
-      "status": "pending"
-    }
-  ]
+  }
 }
