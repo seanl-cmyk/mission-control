@@ -1,59 +1,42 @@
 {
-  "date": "2026-05-14",
-  "generatedAt": "2026-05-15T00:00:00Z",
+  "date": "2026-05-15",
+  "generatedAt": "2026-05-15T19:00:00Z",
   "summary": {
-    "totalTicketsUpdated": 4,
-    "soloWorked": 4,
+    "totalTicketsUpdated": 8,
+    "soloWorked": 8,
     "collaborativeAnalyzed": 0,
     "byCategory": {
-      "call_connectivity": 1,
-      "call_control": 1,
-      "ai_assistants": 1,
-      "portal_configuration": 1
+      "messaging_deliverability": 1,
+      "portal_configuration": 1,
+      "live_chat_billing": 1,
+      "live_chat_ops": 1,
+      "live_chat_voice": 1,
+      "live_chat_voice": 1,
+      "live_chat_ai_infra": 1,
+      "account_verification": 1
     },
     "byPriority": {
-      "urgent": 3,
-      "normal": 1
+      "high": 3,
+      "normal": 4,
+      "low": 1
     },
     "byStatus": {
-      "hold": 1,
+      "open": 4,
       "pending": 2,
-      "solved": 1
+      "closed": 2
     }
   },
   "cases": [
     {
-      "id": "2892622",
-      "subject": "Partial outage at 17:25-17:43 UTC — Inulti",
-      "customer": "Inulti",
-      "category": "call_connectivity",
-      "priority": "urgent",
-      "status": "hold",
-      "source": "solo",
-      "updated": "2026-05-14T22:36:23Z",
-      "summary": "P1 partial outage reported via Slack (ClearFeed). Outage lasted ~18 min. On hold pending review — internal teams notified."
-    },
-    {
-      "id": "2892218",
-      "subject": "NOC Related Social Media Post/Comment Review",
-      "customer": "Telnyx (Internal)",
-      "category": "ai_assistants",
-      "priority": "urgent",
-      "status": "solved",
-      "source": "solo",
-      "updated": "2026-05-14T17:33:19Z",
-      "summary": "Internal review ticket for social media monitoring. Solved same day."
-    },
-    {
-      "id": "2888324",
-      "subject": "Call.muteAudio() in telnyx/webrtc 2.25.25 not muting outbound RTCRtpSender on supervisor leg",
-      "customer": "Inulti (Artūras M)",
-      "category": "call_control",
-      "priority": "urgent",
+      "id": "2877841",
+      "subject": "SMS non-delivery and carrier rejection to Canadian destinations",
+      "customer": "Production Collection",
+      "category": "messaging_deliverability",
+      "priority": "high",
       "status": "pending",
       "source": "solo",
-      "updated": "2026-05-14T19:01:44Z",
-      "summary": "WebRTC SDK muteAudio() not working on supervisor whisper legs. Outbound RTP resumes despite isMuted:true state. Carried over from yesterday — still pending."
+      "updated": "2026-05-15T16:02:12Z",
+      "summary": "Carrier rejecting SMS to Canadian numbers. Sean followed up with partner carrier update — they confirmed a message was initially rejected but then delivered. Awaiting customer response on auto-pending reminder."
     },
     {
       "id": "2887554",
@@ -63,8 +46,74 @@
       "priority": "normal",
       "status": "pending",
       "source": "solo",
-      "updated": "2026-05-14T19:02:24Z",
-      "summary": "Account activation request from Adit. Pending."
+      "updated": "2026-05-15T16:02:06Z",
+      "summary": "Account activation request. User was removed by their org owner. Sean advised them to contact org owner to restore account. Ticket set to pending awaiting response."
+    },
+    {
+      "id": "2896556",
+      "subject": "Conversation with Bailey Stanek",
+      "customer": "Bailey Stanek",
+      "category": "live_chat_billing",
+      "priority": "normal",
+      "status": "open",
+      "source": "solo",
+      "updated": "2026-05-15T18:57:26Z",
+      "summary": "Live chat — billing inquiry. Open, awaiting triage."
+    },
+    {
+      "id": "2896132",
+      "subject": "Conversation with Ops Team",
+      "customer": "Ops Team",
+      "category": "live_chat_ops",
+      "priority": "low",
+      "status": "open",
+      "source": "solo",
+      "updated": "2026-05-15T18:57:26Z",
+      "summary": "Live chat — SIP trunking question. Open, awaiting triage."
+    },
+    {
+      "id": "2896194",
+      "subject": "Conversation with Byron Hsu",
+      "customer": "Byron Hsu",
+      "category": "live_chat_voice",
+      "priority": "normal",
+      "status": "open",
+      "source": "solo",
+      "updated": "2026-05-15T18:57:26Z",
+      "summary": "Live chat — programmable voice issue. Open, awaiting triage."
+    },
+    {
+      "id": "2890926",
+      "subject": "Conversation with Bryce Woods",
+      "customer": "Bryce Woods",
+      "category": "live_chat_voice",
+      "priority": "normal",
+      "status": "open",
+      "source": "solo",
+      "updated": "2026-05-15T18:57:26Z",
+      "summary": "Live chat — programmable voice issue. Open, awaiting triage."
+    },
+    {
+      "id": "2877240",
+      "subject": "Conversation with Raphael Polniak",
+      "customer": "Raphael Polniak",
+      "category": "live_chat_ai_infra",
+      "priority": "high",
+      "status": "closed",
+      "source": "solo",
+      "updated": "2026-05-15T16:43:17Z",
+      "summary": "Live chat — AI storage & compute outage report. Closed."
+    },
+    {
+      "id": "2864899",
+      "subject": "Conversation with freemium890@outlook.com",
+      "customer": "freemium890@outlook.com",
+      "category": "account_verification",
+      "priority": "high",
+      "status": "closed",
+      "source": "solo",
+      "updated": "2026-05-15T18:44:44Z",
+      "summary": "Live chat — account verification / class issue. Closed."
     }
   ]
 }
