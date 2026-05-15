@@ -1,143 +1,70 @@
 {
-  "date": "2026-05-13",
-  "generatedAt": "2026-05-14T00:00:00Z",
+  "date": "2026-05-14",
+  "generatedAt": "2026-05-15T00:00:00Z",
   "summary": {
-    "totalTicketsUpdated": 8,
-    "soloWorked": 6,
-    "collaborativeAnalyzed": 2,
+    "totalTicketsUpdated": 4,
+    "soloWorked": 4,
+    "collaborativeAnalyzed": 0,
     "byCategory": {
-      "webrtc": 1,
       "call_connectivity": 1,
-      "fax": 1,
-      "messaging": 2,
       "call_control": 1,
-      "sip_trunking": 1,
-      "media_quality": 1
+      "ai_assistants": 1,
+      "portal_configuration": 1
     },
     "byPriority": {
       "urgent": 3,
-      "high": 3,
-      "normal": 2
+      "normal": 1
     },
     "byStatus": {
-      "pending": 4,
-      "hold": 4
+      "hold": 1,
+      "pending": 2,
+      "solved": 1
     }
   },
   "cases": [
     {
+      "id": "2892622",
+      "subject": "Partial outage at 17:25-17:43 UTC — Inulti",
+      "customer": "Inulti",
+      "category": "call_connectivity",
+      "priority": "urgent",
+      "status": "hold",
+      "source": "solo",
+      "updated": "2026-05-14T22:36:23Z",
+      "summary": "P1 partial outage reported via Slack (ClearFeed). Outage lasted ~18 min. On hold pending review — internal teams notified."
+    },
+    {
+      "id": "2892218",
+      "subject": "NOC Related Social Media Post/Comment Review",
+      "customer": "Telnyx (Internal)",
+      "category": "ai_assistants",
+      "priority": "urgent",
+      "status": "solved",
+      "source": "solo",
+      "updated": "2026-05-14T17:33:19Z",
+      "summary": "Internal review ticket for social media monitoring. Solved same day."
+    },
+    {
       "id": "2888324",
       "subject": "Call.muteAudio() in telnyx/webrtc 2.25.25 not muting outbound RTCRtpSender on supervisor leg",
       "customer": "Inulti (Artūras M)",
-      "category": "webrtc",
+      "category": "call_control",
       "priority": "urgent",
       "status": "pending",
       "source": "solo",
-      "updated": "2026-05-13T23:02:13Z",
-      "summary": "WebRTC SDK muteAudio() appears to work briefly then outbound RTP resumes (~13kbps Opus) despite isMuted:true state. Affects supervisor whisper legs. ICE candidate errors correlate with mute state loss. UnmuteAudio works normally."
+      "updated": "2026-05-14T19:01:44Z",
+      "summary": "WebRTC SDK muteAudio() not working on supervisor whisper legs. Outbound RTP resumes despite isMuted:true state. Carried over from yesterday — still pending."
     },
     {
-      "id": "2881335",
-      "subject": "Centurylink/Lumen Misrouting - Mini of Ramsey",
-      "customer": "CarWars",
-      "category": "call_connectivity",
+      "id": "2887554",
+      "subject": "Account needs to be activated",
+      "customer": "Adit",
+      "category": "portal_configuration",
       "priority": "normal",
       "status": "pending",
       "source": "solo",
-      "updated": "2026-05-13T17:42:50Z",
-      "summary": "Persistent Lumen/Centurylink misrouting on 4 DIDs. Request to set up direct routing. VIP customer."
-    },
-    {
-      "id": "2880785",
-      "subject": "Failed Outbound Faxes from (855) 688-0841",
-      "customer": "CTM (Ayo)",
-      "category": "fax",
-      "priority": "high",
-      "status": "pending",
-      "source": "collaborative",
-      "updated": "2026-05-13T22:41:26Z",
-      "analysisBy": "Sensei",
-      "rootCause": "Race condition in fax status reporting — parallel origination with fail_on_single_reject caused 3 initial 503 failures to trigger 'Failed' status, but 4th leg (Teliax-TF) completed full T.30 transmission successfully (41/41 pages, 14400bps, 0 bad rows, fax_result_code=0)",
-      "recommendation": "Reply to customer that fax was actually delivered; status reporting bug in parallel origination scenario. Awaiting Sean's approval to post."
-    },
-    {
-      "id": "2874329",
-      "subject": "Ported number +13075875591 — NNID not transferred, can't assign messaging profile",
-      "customer": "ADIT (Jennifer Green)",
-      "category": "messaging",
-      "priority": "urgent",
-      "status": "hold",
-      "source": "solo",
-      "updated": "2026-05-13T22:42:08Z",
-      "summary": "Post-port NNID issue. Customer reports SMS claimed moved but still can't assign messaging profile. On hold pending porting team resolution."
-    },
-    {
-      "id": "2863785",
-      "subject": "SMS from ported number 662-380-5041 not delivered — logs show 'delivered' incorrectly",
-      "customer": "ADIT (Jennifer Green)",
-      "category": "messaging_deliverability",
-      "priority": "urgent",
-      "status": "pending",
-      "source": "solo",
-      "updated": "2026-05-13T20:01:34Z",
-      "summary": "Post-port SMS deliverability issue. Customer assigned 10DLLC campaign but texts not actually reaching recipients despite delivery receipts showing success."
-    },
-    {
-      "id": "2819740",
-      "subject": "No in-progress event on call — Ringba",
-      "customer": "Ringba (Marcella Pimentel)",
-      "category": "call_control",
-      "priority": "urgent",
-      "status": "hold",
-      "source": "solo",
-      "updated": "2026-05-13T22:42:22Z",
-      "summary": "Call events out of order — dial+completed but no in-progress. JIRA escalated. On hold pending engineering review."
-    },
-    {
-      "id": "2791889",
-      "subject": "AT&T calls — initiated then immediate hangup (UpFirst)",
-      "customer": "UpFirst (Felix Dubinsky)",
-      "category": "sip_trunking",
-      "priority": "high",
-      "status": "hold",
-      "source": "solo",
-      "updated": "2026-05-13T17:36:41Z",
-      "summary": "Inbound calls from AT&T showing dial then immediate hangup with normal_clearing/caller. On hold pending further customer-side investigation."
-    },
-    {
-      "id": "2706965",
-      "subject": "Big Jitter (290ms) from Telnyx to Audiocodes SBC",
-      "customer": "Audiocodes (Martin Babjak)",
-      "category": "media_quality",
-      "priority": "urgent",
-      "status": "hold",
-      "source": "solo",
-      "updated": "2026-05-13T20:34:25Z",
-      "summary": "290ms jitter observed on RTP from Telnyx peer to Audiocodes SBC. JIRA escalated. On hold pending network path analysis."
-    },
-    {
-      "id": "2890303",
-      "subject": "GoDaddy Choppy Audio/Disconnect",
-      "customer": "GoDaddy",
-      "category": "voice",
-      "priority": "high",
-      "status": "pending",
-      "source": "collaborative",
-      "updated": "2026-05-13",
-      "analysisBy": "Sensei",
-      "rootCause": "Customer gateway 132.148.54.230 generating severe packet loss and jitter — NOT Telnyx or carrier infrastructure"
-    },
-    {
-      "id": "2892081",
-      "subject": "GoDaddy SMS to Brazil Failures",
-      "customer": "GoDaddy",
-      "category": "messaging",
-      "priority": "high",
-      "status": "pending",
-      "source": "collaborative",
-      "updated": "2026-05-13",
-      "analysisBy": "Sensei",
-      "rootCause": "Research phase — identified MDR API/reports for customer. Draft pending."
+      "updated": "2026-05-14T19:02:24Z",
+      "summary": "Account activation request from Adit. Pending."
     }
   ]
 }
