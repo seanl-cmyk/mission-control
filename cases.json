@@ -1,19 +1,19 @@
 {
   "date": "2026-05-15",
-  "generatedAt": "2026-05-15T19:00:00Z",
+  "generatedAt": "2026-05-16T00:00:00Z",
   "summary": {
-    "totalTicketsUpdated": 8,
+    "totalTicketsUpdated": 9,
     "soloWorked": 8,
-    "collaborativeAnalyzed": 0,
+    "collaborativeAnalyzed": 1,
     "byCategory": {
       "messaging_deliverability": 1,
       "portal_configuration": 1,
       "live_chat_billing": 1,
       "live_chat_ops": 1,
-      "live_chat_voice": 1,
-      "live_chat_voice": 1,
+      "live_chat_voice": 2,
       "live_chat_ai_infra": 1,
-      "account_verification": 1
+      "account_verification": 1,
+      "voice_recording": 1
     },
     "byPriority": {
       "high": 3,
@@ -22,11 +22,22 @@
     },
     "byStatus": {
       "open": 4,
-      "pending": 2,
+      "pending": 3,
       "closed": 2
     }
   },
   "cases": [
+    {
+      "id": "2862026",
+      "subject": "Recording failures on same-account (on-net) calls",
+      "customer": "Sanket Chavan",
+      "category": "voice_recording",
+      "priority": "normal",
+      "status": "pending",
+      "source": "collaborative",
+      "updated": "2026-05-15T23:59:00Z",
+      "summary": "Customer reports recordings fail intermittently when calling between numbers on the same Telnyx account. Root cause: on-net (same-account) calls are handled as a single B2BUA session with only an inbound leg — no outbound PSTN leg is created. Recording CDRs DO exist on the inbound leg (completed: 1, record_completion_cause: success-silence) but no second recording exists because there's no second call. Compared to working off-net call which has 7 CDR legs and 2 recording CDRs. Analysis complete, awaiting Sean's review before drafting customer response. Possible product gap — may need escalation to voice engineering."
+    },
     {
       "id": "2877841",
       "subject": "SMS non-delivery and carrier rejection to Canadian destinations",

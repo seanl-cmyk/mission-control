@@ -1,18 +1,18 @@
 {
-  "status": "online",
-  "lastUpdated": "2026-05-15T19:00:00Z",
+  "status": "offline",
+  "lastUpdated": "2026-05-16T00:00:00Z",
   "operator": "seanl",
   "shiftEnd": "2026-05-16T00:00:00Z",
-  "message": "Mid-shift — Fri May 15, 2026",
+  "message": "Shift ended — Fri May 15, 2026",
   "metrics": {
-    "totalCases": 8,
-    "activeCases": 6,
-    "todayUpdated": 8,
+    "totalCases": 9,
+    "activeCases": 7,
+    "todayUpdated": 9,
     "soloWorked": 8,
-    "collaborativeAnalyzed": 0,
+    "collaborativeAnalyzed": 1,
     "byStatus": {
       "open": 4,
-      "pending": 2,
+      "pending": 3,
       "closed": 2
     }
   }
