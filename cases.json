@@ -1,61 +1,23 @@
 {
   "date": "2026-05-18",
-  "generatedAt": "2026-05-18T19:00:00Z",
+  "generatedAt": "2026-05-19T00:00:00Z",
   "summary": {
-    "totalTicketsUpdated": 6,
-    "soloWorked": 6,
-    "collaborativeAnalyzed": 0,
+    "totalTicketsUpdated": 3,
+    "soloWorked": 1,
+    "collaborativeAnalyzed": 2,
     "byCategory": {
-      "voice_webrtc": 1,
-      "ai_assistants": 1,
-      "wireless_connectivity": 1,
       "voice_recording": 2,
-      "messaging_deliverability": 1
+      "voice_webrtc": 1
     },
     "byPriority": {
-      "urgent": 3,
-      "high": 1,
-      "normal": 2
+      "urgent": 2,
+      "normal": 1
     },
     "byStatus": {
-      "open": 3,
       "hold": 3
     }
   },
   "cases": [
-    {
-      "id": "2888324",
-      "subject": "Call.muteAudio() in telnyx/webrtc 2.25.25 not muting outbound RTCRtpSender on supervisor leg",
-      "customer": "Inulti",
-      "category": "voice_webrtc",
-      "priority": "urgent",
-      "status": "open",
-      "source": "solo",
-      "updated": "2026-05-18T18:42:10Z",
-      "summary": "WebRTC SDK muteAudio() fails on supervisor (whisper) leg — mute takes effect briefly then outbound RTP resumes at ~13kbps Opus despite isMuted staying true. Likely ICE renegotiation re-enables the sender track. P1/Critical."
-    },
-    {
-      "id": "2880969",
-      "subject": "AI Assistant transcripts start but no Audio generated",
-      "customer": "GoDaddy",
-      "category": "ai_assistants",
-      "priority": "urgent",
-      "status": "open",
-      "source": "solo",
-      "updated": "2026-05-18T18:48:25Z",
-      "summary": "AI Assistant generates transcripts but no audio output. P2/Major impact. Under active investigation."
-    },
-    {
-      "id": "2876253",
-      "subject": "Wia // Telnyx Down in UAE",
-      "customer": "Wia",
-      "category": "wireless_connectivity",
-      "priority": "normal",
-      "status": "open",
-      "source": "solo",
-      "updated": "2026-05-18T15:22:43Z",
-      "summary": "Connectivity down in UAE region for Wia's IoT deployments. Complex roaming/connectivity issue."
-    },
     {
       "id": "2889399",
       "subject": "Missing recording for one of the calls",
@@ -64,19 +26,38 @@
       "priority": "urgent",
       "status": "hold",
       "source": "solo",
-      "updated": "2026-05-18T16:06:39Z",
-      "summary": "Call recording missing for a specific call. P1/Critical. On hold awaiting carrier investigation."
+      "updated": "2026-05-18T22:06:30Z",
+      "summary": "Call recording missing for a specific call. P1/Critical. On hold awaiting investigation."
     },
     {
-      "id": "2888457",
-      "subject": "Messages not delivered to recipients in Poland",
-      "customer": "Booksy",
-      "category": "messaging_deliverability",
-      "priority": "high",
+      "id": "2888324",
+      "subject": "Call.muteAudio() in telnyx/webrtc 2.25.25 not muting outbound RTCRtpSender on supervisor leg",
+      "customer": "Inulti",
+      "category": "voice_webrtc",
+      "priority": "urgent",
       "status": "hold",
-      "source": "solo",
-      "updated": "2026-05-18T17:40:58Z",
-      "summary": "SMS delivery failures to Polish destinations. On hold awaiting partner carrier response."
+      "source": "collaborative",
+      "updated": "2026-05-18T22:06:02Z",
+      "summary": "WebRTC SDK muteAudio() fails on supervisor (whisper) leg — mute takes effect briefly then outbound RTP resumes at ~13kbps Opus despite isMuted staying true.",
+      "analysis": {
+        "method": "Merged B2BUA SIPcap + Ringba-side PCAP analysis",
+        "keyFindings": [
+          "muteAudio() does NOT mute outbound RTCRtpSender — payload is real audio, not Opus-encoded silence",
+          "5s before mute: 250 pkts, avg 36.0 bytes, 99% speech",
+          "5s after mute: 250 pkts, avg 54.6 bytes, 98% speech — ZERO difference from pre-mute",
+          "Known-silent window for comparison: avg 8.0 bytes, 0% speech",
+          "B2BUA leg shows only 160-byte comfort noise (not real speech)",
+          "Call topology: Ringba↔Verto direct media (g711U), Supervisor browser↔Verto WebRTC (Opus/encrypted)"
+        ],
+        "rootCauseHypothesis": "ICE renegotiation (701 errors) causes SDK to re-attach/replace sender track, losing enabled=false state",
+        "escalationStatus": "Follow-up escalation drafted with PCAP evidence, Sean reviewing to send",
+        "references": {
+          "pcapFile": "/home/telnyx-user/clawd/ringba-vertx-supervisor.pcap",
+          "supervisorSessionId": "b95449be-5060-11f1-9d3e-02420aef34a0",
+          "supervisorCallControlId": "v3:5F_8B5FmOcoCLxIQ0f34OGrnofCwFFgAkm-gwxXWbvlP-LEWCf738Q",
+          "vertocallID": "707f8d0b-2d36-4ab1-80bd-61cb7f4c2ca8"
+        }
+      }
     },
     {
       "id": "2865668",
@@ -85,8 +66,8 @@
       "category": "voice_recording",
       "priority": "normal",
       "status": "hold",
-      "source": "solo",
-      "updated": "2026-05-18T15:51:13Z",
+      "source": "collaborative",
+      "updated": "2026-05-18T22:06:40Z",
       "summary": "Recordings enabled but not available for calls. Complex investigation ongoing. On hold."
     }
   ]
