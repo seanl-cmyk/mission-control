@@ -1,74 +1,85 @@
 {
-  "date": "2026-05-18",
-  "generatedAt": "2026-05-19T00:00:00Z",
+  "date": "2026-05-19",
+  "generatedAt": "2026-05-19T19:00:00Z",
   "summary": {
     "totalTicketsUpdated": 3,
-    "soloWorked": 1,
-    "collaborativeAnalyzed": 2,
+    "soloWorked": 0,
+    "collaborativeAnalyzed": 3,
     "byCategory": {
-      "voice_recording": 2,
-      "voice_webrtc": 1
+      "voice_streaming": 1,
+      "voice_amd": 1,
+      "ai_voice": 1
     },
     "byPriority": {
-      "urgent": 2,
-      "normal": 1
+      "urgent": 1,
+      "normal": 2
     },
     "byStatus": {
-      "hold": 3
+      "pending": 3
     }
   },
   "cases": [
     {
-      "id": "2889399",
-      "subject": "Missing recording for one of the calls",
-      "customer": "Inulti",
-      "category": "voice_recording",
+      "id": "2905011",
+      "subject": "I'm investigating a dead air issue in this call",
+      "customer": "Stella Automotive (VIP - Advanced 365)",
+      "category": "voice_streaming",
       "priority": "urgent",
-      "status": "hold",
-      "source": "solo",
-      "updated": "2026-05-18T22:06:30Z",
-      "summary": "Call recording missing for a specific call. P1/Critical. On hold awaiting investigation."
-    },
-    {
-      "id": "2888324",
-      "subject": "Call.muteAudio() in telnyx/webrtc 2.25.25 not muting outbound RTCRtpSender on supervisor leg",
-      "customer": "Inulti",
-      "category": "voice_webrtc",
-      "priority": "urgent",
-      "status": "hold",
+      "status": "pending",
       "source": "collaborative",
-      "updated": "2026-05-18T22:06:02Z",
-      "summary": "WebRTC SDK muteAudio() fails on supervisor (whisper) leg — mute takes effect briefly then outbound RTP resumes at ~13kbps Opus despite isMuted staying true.",
+      "updated": "2026-05-19T18:10:59Z",
+      "summary": "Dead air on WebSocket bidirectional streaming calls — marks not returned, audio not played.",
       "analysis": {
-        "method": "Merged B2BUA SIPcap + Ringba-side PCAP analysis",
+        "method": "PCAP extraction and analysis of SSRC payloads",
         "keyFindings": [
-          "muteAudio() does NOT mute outbound RTCRtpSender — payload is real audio, not Opus-encoded silence",
-          "5s before mute: 250 pkts, avg 36.0 bytes, 99% speech",
-          "5s after mute: 250 pkts, avg 54.6 bytes, 98% speech — ZERO difference from pre-mute",
-          "Known-silent window for comparison: avg 8.0 bytes, 0% speech",
-          "B2BUA leg shows only 160-byte comfort noise (not real speech)",
-          "Call topology: Ringba↔Verto direct media (g711U), Supervisor browser↔Verto WebRTC (Opus/encrypted)"
+          "SSRC 0x733A270B (outbound to caller) is entirely 0xFF (PCMU silence) on every packet",
+          "Audio from Stella's WebSocket server is NOT being injected into the call",
+          "Root cause: likely wrong payload format (not base64-encoded), rate limiting (>1 payload/sec), or malformed WebSocket event structure"
         ],
-        "rootCauseHypothesis": "ICE renegotiation (701 errors) causes SDK to re-attach/replace sender track, losing enabled=false state",
-        "escalationStatus": "Follow-up escalation drafted with PCAP evidence, Sean reviewing to send",
-        "references": {
-          "pcapFile": "/home/telnyx-user/clawd/ringba-vertx-supervisor.pcap",
-          "supervisorSessionId": "b95449be-5060-11f1-9d3e-02420aef34a0",
-          "supervisorCallControlId": "v3:5F_8B5FmOcoCLxIQ0f34OGrnofCwFFgAkm-gwxXWbvlP-LEWCf738Q",
-          "vertocallID": "707f8d0b-2d36-4ab1-80bd-61cb7f4c2ca8"
-        }
+        "docsReferenced": "Media Streaming docs — error codes 100003 (malformed_frame), 100004 (invalid_media), 100005 (rate_limit_reached)",
+        "samplesAnalyzed": "6f63decc (May 15, 10s), 441327ae (May 19, 35s)",
+        "recommendation": "Verify WebSocket payload format (base64-encoded raw audio), rate limiting, and event structure against docs"
       }
     },
     {
-      "id": "2865668",
-      "subject": "Call Recording Not Available Despite Being Enabled",
-      "customer": "Kindredpm",
-      "category": "voice_recording",
+      "id": "2906070",
+      "subject": "Telnyx team, we're investigating a possible false voicemail/AMD classification",
+      "customer": "PAM.ai (High Priority org)",
+      "category": "voice_amd",
       "priority": "normal",
-      "status": "hold",
+      "status": "pending",
       "source": "collaborative",
-      "updated": "2026-05-18T22:06:40Z",
-      "summary": "Recordings enabled but not available for calls. Complex investigation ongoing. On hold."
+      "updated": "2026-05-19T18:45:16Z",
+      "summary": "False AMD classification — received machine_start but call was answered by human.",
+      "analysis": {
+        "method": "TeXML AMD callback API documentation review",
+        "keyFindings": [
+          "machine_start is an INTERMEDIATE state, not a final classification",
+          "Final machine states are: machine_end_beep, machine_end_silence, machine_end_other",
+          "Customer's app logic was wrong: treating machine_start as confirmed voicemail instead of waiting for machine_end_*"
+        ],
+        "recommendation": "Update app logic to wait for machine_end_* events; consider Premium AMD for higher accuracy"
+      }
+    },
+    {
+      "id": "2901325",
+      "subject": "Voice Design Lab - Custom Voice Upload Processing Failure (404 Errors)",
+      "customer": "electronicalias@gmail.com (org ID: 34351122378909)",
+      "category": "ai_voice",
+      "priority": "normal",
+      "status": "pending",
+      "source": "collaborative",
+      "updated": "2026-05-19T19:02:09Z",
+      "summary": "Custom voice uploads 'phil-voice-1' and 'phil-voice-2' appear in Voice Design Lab but return 404 on playback/use.",
+      "analysis": {
+        "method": "Account lookup and Voice Clone docs review",
+        "keyFindings": [
+          "Auto-account-lookup failed for electronicalias@gmail.com — need to verify actual Telnyx account email",
+          "Voice clone processing likely failed, entries stuck in DB",
+          "Name collision on re-upload confirms entries exist but are unusable"
+        ],
+        "recommendation": "Get actual account email, determine which model (Qwen3TTS vs Ultra), check audio file format compliance"
+      }
     }
   ]
 }
