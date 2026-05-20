@@ -1,135 +1,30 @@
 {
-  "date": "2026-05-19",
-  "generatedAt": "2026-05-20T00:00:00Z",
+  "date": "2026-05-20",
+  "generatedAt": "2026-05-20T19:00:00Z",
   "summary": {
-    "totalTicketsUpdated": 5,
-    "soloWorked": 0,
-    "collaborativeAnalyzed": 5,
+    "totalTicketsUpdated": 1,
+    "soloWorked": 1,
+    "collaborativeAnalyzed": 0,
     "byCategory": {
-      "voice_streaming": 1,
-      "voice_amd": 1,
-      "ai_voice": 1,
-      "stir_shaken": 1,
-      "ai_assistants": 1
+      "messaging_sms": 1
     },
     "byPriority": {
-      "urgent": 1,
-      "normal": 3,
       "unspecified": 1
     },
     "byStatus": {
-      "open": 1,
-      "pending": 2,
-      "resolved_awaiting_approval": 2
+      "hold": 1
     }
   },
   "cases": [
     {
-      "id": "2905011",
-      "subject": "I'm investigating a dead air issue in this call",
-      "customer": "Stella Automotive (VIP - Advanced 365)",
-      "category": "voice_streaming",
-      "priority": "urgent",
-      "status": "open",
-      "source": "collaborative",
-      "updated": "2026-05-19T23:01:32Z",
-      "summary": "Dead air on WebSocket bidirectional streaming calls — marks not returned, audio not played.",
-      "analysis": {
-        "method": "PCAP extraction and analysis of SSRC payloads",
-        "keyFindings": [
-          "SSRC 0x733A270B (outbound to caller) is entirely 0xFF (PCMU silence) on every packet",
-          "Audio from Stella's WebSocket server is NOT being injected into the call",
-          "Root cause: likely wrong payload format (not base64-encoded), rate limiting (>1 payload/sec), or malformed WebSocket event structure"
-        ],
-        "docsReferenced": "Media Streaming docs — error codes 100003 (malformed_frame), 100004 (invalid_media), 100005 (rate_limit_reached)",
-        "samplesAnalyzed": "6f63decc (May 15, 10s), 441327ae (May 19, 35s)",
-        "recommendation": "Verify WebSocket payload format (base64-encoded raw audio), rate limiting, and event structure against docs"
-      }
-    },
-    {
-      "id": "2906070",
-      "subject": "Telnyx team, we're investigating a possible false voicemail/AMD classification",
-      "customer": "PAM.ai (High Priority org)",
-      "category": "voice_amd",
-      "priority": "normal",
-      "status": "pending",
-      "source": "collaborative",
-      "updated": "2026-05-19T18:45:16Z",
-      "summary": "False AMD classification — received machine_start but call was answered by human.",
-      "analysis": {
-        "method": "TeXML AMD callback API documentation review",
-        "keyFindings": [
-          "machine_start is an INTERMEDIATE state, not a final classification",
-          "Final machine states are: machine_end_beep, machine_end_silence, machine_end_other",
-          "Customer's app logic was wrong: treating machine_start as confirmed voicemail instead of waiting for machine_end_*"
-        ],
-        "recommendation": "Update app logic to wait for machine_end_* events; consider Premium AMD for higher accuracy"
-      }
-    },
-    {
-      "id": "2901325",
-      "subject": "Voice Design Lab - Custom Voice Upload Processing Failure (404 Errors)",
-      "customer": "electronicalias@gmail.com (org ID: 34351122378909)",
-      "category": "ai_voice",
-      "priority": "normal",
-      "status": "pending",
-      "source": "collaborative",
-      "updated": "2026-05-19T19:02:09Z",
-      "summary": "Custom voice uploads 'phil-voice-1' and 'phil-voice-2' appear in Voice Design Lab but return 404 on playback/use.",
-      "analysis": {
-        "method": "Account lookup and Voice Clone docs review",
-        "keyFindings": [
-          "Auto-account-lookup failed for electronicalias@gmail.com — need to verify actual Telnyx account email",
-          "Voice clone processing likely failed, entries stuck in DB",
-          "Name collision on re-upload confirms entries exist but are unusable"
-        ],
-        "recommendation": "Get actual account email, determine which model (Qwen3TTS vs Ultra), check audio file format compliance"
-      }
-    },
-    {
-      "id": "servicemob-stir-shaken",
-      "subject": "STIR/SHAKEN Attestation A Enrollment — McGIVR/UOAS Platform",
-      "customer": "ServiceMob Inc. (Delaware, file #6140711), Marcel Barrera (CSO)",
-      "category": "stir_shaken",
-      "priority": "normal",
-      "status": "resolved_awaiting_approval",
-      "source": "collaborative",
-      "channel": "pylon_chat",
-      "updated": "2026-05-19T00:00:00Z",
-      "summary": "STIR/SHAKEN Attestation A enrollment request for verified numbers + Telnyx-purchased DIDs on McGIVR platform.",
-      "analysis": {
-        "method": "Attestation behavior docs review and telephony-backend-consul-kv logic analysis",
-        "keyFindings": [
-          "Telnyx-purchased DIDs → automatic A attestation (confirmed)",
-          "Verified numbers (UOAS path) → also A attestation per our attestation logic (no special enrollment needed)",
-          "ServiceMob doesn't need own SPC token — they're a Telnyx customer, not an OSP with STIR/SHAKEN obligation",
-          "If forced attestation needed: dialplan override in telephony-backend-consul-kv (attestation-level-override), scoped per user_id or user_id + outbound_profile_id"
-        ],
-        "docsReferenced": "Attestation behavior page, FCC Eighth Report & Order article, STIR/SHAKEN with Telnyx",
-        "recommendation": "No special enrollment needed — both DID types already get A attestation. Sean approved response."
-      }
-    },
-    {
-      "id": "ai-assistants-scheduled-events",
-      "subject": "Scheduled Events 'Resource Not Found' — AI Assistants GET endpoint",
-      "customer": "Org 6250e2de-1b39-4dac-bab5-259c1932526f",
-      "category": "ai_assistants",
-      "priority": "normal",
-      "status": "resolved_awaiting_approval",
-      "source": "collaborative",
-      "channel": "pylon_chat",
-      "updated": "2026-05-19T00:00:00Z",
-      "summary": "Recurring 'Resource Not Found' on GET /v2/ai/assistants/{assistant_id}/scheduled_events/{event_id} — events become inaccessible after processing time passes.",
-      "analysis": {
-        "method": "API behavior analysis and event lifecycle review",
-        "keyFindings": [
-          "Events created successfully (200 + valid IDs, status 'pending') but become inaccessible after scheduled time passes",
-          "This is a backend persistence/retention bug, not a customer-side issue",
-          "24 phone_call events all created 2026-05-19 13:33 UTC, scheduled for 19:30/20:30/21:30 UTC — times now passed",
-          "Docs don't specify a retention window for scheduled event data"
-        ],
-        "recommendation": "Capture webhook callbacks as workaround; escalate to AI Assistants engineering team; get retention policy answer"
-      }
+      "id": "2820819",
+      "subject": "Outbound SMS failure",
+      "category": "messaging_sms",
+      "priority": "unspecified",
+      "status": "hold",
+      "source": "solo",
+      "updated": "2026-05-20T14:38:42Z",
+      "summary": "Outbound SMS delivery failure — currently on hold awaiting further info or resolution."
     }
   ]
 }
