@@ -1,21 +1,26 @@
 {
   "date": "2026-05-19",
-  "generatedAt": "2026-05-19T19:00:00Z",
+  "generatedAt": "2026-05-20T00:00:00Z",
   "summary": {
-    "totalTicketsUpdated": 3,
+    "totalTicketsUpdated": 5,
     "soloWorked": 0,
-    "collaborativeAnalyzed": 3,
+    "collaborativeAnalyzed": 5,
     "byCategory": {
       "voice_streaming": 1,
       "voice_amd": 1,
-      "ai_voice": 1
+      "ai_voice": 1,
+      "stir_shaken": 1,
+      "ai_assistants": 1
     },
     "byPriority": {
       "urgent": 1,
-      "normal": 2
+      "normal": 3,
+      "unspecified": 1
     },
     "byStatus": {
-      "pending": 3
+      "open": 1,
+      "pending": 2,
+      "resolved_awaiting_approval": 2
     }
   },
   "cases": [
@@ -25,9 +30,9 @@
       "customer": "Stella Automotive (VIP - Advanced 365)",
       "category": "voice_streaming",
       "priority": "urgent",
-      "status": "pending",
+      "status": "open",
       "source": "collaborative",
-      "updated": "2026-05-19T18:10:59Z",
+      "updated": "2026-05-19T23:01:32Z",
       "summary": "Dead air on WebSocket bidirectional streaming calls — marks not returned, audio not played.",
       "analysis": {
         "method": "PCAP extraction and analysis of SSRC payloads",
@@ -79,6 +84,51 @@
           "Name collision on re-upload confirms entries exist but are unusable"
         ],
         "recommendation": "Get actual account email, determine which model (Qwen3TTS vs Ultra), check audio file format compliance"
+      }
+    },
+    {
+      "id": "servicemob-stir-shaken",
+      "subject": "STIR/SHAKEN Attestation A Enrollment — McGIVR/UOAS Platform",
+      "customer": "ServiceMob Inc. (Delaware, file #6140711), Marcel Barrera (CSO)",
+      "category": "stir_shaken",
+      "priority": "normal",
+      "status": "resolved_awaiting_approval",
+      "source": "collaborative",
+      "channel": "pylon_chat",
+      "updated": "2026-05-19T00:00:00Z",
+      "summary": "STIR/SHAKEN Attestation A enrollment request for verified numbers + Telnyx-purchased DIDs on McGIVR platform.",
+      "analysis": {
+        "method": "Attestation behavior docs review and telephony-backend-consul-kv logic analysis",
+        "keyFindings": [
+          "Telnyx-purchased DIDs → automatic A attestation (confirmed)",
+          "Verified numbers (UOAS path) → also A attestation per our attestation logic (no special enrollment needed)",
+          "ServiceMob doesn't need own SPC token — they're a Telnyx customer, not an OSP with STIR/SHAKEN obligation",
+          "If forced attestation needed: dialplan override in telephony-backend-consul-kv (attestation-level-override), scoped per user_id or user_id + outbound_profile_id"
+        ],
+        "docsReferenced": "Attestation behavior page, FCC Eighth Report & Order article, STIR/SHAKEN with Telnyx",
+        "recommendation": "No special enrollment needed — both DID types already get A attestation. Sean approved response."
+      }
+    },
+    {
+      "id": "ai-assistants-scheduled-events",
+      "subject": "Scheduled Events 'Resource Not Found' — AI Assistants GET endpoint",
+      "customer": "Org 6250e2de-1b39-4dac-bab5-259c1932526f",
+      "category": "ai_assistants",
+      "priority": "normal",
+      "status": "resolved_awaiting_approval",
+      "source": "collaborative",
+      "channel": "pylon_chat",
+      "updated": "2026-05-19T00:00:00Z",
+      "summary": "Recurring 'Resource Not Found' on GET /v2/ai/assistants/{assistant_id}/scheduled_events/{event_id} — events become inaccessible after processing time passes.",
+      "analysis": {
+        "method": "API behavior analysis and event lifecycle review",
+        "keyFindings": [
+          "Events created successfully (200 + valid IDs, status 'pending') but become inaccessible after scheduled time passes",
+          "This is a backend persistence/retention bug, not a customer-side issue",
+          "24 phone_call events all created 2026-05-19 13:33 UTC, scheduled for 19:30/20:30/21:30 UTC — times now passed",
+          "Docs don't specify a retention window for scheduled event data"
+        ],
+        "recommendation": "Capture webhook callbacks as workaround; escalate to AI Assistants engineering team; get retention policy answer"
       }
     }
   ]
