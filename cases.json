@@ -1,54 +1,41 @@
 {
-  "date": "2026-05-20",
-  "generatedAt": "2026-05-21T00:00:00Z",
+  "date": "2026-05-21",
+  "generatedAt": "2026-05-21T19:00:00Z",
   "summary": {
-    "totalTicketsUpdated": 3,
-    "soloWorked": 3,
+    "totalTicketsUpdated": 2,
+    "soloWorked": 2,
     "collaborativeAnalyzed": 0,
     "byCategory": {
-      "messaging_sms": 2,
-      "calling_spam": 1
+      "social_media_review": 1,
+      "ai_voice_assistants": 1
     },
     "byPriority": {
-      "high": 1,
-      "low": 1,
-      "none": 1
+      "urgent": 2
     },
     "byStatus": {
-      "solved": 2,
-      "hold": 1
+      "closed": 2
     }
   },
   "cases": [
     {
-      "id": "2901187",
-      "subject": "Outbound SMS failure",
-      "category": "messaging_sms",
-      "priority": "low",
-      "status": "solved",
+      "id": "2892218",
+      "subject": "NOC Related Social Media Post/Comment Review",
+      "category": "social_media_review",
+      "priority": "urgent",
+      "status": "closed",
       "source": "solo",
-      "updated": "2026-05-20T22:47:24Z",
-      "summary": "Outbound SMS delivery failure investigation. Customer closed the ticket after internal follow-up. Sean set to solved."
+      "updated": "2026-05-21T17:34:18Z",
+      "summary": "Auto-generated ticket from Reddit post about negative Telnyx support experience. Sean reviewed and closed."
     },
     {
-      "id": "2898196",
-      "subject": "Number labeled as spam (+19058569200)",
-      "category": "calling_spam",
-      "priority": "high",
-      "status": "solved",
+      "id": "2882473",
+      "subject": "AI Voice Assistants completely silent — Francisco Ocaña (iaynegocios.net)",
+      "category": "ai_voice_assistants",
+      "priority": "urgent",
+      "status": "closed",
       "source": "solo",
-      "updated": "2026-05-20T22:46:58Z",
-      "summary": "Customer's number was being flagged as spam. Sean confirmed partner carrier resolved the block, notified customer, and closed the ticket."
-    },
-    {
-      "id": "2820819",
-      "subject": "Outbound SMS failure",
-      "category": "messaging_sms",
-      "priority": "none",
-      "status": "hold",
-      "source": "solo",
-      "updated": "2026-05-20T14:38:42Z",
-      "summary": "Long-running outbound SMS failure case (merged tickets). David sent status update to customer. Remains on hold."
+      "updated": "2026-05-21T18:35:19Z",
+      "summary": "P1 incident — all AI Voice Assistants on customer's account producing complete silence on inbound and outbound calls since 2026-05-07. Sean investigated and closed."
     }
   ]
 }
