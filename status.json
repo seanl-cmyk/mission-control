@@ -1,9 +1,9 @@
 {
-  "status": "online",
-  "lastUpdated": "2026-05-21T19:00:00Z",
+  "status": "offline",
+  "lastUpdated": "2026-05-22T00:00:41Z",
   "operator": "seanl",
   "shiftEnd": "2026-05-22T00:00:00Z",
-  "message": "Mid-shift — Thu May 21, 2026",
+  "message": "Shift ended \u2014 Thu May 21, 2026",
   "metrics": {
     "totalCases": 2,
     "activeCases": 0,

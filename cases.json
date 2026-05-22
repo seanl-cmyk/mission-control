@@ -1,6 +1,6 @@
 {
   "date": "2026-05-21",
-  "generatedAt": "2026-05-21T19:00:00Z",
+  "generatedAt": "2026-05-22T00:00:41Z",
   "summary": {
     "totalTicketsUpdated": 2,
     "soloWorked": 2,
@@ -29,13 +29,13 @@
     },
     {
       "id": "2882473",
-      "subject": "AI Voice Assistants completely silent — Francisco Ocaña (iaynegocios.net)",
+      "subject": "AI Voice Assistants completely silent \u2014 Francisco Oca\u00f1a (iaynegocios.net)",
       "category": "ai_voice_assistants",
       "priority": "urgent",
       "status": "closed",
       "source": "solo",
       "updated": "2026-05-21T18:35:19Z",
-      "summary": "P1 incident — all AI Voice Assistants on customer's account producing complete silence on inbound and outbound calls since 2026-05-07. Sean investigated and closed."
+      "summary": "P1 incident \u2014 all AI Voice Assistants on customer account producing complete silence on inbound and outbound calls since 2026-05-07. Customer ran thorough diagnostics (cloned assistant with known-good config, still silent). Sean investigated and resolved."
     }
   ]
 }
