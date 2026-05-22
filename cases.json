@@ -1,41 +1,13 @@
 {
-  "date": "2026-05-21",
-  "generatedAt": "2026-05-22T00:00:41Z",
+  "date": "2026-05-22",
+  "generatedAt": "2026-05-22T19:00:15Z",
   "summary": {
-    "totalTicketsUpdated": 2,
-    "soloWorked": 2,
+    "totalTicketsUpdated": 0,
+    "soloWorked": 0,
     "collaborativeAnalyzed": 0,
-    "byCategory": {
-      "social_media_review": 1,
-      "ai_voice_assistants": 1
-    },
-    "byPriority": {
-      "urgent": 2
-    },
-    "byStatus": {
-      "closed": 2
-    }
+    "byCategory": {},
+    "byPriority": {},
+    "byStatus": {}
   },
-  "cases": [
-    {
-      "id": "2892218",
-      "subject": "NOC Related Social Media Post/Comment Review",
-      "category": "social_media_review",
-      "priority": "urgent",
-      "status": "closed",
-      "source": "solo",
-      "updated": "2026-05-21T17:34:18Z",
-      "summary": "Auto-generated ticket from Reddit post about negative Telnyx support experience. Sean reviewed and closed."
-    },
-    {
-      "id": "2882473",
-      "subject": "AI Voice Assistants completely silent \u2014 Francisco Oca\u00f1a (iaynegocios.net)",
-      "category": "ai_voice_assistants",
-      "priority": "urgent",
-      "status": "closed",
-      "source": "solo",
-      "updated": "2026-05-21T18:35:19Z",
-      "summary": "P1 incident \u2014 all AI Voice Assistants on customer account producing complete silence on inbound and outbound calls since 2026-05-07. Customer ran thorough diagnostics (cloned assistant with known-good config, still silent). Sean investigated and resolved."
-    }
-  ]
+  "cases": []
 }
