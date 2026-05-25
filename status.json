@@ -1,8 +1,8 @@
 {
-  "status": "offline",
-  "lastUpdated": "2026-05-23T00:00:07Z",
+  "status": "online",
+  "lastUpdated": "2026-05-25T19:00:00Z",
   "operator": "seanl",
-  "message": "Friday May 22 — Shift ended",
+  "message": "Monday May 25 — No active tickets. Quiet shift.",
   "metrics": {
     "totalCases": 0,
     "activeCases": 0,
