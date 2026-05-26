@@ -1,13 +1,127 @@
 {
   "date": "2026-05-25",
-  "generatedAt": "2026-05-25T19:00:00Z",
+  "generatedAt": "2026-05-26T00:00:00Z",
   "summary": {
-    "totalTicketsUpdated": 0,
-    "soloWorked": 0,
+    "totalTicketsUpdated": 6,
+    "soloWorked": 6,
     "collaborativeAnalyzed": 0,
-    "byCategory": {},
-    "byPriority": {},
-    "byStatus": {}
+    "byCategory": {
+      "messaging_deliverability": 2,
+      "call_control": 2,
+      "number_lookup": 1,
+      "portal_configuration": 1
+    },
+    "byPriority": {
+      "high": 2,
+      "urgent": 1,
+      "normal": 1,
+      "low": 1,
+      "unspecified": 1
+    },
+    "byStatus": {
+      "closed": 4,
+      "open": 2
+    }
   },
-  "cases": []
+  "cases": [
+    {
+      "id": 2887554,
+      "subject": "Account needs to be activated",
+      "status": "open",
+      "priority": "normal",
+      "category": "portal_configuration",
+      "updated_at": "2026-05-25T06:42:27Z",
+      "type": "solo",
+      "org": "Adit",
+      "notes": "Account reactivation request for shailendra@adit.com"
+    },
+    {
+      "id": 2873313,
+      "subject": "[URGENT] Parakeet Health - Telnyx Issue",
+      "status": "open",
+      "priority": "normal",
+      "category": "messaging_deliverability",
+      "updated_at": "2026-05-25T14:37:25Z",
+      "type": "solo",
+      "org": "Parakeet Health",
+      "notes": "Inbound SMS not arriving — no record in Telnyx. Customer escalation active."
+    },
+    {
+      "id": 2880314,
+      "subject": "Number Lookup Issues on US managed account",
+      "status": "closed",
+      "priority": "urgent",
+      "category": "number_lookup",
+      "updated_at": "2026-05-25T16:02:31Z",
+      "type": "solo",
+      "org": "LivePerson",
+      "notes": "Different line_type results across accounts for same number. VIP — bad satisfaction rating."
+    },
+    {
+      "id": 2877954,
+      "subject": "Outbound failed SMS",
+      "status": "closed",
+      "priority": "low",
+      "category": "messaging_deliverability",
+      "updated_at": "2026-05-25T09:54:06Z",
+      "type": "solo",
+      "org": "Telnyx (vendor)",
+      "notes": "SMS to Canadian number failing with 40008. Content filtering by carrier."
+    },
+    {
+      "id": 2860674,
+      "subject": "Langfuse Open Telemetry Integration lacks customer controlled meta attributes",
+      "status": "closed",
+      "priority": "high",
+      "category": "call_control",
+      "updated_at": "2026-05-25T17:04:22Z",
+      "type": "solo",
+      "org": "GoDaddy",
+      "notes": "Enhancement request for AI Assistant observability — Langfuse prompt/version metadata. VIP."
+    },
+    {
+      "id": 2823856,
+      "subject": "AI hang-up — voicemail reached disconnection on active call",
+      "status": "closed",
+      "priority": "high",
+      "category": "call_control",
+      "updated_at": "2026-05-25T16:02:28Z",
+      "type": "solo",
+      "org": "Assistable",
+      "notes": "False voicemail detection causing AI call hang-up. VIP customer."
+    },
+    {
+      "id": 2815670,
+      "subject": "Multiple callUpdate 'new' events causing 486 USER_BUSY",
+      "status": "closed",
+      "priority": "urgent",
+      "category": "call_control",
+      "updated_at": "2026-05-25T17:03:34Z",
+      "type": "solo",
+      "org": "Inulti",
+      "notes": "Duplicate call.new events → double answer() → 486 BUSY. WebRTC related."
+    },
+    {
+      "id": 2770785,
+      "subject": "Increasing SMS Send Skips — Error Code 40021",
+      "status": "closed",
+      "priority": "normal",
+      "category": "messaging_deliverability",
+      "updated_at": "2026-05-25T10:54:54Z",
+      "type": "solo",
+      "org": "Quantified Media",
+      "notes": "40021 skip rate increasing since Oct 2025. 10DLC most affected (29-52%)."
+    },
+    {
+      "id": 2757124,
+      "subject": "FW: Payroll Q Calls",
+      "status": "closed",
+      "priority": "high",
+      "category": "call_connectivity",
+      "updated_at": "2026-05-25T21:07:11Z",
+      "type": "solo",
+      "org": "Fitness International",
+      "notes": "Call drops on payroll queue. Onboarding-Prime customer."
+    }
+  ]
 }
