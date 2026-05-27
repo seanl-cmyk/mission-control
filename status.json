@@ -1,17 +1,19 @@
 {
   "status": "offline",
-  "lastUpdated": "2026-05-26T00:00:00Z",
+  "lastUpdated": "2026-05-27T00:00:00Z",
   "operator": "seanl",
-  "message": "Monday May 25 — End of shift. 9 tickets touched (4 closed, 2 open, 3 older closed). Quiet collaborative day.",
+  "message": "Tuesday May 26 — End of shift. 15 tickets touched (7 closed, 6 open, 1 pending, 1 hold). Heavy wireless + voice day. No collaborative analysis sessions.",
   "metrics": {
-    "totalCases": 9,
-    "activeCases": 2,
-    "todayUpdated": 9,
-    "soloWorked": 9,
+    "totalCases": 15,
+    "activeCases": 6,
+    "todayUpdated": 15,
+    "soloWorked": 15,
     "collaborativeAnalyzed": 0,
     "byStatus": {
-      "open": 2,
-      "closed": 7
+      "open": 6,
+      "closed": 7,
+      "pending": 1,
+      "hold": 1
     }
   }
 }

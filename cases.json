@@ -1,127 +1,203 @@
 {
-  "date": "2026-05-25",
-  "generatedAt": "2026-05-26T00:00:00Z",
+  "date": "2026-05-26",
+  "generatedAt": "2026-05-27T00:00:00Z",
   "summary": {
-    "totalTicketsUpdated": 6,
-    "soloWorked": 6,
+    "totalTicketsUpdated": 15,
+    "soloWorked": 15,
     "collaborativeAnalyzed": 0,
     "byCategory": {
-      "messaging_deliverability": 2,
-      "call_control": 2,
-      "number_lookup": 1,
-      "portal_configuration": 1
+      "voice_media_quality": 1,
+      "ai_assistant": 1,
+      "messaging_deliverability": 3,
+      "sip_trunking": 1,
+      "voice_voicemail": 1,
+      "microsoft_teams": 1,
+      "reporting": 1,
+      "fraud_security": 1,
+      "voice_ivr_dtmf": 1,
+      "wireless": 2,
+      "branded_calling": 1,
+      "number_management": 1
     },
     "byPriority": {
-      "high": 2,
-      "urgent": 1,
-      "normal": 1,
-      "low": 1,
+      "urgent": 3,
+      "normal": 2,
+      "high": 5,
+      "low": 4,
       "unspecified": 1
     },
     "byStatus": {
-      "closed": 4,
-      "open": 2
+      "open": 6,
+      "closed": 7,
+      "pending": 1,
+      "hold": 1
     }
   },
   "cases": [
     {
-      "id": 2887554,
-      "subject": "Account needs to be activated",
+      "id": 2706965,
+      "subject": "Big Jitter from Telnyx to Audiocodes",
       "status": "open",
-      "priority": "normal",
-      "category": "portal_configuration",
-      "updated_at": "2026-05-25T06:42:27Z",
+      "priority": "urgent",
+      "category": "voice_media_quality",
+      "updated_at": "2026-05-26T22:04:08Z",
       "type": "solo",
-      "org": "Adit",
-      "notes": "Account reactivation request for shailendra@adit.com"
+      "org": "Audiocodes",
+      "notes": "VIP \u2014 290ms jitter from Telnyx to Audiocodes SBC. Long-running investigation, Jira escalated."
     },
     {
-      "id": 2873313,
-      "subject": "[URGENT] Parakeet Health - Telnyx Issue",
+      "id": 2840824,
+      "subject": "Two Bugs in Agent-to-Agent Call Scenarios - Missing Cost Webhook & Incorrect ai_assistant_start Response",
       "status": "open",
       "priority": "normal",
-      "category": "messaging_deliverability",
-      "updated_at": "2026-05-25T14:37:25Z",
+      "category": "ai_assistant",
+      "updated_at": "2026-05-26T21:33:05Z",
       "type": "solo",
-      "org": "Parakeet Health",
-      "notes": "Inbound SMS not arriving — no record in Telnyx. Customer escalation active."
+      "org": "Trioteca",
+      "notes": "Two bugs in agent-to-agent calls: missing call.cost webhook on inbound, and ai_assistant_start returns recording_id instead of conversation_id."
     },
     {
-      "id": 2880314,
-      "subject": "Number Lookup Issues on US managed account",
+      "id": 2877859,
+      "subject": "Ported (208) 850-4435 number \u2014 10DLC campaign SMS failures",
       "status": "closed",
       "priority": "urgent",
-      "category": "number_lookup",
-      "updated_at": "2026-05-25T16:02:31Z",
+      "category": "messaging_deliverability",
+      "updated_at": "2026-05-26T20:15:56Z",
       "type": "solo",
-      "org": "LivePerson",
-      "notes": "Different line_type results across accounts for same number. VIP — bad satisfaction rating."
+      "org": "Unknown",
+      "notes": "Ported number SMS failures \u2014 10DLC campaign delivery issues after port-in."
     },
     {
-      "id": 2877954,
-      "subject": "Outbound failed SMS",
+      "id": 2856116,
+      "subject": "~400 of 13k dynamic addresses failing to register with general error",
+      "status": "pending",
+      "priority": "normal",
+      "category": "sip_trunking",
+      "updated_at": "2026-05-26T18:23:45Z",
+      "type": "solo",
+      "org": "Phillip",
+      "notes": "400 of 13k SIP endpoints failing registration with general error. Pending customer response."
+    },
+    {
+      "id": 2688346,
+      "subject": "Voicemails Being Cut Off",
+      "status": "open",
+      "priority": "high",
+      "category": "voice_voicemail",
+      "updated_at": "2026-05-26T18:06:25Z",
+      "type": "solo",
+      "org": "Rob Kane",
+      "notes": "Voicemails being cut off during playback. AI-escalated, under investigation."
+    },
+    {
+      "id": 2830490,
+      "subject": "Teams integration domain issues",
+      "status": "open",
+      "priority": "low",
+      "category": "microsoft_teams",
+      "updated_at": "2026-05-26T17:15:24Z",
+      "type": "solo",
+      "org": "Unknown",
+      "notes": "Microsoft Teams direct routing domain validation issues."
+    },
+    {
+      "id": 2820331,
+      "subject": "Urgent Request for Reporting",
+      "status": "closed",
+      "priority": "high",
+      "category": "reporting",
+      "updated_at": "2026-05-26T17:13:29Z",
+      "type": "solo",
+      "org": "johnf",
+      "notes": "Urgent reporting request \u2014 closed."
+    },
+    {
+      "id": 2873724,
+      "subject": "Inbound SMS Failure",
       "status": "closed",
       "priority": "low",
       "category": "messaging_deliverability",
-      "updated_at": "2026-05-25T09:54:06Z",
+      "updated_at": "2026-05-26T17:13:19Z",
       "type": "solo",
-      "org": "Telnyx (vendor)",
-      "notes": "SMS to Canadian number failing with 40008. Content filtering by carrier."
+      "org": "Unknown",
+      "notes": "Inbound SMS delivery failure. Closed."
     },
     {
-      "id": 2860674,
-      "subject": "Langfuse Open Telemetry Integration lacks customer controlled meta attributes",
+      "id": 2816120,
+      "subject": "Anti-fraud measures for your account",
       "status": "closed",
-      "priority": "high",
-      "category": "call_control",
-      "updated_at": "2026-05-25T17:04:22Z",
+      "priority": "low",
+      "category": "fraud_security",
+      "updated_at": "2026-05-26T17:12:48Z",
       "type": "solo",
-      "org": "GoDaddy",
-      "notes": "Enhancement request for AI Assistant observability — Langfuse prompt/version metadata. VIP."
+      "org": "Unknown",
+      "notes": "Anti-fraud measures notification. Closed."
     },
     {
-      "id": 2823856,
-      "subject": "AI hang-up — voicemail reached disconnection on active call",
-      "status": "closed",
-      "priority": "high",
-      "category": "call_control",
-      "updated_at": "2026-05-25T16:02:28Z",
-      "type": "solo",
-      "org": "Assistable",
-      "notes": "False voicemail detection causing AI call hang-up. VIP customer."
-    },
-    {
-      "id": 2815670,
-      "subject": "Multiple callUpdate 'new' events causing 486 USER_BUSY",
+      "id": 2823290,
+      "subject": "Pound Key not Registering on Insurance Calls (Pound #)",
       "status": "closed",
       "priority": "urgent",
-      "category": "call_control",
-      "updated_at": "2026-05-25T17:03:34Z",
+      "category": "voice_ivr_dtmf",
+      "updated_at": "2026-05-26T17:08:17Z",
       "type": "solo",
-      "org": "Inulti",
-      "notes": "Duplicate call.new events → double answer() → 486 BUSY. WebRTC related."
+      "org": "Unknown",
+      "notes": "DTMF pound key not registering on insurance IVR calls. Urgent \u2014 closed."
     },
     {
-      "id": 2770785,
-      "subject": "Increasing SMS Send Skips — Error Code 40021",
-      "status": "closed",
-      "priority": "normal",
-      "category": "messaging_deliverability",
-      "updated_at": "2026-05-25T10:54:54Z",
-      "type": "solo",
-      "org": "Quantified Media",
-      "notes": "40021 skip rate increasing since Oct 2025. 10DLC most affected (29-52%)."
-    },
-    {
-      "id": 2757124,
-      "subject": "FW: Payroll Q Calls",
+      "id": 2409545,
+      "subject": "SIMs connecting to IMSI1 as default in the UK",
       "status": "closed",
       "priority": "high",
-      "category": "call_connectivity",
-      "updated_at": "2026-05-25T21:07:11Z",
+      "category": "wireless",
+      "updated_at": "2026-05-26T16:34:48Z",
       "type": "solo",
-      "org": "Fitness International",
-      "notes": "Call drops on payroll queue. Onboarding-Prime customer."
+      "org": "Unknown",
+      "notes": "SIMs defaulting to IMSI1 profile in UK instead of optimal roaming. Closed."
+    },
+    {
+      "id": 2908150,
+      "subject": "Outbound delivery failure",
+      "status": "hold",
+      "priority": "low",
+      "category": "messaging_deliverability",
+      "updated_at": "2026-05-26T16:04:57Z",
+      "type": "solo",
+      "org": "Unknown",
+      "notes": "Outbound SMS delivery failure. On hold."
+    },
+    {
+      "id": 2581554,
+      "subject": "SIM being disabled in Mozambique",
+      "status": "open",
+      "priority": "high",
+      "category": "wireless",
+      "updated_at": "2026-05-26T12:29:35Z",
+      "type": "solo",
+      "org": "Unknown",
+      "notes": "SIM cards being disabled on Mozambique network. Open/ongoing."
+    },
+    {
+      "id": 2906874,
+      "subject": "Need info on Branded calling and Reputation management",
+      "status": "open",
+      "priority": "high",
+      "category": "branded_calling",
+      "updated_at": "2026-05-26T08:09:43Z",
+      "type": "solo",
+      "org": "Unknown",
+      "notes": "Branded calling and reputation management info request. Open."
+    },
+    {
+      "id": 2463540,
+      "subject": "Assistance with 16028584581 for C1QIS5I",
+      "status": "closed",
+      "priority": "unspecified",
+      "category": "number_management",
+      "updated_at": "2026-05-26T07:16:49Z",
+      "type": "solo",
+      "org": "Unknown",
+      "notes": "Number lookup/assistance request. Closed."
     }
   ]
 }
