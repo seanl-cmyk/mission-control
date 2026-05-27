@@ -1,49 +1,39 @@
 {
-  "date": "2026-05-26",
-  "generatedAt": "2026-05-27T00:00:00Z",
+  "date": "2026-05-27",
+  "generatedAt": "2026-05-27T19:00:00Z",
   "summary": {
-    "totalTicketsUpdated": 15,
-    "soloWorked": 15,
+    "totalTicketsUpdated": 6,
+    "soloWorked": 6,
     "collaborativeAnalyzed": 0,
     "byCategory": {
-      "voice_media_quality": 1,
-      "ai_assistant": 1,
-      "messaging_deliverability": 3,
       "sip_trunking": 1,
-      "voice_voicemail": 1,
-      "microsoft_teams": 1,
-      "reporting": 1,
-      "fraud_security": 1,
-      "voice_ivr_dtmf": 1,
-      "wireless": 2,
-      "branded_calling": 1,
-      "number_management": 1
+      "ai_assistant": 1,
+      "voice_fax": 1,
+      "messaging_deliverability": 1,
+      "voice_routing": 1,
+      "voice_media_quality": 1
     },
     "byPriority": {
-      "urgent": 3,
-      "normal": 2,
-      "high": 5,
-      "low": 4,
-      "unspecified": 1
+      "urgent": 2,
+      "normal": 4
     },
     "byStatus": {
-      "open": 6,
-      "closed": 7,
       "pending": 1,
-      "hold": 1
+      "open": 2,
+      "closed": 3
     }
   },
   "cases": [
     {
-      "id": 2706965,
-      "subject": "Big Jitter from Telnyx to Audiocodes",
-      "status": "open",
-      "priority": "urgent",
-      "category": "voice_media_quality",
-      "updated_at": "2026-05-26T22:04:08Z",
+      "id": 2856116,
+      "subject": "~400 of 13k dynamic addresses failing to register with general error",
+      "status": "pending",
+      "priority": "normal",
+      "category": "sip_trunking",
+      "updated_at": "2026-05-27T19:01:46Z",
       "type": "solo",
-      "org": "Audiocodes",
-      "notes": "VIP \u2014 290ms jitter from Telnyx to Audiocodes SBC. Long-running investigation, Jira escalated."
+      "org": "VOXO",
+      "notes": "400 of 13k SIP endpoints failing registration with geo-code error. Pending customer response. Carry-over from yesterday, still active."
     },
     {
       "id": 2840824,
@@ -51,153 +41,54 @@
       "status": "open",
       "priority": "normal",
       "category": "ai_assistant",
-      "updated_at": "2026-05-26T21:33:05Z",
+      "updated_at": "2026-05-27T15:24:42Z",
       "type": "solo",
       "org": "Trioteca",
-      "notes": "Two bugs in agent-to-agent calls: missing call.cost webhook on inbound, and ai_assistant_start returns recording_id instead of conversation_id."
+      "notes": "Two bugs in agent-to-agent calls: missing call.cost webhook on inbound, and ai_assistant_start returns recording_id instead of conversation_id. Carry-over from yesterday, still open."
     },
     {
-      "id": 2877859,
-      "subject": "Ported (208) 850-4435 number \u2014 10DLC campaign SMS failures",
+      "id": 2833906,
+      "subject": "Outbound faxes still failing",
       "status": "closed",
       "priority": "urgent",
-      "category": "messaging_deliverability",
-      "updated_at": "2026-05-26T20:15:56Z",
+      "category": "voice_fax",
+      "updated_at": "2026-05-27T14:27:12Z",
       "type": "solo",
-      "org": "Unknown",
-      "notes": "Ported number SMS failures \u2014 10DLC campaign delivery issues after port-in."
+      "org": "Adit",
+      "notes": "Outbound fax delivery failures. Urgent — closed today."
     },
     {
-      "id": 2856116,
-      "subject": "~400 of 13k dynamic addresses failing to register with general error",
-      "status": "pending",
+      "id": 2718823,
+      "subject": "Compiling two tickets with concerns about SMS issues",
+      "status": "open",
       "priority": "normal",
-      "category": "sip_trunking",
-      "updated_at": "2026-05-26T18:23:45Z",
-      "type": "solo",
-      "org": "Phillip",
-      "notes": "400 of 13k SIP endpoints failing registration with general error. Pending customer response."
-    },
-    {
-      "id": 2688346,
-      "subject": "Voicemails Being Cut Off",
-      "status": "open",
-      "priority": "high",
-      "category": "voice_voicemail",
-      "updated_at": "2026-05-26T18:06:25Z",
-      "type": "solo",
-      "org": "Rob Kane",
-      "notes": "Voicemails being cut off during playback. AI-escalated, under investigation."
-    },
-    {
-      "id": 2830490,
-      "subject": "Teams integration domain issues",
-      "status": "open",
-      "priority": "low",
-      "category": "microsoft_teams",
-      "updated_at": "2026-05-26T17:15:24Z",
-      "type": "solo",
-      "org": "Unknown",
-      "notes": "Microsoft Teams direct routing domain validation issues."
-    },
-    {
-      "id": 2820331,
-      "subject": "Urgent Request for Reporting",
-      "status": "closed",
-      "priority": "high",
-      "category": "reporting",
-      "updated_at": "2026-05-26T17:13:29Z",
-      "type": "solo",
-      "org": "johnf",
-      "notes": "Urgent reporting request \u2014 closed."
-    },
-    {
-      "id": 2873724,
-      "subject": "Inbound SMS Failure",
-      "status": "closed",
-      "priority": "low",
       "category": "messaging_deliverability",
-      "updated_at": "2026-05-26T17:13:19Z",
+      "updated_at": "2026-05-27T08:21:24Z",
       "type": "solo",
-      "org": "Unknown",
-      "notes": "Inbound SMS delivery failure. Closed."
+      "org": "Unspecified",
+      "notes": "Long-running SMS issue compilation ticket. Updated today, still open."
     },
     {
-      "id": 2816120,
-      "subject": "Anti-fraud measures for your account",
+      "id": 2888346,
+      "subject": "Misrouting Issue - BMW of Anchorage",
       "status": "closed",
-      "priority": "low",
-      "category": "fraud_security",
-      "updated_at": "2026-05-26T17:12:48Z",
+      "priority": "normal",
+      "category": "voice_routing",
+      "updated_at": "2026-05-27T04:20:14Z",
       "type": "solo",
-      "org": "Unknown",
-      "notes": "Anti-fraud measures notification. Closed."
+      "org": "Callbox",
+      "notes": "Call misrouting to BMW of Anchorage. Closed today."
     },
     {
-      "id": 2823290,
-      "subject": "Pound Key not Registering on Insurance Calls (Pound #)",
+      "id": 2890303,
+      "subject": "Incident: Calls with Choppy audio/disconnect",
       "status": "closed",
       "priority": "urgent",
-      "category": "voice_ivr_dtmf",
-      "updated_at": "2026-05-26T17:08:17Z",
+      "category": "voice_media_quality",
+      "updated_at": "2026-05-27T03:19:16Z",
       "type": "solo",
-      "org": "Unknown",
-      "notes": "DTMF pound key not registering on insurance IVR calls. Urgent \u2014 closed."
-    },
-    {
-      "id": 2409545,
-      "subject": "SIMs connecting to IMSI1 as default in the UK",
-      "status": "closed",
-      "priority": "high",
-      "category": "wireless",
-      "updated_at": "2026-05-26T16:34:48Z",
-      "type": "solo",
-      "org": "Unknown",
-      "notes": "SIMs defaulting to IMSI1 profile in UK instead of optimal roaming. Closed."
-    },
-    {
-      "id": 2908150,
-      "subject": "Outbound delivery failure",
-      "status": "hold",
-      "priority": "low",
-      "category": "messaging_deliverability",
-      "updated_at": "2026-05-26T16:04:57Z",
-      "type": "solo",
-      "org": "Unknown",
-      "notes": "Outbound SMS delivery failure. On hold."
-    },
-    {
-      "id": 2581554,
-      "subject": "SIM being disabled in Mozambique",
-      "status": "open",
-      "priority": "high",
-      "category": "wireless",
-      "updated_at": "2026-05-26T12:29:35Z",
-      "type": "solo",
-      "org": "Unknown",
-      "notes": "SIM cards being disabled on Mozambique network. Open/ongoing."
-    },
-    {
-      "id": 2906874,
-      "subject": "Need info on Branded calling and Reputation management",
-      "status": "open",
-      "priority": "high",
-      "category": "branded_calling",
-      "updated_at": "2026-05-26T08:09:43Z",
-      "type": "solo",
-      "org": "Unknown",
-      "notes": "Branded calling and reputation management info request. Open."
-    },
-    {
-      "id": 2463540,
-      "subject": "Assistance with 16028584581 for C1QIS5I",
-      "status": "closed",
-      "priority": "unspecified",
-      "category": "number_management",
-      "updated_at": "2026-05-26T07:16:49Z",
-      "type": "solo",
-      "org": "Unknown",
-      "notes": "Number lookup/assistance request. Closed."
+      "org": "GoDaddy",
+      "notes": "Choppy audio and call disconnections. Urgent incident — closed today."
     }
   ]
 }
