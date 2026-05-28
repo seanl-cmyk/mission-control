@@ -1,8 +1,8 @@
 {
-  "status": "online",
-  "lastUpdated": "2026-05-27T19:00:00Z",
+  "status": "offline",
+  "lastUpdated": "2026-05-28T00:00:00Z",
   "operator": "seanl",
-  "message": "Wednesday May 27 — Midday sync. 6 tickets touched (3 closed, 2 open, 1 pending). Fax, voice, and carry-over work. No collaborative analysis sessions.",
+  "message": "Wednesday May 27 — End of day. 6 tickets touched (3 closed, 2 open, 1 pending). Fax, voice, and carry-over work. No collaborative analysis sessions. Signing off.",
   "metrics": {
     "totalCases": 6,
     "activeCases": 3,
