@@ -1,8 +1,8 @@
 {
   "status": "offline",
-  "lastUpdated": "2026-05-29T00:00:00Z",
+  "lastUpdated": "2026-05-29T19:00:00Z",
   "operator": "seanl",
-  "message": "Thursday May 28 — End of day. Unable to sync with Zendesk (MCP server DNS failure, REST API end-user scope). 3 carry-over tickets from May 27 (2 open, 1 pending). No collaborative analysis sessions. Signing off.",
+  "message": "Friday May 29 — Midday sync. Zendesk still inaccessible (MCP DNS failure + REST API token revoked). 3 carry-over tickets from May 27 unchanged. No solo work or collaborative sessions detected today. Token rotation needed to restore sync capability.",
   "metrics": {
     "totalCases": 3,
     "activeCases": 3,

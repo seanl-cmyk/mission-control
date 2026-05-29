@@ -1,7 +1,7 @@
 {
-  "date": "2026-05-28",
-  "generatedAt": "2026-05-29T00:00:00Z",
-  "syncNote": "Zendesk MCP server unreachable (DNS failure). REST API token has end-user scope only — cannot search tickets. Cases reflect carry-over from 2026-05-27 with no verified updates for 2026-05-28.",
+  "date": "2026-05-29",
+  "generatedAt": "2026-05-29T19:00:00Z",
+  "syncNote": "Zendesk MCP server still unreachable (DNS failure). REST API token expired/revoked — both auth methods failing. Cases reflect carry-over from 2026-05-27 with no verified updates for 2026-05-29. No collaborative analysis sessions today. Token rotation likely needed.",
   "summary": {
     "totalTicketsUpdated": 0,
     "soloWorked": 0,
@@ -24,7 +24,7 @@
       "updated_at": "2026-05-27T19:01:46Z",
       "type": "carry-over",
       "org": "VOXO",
-      "notes": "Carry-over from 2026-05-27. Pending customer response. No verified update on 2026-05-28 due to Zendesk API access issue."
+      "notes": "Carry-over from 2026-05-27. Pending customer response. No verified update — Zendesk API still inaccessible."
     },
     {
       "id": 2840824,
@@ -35,7 +35,7 @@
       "updated_at": "2026-05-27T15:24:42Z",
       "type": "carry-over",
       "org": "Trioteca",
-      "notes": "Carry-over from 2026-05-27. Still open. No verified update on 2026-05-28 due to Zendesk API access issue."
+      "notes": "Carry-over from 2026-05-27. Still open. No verified update — Zendesk API still inaccessible."
     },
     {
       "id": 2718823,
@@ -46,7 +46,7 @@
       "updated_at": "2026-05-27T08:21:24Z",
       "type": "carry-over",
       "org": "Unspecified",
-      "notes": "Carry-over from 2026-05-27. Still open. No verified update on 2026-05-28 due to Zendesk API access issue."
+      "notes": "Carry-over from 2026-05-27. Still open. No verified update — Zendesk API still inaccessible."
     }
   ]
 }
