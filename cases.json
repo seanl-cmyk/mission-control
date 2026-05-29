@@ -1,26 +1,17 @@
 {
-  "date": "2026-05-27",
-  "generatedAt": "2026-05-27T19:00:00Z",
+  "date": "2026-05-28",
+  "generatedAt": "2026-05-29T00:00:00Z",
+  "syncNote": "Zendesk MCP server unreachable (DNS failure). REST API token has end-user scope only — cannot search tickets. Cases reflect carry-over from 2026-05-27 with no verified updates for 2026-05-28.",
   "summary": {
-    "totalTicketsUpdated": 6,
-    "soloWorked": 6,
+    "totalTicketsUpdated": 0,
+    "soloWorked": 0,
     "collaborativeAnalyzed": 0,
-    "byCategory": {
-      "sip_trunking": 1,
-      "ai_assistant": 1,
-      "voice_fax": 1,
-      "messaging_deliverability": 1,
-      "voice_routing": 1,
-      "voice_media_quality": 1
-    },
-    "byPriority": {
-      "urgent": 2,
-      "normal": 4
-    },
+    "carryOverFromPrevious": 3,
+    "byCategory": {},
+    "byPriority": {},
     "byStatus": {
-      "pending": 1,
       "open": 2,
-      "closed": 3
+      "pending": 1
     }
   },
   "cases": [
@@ -31,9 +22,9 @@
       "priority": "normal",
       "category": "sip_trunking",
       "updated_at": "2026-05-27T19:01:46Z",
-      "type": "solo",
+      "type": "carry-over",
       "org": "VOXO",
-      "notes": "400 of 13k SIP endpoints failing registration with geo-code error. Pending customer response. Carry-over from yesterday, still active."
+      "notes": "Carry-over from 2026-05-27. Pending customer response. No verified update on 2026-05-28 due to Zendesk API access issue."
     },
     {
       "id": 2840824,
@@ -42,20 +33,9 @@
       "priority": "normal",
       "category": "ai_assistant",
       "updated_at": "2026-05-27T15:24:42Z",
-      "type": "solo",
+      "type": "carry-over",
       "org": "Trioteca",
-      "notes": "Two bugs in agent-to-agent calls: missing call.cost webhook on inbound, and ai_assistant_start returns recording_id instead of conversation_id. Carry-over from yesterday, still open."
-    },
-    {
-      "id": 2833906,
-      "subject": "Outbound faxes still failing",
-      "status": "closed",
-      "priority": "urgent",
-      "category": "voice_fax",
-      "updated_at": "2026-05-27T14:27:12Z",
-      "type": "solo",
-      "org": "Adit",
-      "notes": "Outbound fax delivery failures. Urgent — closed today."
+      "notes": "Carry-over from 2026-05-27. Still open. No verified update on 2026-05-28 due to Zendesk API access issue."
     },
     {
       "id": 2718823,
@@ -64,31 +44,9 @@
       "priority": "normal",
       "category": "messaging_deliverability",
       "updated_at": "2026-05-27T08:21:24Z",
-      "type": "solo",
+      "type": "carry-over",
       "org": "Unspecified",
-      "notes": "Long-running SMS issue compilation ticket. Updated today, still open."
-    },
-    {
-      "id": 2888346,
-      "subject": "Misrouting Issue - BMW of Anchorage",
-      "status": "closed",
-      "priority": "normal",
-      "category": "voice_routing",
-      "updated_at": "2026-05-27T04:20:14Z",
-      "type": "solo",
-      "org": "Callbox",
-      "notes": "Call misrouting to BMW of Anchorage. Closed today."
-    },
-    {
-      "id": 2890303,
-      "subject": "Incident: Calls with Choppy audio/disconnect",
-      "status": "closed",
-      "priority": "urgent",
-      "category": "voice_media_quality",
-      "updated_at": "2026-05-27T03:19:16Z",
-      "type": "solo",
-      "org": "GoDaddy",
-      "notes": "Choppy audio and call disconnections. Urgent incident — closed today."
+      "notes": "Carry-over from 2026-05-27. Still open. No verified update on 2026-05-28 due to Zendesk API access issue."
     }
   ]
 }
