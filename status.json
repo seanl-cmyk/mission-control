@@ -1,8 +1,8 @@
 {
-  "status": "degraded",
-  "lastUpdated": "2026-06-01T19:00:00Z",
+  "status": "offline",
+  "lastUpdated": "2026-06-02T00:00:00Z",
   "operator": "seanl",
-  "message": "Monday June 1 — Dashboard sync degraded. Zendesk MCP server unreachable (DNS failure). Sean's API token has end-user role only (cannot search/view tickets). ZENDESK_MCP_TOKEN expired. 3 carry-over tickets from May 27 unchanged since last verified. No collaborative analysis sessions today. AUTH ACTION NEEDED: Update ZENDESK_MCP_TOKEN in .env with valid agent-level token.",
+  "message": "Monday June 1 — End of day. Dashboard sync degraded all day. Zendesk MCP server unreachable (DNS failure). API token is end-user role only (403). 3 carry-over tickets from May 27 unchanged. No collaborative work today. AUTH ACTION NEEDED: Update ZENDESK_MCP_TOKEN with valid agent-level token.",
   "authIssue": true,
   "metrics": {
     "totalCases": 3,

@@ -1,8 +1,8 @@
 {
   "date": "2026-06-01",
-  "generatedAt": "2026-06-01T19:00:00Z",
-  "syncNote": "Midday sync (Monday June 1). Zendesk MCP server unreachable (DNS failure). Sean's personal API token has end-user role only — cannot search or view tickets. ZENDESK_MCP_TOKEN in .env also expired (returns Unauthorized). No fresh ticket data available. 3 carry-over tickets from 2026-05-27 remain from last sync. No collaborative analysis sessions today.",
-  "authIssue": "Both Zendesk auth methods failed: MCP server DNS unreachable, ZENDESK_MCP_TOKEN expired, Sean's personal token is end-user role. Need fresh API token with agent/admin role.",
+  "generatedAt": "2026-06-02T00:00:00Z",
+  "syncNote": "End-of-day sync (Monday June 1). Zendesk remains inaccessible — MCP server DNS failure persists, API token is end-user role only (403 on ticket queries). No fresh ticket data available. 3 carry-over tickets from 2026-05-27 unchanged. No collaborative analysis sessions today.",
+  "authIssue": "Ongoing since midday sync. Both Zendesk auth methods failed: MCP server DNS unreachable, API token has end-user role (403 Forbidden on /tickets/). AUTH ACTION NEEDED: Update ZENDESK_MCP_TOKEN in .env with valid agent-level token.",
   "summary": {
     "totalTicketsUpdated": 0,
     "soloWorked": 0,
